@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "grasshoppher-project": "grasshoppher-website"
+  },
+  "targets": {
+    "grasshoppher-website": {
+      "hosting": {
+        "website": [
+          "grasshoppher-website"
+        ]
+      }
+    }
+  }
+}
