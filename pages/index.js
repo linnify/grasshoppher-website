@@ -16,6 +16,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout title={"GrasshoppHers"}>
+        {!this.state.loaded && <div>Loader</div>}
         <h1>Welcome to GrasshoppHers</h1>
       </Layout>
     );
