@@ -1,5 +1,5 @@
 export const heroIndividual = {
-  pageLink: "/",
+  pageLink: "/business-to-client",
   background: "landing/hero-individual.jpg",
   class: "hero__individual",
   buttonText: "Join GrasshoppHer",

@@ -2,10 +2,10 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "./VideoPlayer.module.scss"
 
-export const VideoPlayer = ({ url }) => {
+export const VideoPlayer = ({ url, id }) => {
   return (
     <div className={"container"} style={{paddingTop: "70px"}}>
-      <div className={"video"}>
+      <div className={"video"} id={id}>
         <ReactPlayer
           url={url}
           playIcon={""}

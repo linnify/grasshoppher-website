@@ -21,7 +21,7 @@ export default class BusinessToBusiness extends React.Component {
     return (
       <Layout title={"Join GrasshoppHer Biz"}>
         {!this.state.loaded && <div>Loader</div>}
-        <VideoPlayer url={b2b.videoLink}/>
+        <VideoPlayer url={b2b.videoLink} id={b2b.id}/>
         <PageTitle content={b2b}/>
         <JoinUs />
       </Layout>

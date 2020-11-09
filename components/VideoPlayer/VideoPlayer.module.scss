@@ -5,8 +5,13 @@
   z-index: 10;
 }
 
-.video .react-player__preview {
+.video#business .react-player__preview {
   background-image: url("/landing/hero-business.jpg")!important;
+  background-size: cover;
+}
+
+.video#individual .react-player__preview {
+  background-image: url("/landing/hero-individual.jpg")!important;
   background-size: cover;
 }
 

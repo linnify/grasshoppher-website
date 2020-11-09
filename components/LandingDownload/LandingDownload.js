@@ -2,7 +2,7 @@ import React from "react";
 import {download} from "../../constants/landingSectionDescriptions";
 import {SectionTitle} from "../SectionTitle";
 import "./LandingDownload.module.scss"
-import {DownloadButton} from "./DownloadButton";
+import {DownloadButton} from "../DownloadButton";
 
 export const LandingDownload = () => {
   return(
