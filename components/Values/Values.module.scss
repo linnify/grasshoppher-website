@@ -1,0 +1,17 @@
+.values {
+  padding: 250px 0;
+
+  &__text{
+    font-weight: lighter;
+    margin: 40px 0;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 576px) {
+  .values {
+    &__text{
+      margin: 40px auto;
+    }
+  }
+}

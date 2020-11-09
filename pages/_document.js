@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
       <Html lang={"en-US"}>
         <Head>
           <link rel="icon" href="/favicon.png"/>
+          <link rel="stylesheet" href="https://use.typekit.net/ssp0oyk.css"/>
         </Head>
         <body>
           <Main/>

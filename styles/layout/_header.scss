@@ -1,0 +1,25 @@
+@import "../abstracts/mixins";
+
+.header{
+  padding-top: 20px;
+
+  &__button {
+    @include primary-text-hover;
+    cursor: pointer;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .header{
+    padding-top: 60px;
+
+    &__button {
+      font-size: 24px;
+    }
+
+  }
+}

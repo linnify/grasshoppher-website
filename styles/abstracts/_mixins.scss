@@ -1,0 +1,13 @@
+@import "../abstracts/variables";
+
+@mixin primary-text-hover {
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+@mixin secondary-text-hover {
+  &:hover {
+    color: $color-footer-text-hover;
+  }
+}

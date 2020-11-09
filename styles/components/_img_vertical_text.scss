@@ -1,0 +1,26 @@
+@import "../abstracts/variables";
+
+.relativeContainer {
+  position: relative;
+
+  &--text {
+    transform: rotate(-90deg);
+    font-size: 50px;
+    font-weight: $bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    position: absolute;
+    top: 70px;
+    left: -80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .relativeContainer {
+
+    &--text {
+      font-size: 70px;
+      left: -110px;
+    }
+  }
+}

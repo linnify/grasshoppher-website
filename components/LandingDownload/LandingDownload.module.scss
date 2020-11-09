@@ -1,0 +1,97 @@
+@import "/styles/abstracts/variables";
+
+.download {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &--row {
+    flex-direction: column-reverse;
+  }
+
+  &--img {
+    width: 100%;
+  }
+}
+
+.button-download {
+  border: 1px solid $color-primary;
+  padding: 30px;
+  font-size: 22px;
+  font-weight: $bold;
+  border-radius: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  img {
+    max-width: 200px;
+    max-height: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 345px) {
+  .button-download {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 390px) {
+  .button-download {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 525px) {
+  .button-download {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .download {
+
+    &--row {
+      flex-direction: row;
+    }
+  }
+
+  .button-download {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    img {
+      max-width: 170px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .button-download {
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download{
+    padding-top: 0;
+  }
+  .button-download {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    align-items: center;
+
+    img {
+      margin-left: 25px;
+    }
+  }
+}
+
+@media (min-width: 1520px) {
+  .button-download {
+    font-size: 30px;
+  }
+}

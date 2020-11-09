@@ -1,0 +1,21 @@
+@import "../abstracts/variables";
+
+.button {
+  border-radius: 40px;
+}
+
+.button-redirect {
+  color: #FFFFFF;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 15px 30px;
+  border-radius: $border-radius;
+  background-color: $color-primary;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+}

@@ -1,0 +1,11 @@
+.mobile-app{
+  padding-top: 100px;
+}
+
+@media (min-width: 1200px) {
+  .mobile-app {
+    &--title {
+      margin-top: 100px;
+    }
+  }
+}

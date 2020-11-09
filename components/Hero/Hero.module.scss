@@ -1,0 +1,154 @@
+
+.hero {
+  margin-top: 60px;
+
+  &--grid{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px 0;
+  }
+
+  &--component {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position:relative;
+  }
+
+  &__overlay:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  &__overlay:hover:after {
+    opacity:1;
+    border-radius: 417px;
+  }
+
+  &--component:hover img{
+    border-radius: 417px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10;
+  }
+
+  &--component:hover &__context{
+    top:61%;
+  }
+
+  &__context {
+    position: absolute;
+    width: fit-content;
+    color: white;
+    font-size: 14px;
+    top:63%;
+    left:15%;
+    z-index: 10;
+    transition: .3s;
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__individual {
+    background-color: #F5CAC4;
+  }
+
+  &__business {
+    background-color: #000000;
+  }
+
+  &--button {
+    border-radius: 40px;
+    width: fit-content;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .hero {
+    &--grid {
+      flex-direction: row;
+    }
+
+    &--component {
+      width: 49%;
+      margin-bottom: 0;
+    }
+
+    &__context {
+      font-size: 18px;
+      position: absolute;
+      color: white;
+      left:16%;
+      z-index: 10;
+      transition: .3s;
+    }
+
+    &--button {
+      font-size: 20px;
+      padding: 15px 35px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+
+    &--button {
+      font-size: 18px;
+      padding: 15px 35px;
+    }
+
+    &__description {
+      display: block;
+      font-size: 16px;
+    }
+
+    &__context {
+      width: 250px;
+      left: 18%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    &--button {
+      font-size: 28px;
+      padding: 15px 45px;
+    }
+
+    &__description {
+      display: block;
+      font-size: 18px;
+      padding-top: 5px;
+    }
+
+    &__context {
+      width: 370px;
+      left: 18%;
+    }
+
+  }
+}
