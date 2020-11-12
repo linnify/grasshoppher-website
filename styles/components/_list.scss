@@ -22,6 +22,10 @@ ul li#section::before {
   margin-top: -10px;
 }
 
+li#menu-item::before {
+  content: "";
+}
+
 li#unordered {
   font-size: 18px;
   display: flex;

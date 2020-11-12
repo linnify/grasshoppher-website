@@ -1,0 +1,36 @@
+.story {
+
+  &--row {
+    flex-direction: column-reverse;
+
+    img {
+      padding-top: 30px;
+    }
+  }
+
+  &--text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+  .story {
+
+    &--row {
+      flex-direction: row;
+
+      img {
+        padding-top: 0;
+      }
+    }
+
+    &--text {
+      font-size: 22px;
+      line-height: 40px;
+    }
+
+  }
+}

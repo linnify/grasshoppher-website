@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .header{
   padding-top: 20px;
@@ -10,7 +11,37 @@
 
 }
 
+#dropdown-icon-button {
+  font-family: $primary-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-text-black;
+  border-radius: 0;
+  padding: 0;
 
+  &:hover {
+    color: $color-primary;
+    background: none;
+  }
+
+  &.active-menu {
+    color: $color-primary;
+  }
+
+  & #icon-arrow {
+    margin-top: 5px;
+  }
+
+}
+
+#menu-item {
+  padding: 15px 50px 15px 30px;
+
+  &:hover{
+    background: #F5E8E665;
+  }
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -20,6 +51,13 @@
     &__button {
       font-size: 24px;
     }
+  }
 
+  #dropdown-icon-button {
+    font-size: 22px;
+
+    & #icon-arrow {
+      margin-top: 10px;
+    }
   }
 }

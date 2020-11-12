@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import {HeaderDropdown} from "./HeaderDropdown";
 
 export const Header = () => {
   return(
@@ -15,7 +16,7 @@ export const Header = () => {
             <img src={"/logo.svg"} alt={"logo GrasshoppHer"} style={{cursor: "pointer"}}/>
           </Link>
         </div>
-        <div className={"header__button"}>About</div>
+        <HeaderDropdown />
       </div>
       <div className={"hide-md center-xs"}>
         <img src={"/logo.svg"} alt={"logo GrasshoppHer"} style={{cursor: "pointer"}}/>
