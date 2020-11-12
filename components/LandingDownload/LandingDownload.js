@@ -1,5 +1,5 @@
 import React from "react";
-import {download} from "../../constants/landingSectionDescriptions";
+import {download} from "../../constants/landing";
 import {SectionTitle} from "../SectionTitle";
 import "./LandingDownload.module.scss"
 import {DownloadButton} from "../DownloadButton";

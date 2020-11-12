@@ -7,29 +7,43 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-
-    img {
-      object-fit: cover;
-      height: 570px;
-      width: auto;
-    }
   }
 
   &__text{
     background-color: #F5CAC4;
     padding: 40px 30px;
     max-width: 600px;
-    margin-top: -200px;
+    margin-top: 20px;
   }
 }
 
-@media (min-width: 992px) {
-
+@media (min-width: 768px) {
   .limits {
+
+    &__text {
+      margin-top: -100px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .limits {
+
+    &__container {
+      position: relative;
+
+      img {
+        margin-right: 150px;
+      }
+    }
 
     &__text {
       max-width: 700px;
       padding: 60px 90px;
+      position: absolute;
+      top:42%;
+      right: 0;
+      left: 50%;
     }
   }
 }

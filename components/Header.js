@@ -7,7 +7,7 @@ export const Header = () => {
     <div className={"container"}>
       <div className={"row middle-xs between-xs header"}>
         <div>
-          <Link href={"#"}>
+          <Link href={"/partner-with-us"}>
             <div className={"header__button"}>Partner with Us</div>
           </Link>
         </div>

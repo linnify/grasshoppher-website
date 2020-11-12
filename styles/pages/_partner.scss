@@ -1,0 +1,85 @@
+.title-box {
+  width: 100%;
+}
+
+.organization--col {
+  padding-top: 50px;
+}
+
+
+.partner-book-us-background {
+  position: relative;
+}
+
+.partner-book-us-background #bookUs{
+  position: absolute;
+  margin-left:auto;
+  margin-right: auto;
+  background: #F5E8E666;
+  height: 55%;
+  width: 100%;
+  top: 40%;
+  z-index: 10;
+}
+
+.investor {
+  &--description{
+    position: absolute;
+    background: #FFFFFF9D;
+    bottom: 15%;
+    right: 0;
+    width:55%;
+
+    &-mobile {
+      display: block;
+      margin-top: -80px;
+      margin-bottom: 100px;
+    }
+
+    &-container {
+      padding: 20px 50px 50px;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .partner {
+    &--row {
+      margin-top: -20px;
+    }
+  }
+
+  .organization--col {
+    padding-top: 0;
+  }
+
+  .partner-book-us-background #bookUs {
+    top: 10%;
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .investor {
+    &--description {
+      &-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .partner-book-us-background #bookUs {
+    top: 20%;
+    height: 60%;
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .title-box {
+    width: 653px;
+  }
+}

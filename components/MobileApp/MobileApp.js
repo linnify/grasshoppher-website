@@ -1,5 +1,5 @@
 import React from "react";
-import {app, appList} from "../../constants/landingSectionDescriptions";
+import {app, appList} from "../../constants/landing";
 import {SectionTitle} from "../SectionTitle";
 import "./MobileApp.module.scss"
 import {List} from "../List";

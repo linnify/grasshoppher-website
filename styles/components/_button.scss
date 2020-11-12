@@ -5,19 +5,29 @@
 }
 
 .button-redirect {
-  color: #FFFFFF;
+  color: $color-text-white;
   width: fit-content;
   font-weight: bold;
   font-size: 22px;
   padding: 15px 30px;
   border-radius: $border-radius;
+  border: 2px solid $color-primary;
   background-color: $color-primary;
+  cursor: pointer;
 
   a {
     text-decoration: none;
-    color: white;
+    color: $color-text-white;
   }
 
+  &:hover {
+    border: 2px solid $color-primary;
+    background-color: $color-text-white;
+
+    a {
+      color: $color-primary;
+    }
+  }
 }
 
 

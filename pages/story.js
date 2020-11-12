@@ -20,8 +20,8 @@ export default class Story extends React.Component {
     return (
       <Layout title={"The Story"}>
         {!this.state.loaded && <div>Loader</div>}
-        <div className={"container story--text"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
-          <div>
+        <div className={"container story--text"}>
+          <div className={"padding-top-bottom-100"}>
             <div className={"page-title show-xs hide-lg"}>The Story</div>
             <div className={"row middle-xs top-lg between-lg story--row "}>
               <div className={"col-xs-12 col-lg-6 col-xl-5"}>

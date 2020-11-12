@@ -1,0 +1,38 @@
+.grassbassadors {
+  &--row {
+    flex-direction: column-reverse;
+  }
+
+  &--image {
+    padding-top: 50px;
+  }
+
+}
+
+#grassbassadors li{
+  padding-bottom: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .grassbassadors {
+    &--row {
+      flex-direction: row;
+    }
+
+    &--image {
+      padding-top: 0;
+    }
+
+    &--description{
+      position: absolute;
+      background: #FFFFFF9D;
+      padding-left: 50px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width:45%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

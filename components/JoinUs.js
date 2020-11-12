@@ -6,7 +6,8 @@ import {ImageAndVerticalText} from "./ImageAndVerticalText";
 
 export const JoinUs = () => {
   return(
-    <div className={"container"} style={{paddingTop:"100px", paddingBottom:"100px"}}>
+    <div className={"container"}>
+      <div className={"padding-top-bottom-100"}>
       <div className={"row middle-xs between-md"}>
         <div className={"col-xs-12 col-md-5 col-xl-6"}>
           <ImageAndVerticalText text={"join us"} imgSrc={"/b2b/join-us.png"}/>
@@ -23,6 +24,7 @@ export const JoinUs = () => {
       <div className={"show-xs hide-xl"}>
         <div className={"text-block"}>{reachCommunity.text}</div>
         <ButtonRedirect href={reachCommunity.url} text={reachCommunity.buttonText}/>
+      </div>
       </div>
     </div>
   );
