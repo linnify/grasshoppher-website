@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Link from "next/link";
 import {socialMedia, references} from "../constants/footer";
 
@@ -6,7 +6,7 @@ export const Footer = () => {
 
   const displayReferences = references.map((ref, index) => {
     return (
-      <Link key={index} href={"#"}>
+      <Link key={index} href={ref.link}>
         <div className={"footer__text"}>{ref.text}</div>
       </Link>
     );

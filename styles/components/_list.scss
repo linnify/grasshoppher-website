@@ -6,14 +6,14 @@ ul {
   margin:0;
 }
 
-li {
+li#section {
   font-size: 18px;
   display: flex;
   align-items: start;
   padding-bottom: 10px;
 }
 
-ul li::before {
+ul li#section::before {
   content: "• ";
   color: $color-primary;
   display: inline-block;
@@ -22,13 +22,75 @@ ul li::before {
   margin-top: -10px;
 }
 
+li#unordered {
+  font-size: 18px;
+  display: flex;
+  align-items: start;
+  padding-bottom: 10px;
+}
+
+ul li#unordered::before {
+  content: "• ";
+  color: $color-primary;
+  display: inline-block;
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+
+li#ordered {
+  font-size: 18px;
+  line-height: 35px;
+  padding-top: 40px;
+  text-align: justify;
+}
+
+ol li {
+  counter-increment: list;
+  list-style-type: none;
+  position: relative;
+
+}
+
+ol {
+  padding-left: 25px;
+}
+
+ol li:before {
+  color: $color-primary;
+  content: counter(list) ".";
+  left: -32px;
+  position: absolute;
+  font-size: 18px;
+  text-align: right;
+  width: 26px;
+}
+
+
 @media (min-width: 992px) {
-  li{
+  li#section{
     font-size: 24px;
     padding-bottom: 25px;
   }
 
-  ul li::before {
+  ul li#section::before {
     font-size: 40px;
+  }
+
+  li#unordered{
+    font-size: 22px;
+    padding-bottom: 25px;
+  }
+
+  ul li#unordered::before {
+    font-size: 40px;
+  }
+
+  li#ordered {
+    font-size: 22px;
+  }
+
+  ol li:before {
+    font-size: 22px;
   }
 }

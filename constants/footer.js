@@ -24,14 +24,14 @@ export const socialMedia = [
 export const references = [
   {
     text: "Terms of Use",
-    link: "/terms-of-use",
+    link: "/terms",
   },
   {
     text: "Privacy Policy",
     link: "/privacy-policy",
   },
   {
-    text: "Digital Millenium Copyright Act Compliance",
+    text: "Digital Millennium Copyright Act Compliance",
     link: "/copyright",
   },
   {
