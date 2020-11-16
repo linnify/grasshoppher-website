@@ -1,0 +1,16 @@
+
+@media (min-width: 768px) {
+  .blog-post {
+    display: grid;
+    grid-auto-rows: 20px;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-post {
+    grid-gap: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+}
