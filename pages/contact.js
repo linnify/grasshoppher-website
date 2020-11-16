@@ -1,0 +1,83 @@
+import React from "react";
+import {Layout} from "../components/Layout";
+import ContactForm from "../components/ContactForm/ContactForm";
+import {SnackbarAlert} from "../components/SnackbarAlert";
+
+export default class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadedContact: false,
+      loadingPage: false,
+      snackBarOpened: false,
+      validation: false,
+      requestError: false,
+    };
+  }
+  contactRef = React.createRef();
+
+  componentDidMount() {
+    this.setState({loadedContact: true, loadingPage: true});
+  }
+
+  onSubmit = async (body) => {
+    console.log(body);
+    this.setState({ loadedContact: true });
+    const url = "#";
+    try {
+      await fetch(url, {
+        body: JSON.stringify(body),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      this.setState({
+        loadedContact: false,
+        snackBarOpened: true,
+      });
+      this.contactRef.current.clearState();
+    } catch (e) {
+      this.setState({ loadedContact: false, requestError: true });
+    }
+  };
+
+  onCloseSnackBar = () => {
+    this.setState({ snackBarOpened: false });
+  };
+
+  validate = (e) => {
+    this.setState({ validation: e, snackBarOpened: true });
+  };
+
+  render() {
+    return (
+      <Layout title={"Contact GrasshoppHer"}>
+        {!this.state.loadingPage && <div>Loader</div>}
+        <div className={"container"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
+          <div className={"page-title"}>Contact Grasshoppher</div>
+          <div className={"row middle-xs between-md row-revert-mobile contact--row"}>
+            <div className={"col-xs-12 col-md-6 col-xl-5"} style={{ width: "100%"}}>
+              <ContactForm
+                ref={this.contactRef}
+                loading={this.state.loadedContact}
+                onSubmit={this.onSubmit}
+                validation={this.validate}
+              />
+            </div>
+            <div className={"col-xs-12 col-md-5 col-xl-6 contact--col-img"}>
+              <img src={"/contact.png"} className={"image contact--image"}/>
+            </div>
+          </div>
+        </div>
+        {/*<SnackbarAlert*/}
+        {/*  snackBarOpened={this.state.snackBarOpened}*/}
+        {/*  validation={this.state.validation}*/}
+        {/*  requestError={this.state.requestError}*/}
+        {/*  onCloseSnackBar={this.onCloseSnackBar}*/}
+        {/*/>*/}
+      </Layout>
+    );
+  }
+}

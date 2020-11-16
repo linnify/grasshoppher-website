@@ -1,0 +1,56 @@
+.form{
+  max-width: 515px;
+
+  &__input-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-item {
+    width: 100%;
+
+    input {
+      font-family: europa, sans-serif;
+      border: 1px solid #DCDDDE;
+      border-radius: 12px;
+      padding: 13px;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    textarea {
+      font-family: europa, sans-serif;
+      font-style: normal;
+      padding: 13px;
+      width: 100%;
+      border: 1px solid #DCDDDE;
+      border-radius: 12px;
+      margin-top: 5px;
+      height: 150px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 574px) {
+  .form {
+    &__input-row {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__input-item {
+      width: 48%;
+    }
+  }
+}
