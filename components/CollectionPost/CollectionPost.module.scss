@@ -1,0 +1,44 @@
+.post {
+  padding-bottom: 150px;
+
+  &--image {
+    width: 100%;
+  }
+
+  &--title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+
+  &--author {
+    color: #F5CAC4;
+    margin-top: -25px;
+    padding-bottom: 25px;
+    font-size: 18px;
+  }
+
+  &--description {
+    font-size: 18px;
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and  (min-width: 992px) {
+  .post {
+    padding-top: 50px;
+
+    &--image {
+      width: 80%;
+    }
+
+    &--author {
+      font-size: 22px;
+    }
+
+    &--description {
+      font-size: 22px;
+    }
+  }
+}
