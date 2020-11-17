@@ -1,6 +1,6 @@
-export const press = [
+export const pressReleases = [
   {
-    image: "/press.jpg",
+    image: "/pressReleases/press-release.jpg",
     title: "Women & Courage",
     author: "with Sarah Lajeunesse Podcast",
     description: "Please join us to explore how companies in fashion, tech and policy are thinking about your futures!",
@@ -8,7 +8,7 @@ export const press = [
     buttonText: "Listen",
   },
   {
-    image: "/press.jpg",
+    image: "/pressReleases/press-release.jpg",
     title: "Women & Courage",
     author: "with Sarah Lajeunesse Podcast",
     description: "Please join us to explore how companies in fashion, tech and policy are thinking about your futures!",
@@ -16,7 +16,7 @@ export const press = [
     buttonText: "Listen",
   },
   {
-    image: "/press.jpg",
+    image: "/pressReleases/press-release.jpg",
     title: "Women & Courage",
     author: "with Sarah Lajeunesse Podcast",
     description: "Please join us to explore how companies in fashion, tech and policy are thinking about your futures!",
@@ -24,7 +24,7 @@ export const press = [
     buttonText: "Listen",
   },
   {
-    image: "/press.jpg",
+    image: "/pressReleases/press-release.jpg",
     title: "Women & Courage",
     author: "with Sarah Lajeunesse Podcast",
     description: "Please join us to explore how companies in fashion, tech and policy are thinking about your futures!",

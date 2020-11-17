@@ -9,7 +9,6 @@ export function resizeGridItem(item){
 export function resizeAllGridItems(){
   const allItems = document.getElementsByClassName("post");
   for(let x = 0; x < allItems.length; x++){
-    console.log("resizeAllGridItems");
     resizeGridItem(allItems[x]);
   }
 };

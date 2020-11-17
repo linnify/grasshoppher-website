@@ -1,5 +1,5 @@
-.post {
-  padding-bottom: 150px;
+.item {
+  padding-bottom: 50px;
 
   &--image {
     width: 100%;
@@ -25,8 +25,14 @@
   }
 }
 
+@media only screen and  (min-width: 768px) {
+  .item {
+    padding-bottom: 150px;
+  }
+}
+
 @media only screen and  (min-width: 992px) {
-  .post {
+  .item {
     padding-top: 50px;
 
     &--image {

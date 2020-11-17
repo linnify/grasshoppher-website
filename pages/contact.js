@@ -33,17 +33,14 @@ export default class Contact extends React.Component {
         },
       });
 
-      this.setState({
-        loadedContact: false,
-        snackBarOpened: true,
-      });
+      this.setState({ snackBarOpened: true });
       this.contactRef.current.clearState();
     } catch (e) {
       this.setState({ loadedContact: false, requestError: true });
     }
   };
 
-  onCloseSnackBar = () => {
+  handleClose = () => {
     this.setState({ snackBarOpened: false });
   };
 
@@ -52,6 +49,7 @@ export default class Contact extends React.Component {
   };
 
   render() {
+
     return (
       <Layout title={"Contact GrasshoppHer"}>
         {!this.state.loadingPage && <div>Loader</div>}
@@ -71,12 +69,12 @@ export default class Contact extends React.Component {
             </div>
           </div>
         </div>
-        {/*<SnackbarAlert*/}
-        {/*  snackBarOpened={this.state.snackBarOpened}*/}
-        {/*  validation={this.state.validation}*/}
-        {/*  requestError={this.state.requestError}*/}
-        {/*  onCloseSnackBar={this.onCloseSnackBar}*/}
-        {/*/>*/}
+        <SnackbarAlert
+          snackBarOpened={this.state.snackBarOpened}
+          validation={this.state.validation}
+          requestError={this.state.requestError}
+          onCloseSnackBar={this.handleClose}
+        />
       </Layout>
     );
   }

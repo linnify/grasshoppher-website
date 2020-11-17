@@ -1,10 +1,10 @@
 import React from "react";
 import {PostDate} from "../PostDate";
-import "./Post.module.scss";
+import "./PostItem.module.scss";
 import Link from "next/link";
 import {ButtonRedirect} from "../ButtonRedirect/ButtonRedirect";
 
-export const Post = ({ post }) => {
+export const PostItem = ({ post }) => {
 
   return(
     <Link href={`/blog/${post.slug}`}>
@@ -24,7 +24,7 @@ export const Post = ({ post }) => {
           <div className={"post--source-info"}>
             <div>{post.author.name}</div>
             <div className={"post--source-info-delimiter"}>|</div>
-            {/*<div>{post.author.name}</div>*/}
+            <div>3 min. read</div>
           </div>
         </div>
       </div>

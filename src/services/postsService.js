@@ -1,5 +1,5 @@
 import React from "react";
-import { BLOG_API_KEY, BLOG_HOST } from "../constants/deploy";
+import { BLOG_API_KEY, BLOG_HOST } from "../../constants/deploy";
 
 const settings = {
   method: "GET",
@@ -10,13 +10,13 @@ const settings = {
   },
 };
 
-export const getBlogPostById = (paramId) => {
+export const getPostById = (paramId) => {
   return fetch(`${BLOG_HOST}/api/posts/${paramId}`, settings).then((response) =>
     response.json()
   );
 };
 
-export const getBlogPosts = async () => {
+export const getPosts = async () => {
   let response = await (await fetch(`${BLOG_HOST}/api/posts`, settings)).json();
   return response;
 };

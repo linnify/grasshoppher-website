@@ -32,39 +32,40 @@
     position:absolute;
     width:100%; height:100%;
     top:0; left:0;
-    background:rgba(0,0,0,0.6);
-    opacity:0;
+    background:rgba(0,0,0,0.5);
+    opacity:1;
     transition: all 0.5s;
+    border-radius: 417px;
     -webkit-transition: all 0.5s;
   }
-  &__overlay:hover:after {
-    opacity:1;
-    border-radius: 417px;
-  }
 
-  &--component:hover img{
+  &--component img{
     border-radius: 417px;
-    background-color: rgba(0,0,0,0.6);
     z-index: 10;
   }
 
-  &--component:hover &__context{
-    top:61%;
+  &--component &__context{
+    top:45%;
   }
 
   &__context {
     position: absolute;
-    width: fit-content;
+    width: auto;
     color: white;
     font-size: 14px;
-    top:63%;
-    left:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top:43%;
+    left:17%;
+    right: 17%;
+    bottom: 15%;
     z-index: 10;
     transition: .3s;
   }
 
   &__description {
-    display: none;
+    font-size: 14px;
   }
 
   &__individual {
@@ -77,13 +78,26 @@
 
   &--button {
     border-radius: 40px;
-    width: fit-content;
-    padding: 15px 25px;
-    font-size: 16px;
+    width: auto;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
     cursor: pointer;
   }
 }
 
+
+@media (min-width: 446px) {
+  .hero {
+    &__description {
+      font-size: 16px;
+    }
+
+    &--button {
+      font-size: 16px;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .hero {
@@ -107,7 +121,7 @@
 
     &--button {
       font-size: 20px;
-      padding: 15px 35px;
+      padding: 15px 25px;
     }
   }
 }
@@ -115,18 +129,46 @@
 @media (min-width: 992px) {
   .hero {
 
+    &__overlay:after {
+      opacity:0;
+      border-radius: 0;
+    }
+
+    &__overlay:hover:after {
+      opacity:1;
+      border-radius: 417px;
+    }
+
+    &--component img {
+      border-radius: 0;
+    }
+
+    &--component:hover img{
+      border-radius: 417px;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 10;
+    }
+
+    &--component &__context{
+      top:63%;
+    }
+
+    &--component:hover &__context{
+      top:61%;
+    }
+
     &--button {
       font-size: 18px;
       padding: 15px 35px;
     }
 
     &__description {
-      display: block;
       font-size: 16px;
     }
 
     &__context {
       width: 250px;
+      display: block;
       left: 18%;
     }
   }
@@ -140,7 +182,6 @@
     }
 
     &__description {
-      display: block;
       font-size: 18px;
       padding-top: 5px;
     }

@@ -35,6 +35,18 @@ export const Footer = () => {
             {displayMedia}
           </div>
         </div>
+        <div className={"footer__copyright"}>
+          <a href={"https://linnify.com"}>
+            <img
+              src={"/linnify-logo-gray.svg"}
+              onMouseEnter={e => (e.currentTarget.src = ("/linnify-logo.svg"))}
+              onMouseLeave={e => (e.currentTarget.src = ("/linnify-logo-gray.svg"))}
+              alt={"Linnify logo"}
+            />
+          </a>
+          Copyright © 2020 <a href={"https://linnify.com"}>Linnify. </a> All
+          rights reserved.
+        </div>
       </div>
     </div>
   );

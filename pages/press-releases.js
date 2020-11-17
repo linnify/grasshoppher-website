@@ -1,9 +1,9 @@
 import React from "react";
 import {Layout} from "../components/Layout";
-import {happenings} from "../constants/happenings";
-import {Collections} from "../components/Collections";
+import {pressReleases} from "../src/services/pressReleases";
+import {PressItem} from "../components/PressItem";
 
-export default class Happenings extends React.Component {
+export default class PressReleases extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,14 +16,22 @@ export default class Happenings extends React.Component {
     this.setState({loaded: true});
   }
 
+  onDisplayPressReleases = () => {
+    return (this.state.posts.map((post, index) => {
+      return <PressItem post={post} key={index}/>;
+    }))
+  }
+
   render() {
     return(
-      <Layout title={"Happenings"}>
+      <Layout title={"Press"}>
         {!this.state.loaded && <div>Loader</div>}
         <div className={"container"}>
           <div className={"padding-top-bottom-100"}>
-            <div className={"page-title"}>Happenings</div>
-            <Collections posts={this.state.posts}/>
+            <div className={"page-title"}>Press</div>
+            <div className={"row around-md"}>
+              {this.onDisplayPressReleases()}
+            </div>
           </div>
         </div>
       </Layout>
@@ -33,6 +41,6 @@ export default class Happenings extends React.Component {
 
 export async function getStaticProps({ params }) {
   return {
-    props: { posts: happenings },
+    props: { posts: pressReleases },
   };
 }

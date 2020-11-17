@@ -5,11 +5,11 @@ export const header = [
   },
   {
     menu: "Happenings",
-    link: "/happenings",
+    link: "/events",
   },
   {
     menu: "Press",
-    link: "/press",
+    link: "/press-releases",
   },
   {
     menu: "Blog",

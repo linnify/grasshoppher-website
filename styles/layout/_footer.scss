@@ -4,6 +4,7 @@
 .footer {
   background-color: $color-background-footer;
   height: 100%;
+  padding: 60px 0;
 
   &__text {
     @include secondary-text-hover;
@@ -20,7 +21,7 @@
   &--row {
     display: flex;
     flex-flow: column nowrap;
-    padding: 50px 0;
+    padding-bottom: 15px;
   }
 
   &__references {
@@ -29,6 +30,22 @@
 
   &__social-media {
     margin-top: 30px;
+  }
+
+  &__copyright {
+    color: $color-text-gray;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    & a {
+      color: $color-text-gray;
+      margin: 0 3px;
+    }
+
+    & img {
+      width: 22px;
+      margin-top: 2px;
+    }
   }
 
 }
@@ -41,6 +58,18 @@
       padding-right: 36px;
     }
 
+    &__copyright {
+      font-size: 18px;
+
+      & a {
+        margin: 0 5px;
+      }
+
+      & img {
+        width: 27px;
+        margin-top: 5px;
+      }
+    }
   }
 }
 
@@ -56,7 +85,6 @@
 
 @media only screen and (min-width: 1200px) {
   .footer {
-    height: 153px;
 
     &__media {
       padding-right: 0;

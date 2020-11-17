@@ -1,6 +1,6 @@
 import React from "react";
-// import Alert from "@material-ui/lab/Alert";
-import Snackbar from "@material-ui/core/Snackbar";
+import Alert from "@material-ui/lab/Alert";
+import {Snackbar} from "@material-ui/core";
 
 export const SnackbarAlert = ({
                                 snackBarOpened,
@@ -9,6 +9,7 @@ export const SnackbarAlert = ({
                                 onCloseSnackBar,
                               }) => {
   const success = () => {
+    console.log("success")
     return (
       <Alert severity="success" onClose={onCloseSnackBar}>
         Your message was sent! Thank you!
@@ -17,6 +18,7 @@ export const SnackbarAlert = ({
   };
 
   const error = () => {
+    console.log("error")
     return (
       <Alert severity="warning" onClose={onCloseSnackBar}>
         Request error! Please try again.
@@ -35,8 +37,8 @@ export const SnackbarAlert = ({
   return (
     <Snackbar
       open={snackBarOpened}
+      // onClose={onCloseSnackBar}
       autoHideDuration={3000}
-      onClose={onCloseSnackBar}
     >
       {validation ? success() : requestError ? error() : incorrectEmail()}
     </Snackbar>

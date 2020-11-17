@@ -46,6 +46,7 @@ export default class ContactForm extends React.Component {
   };
 
   render() {
+
     return (
       <div className={"form"}>
         <div className={"form__input-row"}>

@@ -1,9 +1,8 @@
 import React from "react";
-import {getAllPosts, getBlogPostById} from "../../services/blogPosts";
+import { getPostById, getAllPosts} from "../../src/services/postsService";
 import {Layout} from "../../components/Layout";
-import {BlogArticleContent} from "../../components/BlogArticleContent";
+import {PostContent} from "../../components/PostContent";
 import {PostDate} from "../../components/PostDate";
-
 
 export default class Article extends React.Component {
   constructor(props) {
@@ -38,7 +37,7 @@ export default class Article extends React.Component {
                 <div style={{display: "flex", color: "#787D8E"}}>
                   <div>{author.name}</div>
                   <div style={{padding: "0 5px"}}>|</div>
-                  {/*<div>{author.name}</div>*/}
+                  <div>3 min. read</div>
                 </div>
               </div>
               <div className={"col-xs-12 col-md-5 col-xl-6"} style={{ textAlign: "center"}}>
@@ -49,7 +48,7 @@ export default class Article extends React.Component {
         </div>
         <div className={"container"} style={{ marginBottom: "100px"}}>
           <div className={"text-block"}>
-            <BlogArticleContent blockContent={blockContent}/>
+            <PostContent blockContent={blockContent}/>
           </div>
         </div>
       </Layout>
@@ -68,6 +67,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getBlogPostById(params.id);
+  const data = await getPostById(params.id);
   return { props: { data } };
 }

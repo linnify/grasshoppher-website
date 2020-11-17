@@ -1,7 +1,7 @@
 import React from "react";
 import {Layout} from "../../components/Layout";
-import {getBlogPosts} from "../../services/blogPosts";
-import BlogPosts from "../../components/BlogPost/BlogPosts";
+import {getPosts} from "../../src/services/postsService";
+import {BlogPosts} from "../../components/BlogPosts/BlogPosts";
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class Blog extends React.Component {
   }
 }
 export async function getStaticProps({ params }) {
-  const response = await getBlogPosts();
+  const response = await getPosts();
   return {
     props: { posts: response.results },
   };
