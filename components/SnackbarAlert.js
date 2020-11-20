@@ -9,7 +9,6 @@ export const SnackbarAlert = ({
                                 onCloseSnackBar,
                               }) => {
   const success = () => {
-    console.log("success")
     return (
       <Alert severity="success" onClose={onCloseSnackBar}>
         Your message was sent! Thank you!
@@ -18,7 +17,6 @@ export const SnackbarAlert = ({
   };
 
   const error = () => {
-    console.log("error")
     return (
       <Alert severity="warning" onClose={onCloseSnackBar}>
         Request error! Please try again.

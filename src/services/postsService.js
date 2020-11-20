@@ -10,26 +10,27 @@ const settings = {
   },
 };
 
-export const getPostById = (paramId) => {
-  return fetch(`${BLOG_HOST}/api/posts/${paramId}`, settings).then((response) =>
-    response.json()
-  );
+export const getPostById = async (paramId) => {
+  const response = await fetch(`${BLOG_HOST}/api/posts/${paramId}`, settings);
+  return response.json();
 };
 
 export const getPosts = async () => {
-  let response = await (await fetch(`${BLOG_HOST}/api/posts`, settings)).json();
-  return response;
+  const response = await fetch(`${BLOG_HOST}/api/posts`, settings);
+  return response.json();
 };
 
 export const getAllPosts = async () => {
-  let response = await (
-    await fetch(`${BLOG_HOST}/api/posts`, settings)).json();
+  const response = await getPosts();
   const posts = response.results;
   let next = response.next;
+  
   while (next) {
-    let response = await (await fetch(next, settings)).json();
+    const nextResponse = await fetch(next, settings);
+    let response = nextResponse.json();
     posts.push(response.results);
     next = response.next;
   }
+  
   return posts;
 };

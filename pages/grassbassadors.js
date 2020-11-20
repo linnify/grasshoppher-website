@@ -3,12 +3,11 @@ import {Layout} from "../components/Layout";
 import {IntroGrassbassadors} from "../components/IntoGrassbassadors";
 import {JoinGrassbassadors} from "../components/JoinGrassbassadors";
 
-
 export default class Grassbassadors extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      loaded: false
     };
   }
 
