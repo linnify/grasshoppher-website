@@ -1,6 +1,6 @@
 import React from "react";
 import {SectionTitle} from "./SectionTitle";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 
 
 export const SectionLeftImgRightText = ({ section }) => {

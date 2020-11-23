@@ -1,6 +1,6 @@
 import React from "react";
 import {DownloadButton} from "../DownloadButton";
-import {ButtonRedirect} from "../ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "../ButtonRedirect";
 import "./B2CDownloadSection.module.scss"
 
 export const B2CDownloadSection = () => {

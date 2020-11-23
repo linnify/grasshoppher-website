@@ -1,7 +1,7 @@
 import React from "react";
 import {investor} from "../constants/partnerWithUs";
 import {SectionTitle} from "./SectionTitle";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 
 export const Investor = () => {
   return(

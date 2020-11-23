@@ -1,7 +1,7 @@
 import React from "react";
 import {List} from "./List";
 import {listJoinGrassbassadors} from "../constants/grassbassadors";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 
 export const JoinGrassbassadors = () => {
   return(

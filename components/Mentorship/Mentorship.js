@@ -1,7 +1,7 @@
 import React from "react";
 import {SectionTitle} from "../SectionTitle";
 import {mentorship} from "../../constants/landing";
-import {ButtonRedirect} from "../ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "../ButtonRedirect";
 import "./Mentorship.module.scss";
 
 export const Mentorship = () => {

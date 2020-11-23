@@ -1,5 +1,5 @@
 import React from "react";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 
 export const PressItem = ({ post }) => {
   return(

@@ -1,7 +1,7 @@
 import React from "react";
 import {SectionTitle} from "./SectionTitle";
 import {organizationList, organizations} from "../constants/partnerWithUs";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 import {List} from "./List";
 
 export const Organizations = () => {

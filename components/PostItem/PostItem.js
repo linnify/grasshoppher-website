@@ -2,7 +2,7 @@ import React from "react";
 import {PostDate} from "../PostDate";
 import "./PostItem.module.scss";
 import Link from "next/link";
-import {ButtonRedirect} from "../ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "../ButtonRedirect";
 import {roundReadingTime} from "../../src/helpers/roundReadingTime";
 
 export const PostItem = ({ post }) => {

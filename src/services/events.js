@@ -24,22 +24,25 @@ export const events = [
     image: "/events/ideathon.jpg",
     title: "Ideathon",
     description: "Join the #braveboldboundless ideathon to help tackle questions of gender and racial equality and connection in the workplace during the COVID-19 pandemic.",
-    buttonLink: "/",
+    buttonLink: "/events",
     buttonText: "Registration closed",
+    styleId: "disabled",
   },
   {
     image: "/events/SXSW.jpg",
     title: "SXSW",
     description: "Visit us at SXSW to learn more about GrasshoppHer and be mentored!",
-    buttonLink: "/",
+    buttonLink: "/events",
     buttonText: "Registration closed",
+    styleId: "disabled",
   },
   {
     image: "/events/masterclass.jpg",
     title: "LBS Master Class",
     description: "Join us for our personal development Master Class.",
-    buttonLink: "/",
+    buttonLink: "/events",
     buttonText: "Registration closed",
+    styleId: "disabled",
   },
 
 ];

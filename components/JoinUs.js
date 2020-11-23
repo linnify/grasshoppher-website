@@ -1,7 +1,7 @@
 import React from "react";
 import {List} from "./List";
 import {joinUsList, listIntro, reachCommunity} from "../constants/b2b";
-import {ButtonRedirect} from "./ButtonRedirect/ButtonRedirect";
+import {ButtonRedirect} from "./ButtonRedirect";
 import {ImageAndVerticalText} from "./ImageAndVerticalText";
 
 export const JoinUs = () => {

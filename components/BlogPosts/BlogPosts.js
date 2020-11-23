@@ -7,6 +7,7 @@ export const BlogPosts = ({ posts }) => {
 
   useEffect(() => {
     resizeAllGridItems();
+    window.onload = resizeAllGridItems;
     window.addEventListener("resize", resizeAllGridItems);
     return () => {
       window.removeEventListener("resize", resizeAllGridItems);
