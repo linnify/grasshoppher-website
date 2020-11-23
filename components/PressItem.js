@@ -8,7 +8,9 @@ export const PressItem = ({ post }) => {
       <div className={"item--title"} id={post.id}>{post.title}</div>
       <div className={"item--author"}>{post.author}</div>
       <div className={"item--description"}>{post.description}</div>
-      <ButtonRedirect text={post.buttonText} href={post.buttonLink}/>
+      <div style={{display: `${post.buttonText ? "initial" : "none"} `}}>
+        <ButtonRedirect text={post.buttonText} href={post.buttonLink}/>
+      </div>
     </div>
   );
 }

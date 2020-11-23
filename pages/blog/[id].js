@@ -17,7 +17,7 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { blockContent, title, publishDate, author, image, summary } = this.props.data;
+    const { blockContent, title, publishDate, author, image, summary, readTime } = this.props.data;
     const imageSource = image
       ? `${this.props.data.image.file}`
       : "/landing/download-image.png";
@@ -37,7 +37,7 @@ export default class Article extends React.Component {
                 <div style={{display: "flex", color: "#787D8E"}}>
                   <div>{author.name}</div>
                   <div style={{padding: "0 5px"}}>|</div>
-                  <div>3 min. read</div>
+                  <div>{readTime} min. read</div>
                 </div>
               </div>
               <div className={"col-xs-12 col-md-5 col-xl-6"} style={{ textAlign: "center"}}>

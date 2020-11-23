@@ -54,7 +54,7 @@ export default class Contact extends React.Component {
       <Layout title={"Contact GrasshoppHer"}>
         {!this.state.loadingPage && <div>Loader</div>}
         <div className={"container"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
-          <div className={"page-title"}>Contact Grasshoppher</div>
+          <div className={"page-title"}>Contact GrasshoppHer</div>
           <div className={"row middle-xs between-md row-revert-mobile contact--row"}>
             <div className={"col-xs-12 col-md-6 col-xl-5"} style={{ width: "100%"}}>
               <ContactForm

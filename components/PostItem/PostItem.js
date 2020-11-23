@@ -24,7 +24,7 @@ export const PostItem = ({ post }) => {
           <div className={"post--source-info"}>
             <div>{post.author.name}</div>
             <div className={"post--source-info-delimiter"}>|</div>
-            <div>3 min. read</div>
+            <div>{post.readTime} min. read</div>
           </div>
         </div>
       </div>

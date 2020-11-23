@@ -25,7 +25,7 @@ export const JoinGrassbassadors = () => {
         <List list={listJoinGrassbassadors}/>
         <div className={"text-block"} style={{ display: "inline-block"}}>Ready to leap?</div>
         <div style={{display: "inline-block", marginLeft: "30px"}}>
-          <ButtonRedirect text={"Apply"} href={"/"}/>
+          <ButtonRedirect text={"Apply"} href={"https://forms.gle/tJoj8DYXcTYSvH8Q7"}/>
         </div>
       </div>
     </div>

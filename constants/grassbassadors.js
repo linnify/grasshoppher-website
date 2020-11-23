@@ -23,11 +23,11 @@ export const listJoinGrassbassadors = [
     boldText: [""],
   },
   {
-    itemText: "Kudos for your resume",
+    itemText: "Add kudos for your resume",
     boldText: [""],
   },
   {
-    itemText: "Networking opportunities",
+    itemText: "Network with other Grassbassadors, male allies and GrasshoppHer’s community",
     boldText: [""],
   },
   {
@@ -35,7 +35,7 @@ export const listJoinGrassbassadors = [
     boldText: [""],
   },
   {
-    itemText: "Connect with male allies who support GrassshoppHer’s mission",
+    itemText: "Get merch",
     boldText: [""],
   },
   {

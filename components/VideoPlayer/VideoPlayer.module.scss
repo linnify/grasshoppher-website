@@ -13,6 +13,7 @@
 .video#individual .react-player__preview {
   background-image: url("/landing/hero-individual.jpg")!important;
   background-size: cover;
+  background-position: top center!important;
 }
 
 @media (min-width: 768px) {

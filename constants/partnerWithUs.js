@@ -20,8 +20,8 @@ export const organizations = {
   title: "Organizations",
   description: "If you are part of a women’s community or diversity organization and are looking to increase your connectivity and mentorship network, we can help!",
   boldText: [""],
-  buttonText: "Read more",
-  url:"/",
+  buttonText: "Reach out",
+  url:"https://forms.gle/ppU2EMdMxR5go8SD9",
   listDescription: "GrasshoppHer will:",
 }
 
@@ -46,16 +46,16 @@ export const bookUs = {
   description: "GrasshoppHers love a good party. Book us to help your webinar, podcast, panel, event, training or workshop take flight.",
   boldText: [""],
   buttonText: "Reach out",
-  url:"/",
+  url:"https://forms.gle/ppU2EMdMxR5go8SD9",
   imgSrc: "/partner/book-us.png",
 }
 
 export const investor = {
   id: "investor",
   verticalText: "be an investor",
-  description: "GrasshoppHer is more than an investment. It’s about being part of a movement to change the future of work. If see a world where women are leading and contributing to the financial futures of their communities, workplaces and beyond, partner with us in our mission to make that happen one mentorship at a time.",
+  description: "GrasshoppHer is more than an investment. It’s about being part of a movement to change the future of work. If you see a world where women are leading and contributing to the financial futures of their communities, workplaces and beyond, partner with us in our mission to make that happen one mentorship at a time.",
   boldText: [""],
   buttonText: "Reach out",
-  url:"/",
+  url:"https://forms.gle/ppU2EMdMxR5go8SD9",
   imgSrc: "/partner/investor.jpg",
 }

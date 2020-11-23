@@ -1,5 +1,7 @@
 .item {
   padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
 
   &--image {
     width: 100%;
@@ -23,11 +25,16 @@
     font-size: 18px;
     padding-bottom: 25px;
   }
+
 }
 
 @media only screen and  (min-width: 768px) {
   .item {
     padding-bottom: 150px;
+
+    &:last-child {
+      margin-left: 4%;
+    }
   }
 }
 

@@ -3,7 +3,7 @@ export const mentorship = {
   description: "GrasshoppHer brings forward-thinking women together to {0} By challenging the antiquated silos of mentorship programs, and providing better access to a community of mentors, GrasshoppHer is disrupting the status quo and {1} Together.",
   boldText: ["inspire, coach and give each other a leg up.","enabling girls and women alike to achieve more."],
   buttonText: "Read more",
-  url:"/",
+  url:"/story",
 };
 
 export const limits = {

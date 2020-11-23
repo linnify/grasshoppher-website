@@ -11,7 +11,7 @@ export const listIntro = "GrasshoppHer can help you:"
 export const reachCommunity = {
   text: "Do you want GrasshoppHer to further connect your community?",
   buttonText: "Reach out",
-  url: "/"
+  url: "https://forms.gle/ppU2EMdMxR5go8SD9"
 }
 
 export const joinUsList = [
