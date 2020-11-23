@@ -3,6 +3,7 @@ import {PostDate} from "../PostDate";
 import "./PostItem.module.scss";
 import Link from "next/link";
 import {ButtonRedirect} from "../ButtonRedirect/ButtonRedirect";
+import {roundReadingTime} from "../../src/helpers/roundReadingTime";
 
 export const PostItem = ({ post }) => {
 
@@ -24,7 +25,7 @@ export const PostItem = ({ post }) => {
           <div className={"post--source-info"}>
             <div>{post.author.name}</div>
             <div className={"post--source-info-delimiter"}>|</div>
-            <div>{post.readTime} min. read</div>
+            <div>{roundReadingTime(post.readTime)}</div>
           </div>
         </div>
       </div>

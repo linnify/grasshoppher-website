@@ -14,7 +14,7 @@ export const Footer = () => {
 
   const displayMedia = socialMedia.map((media, index) => {
     return (
-      <a href={media.link} className={"footer__media"} key={index}>
+      <a href={media.link} className={"footer__media"} key={index} target={"_blank"}>
         <img
           src={`${media.icon}`}
           onMouseEnter={e => (e.currentTarget.src = `${media.icon_hover}`)}
@@ -36,7 +36,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className={"footer__copyright"}>
-          <a href={"https://linnify.com"}>
+          <a href={"https://linnify.com"} target={"_blank"}>
             <img
               src={"/linnify-logo-gray.svg"}
               onMouseEnter={e => (e.currentTarget.src = ("/linnify-logo.svg"))}
@@ -44,7 +44,7 @@ export const Footer = () => {
               alt={"Linnify logo"}
             />
           </a>
-          Copyright © 2020 <a href={"https://linnify.com"}>Linnify. </a> All
+          Copyright © 2020 <a href={"https://linnify.com"} target={"_blank"}>Linnify. </a> All
           rights reserved.
         </div>
       </div>

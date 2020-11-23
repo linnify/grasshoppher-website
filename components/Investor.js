@@ -12,13 +12,13 @@ export const Investor = () => {
         <div className={"investor--description hide-xs show-lg"}>
           <div className={"investor--description-container"}>
             <SectionTitle content={investor}/>
-            <ButtonRedirect text={investor.buttonText} href={investor.url}/>
+            <ButtonRedirect text={investor.buttonText} href={investor.url} target={true}/>
           </div>
         </div>
       </div>
       <div className={"investor--description-mobile"}>
         <SectionTitle content={investor}/>
-        <ButtonRedirect text={investor.buttonText} href={investor.url}/>
+        <ButtonRedirect text={investor.buttonText} href={investor.url} target={true}/>
       </div>
     </div>
   );

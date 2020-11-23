@@ -12,7 +12,7 @@ export const SectionLeftImgRightText = ({ section }) => {
         </div>
         <div className={"col-xs-12 col-md-6 col-xl-5 padding-top-bottom-50"} style={{ zIndex: "15"}}>
           <SectionTitle content={section} id={section.id}/>
-          <ButtonRedirect text={section.buttonText} href={section.url}/>
+          <ButtonRedirect text={section.buttonText} href={section.url} target={section.target}/>
         </div>
       </div>
     </div>

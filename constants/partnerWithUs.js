@@ -14,6 +14,7 @@ export const allies = {
   buttonText: "Read more",
   url:"/grassbassadors",
   imgSrc: "/partner/grassbassadors.png",
+  target: false,
 }
 
 export const organizations = {
@@ -48,6 +49,7 @@ export const bookUs = {
   buttonText: "Reach out",
   url:"https://forms.gle/ppU2EMdMxR5go8SD9",
   imgSrc: "/partner/book-us.png",
+  target: true,
 }
 
 export const investor = {

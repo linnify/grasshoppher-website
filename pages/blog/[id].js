@@ -3,6 +3,7 @@ import { getPostById, getAllPosts} from "../../src/services/postsService";
 import {Layout} from "../../components/Layout";
 import {PostContent} from "../../components/PostContent";
 import {PostDate} from "../../components/PostDate";
+import {roundReadingTime} from "../../src/helpers/roundReadingTime";
 
 export default class Article extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ export default class Article extends React.Component {
                 <div style={{display: "flex", color: "#787D8E"}}>
                   <div>{author.name}</div>
                   <div style={{padding: "0 5px"}}>|</div>
-                  <div>{readTime} min. read</div>
+                  <div>{roundReadingTime(readTime)}</div>
                 </div>
               </div>
               <div className={"col-xs-12 col-md-5 col-xl-6"} style={{ textAlign: "center"}}>

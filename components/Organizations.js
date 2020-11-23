@@ -13,7 +13,7 @@ export const Organizations = () => {
           <div className={"text-block"} style={{paddingTop: "0"}}>{organizations.listDescription}</div>
           <List list={organizationList}/>
           <div style={{paddingTop: "15px"}}>
-            <ButtonRedirect text={organizations.buttonText} href={organizations.url}/>
+            <ButtonRedirect text={organizations.buttonText} href={organizations.url} target={true}/>
           </div>
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-6"}>

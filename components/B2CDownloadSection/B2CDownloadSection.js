@@ -13,7 +13,7 @@ export const B2CDownloadSection = () => {
           <div className={"email-for-android"}>If you have an Android, email us at <b>hello@grasshoppher.com</b></div>
           <div className={"newsletter-container"}>
             <div className={"newsletter-text"}>Join the newsletter</div>
-            <ButtonRedirect text={"Apply now"} href={"https://forms.gle/oqW8oVtrfxGj6avU7"}/>
+            <ButtonRedirect text={"Apply now"} href={"https://forms.gle/oqW8oVtrfxGj6avU7"} target={true}/>
           </div>
         </div>
         <div className={"col-xs-12 col-md-7 col-xl-6"}>
