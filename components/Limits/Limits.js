@@ -3,7 +3,7 @@ import {SectionTitle} from "../SectionTitle";
 import {limits} from "../../constants/landing";
 import "./Limits.module.scss"
 import {handleOffset} from "../../src/helpers/handleOffset";
-import {ThreeCircles} from "../ThreeCircles";
+import {PageCircles} from "../PageCircles";
 
 export const Limits = () => {
 
@@ -11,7 +11,7 @@ export const Limits = () => {
 
   return (
     <div className={"container"} style={{position: "relative"}}>
-      <ThreeCircles classes={"circle-base circle-limits"} translateOffset={offset}/>
+      <PageCircles classes={"circle-base circle-limits"} translateOffset={offset}/>
       <div style={{position: "relative"}}>
         <div className={"limits__container"}>
           <img

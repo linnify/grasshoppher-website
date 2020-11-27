@@ -3,7 +3,7 @@ import {investor} from "../constants/partnerWithUs";
 import {SectionTitle} from "./SectionTitle";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const Investor = () => {
 
@@ -12,7 +12,7 @@ export const Investor = () => {
   return(
     <div className={"container"}>
       <div className={"circle"}>
-        <ThreeCircles classes={"circle-base circle-top-right circle-investor"} translateOffset={offset}/>
+        <PageCircles classes={"circle-base circle-top-right circle-investor"} translateOffset={offset}/>
         <div style={{position: "relative"}}>
           <div className={"relativeContainer padding-top-bottom-100"} style={{overflowX: "hidden"}}>
             <div className={"relativeContainer--text"} id={investor.id}>{investor.verticalText}</div>

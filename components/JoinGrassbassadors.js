@@ -3,7 +3,7 @@ import {List} from "./List";
 import {listJoinGrassbassadors} from "../constants/grassbassadors";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const JoinGrassbassadors = () => {
 
@@ -12,7 +12,7 @@ export const JoinGrassbassadors = () => {
   return(
     <div className={"container"} id={"grassbassadors"} style={{ paddingBottom: "100px"}}>
       <div className={"circle"}>
-        <ThreeCircles classes={"circle-base circle-limits"} translateOffset={offset}/>
+        <PageCircles classes={"circle-base circle-limits"} translateOffset={offset}/>
         <div style={{position: "relative"}}>
           <div className={"relativeContainer"} style={{overflowX: "hidden"}}>
             <div className={"relativeContainer--text"} id={"grassbassadors"}>Join us</div>

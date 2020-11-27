@@ -1,9 +1,9 @@
 import React from "react";
-import FadeInSection from "./FadeInSection/FadeInSection";
+import FadeInScroll from "./FadeInScroll/FadeInScroll";
 
 export const TextStory = ({ content }) => {
   const displayStory = content.map((item, index) => {
-    return <FadeInSection><div key={index} style={{ paddingTop: "15px" }}>{item}</div></FadeInSection>
+    return <FadeInScroll><div key={index} style={{ paddingTop: "15px" }}>{item}</div></FadeInScroll>
   })
 
   return(displayStory);

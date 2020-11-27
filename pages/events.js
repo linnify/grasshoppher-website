@@ -1,9 +1,9 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {events} from "../src/services/events";
 import {PageTitle} from "../components/PageTitle";
 import Page from "../components/Page";
-import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import FadeIn from "../components/FadeIn/FadeIn";
 import {EventsPosts} from "../components/EventsPosts";
 import {Loader} from "../components/Loader/Loader";
 
@@ -30,9 +30,9 @@ export default class Events extends React.Component {
       >
         <Layout title={"Happenings"}>
           {!this.state.loaded && <Loader/>}
-          <FadeInIntro>
+          <FadeIn>
             <PageTitle content={"Happenings"} id={"general"}/>
-          </FadeInIntro>
+          </FadeIn>
           <EventsPosts events={this.state.posts}/>
         </Layout>
       </Page>

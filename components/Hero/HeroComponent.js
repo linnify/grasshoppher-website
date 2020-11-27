@@ -1,35 +1,35 @@
 import React from "react";
 import Link from "next/link";
-import FadeInIntro from "../FadeInIntro/FadeInIntro";
-import FadeInSection from "../FadeInSection/FadeInSection";
+import FadeIn from "../FadeIn/FadeIn";
+import FadeInScroll from "../FadeInScroll/FadeInScroll";
 
 export const HeroComponent = ({product}) => {
 
   const displayDescription = product.description.map((text,index) =>{
-    return(<div key={index}><FadeInSection>{text}</FadeInSection></div>);
+    return(<div key={index}><FadeInScroll>{text}</FadeInScroll></div>);
   })
 
   return(
     <div className={"hero--component"}>
       <div className={"hero__overlay"}>
-        <FadeInIntro threshold={0}>
+        <FadeIn threshold={0}>
           <img src={product.background} className={"hero--img"}/>
-        </FadeInIntro>
+        </FadeIn>
         <div className={"hero__context"}>
           <div className={"hero__description show-xs hide-lg"}>
-            <FadeInSection>
+            <FadeInScroll>
               {displayDescription}
-            </FadeInSection>
+            </FadeInScroll>
           </div>
-          <FadeInSection>
+          <FadeInScroll>
             <Link href={product.pageLink}>
               <div className={`hero--button ${product.class}`}>{product.buttonText}</div>
             </Link>
-          </FadeInSection>
+          </FadeInScroll>
           <div className={"hero__description hide-xs show-lg"}>
-            <FadeInSection>
+            <FadeInScroll>
               {displayDescription}
-            </FadeInSection>
+            </FadeInScroll>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import ContactForm from "../components/ContactForm/ContactForm";
 import {SnackbarAlert} from "../components/SnackbarAlert";
 import {PageTitle} from "../components/PageTitle";
 import {ContactImage} from "../components/ContactImage";
-import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
 
 
@@ -58,7 +58,7 @@ export default class Contact extends React.Component {
     return (
       <Layout title={"Contact GrasshoppHer"}>
         {!this.state.loadingPage && <Loader/>}
-        <FadeInIntro>
+        <FadeIn>
           <PageTitle content={"Contact GrasshoppHer"} id={"general"}/>
           <div className={"container row middle-xs between-md row-revert-mobile contact--row"}>
             <div className={"col-xs-12 col-md-6 col-xl-5"} style={{ width: "100%"}}>
@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
             </div>
             <ContactImage/>
           </div>
-        </FadeInIntro>
+        </FadeIn>
         <SnackbarAlert
           snackBarOpened={this.state.snackBarOpened}
           validation={this.state.validation}

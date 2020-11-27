@@ -1,6 +1,6 @@
 import React from "react";
 import { getPostById, getAllPosts} from "../../src/services/postsService";
-import {Layout} from "../../components/Layout";
+import Layout from "../../components/Layout";
 import {PostContent} from "../../components/PostContent";
 import {PostDate} from "../../components/PostDate";
 import {roundReadingTime} from "../../src/helpers/roundReadingTime";

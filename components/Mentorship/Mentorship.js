@@ -4,7 +4,7 @@ import {mentorship} from "../../constants/landing";
 import {ButtonRedirect} from "../ButtonRedirect";
 import "./Mentorship.module.scss";
 import {handleOffset} from "../../src/helpers/handleOffset";
-import {ThreeCircles} from "../ThreeCircles";
+import {PageCircles} from "../PageCircles";
 
 export const Mentorship = () => {
 
@@ -27,7 +27,7 @@ export const Mentorship = () => {
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-6"} >
           <div className={"circle"}>
-            <ThreeCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
+            <PageCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
             <div style={{position: "relative"}}>
               <img src={"/landing/mentorship.png"} className={"image mentorship--img"}/>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ThreeCircles = ({ classes, translateOffset  }) => {
+export const PageCircles = ({ classes, translateOffset  }) => {
   return (
     <div className={classes}  style={{ transform: `translateY(-${translateOffset}px)` }}>
       <span></span>

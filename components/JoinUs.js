@@ -4,7 +4,7 @@ import {joinUsList, listIntro, reachCommunity} from "../constants/b2b";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {ImageAndVerticalText} from "./ImageAndVerticalText";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const JoinUs = () => {
 
@@ -19,7 +19,7 @@ export const JoinUs = () => {
               <div style={{position: "relative", zIndex: "20"}}>
                 <ImageAndVerticalText text={"join us"} imgSrc={"/b2b/join-us.png"}/>
               </div>
-              <ThreeCircles classes={"circle-base circle-join"} translateOffset={offset}/>
+              <PageCircles classes={"circle-base circle-join"} translateOffset={offset}/>
             </div>
           </div>
           <div className={"col-xs-12 col-md-6 col-xl-5"}>

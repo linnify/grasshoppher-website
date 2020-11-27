@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {informationList, notificationList} from "../constants/copyright";
 import {UnorderedList} from "../components/UnorderedList";
 import {PageTitle} from "../components/PageTitle";

@@ -2,7 +2,7 @@ import React from "react";
 import {List} from "./List";
 import {listGrassbassadors} from "../constants/grassbassadors";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const IntroGrassbassadors = () => {
 
@@ -27,7 +27,7 @@ export const IntroGrassbassadors = () => {
           </div>
           <div className={"col-xs-12 col-lg-6 col-xl-6"}>
             <div className={"circle"}>
-              <ThreeCircles classes={"circle-base circle-top-right circle-story-photo"} translateOffset={offset}/>
+              <PageCircles classes={"circle-base circle-top-right circle-story-photo"} translateOffset={offset}/>
               <div style={{position: "relative"}}>
                 <img src={"/partner/grassbassadors.png"} className={"image grassbassadors--image"}/>
               </div>

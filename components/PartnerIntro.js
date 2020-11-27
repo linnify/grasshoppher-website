@@ -2,7 +2,7 @@ import React from "react";
 import {SectionTitle} from "./SectionTitle";
 import {partner} from "../constants/partnerWithUs";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const PartnerIntro = () => {
 
@@ -20,7 +20,7 @@ export const PartnerIntro = () => {
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-5"}>
           <div className={"circle"}>
-            <ThreeCircles classes={"circle-base circle-top-right circle-story-photo"} translateOffset={offset}/>
+            <PageCircles classes={"circle-base circle-top-right circle-story-photo"} translateOffset={offset}/>
             <div style={{position: "relative"}}>
               <img src={"/partner/intro.png"} className={"image"}/>
             </div>

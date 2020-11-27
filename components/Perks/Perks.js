@@ -2,7 +2,7 @@ import React from "react";
 import {firstPerk, perks} from "../../constants/b2c";
 import "./Perks.module.scss";
 import {handleOffset} from "../../src/helpers/handleOffset";
-import {ThreeCircles} from "../ThreeCircles";
+import {PageCircles} from "../PageCircles";
 
 export const Perks = () => {
 
@@ -21,7 +21,7 @@ export const Perks = () => {
   return (
     <div className={"container perks"} >
       <div className={"circle"}>
-        <ThreeCircles classes={"circle-base circle-top-right circle-perks"} translateOffset={offset}/>
+        <PageCircles classes={"circle-base circle-top-right circle-perks"} translateOffset={offset}/>
         <div className={"row between-sm"} style={{position: "relative"}}>
           <div className={"col-xs-12 col-sm-6 col-lg-3 perks__col"}>
             <div className={"perks__first"}>

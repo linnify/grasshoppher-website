@@ -1,10 +1,10 @@
 import React from "react";
-import {Layout} from "../../components/Layout";
+import Layout from "../../components/Layout";
 import {getPosts} from "../../src/services/postsService";
 import {BlogPosts} from "../../components/BlogPosts/BlogPosts";
 import {PageTitle} from "../../components/PageTitle";
 import Page from "../../components/Page";
-import FadeInIntro from "../../components/FadeInIntro/FadeInIntro";
+import FadeIn from "../../components/FadeIn/FadeIn";
 import {Loader} from "../../components/Loader/Loader";
 
 export default class Blog extends React.Component {
@@ -29,9 +29,9 @@ export default class Blog extends React.Component {
       >
         <Layout title={"Blog"}>
           {!this.state.loaded && <Loader/>}
-          <FadeInIntro>
+          <FadeIn>
             <PageTitle content={"Blog"} id={"general"}/>
-          </FadeInIntro>
+          </FadeIn>
           <div className={"container"}>
             <BlogPosts posts={this.state.posts}/>
           </div>

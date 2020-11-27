@@ -2,8 +2,8 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "./VideoPlayer.module.scss"
 import {handleOffset} from "../../src/helpers/handleOffset";
-import {ThreeCircles} from "../ThreeCircles";
-import FadeInIntro from "../FadeInIntro/FadeInIntro";
+import {PageCircles} from "../PageCircles";
+import FadeIn from "../FadeIn/FadeIn";
 
 export const VideoPlayer = ({ url, id }) => {
 
@@ -12,9 +12,9 @@ export const VideoPlayer = ({ url, id }) => {
 
   return (
     <div className={"container"} style={{paddingTop: "70px"}}>
-      <FadeInIntro>
+      <FadeIn>
         <div className={"circle"}>
-          <ThreeCircles classes={"circle-base circle-video-left"} translateOffset={offsetLeft}/>
+          <PageCircles classes={"circle-base circle-video-left"} translateOffset={offsetLeft}/>
           <div style={{position: "relative", zIndex: "20"}}>
             <div className={"video"} id={id}>
               <ReactPlayer
@@ -29,9 +29,9 @@ export const VideoPlayer = ({ url, id }) => {
               />
             </div>
           </div>
-          <ThreeCircles classes={"circle-base circle-video-right"}  translateOffset={offsetRight}/>
+          <PageCircles classes={"circle-base circle-video-right"} translateOffset={offsetRight}/>
         </div>
-      </FadeInIntro>
+      </FadeIn>
     </div>
   );
 }

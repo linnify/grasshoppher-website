@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {StoryIntro} from "../components/StoryIntro";
 import Page from "../components/Page";
 import {Loader} from "../components/Loader/Loader";

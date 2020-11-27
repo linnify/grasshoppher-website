@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {VideoPlayer} from "../components/VideoPlayer/VideoPlayer";
 import {PageTitle} from "../components/PageTitle";
 import {b2c} from "../constants/b2c";
@@ -8,7 +8,7 @@ import {Perks} from "../components/Perks/Perks";
 import {b2b} from "../constants/b2b";
 import {TextBoldKeyword} from "../components/TextBoldKeyword";
 import Page from "../components/Page";
-import FadeInSection from "../components/FadeInSection/FadeInSection";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import {Loader} from "../components/Loader/Loader";
 
 
@@ -38,20 +38,20 @@ export default class BusinessToClient extends React.Component {
         <Layout title={"Join GrasshoppHer"}>
           {!this.state.loaded && <Loader/>}
           <VideoPlayer url={b2c.videoLink} id={b2c.id}/>
-          <FadeInSection>
+          <FadeInScroll>
             <PageTitle content={b2c.title}/>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <div className={"container"}>
               <TextBoldKeyword text={b2b}/>
             </div>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <Perks/>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <B2CDownloadSection/>
-          </FadeInSection>
+          </FadeInScroll>
         </Layout>
       </Page>
     );

@@ -4,7 +4,7 @@ import {SectionTitle} from "../SectionTitle";
 import "./LandingDownload.module.scss"
 import {DownloadButton} from "../DownloadButton";
 import {handleOffset} from "../../src/helpers/handleOffset";
-import {ThreeCircles} from "../ThreeCircles";
+import {PageCircles} from "../PageCircles";
 
 export const LandingDownload = () => {
 
@@ -21,7 +21,7 @@ export const LandingDownload = () => {
         </div>
         <div className={"col-xs-12 col-md-7 col-xl-6"}>
           <div className={"circle"}>
-            <ThreeCircles classes={"circle-base circle-download"} translateOffset={offset}/>
+            <PageCircles classes={"circle-base circle-download"} translateOffset={offset}/>
             <div style={{position: "relative"}}>
               <img src={"/landing/download-image.png"} className={"image download--img"} />
             </div>

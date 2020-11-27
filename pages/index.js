@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {Hero} from "../components/Hero/Hero";
 import {Values} from "../components/Values/Values";
 import {Mentorship} from "../components/Mentorship/Mentorship";
@@ -9,8 +9,8 @@ import {LandingDownload} from "../components/LandingDownload/LandingDownload";
 import {InstagramSection} from "../components/InstagramSection";
 import Instagram from "instagram-web-api";
 import {INSTAGRAM_USERNAME, INSTAGRAM_ID} from "../constants/deploy"
-import FadeInSection from "../components/FadeInSection/FadeInSection";
-import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
+import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
 
 export default class Home extends React.Component {
@@ -30,25 +30,25 @@ export default class Home extends React.Component {
     return (
       <Layout title={"GrasshoppHer"}>
         {!this.state.loaded && <Loader/>}
-        <FadeInIntro>
+        <FadeIn>
           <Hero/>
-        </FadeInIntro>
+        </FadeIn>
         <Values/>
-        <FadeInSection threshold={0.25}>
+        <FadeInScroll threshold={0.25}>
           <Mentorship/>
-        </FadeInSection>
-        <FadeInSection>
+        </FadeInScroll>
+        <FadeInScroll>
           <Limits/>
-        </FadeInSection>
-        <FadeInSection>
+        </FadeInScroll>
+        <FadeInScroll>
           <MobileApp/>
-        </FadeInSection>
-        <FadeInSection>
+        </FadeInScroll>
+        <FadeInScroll>
           <LandingDownload/>
-        </FadeInSection>
-        <FadeInSection threshold={0.25}>
+        </FadeInScroll>
+        <FadeInScroll threshold={0.25}>
           <InstagramSection feed={this.state.posts}/>
-        </FadeInSection>
+        </FadeInScroll>
       </Layout>
     );
   }

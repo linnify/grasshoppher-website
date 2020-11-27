@@ -1,10 +1,10 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {IntroGrassbassadors} from "../components/IntoGrassbassadors";
 import {JoinGrassbassadors} from "../components/JoinGrassbassadors";
 import Page from "../components/Page";
-import FadeInSection from "../components/FadeInSection/FadeInSection";
-import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
+import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
 
 export default class Grassbassadors extends React.Component {
@@ -32,12 +32,12 @@ export default class Grassbassadors extends React.Component {
       >
         <Layout title={"Grassbassadors"}>
           {!this.state.loaded && <Loader/>}
-          <FadeInIntro>
+          <FadeIn>
             <IntroGrassbassadors/>
-          </FadeInIntro>
-          <FadeInSection threshold={0.1}>
+          </FadeIn>
+          <FadeInScroll threshold={0.1}>
             <JoinGrassbassadors/>
-          </FadeInSection>
+          </FadeInScroll>
         </Layout>
       </Page>
     );

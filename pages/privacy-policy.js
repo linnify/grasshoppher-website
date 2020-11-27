@@ -1,9 +1,8 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {OrderedList} from "../components/OrderedList";
 import {policy} from "../constants/privacyPolicy";
 import {PageTitle} from "../components/PageTitle";
-
 
 export default class PrivacyPolicy extends React.Component {
   render() {

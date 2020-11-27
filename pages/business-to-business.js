@@ -1,12 +1,12 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {VideoPlayer} from "../components/VideoPlayer/VideoPlayer";
 import {PageTitle} from "../components/PageTitle";
 import {b2b} from "../constants/b2b";
 import {JoinUs} from "../components/JoinUs";
 import {TextBoldKeyword} from "../components/TextBoldKeyword";
 import Page from "../components/Page";
-import FadeInSection from "../components/FadeInSection/FadeInSection";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import {Loader} from "../components/Loader/Loader";
 
 export default class BusinessToBusiness extends React.Component {
@@ -35,17 +35,17 @@ export default class BusinessToBusiness extends React.Component {
         <Layout title={"Join GrasshoppHer Biz"}>
           {!this.state.loaded && <Loader/>}
           <VideoPlayer url={b2b.videoLink} id={b2b.id}/>
-          <FadeInSection>
+          <FadeInScroll>
             <PageTitle content={b2b.title}/>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <div className={"container"}>
               <TextBoldKeyword text={b2b}/>
             </div>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <JoinUs />
-          </FadeInSection>
+          </FadeInScroll>
         </Layout>
       </Page>
     );

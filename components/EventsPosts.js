@@ -1,7 +1,7 @@
 import React from "react";
 import {EventItem} from "./EventItem";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const EventsPosts = ({ events }) => {
 
@@ -16,14 +16,14 @@ export const EventsPosts = ({ events }) => {
   return(
     <div className={"container"}>
       <div className={"circle"}>
-        <ThreeCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
+        <PageCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
         <div style={{position: "relative"}}>
           <div className={"row around-md padding-top-bottom-100"} style={{ zIndex:"20"}}>
             {onDisplayEvents()}
           </div>
         </div>
         <div className={"circle hide-xs show-md"}>
-          <ThreeCircles classes={"circle-base circle-top-right circle-events"} translateOffset={offset}/>
+          <PageCircles classes={"circle-base circle-top-right circle-events"} translateOffset={offset}/>
         </div>
       </div>
     </div>

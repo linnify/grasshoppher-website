@@ -2,7 +2,7 @@ import React from "react";
 import {SectionTitle} from "./SectionTitle";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const SectionLeftImgRightText = ({ section }) => {
 
@@ -13,7 +13,7 @@ export const SectionLeftImgRightText = ({ section }) => {
       <div className={"row middle-xs between-md padding-top-bottom-50"}>
         <div className={"col-xs-12 col-md-5 col-xl-6"} style={{ zIndex: "15"}}>
           <div className={"circle"}>
-            <ThreeCircles classes={`circle-base circle-download ${section.id}`} translateOffset={offset}/>
+            <PageCircles classes={`circle-base circle-download ${section.id}`} translateOffset={offset}/>
             <div style={{position: "relative"}}>
               <img src={section.imgSrc} className={"image"}/>
             </div>

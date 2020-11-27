@@ -4,7 +4,7 @@ import {organizationList, organizations} from "../constants/partnerWithUs";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {List} from "./List";
 import {handleOffset} from "../src/helpers/handleOffset";
-import {ThreeCircles} from "./ThreeCircles";
+import {PageCircles} from "./PageCircles";
 
 export const Organizations = () => {
 
@@ -23,7 +23,7 @@ export const Organizations = () => {
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-6"}>
           <div className={"circle"}>
-            <ThreeCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
+            <PageCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
             <div style={{position: "relative"}}>
               <img src={"/partner/organizations.png"} className={"image"}/>
             </div>

@@ -1,13 +1,13 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {Organizations} from "../components/Organizations";
 import {PartnerIntro} from "../components/PartnerIntro";
 import {SectionLeftImgRightText} from "../components/SectionLeftImgRightText";
 import {allies, bookUs} from "../constants/partnerWithUs";
 import {Investor} from "../components/Investor";
 import Page from "../components/Page";
-import FadeInSection from "../components/FadeInSection/FadeInSection";
-import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
+import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
 
 export default class PartnerWithUs extends React.Component {
@@ -35,26 +35,26 @@ export default class PartnerWithUs extends React.Component {
       >
         <Layout title={"Partner with Us"}>
           {!this.state.loaded && <Loader/>}
-          <FadeInIntro>
+          <FadeIn>
             <PartnerIntro/>
-          </FadeInIntro>
-          <FadeInSection>
+          </FadeIn>
+          <FadeInScroll>
             <div style={{ background: "#F5E8E666" }}>
               <SectionLeftImgRightText section={allies}/>
             </div>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <Organizations/>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <div className={"partner-book-us-background"}>
               <SectionLeftImgRightText section={bookUs}/>
               <div id={bookUs.id}/>
             </div>
-          </FadeInSection>
-          <FadeInSection>
+          </FadeInScroll>
+          <FadeInScroll>
             <Investor/>
-          </FadeInSection>
+          </FadeInScroll>
         </Layout>
       </Page>
     );

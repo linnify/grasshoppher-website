@@ -1,5 +1,5 @@
 import React from "react";
-import {Layout} from "../components/Layout";
+import Layout from "../components/Layout";
 import {OrderedList} from "../components/OrderedList";
 import {accountRights, ageRestrictions, application, yourUse, useApplication, youAgree, userLicense, noWarranty, damageLimitations, indemnification, endAgreement } from "../constants/terms";
 import {PageTitle} from "../components/PageTitle";

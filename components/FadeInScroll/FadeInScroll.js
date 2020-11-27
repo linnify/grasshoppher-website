@@ -1,12 +1,12 @@
 import React, {useEffect, useRef} from "react";
-import "./FadeInIntro.module.scss"
+import "./FadeInScroll.module.scss"
 
-export default function FadeInIntro(props) {
+export default function FadeInScroll(props) {
 
   const domRef = useRef();
 
   const options = {
-    threshold: (props.threshold || 0.2) ,
+    threshold: (props.threshold || 0) ,
   };
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function FadeInIntro(props) {
       if(!entrie[0].isIntersecting) {
         return
       }
-      entrie[0].target.classList.toggle("visible");
+      entrie[0].target.classList.toggle("is-visible");
       observer.unobserve(domRef.current)
     }, options);
 
@@ -26,7 +26,7 @@ export default function FadeInIntro(props) {
   return(
     <div
       ref={domRef}
-      className={`fade-in-intro`}
+      className={`fade-in-section`}
     >
       {props.children}
     </div>
