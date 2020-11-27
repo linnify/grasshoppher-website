@@ -35,7 +35,7 @@ export const SnackbarAlert = ({
   return (
     <Snackbar
       open={snackBarOpened}
-      // onClose={onCloseSnackBar}
+      onClose={onCloseSnackBar}
       autoHideDuration={3000}
     >
       {validation ? success() : requestError ? error() : incorrectEmail()}

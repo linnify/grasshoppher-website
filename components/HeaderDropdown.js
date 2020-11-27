@@ -31,8 +31,6 @@ export const HeaderDropdown = () => {
         onClick={handleClick} id={"dropdown-icon-button"} className={`${anchorEl && "active-menu"}`}>
         About <div id={"icon-arrow"}><ExpandMoreIcon/></div>
       </IconButton>
-
-
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -45,8 +43,6 @@ export const HeaderDropdown = () => {
       >
         {displayMenuItems}
       </Menu>
-
-
     </div>
   )
 }

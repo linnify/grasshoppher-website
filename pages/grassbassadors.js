@@ -2,27 +2,44 @@ import React from "react";
 import {Layout} from "../components/Layout";
 import {IntroGrassbassadors} from "../components/IntoGrassbassadors";
 import {JoinGrassbassadors} from "../components/JoinGrassbassadors";
+import Page from "../components/Page";
+import FadeInSection from "../components/FadeInSection/FadeInSection";
+import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import {Loader} from "../components/Loader/Loader";
 
 export default class Grassbassadors extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false
+      loaded: false,
+      pageURL: ""
     };
   }
 
   componentDidMount() {
-    this.setState({loaded: true});
+    this.setState({loaded: true, pageURL: window.location.href});
   }
-
 
   render() {
     return(
-      <Layout title={"Partner with Us"}>
-        {!this.state.loaded && <div>Loader</div>}
-        <IntroGrassbassadors/>
-        <JoinGrassbassadors/>
-      </Layout>
+      <Page
+        title={"Grassbassadors"}
+        description={"Want to make sure you, your peers and your colleagues are represented in the workplace?"}
+        url={this.state.pageURL}
+        images_url={"https://grasshoppher.com/partner/grassbassadors.png"}
+        images_width={327}
+        images_height={327}
+      >
+        <Layout title={"Grassbassadors"}>
+          {!this.state.loaded && <Loader/>}
+          <FadeInIntro>
+            <IntroGrassbassadors/>
+          </FadeInIntro>
+          <FadeInSection threshold={0.1}>
+            <JoinGrassbassadors/>
+          </FadeInSection>
+        </Layout>
+      </Page>
     );
   }
 }

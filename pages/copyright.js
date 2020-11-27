@@ -2,14 +2,15 @@ import React from "react";
 import {Layout} from "../components/Layout";
 import {informationList, notificationList} from "../constants/copyright";
 import {UnorderedList} from "../components/UnorderedList";
+import {PageTitle} from "../components/PageTitle";
 
 
 export default class Copyright extends React.Component {
   render() {
     return(
       <Layout title={"Digital Millennium Copyright Act"}>
-        <div className={"container container-padding legal-text"}>
-          <div className={"page-title"}>Digital Millennium Copyright Act Compliance</div>
+        <PageTitle content={"Digital Millennium Copyright Act Compliance"} id={"general"}/>
+        <div className={"container container-bottom-padding legal-text"}>
           <div className={"legal-text-padding"}>
             <div style={{fontWeight: "bold"}}>DMCA Compliance</div>
             <div>The below contact information is provided exclusively for DMCA notices. Do not send any unrelated inquiries to the contact listed below.</div>

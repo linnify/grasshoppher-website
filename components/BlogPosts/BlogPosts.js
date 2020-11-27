@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {PostItem} from "../PostItem/PostItem";
 import "./BlogPosts.module.scss"
 import {resizeAllGridItems} from "../../src/helpers/resizeGridItem";

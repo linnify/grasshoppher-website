@@ -1,17 +1,16 @@
 import React from "react";
 import {Layout} from "../components/Layout";
-import {UnorderedList} from "../components/UnorderedList";
-import {informationList, notificationList} from "../constants/copyright";
 import {OrderedList} from "../components/OrderedList";
 import {accountRights, ageRestrictions, application, yourUse, useApplication, youAgree, userLicense, noWarranty, damageLimitations, indemnification, endAgreement } from "../constants/terms";
+import {PageTitle} from "../components/PageTitle";
 
 
 export default class Terms extends React.Component {
   render() {
     return (
       <Layout title={"Terms of Use"}>
-        <div className={"container container-padding legal-text"}>
-          <div className={"page-title"}>Terms of Use</div>
+        <PageTitle content={"Terms of Use"} id={"general"}/>
+        <div className={"container container-bottom-padding legal-text"}>
           <div className={"legal-text-padding"}>
             <div style={{fontWeight: "bold"}}>GRASSHOPPHER Terms of Use</div>
             <div>Welcome to GrasshoppHer!  These “Terms of Use” are a legal contract between Grasshoppher, Inc., a Delaware corporation (“GrasshoppHer”, “us”, “we” or “our”) and you (referred to as “you, “your” or “user”), as a user of GrasshoppHer’s beta version of our social networking website and application (together, the “Application”).  Please let us know if you have any questions about this agreement or its terms.</div>

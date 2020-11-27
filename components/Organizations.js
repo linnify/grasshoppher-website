@@ -3,8 +3,13 @@ import {SectionTitle} from "./SectionTitle";
 import {organizationList, organizations} from "../constants/partnerWithUs";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {List} from "./List";
+import {handleOffset} from "../src/helpers/handleOffset";
+import {ThreeCircles} from "./ThreeCircles";
 
 export const Organizations = () => {
+
+  const offset = handleOffset(1000, 0.2)
+
   return(
     <div className={"container"} >
       <div className={"row middle-xs between-md mentorship--row padding-top-bottom-200"}>
@@ -17,7 +22,12 @@ export const Organizations = () => {
           </div>
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-6"}>
-          <img src={"/partner/organizations.png"} className={"image"}/>
+          <div className={"circle"}>
+            <ThreeCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
+            <div style={{position: "relative"}}>
+              <img src={"/partner/organizations.png"} className={"image"}/>
+            </div>
+          </div>
         </div>
       </div>
     </div>

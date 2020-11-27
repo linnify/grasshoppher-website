@@ -2,6 +2,11 @@ import React from "react";
 import {Layout} from "../components/Layout";
 import ContactForm from "../components/ContactForm/ContactForm";
 import {SnackbarAlert} from "../components/SnackbarAlert";
+import {PageTitle} from "../components/PageTitle";
+import {ContactImage} from "../components/ContactImage";
+import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import {Loader} from "../components/Loader/Loader";
+
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -52,10 +57,10 @@ export default class Contact extends React.Component {
 
     return (
       <Layout title={"Contact GrasshoppHer"}>
-        {!this.state.loadingPage && <div>Loader</div>}
-        <div className={"container"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
-          <div className={"page-title"}>Contact GrasshoppHer</div>
-          <div className={"row middle-xs between-md row-revert-mobile contact--row"}>
+        {!this.state.loadingPage && <Loader/>}
+        <FadeInIntro>
+          <PageTitle content={"Contact GrasshoppHer"} id={"general"}/>
+          <div className={"container row middle-xs between-md row-revert-mobile contact--row"}>
             <div className={"col-xs-12 col-md-6 col-xl-5"} style={{ width: "100%"}}>
               <ContactForm
                 ref={this.contactRef}
@@ -64,11 +69,9 @@ export default class Contact extends React.Component {
                 validation={this.validate}
               />
             </div>
-            <div className={"col-xs-12 col-md-5 col-xl-6 contact--col-img"}>
-              <img src={"/contact.png"} className={"image contact--image"}/>
-            </div>
+            <ContactImage/>
           </div>
-        </div>
+        </FadeInIntro>
         <SnackbarAlert
           snackBarOpened={this.state.snackBarOpened}
           validation={this.state.validation}

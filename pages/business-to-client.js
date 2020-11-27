@@ -5,6 +5,11 @@ import {PageTitle} from "../components/PageTitle";
 import {b2c} from "../constants/b2c";
 import {B2CDownloadSection} from "../components/B2CDownloadSection/B2CDownloadSection";
 import {Perks} from "../components/Perks/Perks";
+import {b2b} from "../constants/b2b";
+import {TextBoldKeyword} from "../components/TextBoldKeyword";
+import Page from "../components/Page";
+import FadeInSection from "../components/FadeInSection/FadeInSection";
+import {Loader} from "../components/Loader/Loader";
 
 
 export default class BusinessToClient extends React.Component {
@@ -12,22 +17,43 @@ export default class BusinessToClient extends React.Component {
     super(props);
     this.state = {
       loaded: false,
+      pageURL: ""
     };
   }
 
   componentDidMount() {
-    this.setState({loaded: true});
+    this.setState({loaded: true, pageURL: window.location.href});
   }
 
   render() {
     return (
-      <Layout title={"Join GrasshoppHer"}>
-        {!this.state.loaded && <div>Loader</div>}
-        <VideoPlayer url={b2c.videoLink} id={b2c.id}/>
-        <PageTitle content={b2c}/>
-        <Perks/>
-        <B2CDownloadSection/>
-      </Layout>
+      <Page
+        title={"Join GrasshoppHer"}
+        description={"Women. Mentorship, Fast. Welcome to your community"}
+        url={this.state.pageURL}
+        images_url={"https://grasshoppher.com/landing/hero-individual.jpg"}
+        images_width={327}
+        images_height={322}
+      >
+        <Layout title={"Join GrasshoppHer"}>
+          {!this.state.loaded && <Loader/>}
+          <VideoPlayer url={b2c.videoLink} id={b2c.id}/>
+          <FadeInSection>
+            <PageTitle content={b2c.title}/>
+          </FadeInSection>
+          <FadeInSection>
+            <div className={"container"}>
+              <TextBoldKeyword text={b2b}/>
+            </div>
+          </FadeInSection>
+          <FadeInSection>
+            <Perks/>
+          </FadeInSection>
+          <FadeInSection>
+            <B2CDownloadSection/>
+          </FadeInSection>
+        </Layout>
+      </Page>
     );
   }
 }

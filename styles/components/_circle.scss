@@ -1,0 +1,260 @@
+@import "../abstracts/variables";
+
+.circle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10!important;
+}
+
+.circle-base span {
+  z-index: -10!important;
+  border-radius: $particleSize;
+  position: absolute;
+  background: #F5E8E666;
+
+  &:nth-child(1) {
+    width: $particleSizeBigMobile;
+    height: $particleSizeBigMobile;
+  }
+
+  &:nth-child(2) {
+    width: $particleSizeMiddle;
+    height: $particleSizeMiddle;
+  }
+  &:nth-child(3) {
+    width: $particleSizeSmall;
+    height: $particleSizeSmall;
+  }
+}
+
+.circle-one span {
+  top: 100%;
+  left: -30%;
+}
+
+.circle-page-title span {
+  top: 100%;
+  left: -10%;
+}
+
+.circle-page-title#general span {
+  top: -140px;
+  left: -10%;
+}
+
+.circle-story span {
+  top: -100px;
+  left: -150px;
+}
+
+.circle-instagram span {
+  top: 370px;
+  left: -11%;
+}
+
+.circle-top-right span {
+  &:nth-child(1) {
+    top: 10%;
+    right: 20px;
+  }
+  &:nth-child(2) {
+    top: 250px;
+    right: -40px;
+  }
+  &:nth-child(3) {
+    top: 150px;
+    right: -70px;
+  }
+}
+
+.circle-perks span {
+  &:nth-child(1) {
+    bottom: 0;
+    right: 20px;
+  }
+  &:nth-child(2) {
+    bottom: 0;
+    right: -90px;
+  }
+  &:nth-child(3) {
+    bottom: 0;
+    right: -70px;
+  }
+}
+
+.circle-story-photo span {
+  &:nth-child(1) {
+    top: -120px;
+    right: 40px;
+  }
+  &:nth-child(2) {
+    top: 150px;
+    right: -50px;
+  }
+  &:nth-child(3) {
+    top: 30px;
+    right: -50px;
+  }
+}
+
+.circle-events span {
+  &:nth-child(1) {
+    left: -220px;
+    top: 50px;
+  }
+  &:nth-child(2) {
+    top: 350px;
+    left: 20px;
+  }
+  &:nth-child(3) {
+    top: 350px;
+    left: -90px;
+  }
+}
+
+.circle-investor span {
+  &:nth-child(1) {
+    top: 250px;
+    right: 0px;
+  }
+  &:nth-child(2) {
+    top: 500px;
+    right: -130px;
+  }
+  &:nth-child(3) {
+    top: 400px;
+    right: -100px;
+  }
+}
+
+.circle-limits span {
+  &:nth-child(1) {
+    top: 14px;
+    left: -150px;
+  }
+
+  &:nth-child(2) {
+    top: 300px;
+    left: 60px;
+  }
+  &:nth-child(3) {
+    top: 300px;
+    left: -50px;
+  }
+}
+
+.circle-download span {
+  &:nth-child(1) {
+    bottom: -580px;
+    right: -60px;
+  }
+
+  &:nth-child(2) {
+    bottom: -750px;
+    right: 30px;
+  }
+  &:nth-child(3) {
+    bottom: -650px;
+    right: -30px;
+  }
+}
+
+.allies span {
+  background: #FFFFFF;
+  &:nth-child(2) {
+    bottom: -650px;
+    right: -200px;
+  }
+  &:nth-child(3) {
+    right: -20px;
+  }
+}
+
+.bookUs span {
+  &:nth-child(1) {
+    right: 0;
+    bottom: 0;
+    top: 700px;
+    left: -150px;
+  }
+  &:nth-child(2) {
+    right: 0;
+    bottom: 0;
+    top: 1000px;
+    left: 50px;
+  }
+  &:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    top: 1000px;
+    left: -50px;
+  }
+}
+
+.circle-video-left span {
+  &:nth-child(1) {
+    top: 150px;
+    left: 60px;
+  }
+  &:nth-child(2) {
+    top: 450px;
+    left: 0;
+  }
+  &:nth-child(3) {
+    top: 350px;
+    left: 0;
+  }
+}
+
+.circle-video-right span {
+  &:nth-child(1) {
+    bottom: 280px;
+    right: 100px;
+  }
+  &:nth-child(2) {
+    bottom: 150px;
+    right: 0;
+  }
+  &:nth-child(3) {
+    bottom: 310px;
+    right: 20px;
+  }
+}
+
+.circle-join span {
+  &:nth-child(1) {
+    bottom: -20px;
+    left: -100px;
+  }
+  &:nth-child(2) {
+    bottom: -220px;
+    left: 40px;
+  }
+  &:nth-child(3) {
+    bottom: -100px;
+    left: -30px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .circle-base span {
+    &:nth-child(1) {
+      width: $particleSizeBig;
+      height: $particleSizeBig;
+    }
+  }
+
+  .circle-instagram span {
+    top: 200px;
+    left: -11%;
+  }
+
+  .circle-limits span {
+    &:nth-child(1) {
+      top: 450px;
+    }
+  }
+}
+

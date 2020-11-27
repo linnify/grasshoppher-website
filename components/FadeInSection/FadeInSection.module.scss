@@ -1,0 +1,14 @@
+.fade-in-section {
+  opacity: 0!important;
+  transform: translateY(10rem) translateZ(0)!important;
+  transition: all .5s linear;
+
+}
+
+.fade-in-section.is-visible {
+  transform: translateY(0) translateZ(0)!important;
+  opacity: 1!important;
+}
+
+
+

@@ -1,11 +1,13 @@
 
 .hero {
   margin-top: 60px;
+  display:block;
 
   &--grid{
     display: flex;
     flex-flow: column nowrap;
     margin: 20px 0;
+
   }
 
   &--component {
@@ -128,6 +130,7 @@
 
 @media (min-width: 992px) {
   .hero {
+    max-height: 100vh;
 
     &__overlay:after {
       opacity:0;

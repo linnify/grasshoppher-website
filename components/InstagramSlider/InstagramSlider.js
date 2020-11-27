@@ -4,7 +4,6 @@ import Link from "next/link";
 import Marquee from 'react-marquee-master';
 import "./InstagramSlider.module.scss"
 
-
 export default function InstagramSlider ({ feed }) {
 
   const onDisplayFeed = feed.map(({ node }, i) => {
@@ -32,7 +31,7 @@ export default function InstagramSlider ({ feed }) {
       <div className={"feed--container"}>
         <Marquee
           marqueeItems={onDisplayFeed}
-          height={"600"}
+          height={"700"}
           marqueeContainerClassName={"feed--marquee"}
           direction={"left"}
           delay={"10"}

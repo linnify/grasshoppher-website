@@ -7,6 +7,7 @@ export const heroIndividual = {
     "Women. Mentorship, Fast.",
     "Welcome to your community.",
   ],
+  direction: "left",
 };
 
 export const heroBusiness = {
@@ -18,5 +19,6 @@ export const heroBusiness = {
     "Want to make mentorship a priority in your organization?",
     "Support your community by connecting with ours.",
   ],
+  direction: "right",
 }
 

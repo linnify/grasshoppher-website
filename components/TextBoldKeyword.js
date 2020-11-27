@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export const TextBoldKeyword = ({ text, light }) => {
   const applyBoldStyle = text => {
     let numberOfItemsAdded = 0;

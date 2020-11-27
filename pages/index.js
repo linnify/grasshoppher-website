@@ -7,14 +7,18 @@ import {Limits} from "../components/Limits/Limits";
 import {MobileApp} from "../components/MobileApp/MobileApp";
 import {LandingDownload} from "../components/LandingDownload/LandingDownload";
 import {InstagramSection} from "../components/InstagramSection";
-const Instagram = require('instagram-web-api');
+import Instagram from "instagram-web-api";
 import {INSTAGRAM_USERNAME, INSTAGRAM_ID} from "../constants/deploy"
+import FadeInSection from "../components/FadeInSection/FadeInSection";
+import FadeInIntro from "../components/FadeInIntro/FadeInIntro";
+import {Loader} from "../components/Loader/Loader";
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
+      posts: this.props.posts,
     };
   }
 
@@ -25,25 +29,34 @@ export default class Home extends React.Component {
   render() {
     return (
       <Layout title={"GrasshoppHer"}>
-        {!this.state.loaded && <div>Loader</div>}
-        <Hero/>
+        {!this.state.loaded && <Loader/>}
+        <FadeInIntro>
+          <Hero/>
+        </FadeInIntro>
         <Values/>
-        <Mentorship/>
-        <Limits/>
-        <MobileApp/>
-        <LandingDownload/>
-        <InstagramSection feed={this.props.posts}/>
+        <FadeInSection threshold={0.25}>
+          <Mentorship/>
+        </FadeInSection>
+        <FadeInSection>
+          <Limits/>
+        </FadeInSection>
+        <FadeInSection>
+          <MobileApp/>
+        </FadeInSection>
+        <FadeInSection>
+          <LandingDownload/>
+        </FadeInSection>
+        <FadeInSection threshold={0.25}>
+          <InstagramSection feed={this.state.posts}/>
+        </FadeInSection>
       </Layout>
     );
   }
 }
 
-
 export async function getStaticProps({ params }) {
-  console.log(INSTAGRAM_USERNAME, INSTAGRAM_ID)
-  const client = new Instagram({ INSTAGRAM_USERNAME });
+  const client = new Instagram({ username: INSTAGRAM_USERNAME });
   const response = await client.getUserIdPhotos({ id: INSTAGRAM_ID, first: 24 });
-
   return {
     props: {
       posts: response.user.edge_owner_to_timeline_media.edges,
