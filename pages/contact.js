@@ -26,9 +26,8 @@ export default class Contact extends React.Component {
   }
 
   onSubmit = async (body) => {
-    console.log(body);
     this.setState({ loadedContact: true });
-    const url = "#";
+    const url = `/api/sendEmail`;
     try {
       await fetch(url, {
         body: JSON.stringify(body),
@@ -46,10 +45,12 @@ export default class Contact extends React.Component {
   };
 
   handleClose = () => {
+    console.log("handleClose");
     this.setState({ snackBarOpened: false });
   };
 
   validate = (e) => {
+    console.log("validate", e);
     this.setState({ validation: e, snackBarOpened: true });
   };
 
@@ -74,7 +75,6 @@ export default class Contact extends React.Component {
         </FadeIn>
         <SnackbarAlert
           snackBarOpened={this.state.snackBarOpened}
-          validation={this.state.validation}
           requestError={this.state.requestError}
           onCloseSnackBar={this.handleClose}
         />

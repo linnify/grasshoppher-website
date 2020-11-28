@@ -4,7 +4,6 @@ import {Snackbar} from "@material-ui/core";
 
 export const SnackbarAlert = ({
                                 snackBarOpened,
-                                validation,
                                 requestError,
                                 onCloseSnackBar,
                               }) => {
@@ -24,21 +23,13 @@ export const SnackbarAlert = ({
     );
   };
 
-  const incorrectEmail = () => {
-    return (
-      <Alert severity="warning" onClose={onCloseSnackBar}>
-        Invalid e-mail address!
-      </Alert>
-    );
-  };
-
   return (
     <Snackbar
       open={snackBarOpened}
       onClose={onCloseSnackBar}
       autoHideDuration={3000}
     >
-      {validation ? success() : requestError ? error() : incorrectEmail()}
+      { requestError ? error() :  success() }
     </Snackbar>
   );
 };

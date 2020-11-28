@@ -8,6 +8,7 @@ export default class ContactForm extends React.Component {
       name: "",
       email: "",
       message: "",
+      validEmail: "",
     };
   }
 
@@ -32,6 +33,7 @@ export default class ContactForm extends React.Component {
   onSubmit = () => {
 
     if (!this.isEmailValid()) {
+      this.setState({validEmail: "invalid"});
       return this.props.validation(false);;
     }
 
@@ -41,27 +43,25 @@ export default class ContactForm extends React.Component {
       email: this.state.email,
       message: this.state.message,
     };
+    this.setState({validEmail: ""});
     this.props.onSubmit(body);
     this.clearState();
   };
 
   render() {
-
     return (
       <div className={"form"}>
         <div className={"form__input-row"}>
           <div className={"form__input-item"}>
             <div>Name</div>
             <input
-              className={"item"}
               value={this.state.name}
               onChange={(name) => this.setState({name: name.target.value})}
             />
           </div>
-          <div className={"form__input-item"}>
+          <div className={`form__input-item`} id={this.state.validEmail}>
             <div>E-mail</div>
             <input
-              className={"item"}
               value={this.state.email}
               onChange={(email) => this.setState({email: email.target.value})}
             />

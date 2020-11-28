@@ -2,3 +2,6 @@ export const BLOG_HOST = process.env.NEXT_PUBLIC_BLOG_HOST;
 export const BLOG_API_KEY = process.env.NEXT_PUBLIC_BLOG_API_KEY;
 export const INSTAGRAM_USERNAME = process.env.INSTAGRAM_USERNAME;
 export const INSTAGRAM_ID = process.env.INSTAGRAM_ID;
+export const EMAIL_HOST = process.env.EMAIL_HOST;
+export const EMAIL_AUTH_USER = process.env.EMAIL_AUTH_USER;
+export const EMAIL_AUTH_PASS = process.env.EMAIL_AUTH_PASS;
