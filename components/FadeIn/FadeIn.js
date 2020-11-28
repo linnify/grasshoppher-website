@@ -20,13 +20,12 @@ export default function FadeIn(props) {
 
     observer.observe(domRef.current);
 
-    return () => observer.unobserve(domRef.current);
   }, []);
 
   return(
     <div
       ref={domRef}
-      className={`fade-in-intro`}
+      className={`fade-in`}
     >
       {props.children}
     </div>

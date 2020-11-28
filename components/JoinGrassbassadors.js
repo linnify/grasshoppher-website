@@ -16,7 +16,7 @@ export const JoinGrassbassadors = () => {
         <div style={{position: "relative"}}>
           <div className={"relativeContainer"} style={{overflowX: "hidden"}}>
             <div className={"relativeContainer--text"} id={"grassbassadors"}>Join us</div>
-            <img src={"/join-grassbassadors.jpg"} className={"image"} alt={"join grassbassadors"} style={{marginLeft: "35px", display: "inline-block" }}/>
+            <img src={"/join-grassbassadors.jpg"} className={"image image-with-text-on-top"} alt={"join grassbassadors"}/>
             <div className={"grassbassadors--description hide-xs show-lg"}>
               <div style={{paddingRight: "50px"}}>
                 <div className={"text-block"} style={{paddingTop: "0"}}>As a Grassbassador you will:</div>

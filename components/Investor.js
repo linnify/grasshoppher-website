@@ -16,7 +16,7 @@ export const Investor = () => {
         <div style={{position: "relative"}}>
           <div className={"relativeContainer padding-top-bottom-100"} style={{overflowX: "hidden"}}>
             <div className={"relativeContainer--text"} id={investor.id}>{investor.verticalText}</div>
-            <img src={investor.imgSrc} className={"image"} alt={investor.verticalText} style={{marginLeft: "30px", display: "inline-block" }}/>
+            <img src={investor.imgSrc} className={"image image-with-text-on-top"} alt={investor.verticalText}/>
             <div className={"investor--description hide-xs show-lg"}>
               <div className={"investor--description-container"}>
                 <SectionTitle content={investor}/>

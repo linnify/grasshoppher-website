@@ -24,17 +24,17 @@ export const IntroGrassbassadors = () => {
               </div>
             </div>
             <List list={listGrassbassadors}/>
+            <div className={"text-block"} style={{marginTop: "-15px"}}>Moral of the story, you’ll have an impact on what the world will look like for girls and women. </div>
           </div>
           <div className={"col-xs-12 col-lg-6 col-xl-6"}>
             <div className={"circle"}>
               <PageCircles classes={"circle-base circle-top-right circle-story-photo"} translateOffset={offset}/>
-              <div style={{position: "relative"}}>
+              <div style={{position: "relative" , textAlign:"center"}}>
                 <img src={"/partner/grassbassadors.png"} className={"image grassbassadors--image"}/>
               </div>
             </div>
           </div>
         </div>
-        <div className={"text-block"}>Moral of the story, you’ll have an impact on what the world will look like for girls and women. </div>
       </div>
     </div>
   );

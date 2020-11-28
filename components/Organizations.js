@@ -24,7 +24,7 @@ export const Organizations = () => {
         <div className={"col-xs-12 col-md-5 col-xl-6"}>
           <div className={"circle"}>
             <PageCircles classes={"circle-base circle-top-right"} translateOffset={offset}/>
-            <div style={{position: "relative"}}>
+            <div style={{position: "relative", textAlign: "center"}}>
               <img src={"/partner/organizations.png"} className={"image"}/>
             </div>
           </div>

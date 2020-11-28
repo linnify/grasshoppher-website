@@ -23,7 +23,7 @@ export const listJoinGrassbassadors = [
     boldText: [""],
   },
   {
-    itemText: "Add kudos for your resume",
+    itemText: "Add kudos to your resume",
     boldText: [""],
   },
   {

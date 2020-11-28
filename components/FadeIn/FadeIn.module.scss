@@ -1,8 +1,8 @@
-.fade-in-intro {
-  opacity: 0!important;
+.fade-in {
+  opacity: 0;
   transition: all 0.3s linear;
 }
 
-.fade-in-intro.visible {
-  opacity: 1!important;
+.fade-in.visible {
+  opacity: 1;
 }

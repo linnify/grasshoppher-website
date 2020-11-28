@@ -2,6 +2,9 @@
   width: 100%;
   height: 65vh;
   margin:auto;
+  & .react-player__shadow{
+    background: #F5CAC4!important;
+  }
 }
 
 .video#business .react-player__preview {

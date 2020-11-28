@@ -16,7 +16,11 @@ export const PartnerIntro = () => {
           <div className={"title-box"}>
             <SectionTitle content={partner}/>
           </div>
-          <div className={"text-block"}>{partner.spiritDescription}<span style={{color: "#F5CAC4"}}>{partner.spiritDescriptionSpan}</span></div>
+          <div className={"text-block"}>{partner.spiritDescription}
+            <a href={"https://forms.gle/ppU2EMdMxR5go8SD9"} target={"_blank"} style={{textDecoration: "none"}}>
+              <span style={{color: "#F5CAC4"}}>{partner.spiritDescriptionSpan}</span>
+            </a>
+          </div>
         </div>
         <div className={"col-xs-12 col-md-5 col-xl-5"}>
           <div className={"circle"}>

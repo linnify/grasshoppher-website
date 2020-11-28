@@ -20,13 +20,12 @@ export default function FadeInScroll(props) {
 
     observer.observe(domRef.current);
 
-    return () => observer.unobserve(domRef.current);
   }, []);
 
   return(
     <div
       ref={domRef}
-      className={`fade-in-section`}
+      className={`fade-in-scroll`}
     >
       {props.children}
     </div>
