@@ -9,10 +9,12 @@ export default {
     site_name: "GrasshoppHers",
     title: "GrasshoppHers",
     description: "We are courage, independence and good fortune.",
-    images_url: 'https://grasshoppher.com/partner/organizations.png',
-    images_width:  695,
-    images_height:  616,
-    alt: 'We are GrasshoppHers.',
+    images: [{
+      url: 'https://grasshoppher.com/partner/organizations.png',
+      width: 695,
+      height: 616,
+      alt: 'We are GrasshoppHers.',
+    }],
   },
   twitter: {
     handle: '@handle',
