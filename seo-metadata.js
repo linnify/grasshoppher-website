@@ -1,13 +1,13 @@
 
 export default {
-  title: "GrasshoppHers",
+  title: "GrasshoppHer",
   description: "We are courage, independence and good fortune.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://grasshoppher.com/",
-    site_name: "GrasshoppHers",
-    title: "GrasshoppHers",
+    site_name: "GrasshoppHer",
+    title: "GrasshoppHer",
     description: "We are courage, independence and good fortune.",
     images: [{
       url: 'https://grasshoppher.com/partner/organizations.png',
@@ -18,7 +18,7 @@ export default {
   },
   twitter: {
     handle: '@handle',
-    site: "@grasshopphers",
+    site: "@GrasshoppHer",
     cardType: "summary",
   },
 }
