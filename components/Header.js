@@ -19,7 +19,9 @@ export const Header = () => {
         <HeaderDropdown />
       </div>
       <div className={"hide-md center-xs"}>
-        <img src={"/logo.svg"} alt={"logo GrasshoppHer"} style={{cursor: "pointer"}}/>
+        <Link href={"/"}>
+          <img src={"/logo.svg"} alt={"logo GrasshoppHer"} style={{cursor: "pointer"}}/>
+        </Link>
       </div>
     </div>
   );

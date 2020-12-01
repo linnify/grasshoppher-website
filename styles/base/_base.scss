@@ -73,6 +73,12 @@ a {
   padding: 0;
 }
 
+
+div, a, img, ul, li, button {
+  outline: none!important;
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media only screen and (min-width: 576px) {
   .container {
     width: 560px;
