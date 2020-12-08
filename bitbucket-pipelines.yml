@@ -1,0 +1,16 @@
+image: node:12
+
+options:
+  max-time: 10
+
+  scripts:
+    - script: &deploy
+        - curl "$DEPLOY_LINK"
+
+pipelines:
+  custom:
+    master:
+      - step:
+          name: "Deploy Production"
+          deployment: production
+          script: *deploy
