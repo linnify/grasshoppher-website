@@ -3,8 +3,8 @@ export const events = [
     image: "/events/use-your-voice.jpg",
     title: "The Power of Using Your Voice Webinar",
     description: "Our panel will highlight how you can harness the power of your voices through business communication and negotiation.",
-    buttonLink: "https://www.eventbrite.com/e/the-power-of-using-your-voice-with-action-button-and-the-pitch-academy-tickets-127486689119",
-    buttonText: "Register here!",
+    buttonLink: "https://www.youtube.com/watch?v=UQsoNJBArrs&feature=youtu.be",
+    buttonText: "View here",
   },
   {
     image: "/events/future-workplace.jpg",
