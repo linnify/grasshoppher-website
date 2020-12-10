@@ -1,11 +1,11 @@
 import React from "react";
-import { getPostById, getAllPosts} from "../../src/services/postsService";
+import {getPostById, getAllPosts} from "../../src/services/postsService";
 import Layout from "../../components/Layout";
 import {PostContent} from "../../components/PostContent";
 import {PostDate} from "../../components/PostDate";
 import {roundReadingTime} from "../../src/helpers/roundReadingTime";
 import Page from "../../components/Page";
-import {Limits} from "../../components/Limits/Limits";
+import {Loader} from "../../components/Loader/Loader";
 
 export default class Article extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ export default class Article extends React.Component {
         author={author}
       >
         <Layout title={title}>
-          {!this.state.loaded && <Limits/>}
+          {!this.state.loaded && <Loader/>}
           <div style={{background: "#F5E8E680", margin: "100px 0"}}>
             <div className={"container"}>
               <div className={"row middle-xs between-md article--row"}>
@@ -73,10 +73,12 @@ export default class Article extends React.Component {
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
+  const allPosts = posts.map((post) => {
+    return { params: { id: post.slug } }
+  });
+
   return {
-    paths: posts.map((post) => {
-      return { params: { id: post.slug } };
-    }),
+    paths: allPosts,
     fallback: false,
   };
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import {getPosts} from "../../src/services/postsService";
+import {getAllPosts} from "../../src/services/postsService";
 import {BlogPosts} from "../../components/BlogPosts/BlogPosts";
 import {PageTitle} from "../../components/PageTitle";
 import Page from "../../components/Page";
@@ -41,8 +41,8 @@ export default class Blog extends React.Component {
   }
 }
 export async function getStaticProps({ params }) {
-  const response = await getPosts();
+  const response = await getAllPosts();
   return {
-    props: { posts: response.results },
+    props: { posts: response },
   };
 }

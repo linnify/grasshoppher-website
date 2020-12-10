@@ -24,13 +24,13 @@ export const getAllPosts = async () => {
   const response = await getPosts();
   const posts = response.results;
   let next = response.next;
-  //
-  // while (next) {
-  //   const nextResponse = await fetch(next, settings);
-  //   let response = nextResponse.json();
-  //   posts.push(response.results);
-  //   next = response.next;
-  // }
+  
+  while (next) {
+    const nextResponse = await fetch(next, settings);
+    let nextResponseJson = await nextResponse.json();
+    posts.push(...nextResponseJson.results);
+    next = nextResponseJson.next;
+  }
   
   return posts;
 };
