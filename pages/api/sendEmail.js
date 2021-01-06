@@ -30,10 +30,9 @@ export default (req, res) => {
 
   transporter.sendMail(mailOption, (err, data) => {
     if (err) {
-      console.log(err);
+      console.log("Transporter sendMail error:", err);
       res.send("error" + JSON.stringify(err));
     } else {
-      console.log("mail send");
       res.send("success");
     }
   });

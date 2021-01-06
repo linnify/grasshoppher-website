@@ -45,12 +45,10 @@ export default class Contact extends React.Component {
   };
 
   handleClose = () => {
-    console.log("handleClose");
     this.setState({ snackBarOpened: false });
   };
 
   validate = (e) => {
-    console.log("validate", e);
     this.setState({ validation: e, snackBarOpened: true });
   };
 

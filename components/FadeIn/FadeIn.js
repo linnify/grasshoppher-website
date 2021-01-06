@@ -4,7 +4,6 @@ import "./FadeIn.module.scss"
 export default function FadeIn(props) {
 
   const domRef = useRef();
-
   const options = {
     threshold: (props.threshold || 0.2) ,
   };
@@ -19,14 +18,10 @@ export default function FadeIn(props) {
     }, options);
 
     observer.observe(domRef.current);
-
   }, []);
 
   return(
-    <div
-      ref={domRef}
-      className={`fade-in`}
-    >
+    <div ref={domRef} className={`fade-in`}>
       {props.children}
     </div>
   );

@@ -1,5 +1,12 @@
 export const events = [
   {
+    image: "/events/bouncing-back.jpg",
+    title: "Bouncing Back in 2021 Webinar",
+    description: "GrasshoppHer will tackle happiness, wellbeing, overcoming adversity, following your passions and entrepreneurship.",
+    buttonLink: "https://www.eventbrite.com/e/bouncing-back-in-2021-with-chris-bordoni-and-stephanie-harrison-tickets-131948406235",
+    buttonText: "Sign up",
+  },
+  {
     image: "/events/use-your-voice.jpg",
     title: "The Power of Using Your Voice Webinar",
     description: "Our panel will highlight how you can harness the power of your voices through business communication and negotiation.",

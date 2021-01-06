@@ -21,7 +21,6 @@ export default class Article extends React.Component {
   }
 
   render() {
-    console.log(this.state.pageURL);
     const { blockContent, title, publishDate, author, image, summary, readTime } = this.props.data;
     const imageSource = image
       ? `${this.props.data.image.file}`
