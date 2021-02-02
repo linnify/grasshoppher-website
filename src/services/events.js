@@ -1,5 +1,12 @@
 export const events = [
   {
+    image: "/events/stem-career.jpg",
+    title: "You and Your STEM Career Webinar",
+    description: "Explore what you can do with your STEM background!",
+    buttonLink: "https://www.eventbrite.com/e/you-and-your-stem-career-with-ashley-fenn-joy-feng-and-olivia-simon-tickets-138468481957",
+    buttonText: "Sigh up",
+  },
+  {
     image: "/events/bouncing-back.jpg",
     title: "Bouncing Back in 2021 Webinar",
     description: "GrasshoppHer will tackle happiness, wellbeing, overcoming adversity, following your passions and entrepreneurship.",
