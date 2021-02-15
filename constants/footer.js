@@ -18,6 +18,11 @@ export const socialMedia = [
     icon: "/footer/instagram.svg",
     icon_hover: "/footer/instagram-hover.svg",
     link: "https://www.instagram.com/grasshoppher/",
+  },
+  {
+    icon: "/footer/linkedin.svg",
+    icon_hover: "/footer/linkedin-hover.svg",
+    link: "https://www.linkedin.com/company/grasshoppher/",
   }
 ];
 

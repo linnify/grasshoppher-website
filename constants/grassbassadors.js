@@ -19,28 +19,36 @@ export const listGrassbassadors = [
 
 export const listJoinGrassbassadors = [
   {
-    itemText: "Get marketing training and experience",
-    boldText: [""],
+    itemText: "{0} your GrasshoppHer Campus Club and spread awareness to potential new members",
+    boldText: ["Lead"],
   },
   {
-    itemText: "Add kudos to your resume",
-    boldText: [""],
+    itemText: "{0} your leadership skills",
+    boldText: ["Grow"],
   },
   {
-    itemText: "Network with other Grassbassadors, male allies and GrasshoppHer’s community",
-    boldText: [""],
+    itemText: "{0} social media marketing and outreach experience while networking with mentors and the GrasshoppHer community",
+    boldText: ["Get"],
   },
   {
-    itemText: "Have access to resources to make your campaign a success",
-    boldText: [""],
+    itemText: "{0} events featuring award-winning professionals and entrepreneurs",
+    boldText: ["Moderate"],
   },
   {
-    itemText: "Get merch",
-    boldText: [""],
+    itemText: "{0} kudos to your resume and get endorsements from the CEO and GrassHoppher team",
+    boldText: ["Add"]
   },
   {
-    itemText: "Have fun!",
-    boldText: [""],
+    itemText: "{0} access to GrasshoppHer exclusive events and networking opportunities",
+    boldText: ["Have"]
+  },
+  {
+    itemText: "{0} free merch",
+    boldText: ["Get"],
+  },
+  {
+    itemText: "{0} fun!",
+    boldText: ["Have"],
   }
 ]
 

@@ -17,6 +17,7 @@ export const Footer = () => {
       <a href={media.link} className={"footer__media"} key={index} target={"_blank"}>
         <img
           src={`${media.icon}`}
+          style={{ width: '36px', height: '28px' }}
           onMouseEnter={e => (e.currentTarget.src = `${media.icon_hover}`)}
           onMouseLeave={e => (e.currentTarget.src = `${media.icon}`)}
         />

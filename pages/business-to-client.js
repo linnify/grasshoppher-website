@@ -10,6 +10,7 @@ import {TextBoldKeyword} from "../components/TextBoldKeyword";
 import Page from "../components/Page";
 import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import {Loader} from "../components/Loader/Loader";
+import {RolesDescription} from "../components/RolesDescription";
 
 
 export default class BusinessToClient extends React.Component {
@@ -20,11 +21,11 @@ export default class BusinessToClient extends React.Component {
       pageURL: ""
     };
   }
-
+  
   componentDidMount() {
     this.setState({loaded: true, pageURL: window.location.href});
   }
-
+  
   render() {
     return (
       <Page
@@ -44,6 +45,8 @@ export default class BusinessToClient extends React.Component {
           <FadeInScroll>
             <div className={"container"}>
               <TextBoldKeyword text={b2c}/>
+              
+              <RolesDescription/>
             </div>
           </FadeInScroll>
           <FadeInScroll>

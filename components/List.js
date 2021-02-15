@@ -1,6 +1,6 @@
 import React from "react";
 
-export const List = ({list}) => {
+export const List = ({list, itemStyle}) => {
 
   const applyBoldStyle = text => {
     let numberOfItemsAdded = 0;
@@ -10,7 +10,7 @@ export const List = ({list}) => {
   };
 
   const displayList = list.map((item, index) => {
-    return <li key={index} className={"list-item"} id={"section"}>{applyBoldStyle(item)}</li>
+    return <li key={index} className={"list-item"} style={itemStyle} id={"section"}>{applyBoldStyle(item)}</li>
   })
 
   return(

@@ -9,6 +9,7 @@ import Page from "../components/Page";
 import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
+import {CampusClubs} from "../components/CampusClubs";
 
 export default class PartnerWithUs extends React.Component {
   constructor(props) {
@@ -42,6 +43,9 @@ export default class PartnerWithUs extends React.Component {
             <div style={{ background: "#F5E8E666" }}>
               <SectionLeftImgRightText section={allies}/>
             </div>
+          </FadeInScroll>
+          <FadeInScroll>
+            <CampusClubs />
           </FadeInScroll>
           <FadeInScroll>
             <Organizations/>

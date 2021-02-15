@@ -7,3 +7,4 @@ export const EMAIL_AUTH_USER = process.env.EMAIL_AUTH_USER;
 export const EMAIL_AUTH_PASS = process.env.EMAIL_AUTH_PASS;
 export const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 export const HOTJAR_SITE_ID = process.env.HOTJAR_SITE_ID;
+export const DEVELOPMENT = process.env.DEVELOPMENT

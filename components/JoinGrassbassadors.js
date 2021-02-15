@@ -4,6 +4,16 @@ import {listJoinGrassbassadors} from "../constants/grassbassadors";
 import {ButtonRedirect} from "./ButtonRedirect";
 import {handleOffset} from "../src/helpers/handleOffset";
 import {PageCircles} from "./PageCircles";
+import styled from 'styled-components';
+
+const JoinImage = styled.img`
+  margin-left: 30px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+  }
+`
+
 
 export const JoinGrassbassadors = () => {
 
@@ -16,7 +26,7 @@ export const JoinGrassbassadors = () => {
         <div style={{position: "relative"}}>
           <div className={"relativeContainer"} style={{overflowX: "hidden"}}>
             <div className={"relativeContainer--text"} id={"grassbassadors"}>Join us</div>
-            <img src={"/join-grassbassadors.jpg"} className={"image image-with-text-on-top"} alt={"join grassbassadors"}/>
+            <JoinImage src={"/join-grassbassadors.jpg"} alt={"join grassbassadors"}/>
             <div className={"grassbassadors--description hide-xs show-lg"}>
               <div style={{paddingRight: "50px"}}>
                 <div className={"text-block"} style={{paddingTop: "0"}}>As a Grassbassador you will:</div>
