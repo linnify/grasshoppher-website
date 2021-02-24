@@ -1,5 +1,13 @@
 export const pressReleases = [
   {
+    image: "/pressReleases/mentorship-program.jpg",
+    title: "How Mentorship Programs Can Help Your Workplace and Increase Your Company’s Productivity",
+    description: "What if I told you there was a simple way to increase productivity and communication within your organization?",
+    author: "",
+    buttonLink: "https://blog.niftypm.com/how-mentorship-programs-can-help-your-workplace-c951f0468c35",
+    buttonText: "Read more"
+  },
+  {
     image: "/pressReleases/pitch-finalist.jpg",
     title: "Create & Cultivate Mastercard Digital Doors Pitch Contest Finalist",
     author: "",
@@ -38,5 +46,5 @@ export const pressReleases = [
     description: "Proud member of Female Collective.",
     buttonLink: "/",
     buttonText: "",
-  },
+  }
 ];
