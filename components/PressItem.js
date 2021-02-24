@@ -17,7 +17,7 @@ const Image = styled.div`
 export const PressItem = ({ post }) => {
   return(
     <div className={"col-xs-12 col-md-5 item"}>
-      <Image image={post.image} alt={post.title} className={"image item--image"}/>
+      <img src={post.image} alt={post.title} className={"image item--image"}/>
       <div className={"item--title"} id={post.id}>{post.title}</div>
       <div className={"item--author"}>{post.author}</div>
       <div className={"item--description"}>{post.description}</div>
