@@ -1,21 +1,28 @@
 export const events = [
   {
+    image: "/events/women-around-the-world.jpg",
+    title: "Women Around The World",
+    description: "A Conversation with Kendra Thurgood from Kiva and Almeera Khalid from Girls20",
+    buttonLink: "https://www.eventbrite.com/e/women-around-the-world-webinar-a-conversation-with-kiva-and-girls20-tickets-145936693579?aff=ebdsoporgprofile",
+    buttonText: "Sign up",
+  },
+  {
     image: "/events/stem-career.jpg",
-    title: "You and Your STEM Career Webinar",
+    title: "You and Your STEM Career",
     description: "Explore what you can do with your STEM background!",
     buttonLink: "https://www.youtube.com/watch?v=d9Je2eEp190",
     buttonText: "View here",
   },
   {
     image: "/events/bouncing-back.jpg",
-    title: "Bouncing Back in 2021 Webinar",
+    title: "Bouncing Back in 2021",
     description: "GrasshoppHer will tackle happiness, wellbeing, overcoming adversity, following your passions and entrepreneurship.",
     buttonLink: "https://youtu.be/czmT8Z0AZ7E",
     buttonText: "View here",
   },
   {
     image: "/events/use-your-voice.jpg",
-    title: "The Power of Using Your Voice Webinar",
+    title: "The Power of Using Your Voice",
     description: "Our panel will highlight how you can harness the power of your voices through business communication and negotiation.",
     buttonLink: "https://www.youtube.com/watch?v=UQsoNJBArrs&feature=youtu.be",
     buttonText: "View here",
@@ -29,7 +36,7 @@ export const events = [
   },
   {
     image: "/events/virtual-networking.jpg",
-    title: "Virtual Networking Webinar",
+    title: "Virtual Networking",
     description: "Our guests will share some recruiting best practices to help you tackle the new virtual environment and best prepare you to land that internship or full-time job!",
     buttonLink: "https://www.youtube.com/watch?v=G9zaP9xEaCI&t=10s",
     buttonText: "View here",
@@ -58,5 +65,4 @@ export const events = [
     buttonText: "Registration closed",
     styleId: "disabled",
   },
-
 ];
