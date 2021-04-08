@@ -1,5 +1,13 @@
 export const pressReleases = [
   {
+    image: "/pressReleases/linnify-interview.jpg",
+    title: "How leaders can create an inclusive workspace, break gender barriers and create opportunities",
+    description: "No matter how much we encourage and support diversity, we are well aware of the injustices and challenges that are still very much present around the world.",
+    author: "",
+    buttonLink: "https://bit.ly/31Si4CG",
+    buttonText: "Read more"
+  },
+  {
     image: "/pressReleases/mentorship-program.jpg",
     title: "How Mentorship Programs Can Help Your Workplace and Increase Your Company’s Productivity",
     description: "What if I told you there was a simple way to increase productivity and communication within your organization?",
