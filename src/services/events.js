@@ -1,5 +1,12 @@
 export const events = [
   {
+    image: "/events/impacting-our-world.jpg",
+    title: "Impacting Our World",
+    description: "Impacting Our World with Elizabeth Cook, Niha Elety and Christina Seidel",
+    buttonLink: "https://www.eventbrite.com/e/impacting-our-world-with-elizabeth-cook-niha-elety-and-christina-seidel-tickets-149483199273",
+    buttonText: "Sign up",
+  },
+  {
     image: "/events/women-around-the-world.jpg",
     title: "Women Around The World",
     description: "A Conversation with Kendra Thurgood from Kiva and Almeera Khalid from Girls20",
