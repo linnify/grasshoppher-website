@@ -1,16 +1,20 @@
-import Instagram from "instagram-web-api";
-import {INSTAGRAM_ID, INSTAGRAM_USERNAME, DEVELOPMENT} from "../../constants/deploy";
+const fs = require('fs');
 
 export const getInstagramPosts = async () => {
   
-  if (DEVELOPMENT) {
-    return []
-  }
+  // if (DEVELOPMENT) {
+  //   return []
+  // }
   
-  console.log(INSTAGRAM_ID, INSTAGRAM_USERNAME)
-  const client = new Instagram({ username: 'grasshoppher' });
+/*  const client = new Instagram({ username: 'grasshoppher' });
   const response = await client.getUserIdPhotos({ id: '8193704282', first: 24 });
+  const values = response.user.edge_owner_to_timeline_media.edges;*/
   
-  console.log(response)
-  return response.user.edge_owner_to_timeline_media.edges;
+  
+  // fs.writeFile('instagram-posts.json', JSON.stringify(values), [], (err) => {
+  //   if (err) return console.log(err);
+  //   console.log('Hello World > helloworld.txt');
+  // })
+  // const data =  fs.readFileSync('./instagram-posts.json', 'utf8');
+  return require('../../instagram-posts.json')
 }
