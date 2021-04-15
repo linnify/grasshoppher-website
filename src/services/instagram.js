@@ -1,4 +1,4 @@
-const fs = require('fs');
+import {data} from "./instagram-posts";
 
 export const getInstagramPosts = async () => {
   
@@ -16,5 +16,5 @@ export const getInstagramPosts = async () => {
   //   console.log('Hello World > helloworld.txt');
   // })
   // const data =  fs.readFileSync('./instagram-posts.json', 'utf8');
-  return require('./instagram-posts.json')
+  return data
 }
