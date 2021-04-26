@@ -3,7 +3,7 @@ import {HeroComponent} from "./HeroComponent";
 import {heroBusiness, heroIndividual} from "../../constants/hero";
 import "./Hero.module.scss"
 
-export  const Hero = () => {
+export const Hero = () => {
   return (
     <div className={"container"}>
       <div className={"hero"}>

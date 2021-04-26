@@ -55,7 +55,7 @@ export default class Home extends React.Component {
 
 export async function getStaticProps({ params }) {
   const posts = await getInstagramPosts();
-  
+
   return {
     props: {
       posts,

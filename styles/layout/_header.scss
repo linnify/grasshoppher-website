@@ -43,6 +43,24 @@
   }
 }
 
+.web-menu {
+  display: none;
+}
+
+.burger-menu {
+  margin-top: 10px;
+}
+
+.logo {
+  height: 60px;
+}
+
+@media only screen and (min-width: 640px) {
+  .logo {
+    height: auto;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
   .header{
@@ -59,5 +77,25 @@
     & #icon-arrow {
       margin-top: 10px;
     }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .web-menu {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu-item {
+    margin-left: 25px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .menu-item {
+    margin-left: 45px;
   }
 }
