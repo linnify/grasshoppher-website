@@ -5,7 +5,6 @@ import {PageTitle} from "../components/PageTitle";
 import {b2c} from "../constants/b2c";
 import {B2CDownloadSection} from "../components/B2CDownloadSection/B2CDownloadSection";
 import {Perks} from "../components/Perks/Perks";
-import {b2b} from "../constants/b2b";
 import {TextBoldKeyword} from "../components/TextBoldKeyword";
 import Page from "../components/Page";
 import FadeInScroll from "../components/FadeInScroll/FadeInScroll";

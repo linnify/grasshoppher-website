@@ -5,9 +5,7 @@ import FadeInScroll from "../FadeInScroll/FadeInScroll";
 
 export const HeroComponent = ({product}) => {
 
-  const displayDescription = product.description.map((text,index) =>{
-    return(<div key={index}><FadeInScroll>{text}</FadeInScroll></div>);
-  })
+  const displayDescription = product.description.map((text,index) => (<div key={index}><FadeInScroll>{text}</FadeInScroll></div>))
 
   return(
     <div className={"hero--component"}>

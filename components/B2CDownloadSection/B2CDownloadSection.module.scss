@@ -23,7 +23,7 @@
   margin-top: 30px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 400px) {
   .newsletter-container {
     flex-direction: row;
     align-items: center;
@@ -45,7 +45,7 @@
     align-items: start;
 
     & .newsletter-text {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 }

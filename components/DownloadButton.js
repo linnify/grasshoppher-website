@@ -1,12 +1,9 @@
 import React from "react";
+import {ButtonRedirect} from "./ButtonRedirect";
 
-export const DownloadButton = () => {
-  return(
-    <div className={"button-download"}>
-      <div>Download the app</div>
-      <a href={"https://apps.apple.com/ro/app/grasshoppher/id1520009505"}>
-        <img src={"/download-button.png"} alt={"download the app from here"}/>
-      </a>
-    </div>
-  );
-}
+export const DownloadButton = () => (
+  <div className={"button-download"}>
+    <div className={'button-download--text'}>Join GrasshoppHer</div>
+    <ButtonRedirect text={"Log in"} href={"https://www.grasshoppherapp.com/signup"} target={true}/>
+  </div>
+)

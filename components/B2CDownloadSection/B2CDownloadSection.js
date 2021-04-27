@@ -3,14 +3,12 @@ import {DownloadButton} from "../DownloadButton";
 import {ButtonRedirect} from "../ButtonRedirect";
 import "./B2CDownloadSection.module.scss"
 
-export const B2CDownloadSection = () => {
-  return(
+export const B2CDownloadSection = () => (
     <div className={"container"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
       <div className={"row middle-xs between-md row-b2c"}>
         <div className={"col-xs-12 col-md-4 col-xl-5"}>
           <div className={"text-block"}>Do you want to join our GrasshoppHer Cloud (aka community)?</div>
           <DownloadButton/>
-          <div className={"email-for-android"}>If you have an Android, email us at <b>hello@grasshoppher.com</b></div>
           <div className={"newsletter-container"}>
             <div className={"newsletter-text"}>Join the newsletter</div>
             <ButtonRedirect text={"Sign up"} href={"https://forms.gle/oqW8oVtrfxGj6avU7"} target={true}/>
@@ -21,5 +19,4 @@ export const B2CDownloadSection = () => {
         </div>
       </div>
     </div>
-  );
-}
+)
