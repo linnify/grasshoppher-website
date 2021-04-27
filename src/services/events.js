@@ -10,8 +10,8 @@ export const events = [
     image: "/events/women-around-the-world.jpg",
     title: "Women Around The World",
     description: "A Conversation with Kendra Thurgood from Kiva and Almeera Khalid from Girls20",
-    buttonLink: "https://www.eventbrite.com/e/women-around-the-world-webinar-a-conversation-with-kiva-and-girls20-tickets-145936693579?aff=ebdsoporgprofile",
-    buttonText: "Sign up",
+    buttonLink: "https://www.youtube.com/watch?v=bet8yk0uJBU",
+    buttonText: "View here",
   },
   {
     image: "/events/stem-career.jpg",
