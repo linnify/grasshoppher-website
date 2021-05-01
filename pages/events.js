@@ -1,18 +1,17 @@
 import React from "react";
 import Layout from "../components/Layout";
-import {events} from "../src/services/events";
 import {PageTitle} from "../components/PageTitle";
 import Page from "../components/Page";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {EventsPosts} from "../components/EventsPosts";
 import {Loader} from "../components/Loader/Loader";
+const datafyCMS = require('@datafycms/js-client')
 
 export default class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
-      posts: this.props.posts,
       pageURL: ""
     };
   }
@@ -33,7 +32,7 @@ export default class Events extends React.Component {
           <FadeIn>
             <PageTitle content={"Happenings"} id={"general"}/>
           </FadeIn>
-          <EventsPosts events={this.state.posts}/>
+          <EventsPosts events={this.props.events}/>
         </Layout>
       </Page>
     );
@@ -41,7 +40,13 @@ export default class Events extends React.Component {
 }
 
 export async function getStaticProps({ params }) {
+  const events = await datafyCMS.collections('event')
+    .fields(['id', 'title', 'description', 'image.url', 'button_link', 'button_text', 'disabled'])
+    .pageSize(50)
+    .list()
+    .then(response => response.results)
+  
   return {
-    props: { posts: events },
+    props: { events },
   };
 }

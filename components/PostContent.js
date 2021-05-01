@@ -1,7 +1,7 @@
 import React from "react";
 
-export const PostContent = ({ blockContent }) => {
-  const markup = { __html: blockContent };
+export const PostContent = ({ content }) => {
+  const markup = { __html: content };
   return <div dangerouslySetInnerHTML={markup}></div>;
 };
 

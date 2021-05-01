@@ -1,13 +1,15 @@
 import React from "react";
-import {getPostById, getAllPosts} from "../../src/services/postsService";
 import Layout from "../../components/Layout";
 import {PostContent} from "../../components/PostContent";
 import {PostDate} from "../../components/PostDate";
 import {roundReadingTime} from "../../src/helpers/roundReadingTime";
 import Page from "../../components/Page";
 import {Loader} from "../../components/Loader/Loader";
+import {withRouter} from "next/router";
+const datafyCMS = require('@datafycms/js-client')
+import readTimeEstimate from 'read-time-estimate';
 
-export default class Article extends React.Component {
+class Article extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,20 +23,26 @@ export default class Article extends React.Component {
   }
 
   render() {
-    const { blockContent, title, publishDate, author, image, summary, readTime } = this.props.data;
-    const imageSource = image
-      ? `${this.props.data.image.file}`
-      : "/landing/download-image.png";
-
+    if (this.props.router?.isFallback) {
+      return <div>Loading ...</div>
+    }
+    
+    const post = this.props.post;
+    const { published_at, title, author, summary } = post
+    const imageSource = post.image?.url || "/landing/download-image.png"
+  
+    const { duration } = readTimeEstimate(post.content);
+    const readTime = Math.floor(duration * 100) / 100;
+    
     return(
       <Page
         title={title}
         description={summary}
         url={this.state.pageURL}
-        images_url={image}
+        images_url={imageSource}
         type={"article"}
-        publishedDate={publishDate}
-        author={author}
+        publishedDate={published_at}
+        author={author?.name}
       >
         <Layout title={title}>
           {!this.state.loaded && <Loader/>}
@@ -43,7 +51,7 @@ export default class Article extends React.Component {
               <div className={"row middle-xs between-md article--row"}>
                 <div className={"col-xs-12 col-md-6 col-xl-5 text-block"}>
                   <div style={{textTransform: "uppercase"}}>
-                    <PostDate date={publishDate}/>
+                    <PostDate date={published_at}/>
                   </div>
                   <div className={"section-title"}>{title}</div>
                   <div className={"text-block"}>{summary}</div>
@@ -61,7 +69,7 @@ export default class Article extends React.Component {
           </div>
           <div className={"container"} style={{ marginBottom: "100px"}}>
             <div className={"text-block"}>
-              <PostContent blockContent={blockContent}/>
+              <PostContent content={post.content}/>
             </div>
           </div>
         </Layout>
@@ -70,19 +78,31 @@ export default class Article extends React.Component {
   }
 }
 
+export default withRouter(Article)
+
 export async function getStaticPaths() {
-  const posts = await getAllPosts();
-  const allPosts = posts.map((post) => {
+  const posts = await datafyCMS.collections('post')
+    .pageSize(50)
+    .fields(['slug'])
+    .list()
+    .then(value => value.results)
+  
+  // const posts = await getAllPosts();
+  const allPosts = posts.map(post => {
     return { params: { id: post.slug } }
   });
 
   return {
     paths: allPosts,
-    fallback: false,
+    fallback: true,
   };
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostById(params.id);
-  return { props: { data } };
+  const post = await datafyCMS.collections('post')
+    .record(params.id)
+    .fields(['title', 'summary', 'published_at', 'content', 'author.name', 'image.url'])
+    .get()
+  
+  return { props: { post } };
 }

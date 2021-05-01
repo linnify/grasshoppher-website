@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import {getAllPosts} from "../../src/services/postsService";
 import {BlogPosts} from "../../components/BlogPosts/BlogPosts";
 import {PageTitle} from "../../components/PageTitle";
 import Page from "../../components/Page";
 import FadeIn from "../../components/FadeIn/FadeIn";
 import {Loader} from "../../components/Loader/Loader";
+const datafyCMS = require('@datafycms/js-client')
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -41,8 +41,18 @@ export default class Blog extends React.Component {
   }
 }
 export async function getStaticProps({ params }) {
-  const response = await getAllPosts();
+  // TODO Bia we load only the first 50 items, after that we should have a load more button
+  
+  const response = await datafyCMS.collections('post')
+    .fields(['slug', 'title', 'summary', 'image.url', 'author.name', 'published_at'])
+    .sortBy('published_at', 'desc')
+    .pageSize(50)
+    .list()
+  
   return {
-    props: { posts: response },
+    props: {
+      posts: response.results,
+      hasMore: !!response.next,
+    },
   };
 }
