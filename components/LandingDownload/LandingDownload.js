@@ -5,6 +5,7 @@ import "./LandingDownload.module.scss"
 import {DownloadButton} from "../DownloadButton";
 import {handleOffset} from "../../src/helpers/handleOffset";
 import {PageCircles} from "../PageCircles";
+import {ButtonRedirect} from "../ButtonRedirect";
 
 export const LandingDownload = () => {
 
@@ -17,6 +18,10 @@ export const LandingDownload = () => {
           <div style={{position: "relative", zIndex: "20"}}>
             <SectionTitle content={download}/>
             <DownloadButton/>
+            <div className={"newsletter-container"}>
+              <div className={"newsletter-text"}>Want our newsletter?</div>
+              <ButtonRedirect text={"Sign up"} href={"https://forms.gle/oqW8oVtrfxGj6avU7"} target={true}/>
+            </div>
           </div>
         </div>
         <div className={"col-xs-12 col-md-7 col-xl-6"}>

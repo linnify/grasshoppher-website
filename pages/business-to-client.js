@@ -44,7 +44,6 @@ export default class BusinessToClient extends React.Component {
           <FadeInScroll>
             <div className={"container"}>
               <TextBoldKeyword text={b2c}/>
-              
               <RolesDescription/>
             </div>
           </FadeInScroll>

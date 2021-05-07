@@ -30,14 +30,12 @@ export const HeaderBurgerMenu = () => {
         </Link>
       </div>
       <div className={'menu-item'}>
-        <Link href={"https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/"}>
+        <a target="_blank" href={"https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/"} style={{ textDecoration: 'none', color: 'black'}}>
           <div className={"header__button"}>Join our Slack</div>
-        </Link>
+        </a>
       </div>
       <div style={{marginTop: '20px'}}>
-        <Link href={"/partner-with-us"}>
-          <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'}/>
-        </Link>
+        <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true}/>
       </div>
     </Menu>
   )

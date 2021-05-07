@@ -15,8 +15,8 @@ export const limits = {
 
 export const app = {
   title: "Finally.",
-  description: "GrasshoppHer is a mobile app for both {0} that connects {1}. Our unique matching system provides:",
-  boldText: ["corporations and individuals", "womxn mentees and mentors"],
+  description: "GrasshoppHer is a {0} that connects female identifying and non-binary {1} Our unique matching system provides:",
+  boldText: ["community and app", "mentees and mentors."],
   url:"/",
 };
 

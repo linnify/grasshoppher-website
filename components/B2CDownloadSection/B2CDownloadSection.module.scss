@@ -2,80 +2,21 @@
   flex-direction: column-reverse;
 }
 
-.newsletter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  //border:2px solid blue;
-  font-size: 27px;
-  font-weight: 700;
-  padding: 30px 0;
-
-  & .newsletter-text {
-    margin-bottom: 10px;
-  }
-}
-
 .email-for-android {
   font-size: 16px;
   text-align: start;
   margin-top: 30px;
 }
 
-@media (min-width: 400px) {
-  .newsletter-container {
-    flex-direction: row;
-    align-items: center;
-
-    & .newsletter-text {
-      margin-bottom: 0;
-    }
-  }
-}
-
 @media (min-width: 768px) {
   .row-b2c {
     flex-direction: row;
   }
-
-  .newsletter-container {
-    flex-direction: column;
-    font-size: 27px;
-    align-items: start;
-
-    & .newsletter-text {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .newsletter-container {
-    font-size: 33px;
-  }
 }
 
 @media (min-width: 1200px) {
-  .newsletter-container {
-    flex-direction: row;
-    font-size: 33px;
-
-    & .newsletter-text {
-      margin-bottom: 0;
-    }
-  }
-
   .email-for-android {
     font-size: 18px;
     margin-top: -70px;
-  }
-
-}
-
-
-@media (min-width: 1570px) {
-  .newsletter-container {
-    font-size: 38px;
   }
 }

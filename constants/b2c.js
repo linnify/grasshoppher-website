@@ -2,8 +2,8 @@ export const b2c = {
   id: "individual",
   videoLink: "https://www.youtube.com/watch?v=qRe2884UQfs",
   title: "What is GrasshoppHer?",
-  description: "{0} is an app that connects female identifying and non-binary {1}. Our community is full of women who want to see you succeed whether it is on your next assignment, your career exploration or your journey to the top. In addition to the app, we provide you with resources to strengthen your leadership toolkits, like webinars, trainings, podcasts, and more!",
-  boldText:[ "GrasshoppHer", "mentees and mentors" ],
+  description: "GrasshoppHer is a {0} hat connects female identifying and non-binary {1}. Our community is full of women who want to see you succeed whether it is on your next assignment, your career exploration or your journey to the top. In addition to the app, we provide you with resources to strengthen your leadership toolkits, like webinars, trainings, podcasts, and more!",
+  boldText:[ "community and app", "mentees and mentors" ],
 }
 
 export const firstPerk = {
