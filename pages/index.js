@@ -11,6 +11,8 @@ import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
 import {getInstagramPosts} from "../src/services/instagram";
+import {Partnership} from "../components/Partnership";
+import {getLastPartner, getPartners} from "../src/services/datafycms";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -18,13 +20,15 @@ export default class Home extends React.Component {
     this.state = {
       loaded: false,
       posts: this.props.posts,
+      newPartnership: this.props.newPartnership,
+      partners: this.props.partners,
     };
   }
-  
+
   async componentDidMount() {
     this.setState({loaded: true});
   }
-  
+
   render() {
     return (
       <Layout title={"GrasshoppHer"}>
@@ -48,6 +52,9 @@ export default class Home extends React.Component {
         <FadeInScroll threshold={0.25}>
           <InstagramSection feed={this.state.posts}/>
         </FadeInScroll>
+        <FadeInScroll>
+          <Partnership newPartnership={this.state.newPartnership} partners={this.state.partners}/>
+        </FadeInScroll>
       </Layout>
     );
   }
@@ -55,10 +62,14 @@ export default class Home extends React.Component {
 
 export async function getStaticProps({ params }) {
   const posts = await getInstagramPosts();
+  const newPartnership = await getLastPartner()
+  const partners = await getPartners()
 
   return {
     props: {
       posts,
+      newPartnership,
+      partners,
     },
   };
 }

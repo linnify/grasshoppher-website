@@ -68,6 +68,21 @@
   }
 }
 
+.circle-top-left span {
+  &:nth-child(1) {
+    top: 10%;
+    left: 20px;
+  }
+  &:nth-child(2) {
+    top: 250px;
+    left: -40px;
+  }
+  &:nth-child(3) {
+    top: 150px;
+    left: -70px;
+  }
+}
+
 .circle-perks span {
   &:nth-child(1) {
     bottom: 0;

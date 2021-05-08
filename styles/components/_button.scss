@@ -48,8 +48,9 @@
   font-weight: $bold;
   border-radius: 100px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
+  align-items: center;
 
   &--text {
      margin-bottom: 20px;
@@ -90,6 +91,8 @@
 
 @media (min-width: 444px) {
   .button-download {
+    flex-flow: row wrap;
+
     &--text {
       margin-bottom: 0;
       margin-right: 10px;

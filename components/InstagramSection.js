@@ -8,15 +8,17 @@ export const InstagramSection = ({ feed }) => {
 
   return(
     <div className={"container"}>
-      <div style={{position: "relative"}}>
-        <div className={"circle-base circle-instagram"} style={{ transform: `translateY(-${offset}px)`, zIndex: "-10px" }}>
-          <span></span>
-        </div>
+      <div className={"padding-top-bottom-100"}>
         <div style={{position: "relative"}}>
-          <div className={"section-title"}>This just happended.</div>
+          <div className={"circle-base circle-instagram"} style={{ transform: `translateY(-${offset}px)`, zIndex: "-10px" }}>
+            <span></span>
+          </div>
+          <div style={{position: "relative"}}>
+            <div className={"section-title"}>This just happended.</div>
+          </div>
         </div>
+        <InstagramSlider feed={feed}/>
       </div>
-      <InstagramSlider feed={feed}/>
     </div>
   );
 }
