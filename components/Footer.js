@@ -1,20 +1,29 @@
 import React from "react";
 import Link from "next/link";
-import {socialMedia, references} from "../constants/footer";
+import {socialMedia, legalFooterItems, menuFooterItems} from "../constants/footer";
 
 export const Footer = () => {
 
-  const displayReferences = references.map((ref, index) => {
+  const legalItems = legalFooterItems.map((ref, index) => {
     return (
       <Link key={index} href={ref.link}>
-        <div className={"footer__text"}>{ref.text}</div>
+        <div className={"footer__menu-text"}>{ref.text}</div>
       </Link>
     );
   })
 
+  const menuItems = menuFooterItems.map((item, index) => {
+    const isContact = item.text === 'Contact'
+    return (
+      <a href={item.link} className={""} key={index} target={isContact ? "" : "_blank"}>
+        <div className={"footer__menu-text"}>{item.text}</div>
+      </a>
+    )
+  })
+
   const displayMedia = socialMedia.map((media, index) => {
     return (
-      <a href={media.link} className={"footer__media"} key={index} target={"_blank"}>
+      <a href={media.link} className={"footer__media-item"} key={index} target={"_blank"}>
         <img
           src={`${media.icon}`}
           style={{ width: '36px', height: '28px' }}
@@ -28,11 +37,16 @@ export const Footer = () => {
   return(
     <div className={"footer"}>
       <div className={"container"}>
-        <div className={"footer--row"}>
-          <div className={"footer__references"}>
-            {displayReferences}
+        <div className={"footer--menu"}>
+          <div className={'footer--menu-links'}>
+            <div className={"footer__menu-col"}>
+              {legalItems}
+            </div>
+            <div className={"footer__menu-col"}>
+              {menuItems}
+            </div>
           </div>
-          <div className={"footer__social-media"}>
+          <div>
             {displayMedia}
           </div>
         </div>

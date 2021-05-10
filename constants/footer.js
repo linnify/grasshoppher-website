@@ -26,7 +26,7 @@ export const socialMedia = [
   }
 ];
 
-export const references = [
+export const legalFooterItems = [
   {
     text: "Terms of Use",
     link: "/terms",
@@ -39,8 +39,23 @@ export const references = [
     text: "Digital Millennium Copyright Act Compliance",
     link: "/copyright",
   },
+];
+
+export const menuFooterItems = [
+  {
+    text: "Find Mentorship",
+    link: "https://www.grasshoppherapp.com/signup",
+  },
+  {
+    text: "Want our Newsletter?",
+    link: "https://forms.gle/oqW8oVtrfxGj6avU7",
+  },
   {
     text: "Contact",
     link: "/contact",
+  },
+  {
+    text: "Join our Slack",
+    link: "https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/",
   },
 ];
