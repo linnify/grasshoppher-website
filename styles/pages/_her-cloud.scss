@@ -1,0 +1,89 @@
+.her-cloud-hero-background {
+  position: relative;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.her-cloud-mentorship {
+  width: 100%;
+  margin-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #f5cac4;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 100px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &--text {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: 400px) {
+  .her-cloud-mentorship {
+    flex-flow: row nowrap;
+
+    &--text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .her-cloud-hero-background {
+    height: auto;
+  }
+  .text-overlay {
+    font-size: 30px;
+    bottom: 4px;
+  }
+
+  .her-cloud-mentorship {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-overlay {
+    font-size: 40px;
+  }
+  .her-cloud-mentorship {
+    width: 47.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-overlay {
+    font-size: 50px;
+  }
+
+  .her-cloud-mentorship {
+    width: 43%;
+  }
+}

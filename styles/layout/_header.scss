@@ -80,7 +80,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .web-menu {
     display: flex;
   }
@@ -89,12 +89,6 @@
     display: none;
   }
 
-  .menu-item {
-    margin-left: 25px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
   .menu-item {
     margin-left: 45px;
   }
