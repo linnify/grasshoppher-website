@@ -6,7 +6,7 @@ import {Mentorship} from "../components/Mentorship/Mentorship";
 import {Limits} from "../components/Limits/Limits";
 import {MobileApp} from "../components/MobileApp/MobileApp";
 import {LandingDownload} from "../components/LandingDownload/LandingDownload";
-import {InstagramSection} from "../components/InstagramSection";
+// import {InstagramSection} from "../components/InstagramSection";
 import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
@@ -49,9 +49,9 @@ export default class Home extends React.Component {
         <FadeInScroll>
           <LandingDownload/>
         </FadeInScroll>
-        <FadeInScroll threshold={0.25}>
-          <InstagramSection feed={this.state.posts}/>
-        </FadeInScroll>
+        {/*<FadeInScroll threshold={0.25}>*/}
+        {/*  <InstagramSection feed={this.state.posts}/>*/}
+        {/*</FadeInScroll>*/}
         <FadeInScroll>
           <Partnership newPartnership={this.state.newPartnership} partners={this.state.partners}/>
         </FadeInScroll>
