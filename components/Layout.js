@@ -23,6 +23,7 @@ export default class Layout extends React.Component {
         <Head>
           <title>{this.props.title}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+          <meta name="facebook-domain-verification" content="4b6xkq3wp9mrtnqqyi8kw9b7iwrbt7" />
         </Head>
         <header>
           <Header/>
