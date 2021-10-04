@@ -39,8 +39,11 @@ export const HeaderBurgerMenu = () => {
           <div className={"header__button"}>Join our Slack</div>
         </a>
       </div>
-      <div style={{marginTop: '20px'}}>
+      <div style={{marginTop: '20px', marginBottom: '20px'}}>
         <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true}/>
+      </div>
+      <div style={{marginTop: '20px'}}>
+        <ButtonRedirect text={'Be a Mentor'} href={'https://forms.gle/YxesDx7X1UXsV4HA9'} target={true}/>
       </div>
     </Menu>
   )

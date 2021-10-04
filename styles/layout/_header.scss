@@ -71,6 +71,10 @@
     }
   }
 
+  #in-header-button a{
+    font-size: 22px;
+  }
+
   #dropdown-icon-button {
     font-size: 22px;
 
@@ -81,6 +85,19 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .header{
+    &__button {
+      font-size: 18px;
+    }
+  }
+  #dropdown-icon-button {
+    font-size: 18px;
+  }
+
+  #in-header-button a {
+    font-size: 18px;
+  }
+
   .web-menu {
     display: flex;
   }
@@ -90,6 +107,26 @@
   }
 
   .menu-item {
-    margin-left: 45px;
+    margin-left: 25px;
+  }
+}
+
+@media only screen and (min-width: 1710px) {
+  .header{
+    &__button {
+      font-size: 22px;
+    }
+  }
+
+  #in-header-button a {
+    font-size: 22px;
+  }
+
+  #dropdown-icon-button {
+    font-size: 22px;
+  }
+
+  .menu-item {
+    margin-left: 35px;
   }
 }

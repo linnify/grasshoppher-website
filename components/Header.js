@@ -30,7 +30,10 @@ export const Header = () => (
           </a>
         </div>
         <div className={'menu-item'}>
-          <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true}/>
+          <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true} id={'in-header-button'}/>
+        </div>
+        <div className={'menu-item'}>
+          <ButtonRedirect text={'Be a Mentor'} href={'https://forms.gle/YxesDx7X1UXsV4HA9'} target={true} id={'in-header-button'}/>
         </div>
       </div>
       <div className={'burger-menu'}>
