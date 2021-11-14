@@ -1,0 +1,37 @@
+@import "styles/abstracts/mixins";
+
+.description-section {
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #FDC636;
+  position: relative;
+}
+
+.description {
+
+  @include media-query(md) {
+    padding-right: 25%;
+  }
+
+}
+
+.image {
+  background: url("/disruptors/description-lines.svg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  max-width: 500px;
+  bottom: 0;
+}
+
+.word {
+  font-size: 24px;
+
+  @include media-query(md) {
+    font-size: 36px;
+  }
+}

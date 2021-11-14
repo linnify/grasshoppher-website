@@ -1,0 +1,81 @@
+@import "styles/abstracts/mixins";
+
+
+.scholarship {
+  //height: 90vh;
+  position: relative;
+  min-height: 90vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+  }
+
+  &__video {
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 0;
+    color: #294584;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: -100px;
+    text-shadow: 10px 10px 0 rgba(245, 202, 196, 0.6);
+    left: 0;
+    right: 0;
+
+    @include media-query(md) {
+      font-size: 116px;
+      text-shadow: 15px 15px 0 rgba(245, 202, 196, 0.6);
+      top: -100px;
+      text-align: left;
+    }
+  }
+
+  &__heading {
+    color: white;
+    margin-top: 124px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    @include media-query(md) {
+      margin-top: 124px;
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    background: #294584;
+    padding: 24px;
+    line-height: 28px;
+    font-size: 18px;
+    color: white;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -64px;
+
+    @include media-query(md) {
+      padding: 48px;
+      width: 70%;
+      line-height: 32px;
+      font-size: 22px;
+    }
+  }
+}
+

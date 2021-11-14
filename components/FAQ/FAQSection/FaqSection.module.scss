@@ -1,0 +1,18 @@
+@import "styles/abstracts/mixins";
+
+.faq {
+  min-height: 80vh;
+
+  &__image {
+    width: 300px;
+    object-fit: contain;
+  }
+
+  &__questions {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @include media-query(md) {
+      margin-left: 64px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "styles/abstracts/mixins";
+
+.become-mentor {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__video {
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  &__title {
+
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 74px;
+    text-align: center;
+
+    @include media-query(md) {
+      font-size: 88px;
+      line-height: 100px;
+    }
+
+    &--pink {
+      color: #F5CAC4;
+    }
+  }
+
+  &__typed {
+    &--make {
+      @include media-query(md) {
+        margin-right: 22px;
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    @include media-query(md) {
+      flex-direction: row;
+    }
+  }
+}

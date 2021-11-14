@@ -1,0 +1,45 @@
+@import "styles/abstracts/mixins";
+
+.become-mentor-description {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #F5E8E666;
+
+  &__text {
+    padding: 0 24px;
+    font-size: 20px;
+
+    @include media-query(md) {
+      margin-left: 40%;
+      max-width: 600px;
+    }
+
+    @include media-query(xl) {
+      max-width: 740px;
+    }
+
+
+    .word {
+      font-size: 24px;
+
+      @include media-query(md) {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__image {
+    background: url("/mentor/description-lines.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    max-width: 600px;
+    bottom: 0;
+  }
+}
+

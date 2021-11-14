@@ -2,7 +2,9 @@
 @import "../abstracts/variables";
 
 .header{
-  padding-top: 20px;
+  height: 100px;
+  display: flex;
+  align-items: center;
 
   &__button {
     @include primary-text-hover;
@@ -55,16 +57,9 @@
   height: 60px;
 }
 
-@media only screen and (min-width: 640px) {
-  .logo {
-    height: auto;
-  }
-}
-
 @media only screen and (min-width: 768px) {
 
   .header{
-    padding-top: 30px;
 
     &__button {
       font-size: 22px;

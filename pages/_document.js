@@ -9,8 +9,14 @@ export default class MyDocument extends Document {
       <Html lang={"en-US"}>
         <Head>
           <link rel="icon" href="/favicon.png"/>
-          <link rel="stylesheet" href="https://use.typekit.net/ssp0oyk.css"/>
-
+          <link  rel="stylesheet" href="https://use.typekit.net/ssp0oyk.css"/>
+          <link
+            rel="preload"
+            href="/fonts/Plume/Plume.otf"
+            as="font"
+            crossOrigin=""
+          />
+          
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

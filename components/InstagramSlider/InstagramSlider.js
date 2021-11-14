@@ -4,7 +4,7 @@ import Link from "next/link";
 import Marquee from 'react-marquee-master';
 import "./InstagramSlider.module.scss"
 
-export default function InstagramSlider ({ feed }) {
+function InstagramSlider ({ feed }) {
 
   const onDisplayFeed = feed.map(({ node }, i) => {
     return (
@@ -40,5 +40,7 @@ export default function InstagramSlider ({ feed }) {
     </div>
   );
 }
+
+export default React.memo(InstagramSlider)
 
 

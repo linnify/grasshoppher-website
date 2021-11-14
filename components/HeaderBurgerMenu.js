@@ -40,10 +40,10 @@ export const HeaderBurgerMenu = () => {
         </a>
       </div>
       <div style={{marginTop: '20px', marginBottom: '20px'}}>
-        <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true}/>
+        <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
       </div>
       <div style={{marginTop: '20px'}}>
-        <ButtonRedirect text={'Be a Mentor'} href={'https://forms.gle/YxesDx7X1UXsV4HA9'} target={true}/>
+        <ButtonRedirect href={"/become-mentor"} text={'Be a Mentor'} target={false} id={'in-header-button'}/>
       </div>
     </Menu>
   )

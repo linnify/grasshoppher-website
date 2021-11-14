@@ -8,6 +8,7 @@ $color-footer-text-hover: #A9AEBC;
 $color-background-section: #F5E8E666;
 
 $primary-font-family: europa, sans-serif;
+$text-pink: #F5CAC4;
 
 $border-radius: 41px;
 
@@ -21,3 +22,12 @@ $particleSizeBigMobile: 130px;
 $particleSizeMiddle: 111px;
 $particleSizeSmall: 45px;
 $animationDuration: 3s;
+
+$breakpoints: (
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1500px,
+);

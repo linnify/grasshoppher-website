@@ -29,11 +29,12 @@ export const Header = () => (
             <div className={"header__button"}>Join our Slack</div>
           </a>
         </div>
+        
         <div className={'menu-item'}>
-          <ButtonRedirect text={'Find Mentorship'} href={'https://www.grasshoppherapp.com/signup'} target={true} id={'in-header-button'}/>
+          <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
         </div>
         <div className={'menu-item'}>
-          <ButtonRedirect text={'Be a Mentor'} href={'https://forms.gle/YxesDx7X1UXsV4HA9'} target={true} id={'in-header-button'}/>
+          <ButtonRedirect href={"/become-mentor"} text={'Be a Mentor'} target={false} id={'in-header-button'}/>
         </div>
       </div>
       <div className={'burger-menu'}>

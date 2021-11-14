@@ -27,7 +27,7 @@ export default class PartnerWithUs extends React.Component {
   render() {
     return(
       <Page
-        title={"Partner with Us"}
+        title={"Grasshopper | Partner with Us"}
         description={"If you want to go fast, go alone. If you want to go far, go together. – Anonymous proverb and also 100% of everything that fuels what we do here."}
         url={this.state.pageURL}
         images_url={"https://grasshoppher.com/partner/intro.png"}
