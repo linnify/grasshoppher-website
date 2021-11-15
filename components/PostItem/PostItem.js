@@ -15,7 +15,7 @@ export const PostItem = ({ post }) =>
           <div className={"post--button"}>
             <ButtonRedirect href={`/blog/${post.slug}`} text={"Read more"}/>
           </div>
-          <img src={post.image?.url} className={"image"}/>
+          <img src={post.image?.url} />
         </div>
         <h2 className={"post--title"}>{post.title}</h2>
         <div className={"post--summary"}>{post.summary}</div>
