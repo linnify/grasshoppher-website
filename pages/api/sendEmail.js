@@ -1,13 +1,13 @@
 const nodemailer = require("nodemailer");
-import { EMAIL_HOST, EMAIL_AUTH_USER, EMAIL_AUTH_PASS } from "../../constants/deploy";
+import { EMAIL_AUTH_USER, EMAIL_AUTH_PASS } from "../../constants/deploy";
 
 export default (req, res) => {
-
+  
   const { name, email, message } = req.body;
-
+  
   const transporter = nodemailer.createTransport({
     sendmail: true,
-    host: {EMAIL_HOST},
+    host: 'smtp.mailgun.org',
     port: 587,
     secure: false,
     auth: {
@@ -15,26 +15,32 @@ export default (req, res) => {
       pass: EMAIL_AUTH_PASS ,
     },
   });
-
+  const html = `Hello, <br/> <br/> <b>${name}</b> completed the contact form</b>. <br/>
+    <br/> Name: ${name}
+    <br/> E-Mail: ${email}
+    <br/> Mesage: ${message}
+  `;
+  
   const mailOption = {
-    from: `${email}`,
+    from: {
+      name: "Grasshoppher Website",
+      address: 'website@grasshoppher.com',
+    },
     to: `hello@grasshoppher.com`,
     subject: `Contact - GrasshoppHer website`,
-    text: `
-        ${message}
-    
-        ${name}  
-        ${email} 
-    `,
+    html,
   };
-
-  transporter.sendMail(mailOption, (err, data) => {
-    if (err) {
-      console.log("Transporter sendMail error:", err);
-      res.send("error" + JSON.stringify(err));
-    } else {
-      res.send("success");
-    }
-  });
-
+  
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOption, (err, data) => {
+      if (err) {
+        console.log("Transporter sendMail error:", err);
+        return reject(err)
+      }
+      resolve()
+    });
+  })
+    .then(() => res.send("success"))
+    .catch((err) =>  res.send("error" + JSON.stringify(err)))
+  
 }
