@@ -14,9 +14,14 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%;
-    max-width: 500px;
+    width: 45%;
+    max-width: 600px;
     bottom: 0;
+
+    @include media-query(xl) {
+      width: 50%;
+      max-width: 700px;
+    }
   }
 
   &__description {

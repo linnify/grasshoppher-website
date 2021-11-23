@@ -7,6 +7,7 @@
   min-height: 90vh;
 
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;

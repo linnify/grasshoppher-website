@@ -106,13 +106,16 @@ $pink-color: #fcdfee;
     font-size: 32px;
     font-weight: 700;
     color: white;
+    margin-left: 24px;
 
     @include media-query(md) {
       font-size: 48px;
     }
 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-fill-color: #284584;
+    //-webkit-text-stroke-width: 1px;
+    //-webkit-text-fill-color: #284584;
+    //-webkit-text-stroke-width: 0;
+    //-webkit-text-fill-color: white;
 
     animation-name: mentorPulse;
     animation-duration: 8s;
@@ -126,6 +129,8 @@ $pink-color: #fcdfee;
     animation-name: descriptionTitle;
     animation-iteration-count: infinite;
     animation-duration: 8s;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: #284584;
   }
 }
 

@@ -26,7 +26,7 @@ $gotch-image-size: 500px;
   &__count {
     font: normal normal normal 64px/64px Plume;
     letter-spacing: 0;
-    color: #294584;
+    //color: #294584;
 
     @include media-query(md) {
       margin-left: 32px;

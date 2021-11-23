@@ -6,7 +6,7 @@ export const DisruptorsMentors = ({mentors}) => {
   const renderMentor = (mentor, index) => {
     const image = mentor.professional_profile_image?.url;
     const name = `${mentor.first_name} ${mentor.last_name}`
-    const role = mentor.role
+    const title = `${mentor.title}`
     const tags = (mentor.keywords || [])
     
     return (
@@ -17,13 +17,13 @@ export const DisruptorsMentors = ({mentors}) => {
           <div className={'mentor-card__bar--dot'}/>
         </div>
         <div style={{ backgroundImage: `url(${image})`}} className={'mentor-card__image'}/>
-        {/*<img src={image} className={'mentor-card__image'} />*/}
         <div className={'mentor-card__bar'}/>
         
-        <div className={'mentor-card__title'}>{ mentor.nickname }</div>
+        <div className={'mentor-card__nickname'}>{ mentor.nickname }</div>
         <div className={'mentor-card__name'}>{ name }</div>
-        <div className={'mentor-card__occupations'}>{ role }</div>
-        
+        <div className={'mentor-card__occupations'}>{ title } </div>
+        <div className={'mentor-card__occupations mentor-card__occupations--organization'}>{ mentor.organization }</div>
+  
         <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
           <div className={'mentor-card__price'}>
             <div>Starting from: ${mentor.starting_price}</div>
@@ -47,11 +47,11 @@ export const DisruptorsMentors = ({mentors}) => {
       </div>
       
       <div className={'disruptors-mentors__waves margin-top-l'}>
-        <div className={'container padding-l disruptors-mentors__mentors'}>
+        <div className={'container padding-top-xl disruptors-mentors__mentors'}>
           
           <Marquee
             marqueeItems={displayMentors}
-            minHeight={600}
+            minHeight={700}
             direction={"left"}
             marqueeItemClassName={'mentor-item'}
             marqueeClassName={'disruptors-mentors__mentors'}
