@@ -11,8 +11,17 @@
   &__questions {
     margin-top: 32px;
     margin-bottom: 32px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
+
     @include media-query(md) {
       margin-left: 64px;
+    }
+
+    &--border {
+      padding-top: 24px;
     }
   }
 }

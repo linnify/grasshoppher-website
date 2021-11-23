@@ -30,7 +30,6 @@ export const getMentors = async () => {
 
 export const getFrequentlyAskQuestions = async () => {
   const response = await datafyCMS.collections('faq')
-    .fields(['id', 'title', 'description'])
     .pageSize(50)
     .list()
   return response.results;

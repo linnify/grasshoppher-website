@@ -6,6 +6,10 @@ import {getFrequentlyAskQuestions} from "../src/services/datafycms";
 import {FAQSection} from "../components/FAQ/FAQSection/FaqSection";
 
 const FAQ = ({ questions }) => {
+  
+  const mentorQuestions = questions.filter(item => item.type === 'Mentor');
+  const menteeQuestions = questions.filter(item => item.type === 'Mentee');
+  
   return (
     <Page
       title={"Grasshopper | FAQ"}
@@ -17,7 +21,7 @@ const FAQ = ({ questions }) => {
     >
       <Layout title={"Grasshopper | FAQ"}>
         <FadeIn>
-          <FAQSection questions={questions} />
+          <FAQSection menteeQuestions={menteeQuestions} mentorQuestions={mentorQuestions} />
         </FadeIn>
       </Layout>
   
