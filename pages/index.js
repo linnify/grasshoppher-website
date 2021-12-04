@@ -48,9 +48,9 @@ export default class Home extends React.Component {
         <FadeInScroll>
           <LandingDownload/>
         </FadeInScroll>
-     {/*   <FadeInScroll threshold={0.25}>
+        <FadeInScroll threshold={0.25}>
           <InstagramSection feed={this.props.posts}/>
-        </FadeInScroll>*/}
+        </FadeInScroll>
         <FadeInScroll>
           <Partnership newPartnership={this.state.newPartnership} partners={this.state.partners}/>
         </FadeInScroll>

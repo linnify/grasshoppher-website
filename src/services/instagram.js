@@ -1,38 +1,12 @@
-import {data} from "./instagram-posts";
-
-import {DEVELOPMENT, INSTAGRAM_ID, INSTAGRAM_USERNAME} from "../../constants/deploy";
-import Instagram from "instagram-web-api";
 
 export const getInstagramPosts = async () => {
-
-  return []
-/*  if (DEVELOPMENT) {
-    return data
-  }
   
-  const client = new Instagram({ username: 'razvanbretoiu', password: 'eusicutine1994.' });
+  const fields = 'id,caption,media_url,media_type,permalink,timestamp,thumbnail_url'
+  const accessToken = process.env.INSTAGRAM_TOKEN
+  const url = `https://graph.instagram.com/v12.0/me/media?access_token=${accessToken}&fields=${fields}&limit=25`
   
-  try {
-    await client.login()
-  } catch (err) {
-    
-    if (err.error && err.error.message === 'checkpoint_required') {
-      console.log('Challenge failed!', 'Performing new challenge...');
-      
-      const challengeUrl = err.error.checkpoint_url;
-      await client.updateChallenge({ challengeUrl, choice: 1 });
-    }
-  }
+  const response = await fetch(url, { method: 'GET'})
+    .then(response => response.json())
   
-  console.log("After login succsefuly")
-  const response = await client.getPhotosByUsername({ id: 'razvanbretoiu', first: 24 });
-  
-  const values = response.user.edge_owner_to_timeline_media.edges;
-  
-  console.log(values.length)
-  fs.writeFile('instagram-posts.json', JSON.stringify(values), [], (err) => {
-    if (err) return console.log(err);
-  })
-  
-  return values*/
+  return response.data
 }

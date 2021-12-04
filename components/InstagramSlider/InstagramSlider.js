@@ -6,15 +6,18 @@ import "./InstagramSlider.module.scss"
 
 function InstagramSlider ({ feed }) {
 
-  const onDisplayFeed = feed.map(({ node }, i) => {
+  const onDisplayFeed = feed.map((post, i) => {
+    const image = post.thumbnail_url || post.media_url
+    const caption = post.caption
+    
     return (
-      <Link key={i} href={`https://www.instagram.com/grasshoppher/p/${node.shortcode}`}>
+      <Link key={i} href={post.permalink}>
         <div className={"feed"}>
-          <img src={node.display_resources[0].src} alt={"instagram feed"} className={"image feed--img"}/>
+          <img src={image} alt={"instagram feed"} className={"image feed--img"}/>
           <div style={{padding: "0 20px"}}>
             <div className={"feed--insta"}>instagram</div>
             <LinesEllipsis
-              text={node.edge_media_to_caption.edges[0]?.node.text}
+              text={caption}
               maxLine="3"
               ellipsis="..."
               className={"feed--text"}
