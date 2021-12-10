@@ -1,17 +1,18 @@
 @import "styles/abstracts/mixins";
 
+$video-height: 80vh;
 
 .scholarship {
   //height: 90vh;
   position: relative;
-  min-height: 90vh;
+  min-height: $video-height;
 
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
+    height: $video-height;
   }
 
   &__video {
@@ -23,7 +24,7 @@
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 90vh;
+    height: $video-height;
   }
 
   &__title {

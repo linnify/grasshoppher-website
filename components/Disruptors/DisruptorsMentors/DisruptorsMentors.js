@@ -49,11 +49,11 @@ export const DisruptorsMentors = ({mentors}) => {
       </div>
       
       <div className={'disruptors-mentors__waves margin-top-l'}>
-        <div className={'container padding-top-xl disruptors-mentors__mentors'}>
+        <div className={'container padding-top-m disruptors-mentors__mentors'}>
           
           <Marquee
             marqueeItems={displayMentors}
-            minHeight={700}
+            minHeight={650}
             direction={"left"}
             marqueeItemClassName={'mentor-item'}
             marqueeClassName={'disruptors-mentors__mentors'}

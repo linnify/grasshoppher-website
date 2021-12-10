@@ -1,6 +1,6 @@
 import Dialog from '@material-ui/core/Dialog';
 import './DonateDialog.module.scss';
-import {Button, IconButton} from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 import CloseIcon from '@material-ui/icons/Close';
 
 export const DonateDialog = ({ open, onClose}) => {
