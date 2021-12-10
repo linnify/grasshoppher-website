@@ -1,0 +1,20 @@
+.mentor-card-bar {
+  height: 20px;
+  background: black;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+
+  &__bottom {
+    height: 15px;
+    background-image: url("/mentor/mentor-bottom-bar.svg");
+    background-size: cover;
+  }
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    margin-right: 4px;
+  }
+}

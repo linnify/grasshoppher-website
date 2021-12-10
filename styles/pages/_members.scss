@@ -1,0 +1,14 @@
+@import "styles/abstracts/mixins";
+
+.members-page {
+
+  &__header {
+    margin-top: 24px;
+    padding-bottom: 24px;
+
+    @include media-query(md) {
+      margin-top: 68px;
+      padding-bottom: 32px;
+    }
+  }
+}

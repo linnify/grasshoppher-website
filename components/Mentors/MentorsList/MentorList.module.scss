@@ -1,0 +1,18 @@
+@import "styles/abstracts/mixins";
+
+
+.mentors-list {
+  padding-bottom: 212px;
+  display: grid;
+  grid-column-gap: 48px;
+  grid-row-gap: 212px;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+
+  @include media-query(xxl) {
+    grid-column-gap: 72px;
+  }
+
+  &__item {
+
+  }
+}

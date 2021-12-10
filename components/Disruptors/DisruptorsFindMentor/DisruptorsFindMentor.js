@@ -1,5 +1,6 @@
 import React from 'react';
 import './DisruptorsFindMentor.module.scss'
+import Link from 'next/link';
 
 export const DisruptorsFindMentors = () => {
   
@@ -65,7 +66,14 @@ export const DisruptorsFindMentors = () => {
                 <span className={'red'}>u</span>
                 <span className={'pink'}>.</span>
               </div>
+  
+              <Link href={'/mentors'}>
+                <div className={'ready-container__find-mentor'}>
+                  Find a mentor
+                </div>
+              </Link>
             </div>
+            
           </div>
           <div className={'ready-container__image show-md'}/>
         </div>

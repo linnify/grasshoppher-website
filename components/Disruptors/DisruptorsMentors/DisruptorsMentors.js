@@ -1,6 +1,7 @@
 import React from 'react';
 import './DisruptorsMentors.module.scss'
 import Marquee from "react-marquee-master";
+import Link from 'next/link'
 
 export const DisruptorsMentors = ({mentors}) => {
   const renderMentor = (mentor, index) => {
@@ -10,28 +11,29 @@ export const DisruptorsMentors = ({mentors}) => {
     const tags = (mentor.keywords || [])
     
     return (
-      <div className={'mentor-card'} key={index}>
-        <div className={'mentor-card__bar'}>
-          <div className={'mentor-card__bar--dot'}/>
-          <div className={'mentor-card__bar--dot'}/>
-          <div className={'mentor-card__bar--dot'}/>
+      <div className={'disruptors-mentor-card'} key={index}>
+        <div className={'disruptors-mentor-card__bar'}>
+          <div className={'disruptors-mentor-card__bar--dot'}/>
+          <div className={'disruptors-mentor-card__bar--dot'}/>
+          <div className={'disruptors-mentor-card__bar--dot'}/>
         </div>
-        <div style={{ backgroundImage: `url(${image})`}} className={'mentor-card__image'}/>
-        <div className={'mentor-card__bar'}/>
+        <div style={{ backgroundImage: `url(${image})`}} className={'disruptors-mentor-card__image'}/>
+        <div className={'disruptors-mentor-card__bar'}/>
         
-        <div className={'mentor-card__nickname'}>{ mentor.nickname }</div>
-        <div className={'mentor-card__name'}>{ name }</div>
-        <div className={'mentor-card__occupations'}>{ title } </div>
-        <div className={'mentor-card__occupations mentor-card__occupations--organization'}>{ mentor.organization }</div>
-  
+        <Link href={`/mentors/${mentor.slug}`}>
+          <div className={'disruptors-mentor-card__nickname'}>{ mentor.nickname }</div>
+        </Link>
+        <div className={'disruptors-mentor-card__name'}>{ name }</div>
+        <div className={'disruptors-mentor-card__occupations'}>{ title }</div>
+        
         <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-          <div className={'mentor-card__price'}>
+          <div className={'disruptors-mentor-card__price'}>
             <div>Starting from: ${mentor.starting_price}</div>
           </div>
         </div>
         
-        <div className={'mentor-card__tags'}>
-          {tags.map((tag, index) => <div className={'mentor-card__tags--item'} key={index}>#{tag}</div>)}
+        <div className={'disruptors-mentor-card__tags'}>
+          {tags.map((tag, index) => <div className={'disruptors-mentor-card__tags--item'} key={index}>#{tag}</div>)}
         </div>
       </div>
     )

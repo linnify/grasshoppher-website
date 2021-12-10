@@ -1,0 +1,35 @@
+@import "styles/abstracts/mixins";
+@import "styles/abstracts/variables";
+
+.breadcrumbs {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &--name {
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+
+      @include media-query(md) {
+        font-size: 18px;
+      }
+    }
+
+    &--arrow {
+      margin: 0 12px;
+      height: 11px;
+      width: 11px;
+    }
+  }
+}
+
+.breadcrumbs__item--name:hover {
+  color: $color-primary;
+}
+
+

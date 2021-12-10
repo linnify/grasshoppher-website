@@ -35,22 +35,10 @@
   min-height: 700px;
   margin-right: 32px;
   overflow-wrap: break-word;
-  //overflow-x: hidden;
-  //position: relative;
-  //overflow-wrap: break-word;
-  //word-break: break-all;
-  //text-overflow: ellipsis;
 }
 
-.mentor-card {
+.disruptors-mentor-card {
   width: 100%;
-
-
-  //overflow-x: hidden;
-/*  position: relative;
-  overflow-wrap: break-word;
-  word-break: break-all;
-  text-overflow: ellipsis;*/
 
 
   &__bar {
@@ -97,7 +85,7 @@
     overflow: hidden;
   }
 
-  &__title:hover {
+  &__nickname:hover {
     color: white;
   }
 
