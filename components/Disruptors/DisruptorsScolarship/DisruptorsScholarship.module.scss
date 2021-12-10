@@ -60,6 +60,10 @@
     }
   }
 
+  &__description-container {
+    margin-top: -112px;
+  }
+
   &__description {
     background: #294584;
     padding: 24px;
@@ -69,7 +73,7 @@
     right: 0;
     left: 0;
     width: 100%;
-    margin-top: -64px;
+     margin-top: -64px;
 
     @include media-query(md) {
       padding: 48px;
@@ -77,6 +81,27 @@
       line-height: 32px;
       font-size: 22px;
     }
+  }
+
+  &__donate {
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+    cursor: pointer;
+    background: #F5CAC4;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    width: 190px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
   }
 }
 

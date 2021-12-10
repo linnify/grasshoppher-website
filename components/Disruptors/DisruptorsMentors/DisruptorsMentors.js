@@ -57,7 +57,7 @@ export const DisruptorsMentors = ({mentors}) => {
             direction={"left"}
             marqueeItemClassName={'mentor-item'}
             marqueeClassName={'disruptors-mentors__mentors'}
-            delay={"40"}
+            delay={"10"}
           />
         </div>
       </div>
