@@ -25,7 +25,7 @@ const MentorSchedule = ({ mentor }) => {
       href: '/mentors',
     },
     {
-      label: "The Disruptor",
+      label: mentor.nickname,
       href: `/mentors/${mentor.slug}`,
     },
     {
