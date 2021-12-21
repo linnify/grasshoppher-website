@@ -44,9 +44,9 @@ export default class PartnerWithUs extends React.Component {
               <SectionLeftImgRightText section={allies}/>
             </div>
           </FadeInScroll>
-          <FadeInScroll>
+          {/*<FadeInScroll>
             <CampusClubs />
-          </FadeInScroll>
+          </FadeInScroll>*/}
           <FadeInScroll>
             <Organizations/>
           </FadeInScroll>

@@ -54,10 +54,10 @@ export const menuFooterItems = [
     text: "Contact",
     link: "/contact",
   },
-  // {
-  //   text: "FAQ",
-  //   link: "/faq"
-  // },
+  {
+    text: "FAQ",
+    link: "/faq"
+  },
   {
     text: "Join our Slack",
     link: "https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/",
