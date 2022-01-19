@@ -45,7 +45,7 @@ export const DisruptorsFindMentors = () => {
             Begin your journey
           </div>
           <div className={'steps__step__description'}>
-            Once your matched, the journey begins. Consider this your professional path to enlightenment. Namaste, GrasshoppHers.
+            Once you're matched, the journey begins. Consider this your professional path to enlightenment. Namaste, GrasshoppHers.
           </div>
         </div>
       </div>
