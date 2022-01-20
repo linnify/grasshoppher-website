@@ -120,11 +120,11 @@ export const  MentorHero = ({ mentor }) => {
           <MentorCardBar bottom={true}/>
           
           { renderSocial() }
-         {/* <Link href={`/mentors/${mentor.slug}/schedule`}>
+          <Link href={`/mentors/${mentor.slug}/schedule`}>
             <div className={'mentor-hero__book-now'}>
               Book a session
             </div>
-          </Link>*/}
+          </Link>
         </div>
   
   
