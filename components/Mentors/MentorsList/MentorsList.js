@@ -1,7 +1,7 @@
 import React from 'react';
 import {MentorsSearchBar} from "../MentorsSearchBar/MentorsSearchBar";
 import {MentorCard} from "../MentorCard/MentorCard";
-import './MentorList.module.scss';
+import styles from './MentorList.module.scss';
 
 export const MentorsList = ({ mentors }) => {
   
@@ -42,7 +42,7 @@ export const MentorsList = ({ mentors }) => {
     <div className={'container'}>
       <MentorsSearchBar onSearch={onSearch} />
       
-      <div className={'padding-top-l mentors-list'}>
+      <div className={'padding-top-l ' + styles['mentors-list']}>
         {data.map((mentor, index) => <MentorCard key={index} mentor={mentor} />)}
         
         {data.length === 0 && <div>

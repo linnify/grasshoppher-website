@@ -1,5 +1,5 @@
 import Dialog from '@material-ui/core/Dialog';
-import './DonateDialog.module.scss';
+import styles from './DonateDialog.module.scss';
 import { IconButton } from "@material-ui/core";
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -39,24 +39,24 @@ export const DonateDialog = ({ open, onClose}) => {
   
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <div className={'donate-dialog'}>
+      <div className={styles['donate-dialog']}>
         
         
-        <h1 className={'donate-dialog__title'}>
+        <h1 className={styles['donate-dialog__title']}>
           <div>GH SCHOLARSHIP</div>
           <IconButton onClick={handleClose}>
             <CloseIcon />
           </IconButton>
         </h1>
-        <div className={'donate-dialog__description'}>
+        <div className={styles['donate-dialog__description']}>
           How much would you like to donate?
         </div>
         
-        <div className={'donate-dialog__buttons'}>
+        <div className={styles['donate-dialog__buttons']}>
           {prices.map((value, index) => (
-            <div key={index} className={'donate-dialog__buttons--container'}>
+            <div key={index} className={styles['donate-dialog__buttons--container']}>
               <div>{value.name}</div>
-              <a className={'donate-dialog__button'} href={value.link}>
+              <a className={styles['donate-dialog__button']} href={value.link}>
                 {value.price}
               </a>
             </div>

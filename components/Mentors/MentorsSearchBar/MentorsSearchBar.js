@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './MentorsSearchBar.module.scss';
+import styles from './MentorsSearchBar.module.scss';
 import { Menu, MenuItem, withStyles} from "@material-ui/core";
 import {useDebounce} from "../../../src/hooks/debounce";
 
@@ -59,13 +59,13 @@ export const MentorsSearchBar = (props) => {
   const sortBy = sort === 'ascending' ? 'Min > Max' : 'Min < Max';
   
   return (
-    <div className={'mentors-bar'}>
-      <div className={'mentors-bar__search'}>
+    <div className={styles['mentors-bar']}>
+      <div className={styles['mentors-bar__search']}>
         <img src={'/icons/search.svg'} />
         <input onChange={onSearch} placeholder={'Enter keywords like strengths or skills you’re looking for, industries, etc'}/>
       </div>
   
-      <div className={'mentors-bar__sort'} onClick={handleClick}>
+      <div className={styles['mentors-bar__sort']} onClick={handleClick}>
         <div>Sort by price: <span className={'primary-color'}>{sortBy}</span></div>
         <img src={'icons/arrow-down.svg'}/>
       </div>

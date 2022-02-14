@@ -3,9 +3,8 @@
   transform: translateY(10rem) translateZ(0);
   transition: all .5s linear;
 
-}
-
-.fade-in-scroll.is-visible {
-  transform: translateY(0) translateZ(0);
-  opacity: 1;
+  &__is-visible {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
 }

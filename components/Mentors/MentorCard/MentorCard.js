@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Link from 'next/link'
-import './MentorCard.module.scss';
+import styles from './MentorCard.module.scss';
 import {MentorCardBar} from "../MentorCardBar/MentorCardBar";
 
 
@@ -19,32 +19,32 @@ export const MentorCard = ({ mentor }) => {
   
   return (
     <Link href={`/mentors/${mentor.slug}`}>
-      <div className={'mentor-card'}
+      <div className={styles['mentor-card']}
            onMouseOver={() => funnyImage && setDisplayImage(funnyImage)}
            onMouseOut={() => funnyImage && setDisplayImage(image)}
       >
         <MentorCardBar />
-        <div style={{ backgroundImage: `url(${displayImage})`}} className={'mentor-card__image'}>
-          <div className={'mentor-card__title'}>
+        <div style={{ backgroundImage: `url(${displayImage})`}} className={styles['mentor-card__image']}>
+          <div className={styles['mentor-card__title']}>
             { mentor.nickname }
           </div>
         </div>
         
         
         
-        <div className={'mentor-card__details-container'}>
-          <div className={'mentor-card__details'}>
-            <div className={'mentor-card__name'}>{ name }</div>
-            <div className={'mentor-card__occupations'}>{ role }</div>
+        <div className={styles['mentor-card__details-container']}>
+          <div className={styles['mentor-card__details']}>
+            <div className={styles['mentor-card__name']}>{ name }</div>
+            <div className={styles['mentor-card__occupations']}>{ role }</div>
             
             <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-              <div className={'mentor-card__price'}>
+              <div className={styles['mentor-card__price']}>
                 <div>Starting from: ${mentor.starting_price}</div>
               </div>
             </div>
             
-            <div className={'mentor-card__tags'}>
-              {tags.map((tag, index) => <div className={'mentor-card__tags--item'} key={index}>#{tag}</div>)}
+            <div className={styles['mentor-card__tags']}>
+              {tags.map((tag, index) => <div className={styles['mentor-card__tags--item']} key={index}>#{tag}</div>)}
             </div>
           
           

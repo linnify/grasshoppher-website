@@ -1,4 +1,4 @@
-import './DisruptorsMentorshipMovement.module.scss'
+import styles from './DisruptorsMentorshipMovement.module.scss'
 
 const cards = [
   {
@@ -27,8 +27,8 @@ export const DisruptorsMentornshipMovement = () => {
   const lastCard = cards.length % 2 === 0 ? null : cards[cards.length - 1]
   const renderCard = (icon, text, index) => {
     return (
-      <div className={'card'} key={index}>
-        <div className={'card__icon-container'}>
+      <div className={styles.card} key={index}>
+        <div className={styles['card__icon-container']}>
           <img src={icon}/>
         </div>
         
@@ -44,12 +44,12 @@ export const DisruptorsMentornshipMovement = () => {
         <span className={'primary-color'}>YOU GET TO</span>
       </h1>
       
-      <div className={'cards'}>
+      <div className={styles.cards}>
         {cards.map((card, index) => index !== cards.length - 1  && renderCard(card.icon, card.text, index))}
       </div>
       
       {lastCard && (
-        <div className={'cards'} style={{ gridTemplateColumns: 'auto'}}>
+        <div className={styles.cards} style={{ gridTemplateColumns: 'auto'}}>
           {renderCard(lastCard.icon, lastCard.text, 1)}
         </div>
       )}

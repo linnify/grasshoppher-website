@@ -1,10 +1,10 @@
 import React from "react";
-import "./Loader.module.scss"
+import styles from "./Loader.module.scss"
 
 export const Loader = () => {
   return(
-    <div className={"page-loader"}>
-      <div className="lds-default">
+    <div className={styles["page-loader"]}>
+      <div className={styles["lds-default"]}>
         <div></div>
         <div></div>
         <div></div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './DisruptorsHero.module.scss'
+import styles from './DisruptorsHero.module.scss'
 import Typed from 'typed.js';
 
 export const DisruptorsHero = () => {
@@ -28,7 +28,7 @@ export const DisruptorsHero = () => {
   }, [])
   
   return (
-    <div className={'hero-section'}>
+    <div className={styles['hero-section']}>
       <video
         playsInline
         loop
@@ -39,31 +39,31 @@ export const DisruptorsHero = () => {
         data-video-element=""
         data-video-mobile-src={'/disruptors/hero-section.mp4'}
         data-video-desktop-src={'/disruptors/hero-section.mp4'}
-        className={'hero-section__video'}
+        className={styles['hero-section__video']}
       >
         
         <source type="video/mp4" src={'/disruptors/hero-section.mp4'}/>
       </video>
       
-      <div className={'hero-section__grid'}/>
+      <div className={styles['hero-section__grid']}/>
       
-      <div className={'hero-box'}>
-        <div className={'hero-box__header'}>
-          <div className={'hero-box__header__dot'}/>
-          <div className={'hero-box__header__dot'}/>
-          <div className={'hero-box__header__dot'}/>
+      <div className={styles['hero-box']}>
+        <div className={styles['hero-box__header']}>
+          <div className={styles['hero-box__header__dot']}/>
+          <div className={styles['hero-box__header__dot']}/>
+          <div className={styles['hero-box__header__dot']}/>
         </div>
         
-        <div className={'hero-box__container'}>
-          <div className="hero-box__type-wrap">
+        <div className={styles['hero-box__container']}>
+          <div className={styles["hero-box__type-wrap"]}>
             <span style={{ whiteSpace: 'pre' }} ref={el} />
           </div>
           
-          <div className={'hero-box__discover'}>
+          <div className={styles['hero-box__discover']}>
             discover your
           </div>
           
-          <div className={'hero-box__mentor'}/>
+          <div className={styles['hero-box__mentor']}/>
         </div>
       </div>
     </div>

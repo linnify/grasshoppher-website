@@ -1,6 +1,6 @@
 import React from 'react'
 import {ButtonRedirect} from "../ButtonRedirect";
-import './Partnerships.module.scss'
+import styles from './Partnerships.module.scss'
 
 export const Partnerships = ({ partners }) => {
 
@@ -9,12 +9,12 @@ export const Partnerships = ({ partners }) => {
     const pdf = partner?.benefits_document?.url
 
     return (
-      <div className={'partner-card-container'} key={index}>
-        <div className={'partner-card'} >
-          <div className={'partner-card--logo'}>
+      <div className={styles['partner-card-container']} key={index}>
+        <div className={styles['partner-card']} >
+          <div className={styles['partner-card--logo']}>
             <img src={logo} alt={'logo partner'}/>
           </div>
-          <div className={'partner-card--summary'}>{partner.partner_summary}</div>
+          <div className={styles['partner-card--summary']}>{partner.partner_summary}</div>
           {!!pdf && <ButtonRedirect text={'See more'} href={pdf} target={true}/>}
         </div>
       </div>
@@ -24,7 +24,7 @@ export const Partnerships = ({ partners }) => {
   return(
     <div className={'padding-top-bottom-100'}>
       <div className={"section-title"}>All Partnerships</div>
-      <div className={'partners-list'}>{displayPartners}</div>
+      <div className={styles['partners-list']}>{displayPartners}</div>
     </div>
   )
 }

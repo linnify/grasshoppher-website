@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from "react";
-import "./FadeInScroll.module.scss"
+import styles from "./FadeInScroll.module.scss"
 
 export default function FadeInScroll(props) {
 
@@ -14,7 +14,7 @@ export default function FadeInScroll(props) {
       if(!entrie[0].isIntersecting) {
         return
       }
-      entrie[0].target.classList.toggle("is-visible");
+      entrie[0].target.classList.toggle(styles["fade-in-scroll__is-visible"]);
       observer.unobserve(domRef.current)
     }, options);
 
@@ -25,7 +25,7 @@ export default function FadeInScroll(props) {
   return(
     <div
       ref={domRef}
-      className={`fade-in-scroll`}
+      className={styles['fade-in-scroll']}
     >
       {props.children}
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './DisruptorsMentors.module.scss'
+import styles from './DisruptorsMentors.module.scss'
 import Marquee from "react-marquee-master";
 import Link from 'next/link'
 
@@ -11,29 +11,29 @@ export const DisruptorsMentors = ({mentors}) => {
     const tags = (mentor.keywords || [])
     
     return (
-      <div className={'disruptors-mentor-card'} key={index}>
-        <div className={'disruptors-mentor-card__bar'}>
-          <div className={'disruptors-mentor-card__bar--dot'}/>
-          <div className={'disruptors-mentor-card__bar--dot'}/>
-          <div className={'disruptors-mentor-card__bar--dot'}/>
+      <div className={styles['disruptors-mentor-card']} key={index}>
+        <div className={styles['disruptors-mentor-card__bar']}>
+          <div className={styles['disruptors-mentor-card__bar--dot']}/>
+          <div className={styles['disruptors-mentor-card__bar--dot']}/>
+          <div className={styles['disruptors-mentor-card__bar--dot']}/>
         </div>
-        <div style={{ backgroundImage: `url(${image})`}} className={'disruptors-mentor-card__image'}/>
-        <div className={'disruptors-mentor-card__bar'}/>
+        <div style={{ backgroundImage: `url(${image})`}} className={styles['disruptors-mentor-card__image']}/>
+        <div className={styles['disruptors-mentor-card__bar']}/>
         
         <Link href={`/mentors/${mentor.slug}`}>
-          <div className={'disruptors-mentor-card__nickname'}>{ mentor.nickname }</div>
+          <div className={styles['disruptors-mentor-card__nickname']}>{ mentor.nickname }</div>
         </Link>
-        <div className={'disruptors-mentor-card__name'}>{ name }</div>
-        <div className={'disruptors-mentor-card__occupations'}>{ title }</div>
+        <div className={styles['disruptors-mentor-card__name']}>{ name }</div>
+        <div className={styles['disruptors-mentor-card__occupations']}>{ title }</div>
         
         <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
-          <div className={'disruptors-mentor-card__price'}>
+          <div className={styles['disruptors-mentor-card__price']}>
             <div>Starting from: ${mentor.starting_price}</div>
           </div>
         </div>
         
-        <div className={'disruptors-mentor-card__tags'}>
-          {tags.map((tag, index) => <div className={'disruptors-mentor-card__tags--item'} key={index}>#{tag}</div>)}
+        <div className={styles['disruptors-mentor-card__tags']}>
+          {tags.map((tag, index) => <div className={styles['disruptors-mentor-card__tags--item']} key={index}>#{tag}</div>)}
         </div>
       </div>
     )
@@ -42,21 +42,21 @@ export const DisruptorsMentors = ({mentors}) => {
   const displayMentors = mentors.map((mentor, index) => renderMentor(mentor, index))
   
   return (
-    <div className={'relative disruptors-mentors'}>
+    <div className={`relative ${styles['disruptors-mentors']}`}>
       
       <div className={'container'} >
-        <h1 className={'disruptors-mentors--featured'}>Featured <span className={'disruptors-mentors--mentors'}>Mentors</span></h1>
+        <h1 className={styles['disruptors-mentors--featured']}>Featured <span className={styles['disruptors-mentors--mentors']}>Mentors</span></h1>
       </div>
       
-      <div className={'disruptors-mentors__waves margin-top-l'}>
-        <div className={'container padding-top-m disruptors-mentors__mentors'}>
+      <div className={`${styles['disruptors-mentors__waves']} margin-top-l`}>
+        <div className={`container padding-top-m ${styles['disruptors-mentors__mentors']}`}>
           
           <Marquee
             marqueeItems={displayMentors}
             minHeight={650}
             direction={"left"}
-            marqueeItemClassName={'mentor-item'}
-            marqueeClassName={'disruptors-mentors__mentors'}
+            marqueeItemClassName={styles['mentor-item']}
+            marqueeClassName={styles['disruptors-mentors__mentors']}
             delay={"10"}
           />
         </div>

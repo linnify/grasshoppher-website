@@ -2,7 +2,7 @@ import React from "react";
 import LinesEllipsis from "react-lines-ellipsis";
 import Link from "next/link";
 import Marquee from 'react-marquee-master';
-import "./InstagramSlider.module.scss"
+import styles from "./InstagramSlider.module.scss"
 
 function InstagramSlider ({ feed }) {
 
@@ -12,17 +12,17 @@ function InstagramSlider ({ feed }) {
     
     return (
       <Link key={i} href={post.permalink}>
-        <div className={"feed"}>
-          <img src={image} alt={"instagram feed"} className={"image feed--img"}/>
+        <div className={styles.feed}>
+          <img src={image} alt={"instagram feed"} className={"image " + styles['feed--img']}/>
           <div style={{padding: "0 20px"}}>
-            <div className={"feed--insta"}>instagram</div>
+            <div className={styles["feed--insta"]}>instagram</div>
             <LinesEllipsis
               text={caption}
               maxLine="3"
               ellipsis="..."
-              className={"feed--text"}
+              className={styles["feed--text"]}
             />
-            <img src={"/insta-arrow.svg"} className={"feed--arrow"} alt={"arrow"}/>
+            <img src={"/insta-arrow.svg"} className={styles["feed--arrow"]} alt={"arrow"}/>
           </div>
         </div>
       </Link>
@@ -31,13 +31,13 @@ function InstagramSlider ({ feed }) {
 
   return(
     <div className={"row"}>
-      <div className={"feed--container"}>
+      <div className={styles["feed--container"]}>
         <Marquee
           marqueeItems={onDisplayFeed}
-          height={"700"}
-          marqueeContainerClassName={"feed--marquee"}
+          height={700}
+          marqueeContainerClassName={styles["feed--marquee"]}
           direction={"left"}
-          delay={"10"}
+          delay={10}
         />
       </div>
     </div>

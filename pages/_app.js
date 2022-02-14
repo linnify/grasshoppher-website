@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/main.global.scss";
 import { DefaultSeo } from "next-seo";
 import SEO from "../seo-metadata";
 import React, {useEffect} from "react";

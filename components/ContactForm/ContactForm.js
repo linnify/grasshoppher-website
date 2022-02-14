@@ -1,5 +1,5 @@
 import React from "react";
-import "./ContactForm.module.scss"
+import styles from "./ContactForm.module.scss"
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -50,16 +50,16 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className={"form"}>
-        <div className={"form__input-row"}>
-          <div className={"form__input-item"}>
+      <div className={styles.form}>
+        <div className={styles['form__input-row']}>
+          <div className={styles["form__input-item"]}>
             <div>Name</div>
             <input
               value={this.state.name}
               onChange={(name) => this.setState({name: name.target.value})}
             />
           </div>
-          <div className={`form__input-item`} id={this.state.validEmail}>
+          <div className={styles[`form__input-item`]} id={this.state.validEmail}>
             <div>E-mail</div>
             <input
               value={this.state.email}
@@ -67,7 +67,7 @@ export default class ContactForm extends React.Component {
             />
           </div>
         </div>
-        <div className={"form__textarea"}>
+        <div className={styles["form__textarea"]}>
           <div>Your message</div>
           <textarea
             value={this.state.message}

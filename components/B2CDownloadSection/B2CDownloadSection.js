@@ -1,10 +1,10 @@
 import React from "react";
 import {DownloadButton} from "../DownloadButton";
-import "./B2CDownloadSection.module.scss"
+import styles from "./B2CDownloadSection.module.scss"
 
 export const B2CDownloadSection = () => (
     <div className={"container"} style={{paddingTop: "100px", paddingBottom: "100px"}}>
-      <div className={"row middle-xs between-md row-b2c"}>
+      <div className={"row middle-xs between-md " + styles['row-b2c']}>
         <div className={"col-xs-12 col-md-4 col-xl-5"}>
           <div className={"text-block"}>Do you want to join our GrasshoppHer Cloud (aka community)?</div>
           <DownloadButton/>

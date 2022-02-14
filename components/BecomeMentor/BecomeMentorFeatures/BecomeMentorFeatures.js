@@ -1,5 +1,5 @@
 import React from "react";
-import './BecomeMentorFeatures.module.scss';
+import styles from './BecomeMentorFeatures.module.scss';
 
 const cards = [
   {
@@ -28,8 +28,8 @@ export const BecomeMentorFeatures = () => {
   const lastCard = cards.length % 2 === 0 ? null : cards[cards.length - 1]
   const renderCard = (icon, text, index) => {
     return (
-      <div className={'become-mentor-features__card'} key={index}>
-        <div className={'become-mentor-features__card__icon-container'}>
+      <div className={styles['become-mentor-features__card']} key={index}>
+        <div className={styles['become-mentor-features__card__icon-container']}>
           <img src={icon}/>
         </div>
         
@@ -39,18 +39,18 @@ export const BecomeMentorFeatures = () => {
   }
   
   return (
-    <div className={'become-mentor-features container padding-vertical-xxl'}>
+    <div className={'container padding-vertical-xxl ' + styles['become-mentor-features']}>
       <h1 className={'padding-bottom-l'}>
         <span className={'primary-color'}>BY JOINING THE</span> PAID MENTORSHIP <span className={'primary-color'}>HUB</span><br/>
         <span className={'primary-color'}>YOU GET TO:</span>
       </h1>
   
-      <div className={'become-mentor-features__cards'}>
+      <div className={styles['become-mentor-features__cards']}>
         {cards.map((card, index) => index !== cards.length - 1  && renderCard(card.icon, card.text, index))}
       </div>
   
       {lastCard && (
-        <div className={'become-mentor-features__cards'} style={{ gridTemplateColumns: 'auto'}}>
+        <div className={styles['become-mentor-features__cards']} style={{ gridTemplateColumns: 'auto'}}>
           {renderCard(lastCard.icon, lastCard.text, 1)}
         </div>
       )}

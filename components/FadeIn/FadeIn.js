@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from "react";
-import "./FadeIn.module.scss"
+import styles from "./FadeIn.module.scss"
 
 export default function FadeIn(props) {
 
@@ -13,7 +13,7 @@ export default function FadeIn(props) {
       if(!entrie[0].isIntersecting) {
         return
       }
-      entrie[0].target.classList.toggle("visible");
+      entrie[0].target.classList.toggle(styles["fade-in__visible"]);
       observer.unobserve(domRef.current)
     }, options);
 
@@ -21,7 +21,7 @@ export default function FadeIn(props) {
   }, []);
 
   return(
-    <div ref={domRef} className={`fade-in`}>
+    <div ref={domRef} className={styles[`fade-in`]}>
       {props.children}
     </div>
   );

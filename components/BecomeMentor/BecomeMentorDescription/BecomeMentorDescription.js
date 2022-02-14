@@ -1,14 +1,14 @@
 import React from "react";
-import './BecomeMentorDescription.module.scss';
+import styles from './BecomeMentorDescription.module.scss';
 
 export const BecomeMentorDescription = () => {
   
   return (
-    <div className={'become-mentor-description padding-vertical-xl'}>
+    <div className={'padding-vertical-xl ' + styles['become-mentor-description']}>
       
-      <div className={'become-mentor-description__image hide-sm show-md'}/>
+      <div className={'hide-sm show-md ' + styles['become-mentor-description__image']}/>
       
-      <div className={'become-mentor-description__text'}>
+      <div className={styles['become-mentor-description__text']}>
         GrasshoppHer is a <b className={'word'}>movement</b>, community and platform designed to connect and empower women – whether you’re looking to grow your skills or share them with others.
         Now, it’s a place where you can <b className={'word'}>get paid</b> for doing that second part.
         That’s right. Our new mentorship paid hub means you get to paid for being, well, you.

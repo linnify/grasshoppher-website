@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import "./VideoPlayer.module.scss"
+import styles from "./VideoPlayer.module.scss"
 import {handleOffset} from "../../src/helpers/handleOffset";
 import {PageCircles} from "../PageCircles";
 import FadeIn from "../FadeIn/FadeIn";
@@ -16,7 +16,7 @@ export const VideoPlayer = ({ url, id }) => {
         <div className={"circle"}>
           <PageCircles classes={"circle-base circle-video-left"} translateOffset={offsetLeft}/>
           <div style={{position: "relative", zIndex: "20"}}>
-            <div className={"video"} id={id}>
+            <div className={styles.video} id={id}>
               <ReactPlayer
                 url={url}
                 playIcon={""}

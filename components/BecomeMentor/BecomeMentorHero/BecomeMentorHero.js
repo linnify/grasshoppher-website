@@ -1,4 +1,4 @@
-import './BecomeMentorHero.module.scss'
+import styles from './BecomeMentorHero.module.scss'
 import Typed from 'typed.js';
 import React from "react";
 
@@ -29,7 +29,7 @@ export const BecomeMentorHero = () => {
   }, [])
   
   return (
-    <div className={'become-mentor'}>
+    <div className={styles['become-mentor']}>
       <video
         playsInline
         loop
@@ -40,18 +40,18 @@ export const BecomeMentorHero = () => {
         data-video-element=""
         data-video-mobile-src={'/mentor/hero-section.mp4'}
         data-video-desktop-src={'/mentor/hero-section.mp4'}
-        className={'become-mentor__video'}
+        className={styles['become-mentor__video']}
       >
         <source type="video/mp4" src={'/mentor/hero-section.mp4'}/>
       </video>
       
       <div>
-        <div className={'become-mentor__title'}>
+        <div className={styles['become-mentor__title']}>
           BECOME A MENTOR.
         </div>
-        <div className={'become-mentor__title become-mentor__typed'}>
-          <div className={'become-mentor__typed--make'}>MAKE</div>
-          <div className={'become-mentor__title--pink'}>
+        <div className={`${styles['become-mentor__title']} ${styles['become-mentor__typed']}`}>
+          <div className={styles['become-mentor__typed--make']}>MAKE</div>
+          <div className={styles['become-mentor__title--pink']}>
             <span style={{ whiteSpace: 'pre' }} ref={el} />
           </div>
         </div>
