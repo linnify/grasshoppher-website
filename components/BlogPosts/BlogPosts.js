@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import {PostItem} from "../PostItem/PostItem";
-import styles from "./BlogPosts.module.scss"
 import {resizeAllGridItems} from "../../src/helpers/resizeGridItem";
 
 export const BlogPosts = ({ posts }) => {
@@ -19,7 +18,7 @@ export const BlogPosts = ({ posts }) => {
   const displayPosts = posts.map((post, index) => <PostItem post={post} key={index}/>);
 
   return(
-    <div className={styles["blog-post"]}>
+    <div className={"blog-post"}>
       {displayPosts}
     </div>
   );
