@@ -43,11 +43,15 @@ export default class Blog extends React.Component {
 export async function getStaticProps({ params }) {
   // TODO Bia we load only the first 50 items, after that we should have a load more button
   
-  const response = await datafyCMS.collections('post')
-    .fields(['slug', 'title', 'summary', 'image.url', 'author.name', 'published_at'])
-    .sortBy('published_at', 'desc')
-    .pageSize(50)
-    .list()
+  // const response = await datafyCMS.collections('post')
+  //   .fields(['slug', 'title', 'summary', 'image.url', 'author.name', 'published_at'])
+  //   .sortBy('published_at', 'desc')
+  //   .pageSize(50)
+  //   .list()
+  const response = {
+    results: [],
+    next: false
+  }
   
   return {
     props: {

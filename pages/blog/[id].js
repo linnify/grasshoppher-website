@@ -93,8 +93,9 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths: allPosts,
-    fallback: true,
+    paths: []
+    // paths: allPosts,
+    // fallback: true,
   };
 }
 
