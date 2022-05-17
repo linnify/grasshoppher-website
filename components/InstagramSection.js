@@ -14,7 +14,7 @@ export const InstagramSection = ({ feed }) => {
             <span></span>
           </div>
           <div style={{position: "relative"}}>
-            <div className={"section-title"}>This just happend.</div>
+            <div className={"section-title"}>GrasshoppHer IRL</div>
           </div>
         </div>
         <InstagramSlider feed={feed}/>

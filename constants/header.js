@@ -11,8 +11,8 @@ export const header = [
     menu: "Press",
     link: "/press-releases",
   },
-  {
-    menu: "Blog",
-    link: "/blog",
-  },
+  // {
+  //   menu: "Blog",
+  //   link: "/blog",
+  // },
 ];
