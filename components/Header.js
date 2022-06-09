@@ -15,6 +15,11 @@ export const Header = () => (
       <div className={"row middle-xs web-menu"}>
         <HeaderDropdown />
         <div className={'menu-item'}>
+          <Link href={"/membership"}>
+            <div className={"header__button"}>Presale Membership</div>
+          </Link>
+        </div>
+        <div className={'menu-item'}>
           <Link href={"/partner-with-us"}>
             <div className={"header__button"}>Partner with Us</div>
           </Link>
@@ -24,11 +29,11 @@ export const Header = () => (
             <div className={"header__button"}>HerCloud</div>
           </Link>
         </div>
-        <div className={'menu-item'}>
-          <a target="_blank" href={"https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/"} style={{ textDecoration: 'none', color: 'black'}}>
-            <div className={"header__button"}>Join our Slack</div>
-          </a>
-        </div>
+        {/*<div className={'menu-item'}>*/}
+        {/*  <a target="_blank" href={"https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/"} style={{ textDecoration: 'none', color: 'black'}}>*/}
+        {/*    <div className={"header__button"}>Join our Slack</div>*/}
+        {/*  </a>*/}
+        {/*</div>*/}
         
         <div className={'menu-item'}>
           <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
