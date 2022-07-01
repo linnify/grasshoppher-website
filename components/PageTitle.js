@@ -8,7 +8,7 @@ export const PageTitle = ({ content, id }) => {
   const offset = handleOffset(0, 0.2);
 
   return(
-    <div className={"container"} style={{marginTop: "180px"}}>
+    <div className={"container page-title-container"}>
       <div className={"circle"}>
         <div className={"circle-base circle-one circle-page-title"} id={id} style={{ transform: `translateY(-${offset}px)`}}>
           <span></span>

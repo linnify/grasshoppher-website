@@ -8,6 +8,7 @@
 }
 
 .circle-base span {
+  display: none;
   z-index: -10!important;
   border-radius: $particleSize;
   position: absolute;
@@ -252,7 +253,11 @@
   }
 }
 
-
+@media (min-width: 768px) {
+  .circle-base span {
+    display: block;
+  }
+}
 @media (min-width: 992px) {
   .circle-base span {
     &:nth-child(1) {

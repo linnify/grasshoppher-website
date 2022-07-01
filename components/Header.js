@@ -29,12 +29,6 @@ export const Header = () => (
             <div className={"header__button"}>HerCloud</div>
           </Link>
         </div>
-        {/*<div className={'menu-item'}>*/}
-        {/*  <a target="_blank" href={"https://grasshopphergroup.slack.com/join/shared_invite/zt-p98xthbp-4cJGlt120TqpRCoIIMuVig#/"} style={{ textDecoration: 'none', color: 'black'}}>*/}
-        {/*    <div className={"header__button"}>Join our Slack</div>*/}
-        {/*  </a>*/}
-        {/*</div>*/}
-        
         <div className={'menu-item'}>
           <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
         </div>
