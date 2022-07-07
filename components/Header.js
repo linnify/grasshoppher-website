@@ -20,11 +20,6 @@ export const Header = () => (
           </Link>
         </div>
         <div className={'menu-item'}>
-          <Link href={"/partner-with-us"}>
-            <div className={"header__button"}>Partner with Us</div>
-          </Link>
-        </div>
-        <div className={'menu-item'}>
           <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
         </div>
         <div className={'menu-item'}>
