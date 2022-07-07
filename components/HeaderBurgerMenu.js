@@ -34,11 +34,6 @@ export const HeaderBurgerMenu = () => {
           <div className={"header__button"}>Partner with Us</div>
         </Link>
       </div>
-      <div className={'menu-item'}>
-        <Link href={"/her-cloud"}>
-          <div className={"header__button"}>HerCloud</div>
-        </Link>
-      </div>
       <div style={{marginTop: '20px', marginBottom: '20px'}}>
         <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
       </div>
