@@ -48,9 +48,9 @@ export default class Home extends React.Component {
         <FadeInScroll>
           <LandingDownload/>
         </FadeInScroll>
-        <FadeInScroll threshold={0.25}>
+{/*        <FadeInScroll threshold={0.25}>
           <InstagramSection feed={this.props.posts}/>
-        </FadeInScroll>
+        </FadeInScroll>*/}
         <FadeInScroll>
           <Partnership newPartnership={this.state.newPartnership} partners={this.state.partners}/>
         </FadeInScroll>
@@ -60,13 +60,13 @@ export default class Home extends React.Component {
 }
 
 export async function getStaticProps({ params }) {
-  const posts = await getInstagramPosts();
+  // const posts = await getInstagramPosts();
   const newPartnership = await getLastPartner()
   const partners = await getPartners()
 
   return {
     props: {
-      posts,
+      posts: [],
       newPartnership,
       partners,
     },
