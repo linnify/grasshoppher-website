@@ -1,11 +1,11 @@
 @import "styles/abstracts/variables";
 
 .hero-layout {
-  height: calc(100vh - #{header-height(xs)});
+  height: calc(85vh - #{header-height(xs)});
   position: relative;
 
   &__content {
-    height: 100vh;
+    height: 85vh;
     position: relative;
     top: -#{header-height(xs)};
     width: 100%;
@@ -26,7 +26,7 @@
     z-index: 10;
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media (min-width: 1200px) {
     height: calc(100vh - #{header-height(xl)});
 
     &__content {

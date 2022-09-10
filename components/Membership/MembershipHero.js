@@ -12,6 +12,9 @@ export const MembershipHero = () => {
           <PageTitle
             content={"Become\na\nGrasshoppHer"}
             id={"general"}
+            style={{
+              marginBottom: '67px'
+            }}
           />
           <HighlightedText text={'GrassHoppHer is \n' +
             'thrilled to show you how \n' +
