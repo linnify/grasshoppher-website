@@ -1,18 +1,21 @@
 export const header = [
   {
-    menu: "Story",
-    link: "/story",
+    label: "HOME",
+    path: "/",
   },
   {
-    menu: "Happenings",
-    link: "/events",
+    label: "MEMBERSHIP",
+    path: "/membership",
   },
   {
-    menu: "Press",
-    link: "/press-releases",
+    label: "ABOUT US",
+    path: "/about-us",
   },
-  // {
-  //   menu: "Blog",
-  //   link: "/blog",
-  // },
+  {
+    label: "JOIN NOW",
+    path: "/join",
+    style: {
+      textDecoration: "underline"
+    }
+  }
 ];

@@ -1,40 +1,37 @@
 import React from "react"
-import { slide as Menu } from "react-burger-menu"
+import {slide as Menu} from "react-burger-menu"
 import Link from "next/link";
-import {ButtonRedirect} from "./ButtonRedirect";
 import {header} from "../constants/header";
+import {ActiveItem} from "./Header";
+import {useRouter} from "next/router";
 
 export const HeaderBurgerMenu = () => {
+    const router = useRouter()
 
-  const displayMenuItems = header.map((item, index) => {
+    const displayMenuItems = header.map((item, index) => {
+        return (
+            <div className={'menu-item'} key={index}>
+                <Link href={item.path}>
+                    <ActiveItem active={item.path === '/'
+                        ? router.asPath === item.path
+                        : router.asPath.includes(item.path)}
+                                style={item.style}>{item.label}</ActiveItem>
+                </Link>
+            </div>
+        )
+    })
+
     return (
-      <div className={'menu-item'} key={index}>
-        <Link href={item.link}>
-          <div className={'header__button'}>{item.menu}</div>
-        </Link>
-      </div>
+        <Menu right={true}>
+            <div>
+                <Link href={"/"}>
+                    <img src={"/logos/logo.svg"} alt={"logo GrasshoppHer"} style={{marginBottom: "40px"}}
+                         className={"logo"}/>
+                </Link>
+            </div>
+            {displayMenuItems}
+            <img src={"/logos/be_fearless_promo.svg"} alt={"logo Be Fearless"}
+                 style={{cursor: "pointer", height: "177px", marginTop: "30px"}} className={"web-menu__promo"}/>
+        </Menu>
     )
-  })
-
-  return(
-    <Menu right={true}>
-      <div>
-        <Link href={"/"}>
-          <img src={"/logo.svg"} alt={"logo GrasshoppHer"} style={{marginBottom: "40px"}} className={"logo"}/>
-        </Link>
-      </div>
-      {displayMenuItems}
-      <div className={'menu-item'}>
-        <Link href={"/membership"}>
-          <div className={"header__button"}>Presale Membership</div>
-        </Link>
-      </div>
-      <div style={{marginTop: '20px', marginBottom: '20px'}}>
-        <ButtonRedirect href={"/disruptors"} text={'Book a Mentor'} target={false} id={'in-header-button'}/>
-      </div>
-      <div style={{marginTop: '20px'}}>
-        <ButtonRedirect href={"/become-mentor"} text={'Be a Mentor'} target={false} id={'in-header-button'}/>
-      </div>
-    </Menu>
-  )
 }

@@ -2,39 +2,18 @@
 @import "../abstracts/variables";
 
 .header{
-  height: 100px;
+  height: 177px;
   display: flex;
-  align-items: center;
+  align-items: start;
+  background-color: transparent;
 
-  &__button {
-    @include primary-text-hover;
-    cursor: pointer;
+  &__padding-top-40 {
+    padding-top: 40px;
   }
 
-}
-
-#dropdown-icon-button {
-  font-family: $primary-font-family;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  color: $color-text-black;
-  border-radius: 0;
-  padding: 0;
-
-  &:hover {
-    color: $color-primary;
-    background: none;
+  &__padding-top-30 {
+    padding-top: 30px;
   }
-
-  &.active-menu {
-    color: $color-primary;
-  }
-
-  & #icon-arrow {
-    margin-top: 5px;
-  }
-
 }
 
 #menu-item {
@@ -47,34 +26,25 @@
 
 .web-menu {
   display: none;
+
+  &__promo {
+    display: none;
+  }
 }
 
 .burger-menu {
-  margin-top: 10px;
+  margin-top: 45px;
 }
 
 .logo {
-  height: 60px;
+  height: 42px;
 }
 
 @media only screen and (min-width: 768px) {
 
   .header{
-
     &__button {
       font-size: 22px;
-    }
-  }
-
-  #in-header-button a{
-    font-size: 22px;
-  }
-
-  #dropdown-icon-button {
-    font-size: 22px;
-
-    & #icon-arrow {
-      margin-top: 10px;
     }
   }
 }
@@ -85,16 +55,18 @@
       font-size: 18px;
     }
   }
-  #dropdown-icon-button {
-    font-size: 18px;
-  }
-
-  #in-header-button a {
-    font-size: 18px;
-  }
 
   .web-menu {
     display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+    margin-right: 33px;
+
+    &__promo {
+      display: block;
+    }
   }
 
   .burger-menu {
@@ -111,14 +83,6 @@
     &__button {
       font-size: 22px;
     }
-  }
-
-  #in-header-button a {
-    font-size: 22px;
-  }
-
-  #dropdown-icon-button {
-    font-size: 22px;
   }
 
   .menu-item {

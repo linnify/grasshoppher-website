@@ -10,7 +10,6 @@ import {InstagramSection} from "../components/InstagramSection";
 import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
-import {getInstagramPosts} from "../src/services/instagram";
 import {Partnership} from "../components/Partnership";
 import {getLastPartner, getPartners} from "../src/services/datafycms";
 

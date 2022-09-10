@@ -2,12 +2,17 @@
 @import "../abstracts/mixins";
 
 .footer {
-  background-color: $color-background-footer;
+  background: linear-gradient(252.15deg, #DBFF00 -15.93%, #F7F3DF 122.23%);
   height: 100%;
-  padding: 60px 0;
+  padding: 100px 0;
+
+  &__bold-text {
+    font-size: 40px;
+    line-height: 34px;
+  }
 
   &__media-item {
-    padding-right: 20px;
+    padding-right: 30px;
     &:hover{
       fill: #787D8E;
     }
@@ -17,13 +22,16 @@
     }
   }
 
-  &--menu {
+  &__menu {
+    margin-top: 20px;
     display: flex;
     flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 40px;
     padding-bottom: 15px;
   }
 
-  &--menu-links {
+  &__menu-links {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -37,6 +45,11 @@
 
   &__menu-text {
     @include secondary-text-hover;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 29px;
+    text-decoration: underline;
     cursor: pointer;
     margin-bottom: 15px;
   }
@@ -61,12 +74,8 @@
 
 @media only screen and (min-width: 768px) {
   .footer {
-    &--menu-links {
-      flex-direction: row;
-    }
-
     &__menu-text{
-      font-size: 20px;
+      font-size: 15px;
       padding-right: 36px;
     }
 
@@ -92,11 +101,12 @@
       margin-bottom: 0;
     }
 
-    &--menu {
+    &__menu {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 45px;
       height: 100%;
     }
   }
@@ -106,12 +116,11 @@
   .footer {
 
     &__media-item {
-      padding-right: 0;
-      padding-left: 23px;
+      padding-right: 40px;
     }
 
     &__menu-text{
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 }
