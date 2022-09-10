@@ -3,25 +3,31 @@ import React from "react";
 import {GA_TRACKING_ID, HOTJAR_SITE_ID} from "../constants/deploy"
 
 export default class MyDocument extends Document {
-    render() {
-        return (
-            <Html lang={"en-US"}>
-                <Head>
-                    <link rel="icon" href="/favicon.png"/>
-                    <link rel="stylesheet" href="https://use.typekit.net/ssp0oyk.css"/>
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap"
-                        rel="stylesheet"
-                    />
-                    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
-
-                    <script
-                        async
-                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-                    />
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: `
+  render() {
+    return (
+      <Html lang={"en-US"}>
+        <Head>
+          <link rel="icon" href="/favicon.png"/>
+          <link rel="stylesheet" href="https://use.typekit.net/ssp0oyk.css"/>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap"
+            rel="stylesheet"
+          />
+          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+          <link
+            rel="preload"
+            href="/fonts/BebasNeue/FontsFree-Net-BebasNeueRegular.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -29,11 +35,11 @@ export default class MyDocument extends Document {
                   page_path: window.location.pathname,
                 });
               `
-                        }}
-                    />
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: `
+            }}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                 (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                 h._hjSettings={hjid:${HOTJAR_SITE_ID},hjsv:6};
@@ -43,14 +49,14 @@ export default class MyDocument extends Document {
                 a.appendChild(r);
                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               `
-                        }}
-                    />
-                </Head>
-                <body>
-                <Main/>
-                <NextScript/>
-                </body>
-            </Html>
-        );
-    }
+            }}
+          />
+        </Head>
+        <body>
+        <Main/>
+        <NextScript/>
+        </body>
+      </Html>
+    );
+  }
 }

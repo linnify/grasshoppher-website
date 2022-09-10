@@ -1,0 +1,16 @@
+@import "styles/abstracts/variables";
+
+
+.membership-hero {
+  height: calc(100vh - #{header-height(xs)});
+  min-height: 777px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 67px;
+  padding-bottom: 48px;
+
+  @media (min-width: 1200px) {
+    height: calc(100vh - #{header-height(xl)});
+  }
+}

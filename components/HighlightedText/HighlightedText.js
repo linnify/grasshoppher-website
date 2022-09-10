@@ -5,10 +5,10 @@ export const HighlightedText = ({text}) => {
 
   return (
     <div className={styles['highlighted-text']}>
-      <div className={styles['highlighted-text__content']}>{text}</div>
-      <div className={styles['highlighted-text__underline']}>
+      <h2 className={styles['highlighted-text__content']}>{text}</h2>
+      <h2 className={styles['highlighted-text__underline']}>
         {text}
-      </div>
+      </h2>
     </div>
   )
 }

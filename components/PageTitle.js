@@ -3,12 +3,12 @@ import {TextBoldKeyword} from "./TextBoldKeyword";
 import handleScroll from "../src/hooks/handleScroll";
 import {handleOffset} from "../src/helpers/handleOffset";
 
-export const PageTitle = ({content, id, style}) => {
+export const PageTitle = ({content, id, style = {}}) => {
 
   // const offset = handleOffset(0, 0.2);
 
   return (
-    <div id={id} className={"page-title"} style={style}>{content}</div>
+    <h1 id={id} style={style} className={'white-space-break'}>{content}</h1>
   );
 
   // return(

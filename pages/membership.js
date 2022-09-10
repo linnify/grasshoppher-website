@@ -4,6 +4,8 @@ import {Loader} from "../components/Loader/Loader";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {PageTitle} from "../components/PageTitle";
 import React from "react";
+import {HighlightedText} from '../components/HighlightedText/HighlightedText';
+
 const datafyCMS = require('@datafycms/js-client')
 
 const Membership = (props) => {
@@ -11,16 +13,17 @@ const Membership = (props) => {
     <Page title={"Presale Membership - GrasshoppHer"}>
       <Layout title={"Presale Membership"}>
         <FadeIn>
-          <PageTitle content={"Presale Membership"} id={"general"}/>
+          <div className={'container'}>
+            <HighlightedText text={'Presale Membership'}/>
+          </div>
         </FadeIn>
         <div className={"container padding-top-m padding-bottom-xxl"}>
-          <div dangerouslySetInnerHTML={{__html: props.page }}/>
+          <div dangerouslySetInnerHTML={{__html: props.page}}/>
         </div>
       </Layout>
     </Page>
   )
 }
-
 
 
 export const getStaticProps = async () => {
@@ -29,8 +32,8 @@ export const getStaticProps = async () => {
     .pageSize(1)
     .list()
   const page = response.results?.[0];
-  
-  
+
+
   return {
     props: {
       page: page?.content || ''

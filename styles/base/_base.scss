@@ -24,8 +24,8 @@ img {
 }
 
 .rowTest {
-    border:2px solid teal;
-    display:flex;
+  border: 2px solid teal;
+  display: flex;
 }
 
 .container {
@@ -33,7 +33,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px;
-  z-index: 10!important;
+  z-index: 10 !important;
 }
 
 .padding-top-bottom-50 {
@@ -54,18 +54,23 @@ img {
 .show-xs {
   display: unset;
 }
+
 .hide-xs {
   display: none;
 }
+
 .show-sm {
   display: none;
 }
+
 .show-md {
   display: none;
 }
+
 .show-lg {
   display: none;
 }
+
 .show-xl {
   display: none;
 }
@@ -83,12 +88,12 @@ a {
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 
 div, a, img, ul, li, button {
-  outline: none!important;
+  outline: none !important;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -204,4 +209,8 @@ h1 {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.white-space-break {
+  white-space: break-spaces;
 }

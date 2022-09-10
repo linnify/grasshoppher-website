@@ -1,5 +1,13 @@
 @import "../abstracts/variables";
 
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 300;
+  font-display: optional;
+  src: url(/fonts/BebasNeue/FontsFree-Net-BebasNeueRegular.ttf) format("truetype");
+}
+
 body {
   font-family: $primary-font-family;
   font-style: normal;
@@ -18,7 +26,7 @@ body {
   }
 
   & a {
-    color: black!important;
+    color: black !important;
   }
 }
 
@@ -35,5 +43,63 @@ body {
 
   .legal-text {
     font-size: 22px;
+  }
+}
+
+h1 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 55px;
+  letter-spacing: 0.05em;
+  font-weight: 400 !important;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400 !important;
+}
+
+.inter1, .inter2{
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.inter1 {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.inter2 {
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 100px;
+    line-height: 90px;
+  }
+
+  h2 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 42px;
   }
 }
