@@ -1,10 +1,17 @@
+@import "styles/abstracts/variables";
+
 .hero-layout {
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #BFC2B9;
-  z-index: 1;
+  height: calc(100vh - #{header-height(xs)});
+  position: relative;
+
+  &__content {
+    height: 100vh;
+    position: relative;
+    top: -#{header-height(xs)};
+    width: 100%;
+    background-color: $hero-background;
+    z-index: 1;
+  }
 
   &__background {
     position: absolute;
@@ -13,9 +20,21 @@
     z-index: 2;
   }
 
-  &__content{
+  &__children {
     position: relative;
-    margin-top: 177px;
+    padding-top: calc(13px + #{header-height(xs)});
     z-index: 10;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: calc(100vh - #{header-height(xl)});
+
+    &__content {
+      top: -#{header-height(xl)};
+    }
+
+    &__children {
+      padding-top: calc(13px + #{header-height(xl)});
+    }
   }
 }

@@ -3,12 +3,12 @@ import React from "react"
 
 export const HighlightedText = ({text}) => {
 
-    return (
-        <>
-            {text.map(textPart => <div className={styles['highlighted-text']}>
-                <div>{textPart}</div>
-                <div className={styles['highlight']}/>
-            </div>)}
-        </>
-    )
+  return (
+    <div className={styles['highlighted-text']}>
+      <div className={styles['highlighted-text__content']}>{text}</div>
+      <div className={styles['highlighted-text__underline']}>
+        {text}
+      </div>
+    </div>
+  )
 }

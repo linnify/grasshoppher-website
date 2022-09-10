@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .header{
-  height: 177px;
+  height: header-height(xs);
   display: flex;
   align-items: start;
   background-color: transparent;
@@ -53,6 +53,7 @@
 
 @media only screen and (min-width: 1200px) {
   .header{
+    height: header-height(xl);
     &__button {
       font-size: 18px;
     }

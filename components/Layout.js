@@ -19,16 +19,18 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div style={{overflow: "hidden"}}>
-        {!this.state.loaded && <Loader/> }
+        {!this.state.loaded && <Loader/>}
         <Head>
           <title>{this.props.title}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-          <meta name="facebook-domain-verification" content="4b6xkq3wp9mrtnqqyi8kw9b7iwrbt7" />
+          <meta name="facebook-domain-verification" content="4b6xkq3wp9mrtnqqyi8kw9b7iwrbt7"/>
         </Head>
         <header>
           <Header/>
         </header>
-        {this.props.children}
+        <main>
+          {this.props.children}
+        </main>
         <footer>
           <Footer/>
         </footer>

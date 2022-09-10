@@ -12,7 +12,7 @@ $color-neon-hover: #DFEF28;
 $color-black-hover: #393939;
 $color-gray-hover: #DEDEDE;
 $color-highlight: #DBFF00;
-
+$hero-background: #BFC2B9;
 
 $primary-font-family: 'Bebas Neue', sans-serif;
 $text-pink: #F5CAC4;
@@ -38,3 +38,14 @@ $breakpoints: (
         xl: 1200px,
         xxl: 1500px,
 );
+
+$header-heights: (
+  xs: 110px,
+  xl: 177px
+);
+
+@function header-height($breakpoint){
+  @return map-get($header-heights, $breakpoint)
+}
+
+

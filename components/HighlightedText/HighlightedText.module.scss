@@ -7,13 +7,20 @@
   line-height: 70px;
   letter-spacing: 0.05em;
   margin-bottom: 5px;
-}
+  white-space: break-spaces;
 
-.highlight {
-  position: absolute;
-  height: 50px;
-  background-color: $color-highlight;
-  width: 100%;
-  bottom: -10px;
-  z-index: -1;
+  &__content{
+    position: relative;
+    z-index: 15;
+  }
+
+  &__underline {
+    position: absolute;
+    color: transparent;
+    top: -42px;
+    text-decoration-line: underline;
+    text-decoration-color: $color-highlight;
+    text-decoration-thickness: 42px;
+    z-index: 10;
+  }
 }
