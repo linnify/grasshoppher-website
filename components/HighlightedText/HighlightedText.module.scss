@@ -1,0 +1,19 @@
+@import "../../styles/abstracts/variables.scss";
+
+.highlighted-text {
+  position: relative;
+  width: fit-content;
+  font-size: 50px;
+  line-height: 70px;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+
+.highlight {
+  position: absolute;
+  height: 50px;
+  background-color: $color-highlight;
+  width: 100%;
+  bottom: -10px;
+  z-index: -1;
+}
