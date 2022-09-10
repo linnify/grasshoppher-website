@@ -1,6 +1,6 @@
 
 export const getInstagramPosts = async () => {
-  
+  console.log(process.env.INSTAGRAM_TOKEN)
   const fields = 'id,caption,media_url,media_type,permalink,timestamp,thumbnail_url'
   const accessToken = process.env.INSTAGRAM_TOKEN
   const url = `https://graph.instagram.com/v12.0/me/media?access_token=${accessToken}&fields=${fields}&limit=25`
@@ -17,7 +17,10 @@ export const getInstagramPosts = async () => {
    */
   
   const response = await fetch(url, { method: 'GET'})
-    .then(response => response.json())
+    .then(response => {
+      console.log(response)
+      return response.json()
+    })
     .catch(response => console.log(response))
   
   return response.data

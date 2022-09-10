@@ -1,0 +1,27 @@
+@import "../abstracts/variables";
+
+.big-text {
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: 0.04em;
+  color: $color-neon;
+  text-align: end;
+}
+
+@media (min-width: 768px) {
+  .big-text  {
+    font-size: 160px;
+    line-height: 200px;
+    letter-spacing: 0.04em;
+    color: $color-neon;
+  }
+}
+
+@media (min-width: 992px) {
+  .big-text  {
+    font-size: 250px;
+    line-height: 200px;
+    letter-spacing: 0.04em;
+    color: $color-neon;
+  }
+}

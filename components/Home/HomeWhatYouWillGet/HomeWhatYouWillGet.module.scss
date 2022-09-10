@@ -1,0 +1,9 @@
+.what-you-will-get {
+
+  &--sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 32px;
+  }
+}

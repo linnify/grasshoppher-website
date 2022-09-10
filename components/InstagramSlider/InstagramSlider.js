@@ -31,11 +31,11 @@ function InstagramSlider ({ feed }) {
 
   return(
     <div className={"row"}>
-      <div className={styles["feed--container"]}>
+      <div className={"marquee--container"}>
         <Marquee
           marqueeItems={onDisplayFeed}
           height={700}
-          marqueeContainerClassName={styles["feed--marquee"]}
+          marqueeContainerClassName={'marquee'}
           direction={"left"}
           delay={10}
         />

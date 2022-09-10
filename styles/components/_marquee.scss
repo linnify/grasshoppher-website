@@ -1,0 +1,21 @@
+.marquee {
+  width: 100% !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &:before {
+    background: linear-gradient(90deg, #DCD8C8 0%, #DCD8C899 -20%, #DCD8C800 100%) !important;
+  }
+
+  &:after {
+    background: linear-gradient(270deg, #DCD8C8 0%, #DCD8C899 -20%, #DCD8C800 100%) !important;
+  }
+
+  &--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+  }
+}

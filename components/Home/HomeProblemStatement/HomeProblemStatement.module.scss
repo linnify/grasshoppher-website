@@ -1,0 +1,49 @@
+.problem-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 16px;
+
+  &--align-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: start;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  &__section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 769px) {
+  .problem-statement {
+    gap: 32px;
+
+    &__section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__section-title {
+      max-width: 50%;
+    }
+
+    &__section-subtitle {
+      max-width: 70%;
+    }
+  }
+}

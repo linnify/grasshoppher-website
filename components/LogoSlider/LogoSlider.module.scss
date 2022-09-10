@@ -1,0 +1,25 @@
+.logo-slider {
+  height: 580px;
+  width: 100%;
+
+  &__wrapper {
+    width: 200px;
+    height: 160px;
+    margin: 25px 30px 50px;
+    padding-bottom: 50px;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo-slider__wrapper {
+    width: 300px;
+  }
+}
