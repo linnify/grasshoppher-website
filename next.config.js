@@ -3,6 +3,7 @@ module.exports = {
   swcMinify: true,
   experimental: {
     sprFlushToDisk: false,
+    styledComponents: true
   },
   
   eslint: {

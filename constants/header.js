@@ -5,7 +5,7 @@ export const header = [
   },
   {
     label: "MEMBERSHIP",
-    path: "/membership",
+    path: "/membership-landing",
   },
   {
     label: "ABOUT US",
