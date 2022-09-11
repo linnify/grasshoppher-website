@@ -1,6 +1,5 @@
 @import "../abstracts/variables";
 
-
 .button {
   cursor: pointer;
   padding: 28px 48px;
@@ -9,8 +8,12 @@
   line-height: 16px;
   letter-spacing: 0.1em;
   width: fit-content;
-  cursor: pointer;
+  white-space: break-spaces;
   transition: background-color 0.2s ease;
+
+  @media (min-width: 768px) {
+    white-space: nowrap;
+  }
 
   &--disabled {
     cursor: unset;

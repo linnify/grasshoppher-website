@@ -6,8 +6,7 @@ import {HomeProblemStatement} from "../components/Home/HomeProblemStatement/Home
 import {HomeWhatYouWillGet} from "../components/Home/HomeWhatYouWillGet/HomeWhatYouWillGet";
 import {getInstagramPosts} from "../src/services/instagram"
 import {Sponsors} from "../components/Home/Sponsors";
-import {HomeEBook} from "../components/Home/HomeEBook/HomeEBook";
-import {HomeImpactInYourInbox} from "../components/Home/HomeImpactInYourInbox/HomeImpactInYourInbox";
+import {EBook} from "../components/EBook/EBook";
 import {HomeHero} from '../components/Home/HomeHero/HomeHero';
 
 export default class Home extends React.Component {
@@ -40,12 +39,8 @@ export default class Home extends React.Component {
                 <FadeInScroll>
                     <Sponsors/>
                 </FadeInScroll>
-                {/*inbox*/}
                 <FadeInScroll>
-                    <HomeImpactInYourInbox/>
-                </FadeInScroll>
-                <FadeInScroll>
-                    <HomeEBook/>
+                    <EBook/>
                 </FadeInScroll>
             </Layout>
         );

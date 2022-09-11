@@ -1,8 +1,9 @@
-.impact-in-your-inbox {
+.ebook {
   display: flex;
   flex-direction: column;
   justify-content: start;
   position: relative;
+
 
   &__content {
     width: 450px;
@@ -51,19 +52,40 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     padding-bottom: 144px;
 
     &__image {
       position: absolute;
       bottom: 0;
       z-index: 1;
-      top: 150px;
+      top: 70px;
+      width: 70%;
+
+
+      img{
+        object-fit: cover;
+        object-position: top left;
+        height: 800px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    &__image {
+      width: 77%;
+
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__image {
       width: 82%;
 
       img{
-        position: relative;
-        width: 100%;
+        object-fit: contain;
+        object-position: top left;
+        height: unset;
       }
     }
   }
