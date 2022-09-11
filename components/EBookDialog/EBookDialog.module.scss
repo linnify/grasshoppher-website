@@ -16,28 +16,9 @@
     gap: 30px !important;
   }
 
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 90px;
-      line-height: 85px;
-    }
-  }
-
-  @include media-query(md) {
-    &__wrapper {
-      height: 842px;
-      overflow: hidden;
-    }
-    padding: 24px 24px 16px 24px;
-  }
-
-  @include media-query(lg) {
-    padding: 24px 139px 16px 139px;
-  }
-
   &__paper {
     background-color: $color-main-background !important;
-    border-radius: 0!important;
+    border-radius: 0 !important;
 
     @media (max-width: 768px) {
       height: 100vh !important;
@@ -58,6 +39,9 @@
     width: 100%;
     margin-bottom: 20px;
     z-index: 100;
+    stroke: black;
+    stroke-width: 2;
+    cursor: pointer;
   }
 
   &__buttons {
@@ -66,11 +50,6 @@
     flex-direction: column;
     justify-content: space-between;
     //align-items: center;
-
-    @include media-query(md) {
-      margin-top: 32px;
-      //flex-direction: row;
-    }
 
     &--container {
       display: flex;
@@ -94,6 +73,34 @@
     padding: 10px 0;
     width: 140px;
     //margin-bottom: 16px;
+  }
+
+  &__wrapper {
+    height: calc(100vh - 32px);
+    overflow: hidden;
+  }
+
+  @media (min-width: 576px) {
+    &__wrapper {
+      height: 804px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 90px;
+      line-height: 85px;
+    }
+
+    &__buttons {
+      margin-top: 32px;
+    }
+
+    padding: 24px 24px 16px 24px;
+  }
+
+  @include media-query(lg) {
+    padding: 24px 139px 16px 139px;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {BigText} from "../../BigText";
 import {HighlightedText} from "../../HighlightedText/HighlightedText";
-import {Button} from "../../Button";
+import {RedirectButton} from "../../RedirectButton";
 import styles from "./HomeProblemStatement.module.scss"
 
 export const HomeProblemStatement = () => {
@@ -24,7 +24,7 @@ export const HomeProblemStatement = () => {
                         Let us be your roadmap on the next leg of your journey. We’ll help you fill in the missing
                         pieces to reach your full potential.
                     </div>
-                    <Button href={"/membership"} target={false} label={"Join now"}/>
+                    <RedirectButton href={"/membership"} target={false} label={"Join now"}/>
                 </div>
                 <div className={styles['problem-statement--align-end']}>
                     <BigText text={"Bold"}/>

@@ -21,6 +21,8 @@ export default class MyDocument extends Document {
             type="font/ttf"
             crossOrigin="anonymous"
           />
+          <link rel="preload" as="image" href="/images/story-hero.png" />
+          <link rel="preload" as="image" href="/images/contact.jpg" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

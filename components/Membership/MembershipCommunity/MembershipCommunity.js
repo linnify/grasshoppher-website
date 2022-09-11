@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./MembershipCommunity.module.scss"
 import {HighlightedText} from '../../HighlightedText/HighlightedText';
-import {Button} from '../../Button';
+import {RedirectButton} from '../../RedirectButton';
 
 export const MembershipCommunity = () => {
   return (
@@ -24,7 +24,7 @@ export const MembershipCommunity = () => {
             </div>
           </div>
         </div>
-        <Button
+        <RedirectButton
           label={'Join GrasshoppHer'}
           target={false}
           href={'/membership'}

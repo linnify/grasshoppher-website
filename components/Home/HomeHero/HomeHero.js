@@ -2,7 +2,7 @@ import {HeroLayout} from '../../HeroLayout/HeroLayout';
 import {PageTitle} from '../../PageTitle';
 import React from 'react';
 import styles from "./HomeHero.module.scss"
-import {Button} from '../../Button';
+import {RedirectButton} from '../../RedirectButton';
 
 export const HomeHero = () => {
   return (
@@ -13,14 +13,21 @@ export const HomeHero = () => {
           <div className={`inter1 ${styles['home-hero__text']}`}>Connect with industry experts and a network of leaders to
             catapult you into your dreams, GrasshoppHer.
           </div>
-          <Button
+          <RedirectButton
             label={'Join now'}
             target={false}
             href={'/membership-landing'}
           />
         </div>
         <div className={styles['home-hero__video']}>
-          <video preload autoPlay loop muted poster={'/images/hero-video-frame.png'}>
+          <video
+            playsInline
+            loop
+            muted
+            autoPlay
+            preload="auto"
+            poster={'/images/hero-video-frame.png'}
+          >
             <source src={'/videos/hero.mov'}/>
           </video>
         </div>

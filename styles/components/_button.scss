@@ -10,6 +10,7 @@
   width: fit-content;
   white-space: break-spaces;
   transition: background-color 0.2s ease;
+  display: inline-flex;
 
   @media (min-width: 768px) {
     white-space: nowrap;

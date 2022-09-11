@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./EBook.module.scss"
 import {PageTitle} from "../PageTitle";
-import {Button} from "../Button";
+import {RedirectButton} from "../RedirectButton";
 
 export const EBook = () => {
     return (
@@ -13,7 +13,7 @@ export const EBook = () => {
                         Get leveling up tips and tricks for your personal and professional games.
                     </div>
                 </div>
-                <Button
+                <RedirectButton
                     label={"Get your free\ndownloadable ebook"}
                     target={true}
                     href={"/documents/the_career_hacks_you_need.pdf"}

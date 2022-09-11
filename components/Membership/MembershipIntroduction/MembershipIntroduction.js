@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./MembershipIntroduction.module.scss"
-import {Button} from '../../Button';
+import {RedirectButton} from '../../RedirectButton';
 
 export const MembershipIntroduction = () => {
 
@@ -14,7 +14,7 @@ export const MembershipIntroduction = () => {
         <div className={'inter1 white-space-break'}>
           {'Between our highly vetted role models and professional leaders, upskilling events, and a community of engaged peers, you\'ve got access to the dream team. Literally.\n\nJoin GrasshoppHer. Together, we can disrupt the status quo and you can become the person you want to be.'}
         </div>
-        <Button
+        <RedirectButton
           label={'Join GrasshoppHer'}
           target={false}
           href={'/membership'}

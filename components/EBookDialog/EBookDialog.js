@@ -14,11 +14,13 @@ export const EBookDialog = ({open, onClose}) => {
             paper: styles['ebook-dialog__paper']
         }}>
             <div className={styles['ebook-dialog__close-button']}>
-                <CloseIcon onClick={handleClose} style={{cursor: "pointer"}}/>
+                <CloseIcon onClick={handleClose} fontSize={'large'}/>
             </div>
             <div className={styles['ebook-dialog']}>
-                <div className={styles['ebook-dialog__wrapper']}>
-                    <EBook/>
+                <div>
+                    <div className={styles['ebook-dialog__wrapper']}>
+                        <EBook/>
+                    </div>
                 </div>
             </div>
         </Dialog>

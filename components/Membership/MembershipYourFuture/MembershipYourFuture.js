@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./MembershipYourFuture.module.scss"
 import {PageTitle} from '../../PageTitle';
-import {Button} from '../../Button';
+import {RedirectButton} from '../../RedirectButton';
 import {HighlightedText} from '../../HighlightedText/HighlightedText';
 
 export const MembershipYourFuture = () => {
@@ -12,7 +12,7 @@ export const MembershipYourFuture = () => {
         <PageTitle
           content={"Dont't\nleave\nyour\nfuture\non\nread."}
         />
-        <Button
+        <RedirectButton
           label={'Join GrasshoppHer'}
           target={false}
           href={'/membership'}
