@@ -20,7 +20,7 @@ export const HomeHero = () => {
           />
         </div>
         <div className={styles['home-hero__video']}>
-          <video autoPlay loop muted poster={'/images/hero-video-frame.png'}>
+          <video preload autoPlay loop muted poster={'/images/hero-video-frame.png'}>
             <source src={'/videos/hero.mov'}/>
           </video>
         </div>

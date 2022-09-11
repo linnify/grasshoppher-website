@@ -11,11 +11,7 @@ export const HomeProblemStatement = () => {
                 <BigText text={"Brave"}/>
             </div>
             <HighlightedText
-                text={[
-                    "GrasshoppHer is a career road mapping platform and",
-                    "community, designed to connect you with industry leader",
-                    "and empower you to reach your fullest, brightest potential.",
-                ]}
+                text={"GrasshoppHer is a career road mapping platform and\ncommunity, designed to connect you with industry leader\nand empower you to reach your fullest, brightest potential."}
             />
             <div className={styles['problem-statement__section']} style={{width: "100%"}}>
                 <div className={`col start-xs ${styles['problem-statement__section-title']}`}>

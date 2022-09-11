@@ -8,24 +8,23 @@
   white-space: break-spaces;
 
   &__content {
-    position: relative;
+    position: absolute;
     z-index: 15;
   }
 
   &__underline {
-    position: absolute;
+    letter-spacing: 0.06em;
     color: transparent;
-    top: -30px;
-    text-decoration-line: underline;
-    text-decoration-color: $color-highlight;
-    text-decoration-thickness: 30px;
+    top: 21px;
+    position: relative;
+    background: linear-gradient(to top, transparent 50%, $color-highlight 50%);
+    display: inline;
     z-index: 10;
   }
 
   @media (min-width: 768px) {
     &__underline {
-      top: -42px;
-      text-decoration-thickness: 42px;
+      top: 30px
     }
   }
 }

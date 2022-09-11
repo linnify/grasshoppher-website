@@ -3,7 +3,9 @@
 .founders {
   display: flex;
   flex-direction: column;
-  gap: 112px;
+  gap: 64px;
+  padding: 100px 0;
+  position: relative;
 
   &__header-section {
     display: flex;
@@ -17,7 +19,7 @@
     &__highlighted-band {
       @media (min-width: 576px) {
         position: absolute;
-        top: calc(50% - 190px);
+        top: 275px;
         z-index: 0;
         width: 100%;
         height: 190px;
@@ -31,12 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 108px;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-
+    gap: 64px;
   }
 
   &__message-section {
@@ -46,10 +43,6 @@
     align-items: start;
     gap: 32px;
     width: 100%;
-
-    @media (min-width: 768px) {
-      width: 428px;
-    }
   }
 
   &__messages {
@@ -58,5 +51,25 @@
     justify-content: start;
     align-items: start;
     gap: 32px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 172px 0;
+    gap: 112px;
+
+    &__header-section {
+      &__highlighted-band {
+        top: 347px;
+      }
+    }
+
+    &__messages-section {
+      flex-direction: row;
+      gap: 108px;
+    }
+
+    &__message-section {
+      width: 428px;
+    }
   }
 }

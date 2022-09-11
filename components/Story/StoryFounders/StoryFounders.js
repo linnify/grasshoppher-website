@@ -42,10 +42,10 @@ export const StoryFounders = () => {
     }
 
     return (
-        <div className={`margin-bottom-l ${styles['founders']}`}>
+        <div className={`${styles['founders']}`}>
+            <div className={styles['founders__header-section__highlighted-band']}/>
             <div className={styles['founders__header-section']}>
                 <img src={'/images/founders.png'} className={styles['founders__header-section__image']}/>
-                <div className={styles['founders__header-section__highlighted-band']}/>
             </div>
             <div className={`container ${styles['founders__messages-section']}`}>
                 {displayMessages()}

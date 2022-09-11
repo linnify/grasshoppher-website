@@ -9,13 +9,11 @@ export const HeaderBurgerMenu = () => {
     const router = useRouter()
 
     const displayMenuItems = header.map((item, index) => {
-        return (
+      const isActive = router.asPath === item.path;
+      return (
             <div className={'menu-item'} key={index}>
                 <Link href={item.path}>
-                    <ActiveItem active={item.path === '/'
-                        ? router.asPath === item.path
-                        : router.asPath.includes(item.path)}
-                                style={item.style}>{item.label}</ActiveItem>
+                    <ActiveItem active={isActive} style={item.computeStyle && item.computeStyle(isActive)}>{item.label}</ActiveItem>
                 </Link>
             </div>
         )
