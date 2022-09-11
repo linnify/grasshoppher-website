@@ -1,6 +1,5 @@
 .form{
   max-width: 515px;
-  margin-bottom: 100px;
 
   &__input-row {
     width: 100%;
@@ -13,9 +12,9 @@
 
     input {
       font-family: europa, sans-serif;
-      border: 1px solid #DCDDDE;
+      border: 1px solid rgba(0, 0, 0, 0.23);
       color: black;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 13px;
       margin-top: 5px;
       margin-bottom: 30px;
@@ -42,13 +41,14 @@
         font-style: normal;
         padding: 13px;
         width: 100%;
-        border: 1px solid #DCDDDE;
-        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        border-radius: 8px;
         margin-top: 5px;
         height: 150px;
         margin-bottom: 30px;
         box-sizing: border-box;
         outline: none;
+        resize: none;
       }
     }
   }

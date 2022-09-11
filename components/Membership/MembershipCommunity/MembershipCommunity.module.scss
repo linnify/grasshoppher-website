@@ -84,4 +84,11 @@
       height: 597px;
     }
   }
+
+  @media (min-width: 1600px) {
+    &__image {
+      left: 50%;
+      right: unset;
+    }
+  }
 }

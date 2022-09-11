@@ -3,7 +3,7 @@ import React from "react";
 export const UnorderedList = ({ list }) => {
 
   const displayList = list.map((item, index) => {
-    return( <li key={index} id={"unordered"}>{item}</li> );
+    return( <li key={index}>{item}</li> );
   })
 
   return (

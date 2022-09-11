@@ -6,6 +6,7 @@ import {PageTitle} from "../components/PageTitle";
 import {ContactImage} from "../components/ContactImage";
 import FadeIn from "../components/FadeIn/FadeIn";
 import {Loader} from "../components/Loader/Loader";
+import {HighlightedText} from '../components/HighlightedText/HighlightedText';
 
 
 export default class Contact extends React.Component {
@@ -19,6 +20,7 @@ export default class Contact extends React.Component {
       requestError: false,
     };
   }
+
   contactRef = React.createRef();
 
   componentDidMount() {
@@ -26,7 +28,7 @@ export default class Contact extends React.Component {
   }
 
   onSubmit = async (body) => {
-    this.setState({ loadedContact: true });
+    this.setState({loadedContact: true});
     const url = `/api/sendEmail`;
     try {
       await fetch(url, {
@@ -37,19 +39,19 @@ export default class Contact extends React.Component {
         },
       });
 
-      this.setState({ snackBarOpened: true });
+      this.setState({snackBarOpened: true});
       this.contactRef.current.clearState();
     } catch (e) {
-      this.setState({ loadedContact: false, requestError: true });
+      this.setState({loadedContact: false, requestError: true});
     }
   };
 
   handleClose = () => {
-    this.setState({ snackBarOpened: false });
+    this.setState({snackBarOpened: false});
   };
 
   validate = (e) => {
-    this.setState({ validation: e, snackBarOpened: true });
+    this.setState({validation: e, snackBarOpened: true});
   };
 
   render() {
@@ -57,20 +59,24 @@ export default class Contact extends React.Component {
     return (
       <Layout title={"Contact GrasshoppHer"}>
         {!this.state.loadingPage && <Loader/>}
-        <FadeIn>
-          <PageTitle content={"Contact GrasshoppHer"} id={"general"}/>
-          <div className={"container row middle-xs between-md row-revert-mobile contact--row"}>
-            <div className={"col-xs-12 col-md-6 col-xl-5"} style={{ width: "100%"}}>
-              <ContactForm
-                ref={this.contactRef}
-                loading={this.state.loadedContact}
-                onSubmit={this.onSubmit}
-                validation={this.validate}
-              />
+        <div className={"contact"}>
+          <div className={'container contact__wrapper'}>
+            <HighlightedText text={"Contact GrasshoppHer"}/>
+            <div className={'row middle-xs between-md row-revert-mobile contact--row'}>
+              <div className={"col-xs-12 col-md-6 col-xl-5"} style={{width: "100%"}}>
+                <ContactForm
+                  ref={this.contactRef}
+                  loading={this.state.loadedContact}
+                  onSubmit={this.onSubmit}
+                  validation={this.validate}
+                />
+              </div>
             </div>
-            <ContactImage/>
           </div>
-        </FadeIn>
+          <div className={"contact--image"}>
+            <img src={"/images/contact.jpg"}/>
+          </div>
+        </div>
         <SnackbarAlert
           snackBarOpened={this.state.snackBarOpened}
           requestError={this.state.requestError}

@@ -6,7 +6,7 @@ export const Footer = () => {
 
     const legalItems = legalFooterItems.map((item, index) => {
         return (
-            <Link key={index} href={item.link} target={item.newTab ? "" : "_blank"}>
+            <Link key={index} href={item.link} target={item.newTab ? "_blank" : ""}>
                 <div className={"footer__menu-text"}>{item.text}</div>
             </Link>
         );
@@ -14,7 +14,7 @@ export const Footer = () => {
 
     const menuItems = menuFooterItems.map((item, index) => {
         return (
-            <a href={item.link} className={""} key={index} target={item.newTab ? "" : "_blank"}>
+            <a href={item.link} className={""} key={index} target={item.newTab ? "_blank" : ""}>
                 <div className={"footer__menu-text"}>{item.text}</div>
             </a>
         )
@@ -22,7 +22,7 @@ export const Footer = () => {
 
     const copyrightItems = copyrightFooterItems.map((item, index) => {
         return (
-            <a href={item.link} className={""} key={index} target={item.newTab ? "" : "_blank"}>
+            <a href={item.link} className={""} key={index} target={item.newTab ? "_blank" : ""}>
                 <div className={"footer__menu-text"}>{item.text}</div>
             </a>
         )

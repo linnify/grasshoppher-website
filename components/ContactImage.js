@@ -6,14 +6,9 @@ export const ContactImage = () => {
 
   const offset = handleOffset(0, 0.3)
 
-  return(
+  return (
     <div className={"col-xs-12 col-md-5 col-xl-6 contact--col-img"}>
-      <div className={"circle"}>
-        <PageCircles classes={"circle-top-right circle-story-photo"} translateOffset={offset}/>
-        <div style={{position: "relative"}}>
-          <img src={"/contact.png"} className={"image contact--image"}/>
-        </div>
-      </div>
+      <img src={"/images/contact.jpg"} className={"image contact--image"}/>
     </div>
   );
 }

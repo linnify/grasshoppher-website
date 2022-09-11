@@ -1,7 +1,36 @@
+@import "styles/abstracts/variables";
+
 .contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  //height: calc(100vh - #{header-height(xs)});
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    z-index: 15;
+  }
 
   &--image {
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    right: 0;
+    height: 597px;
+
+    img {
+      //position: absolute;
+      //bottom: 0;
+      //height: 697px;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 
   &--col-img {
@@ -11,30 +40,40 @@
 
 }
 
-
-
-@media only screen and (min-width: 768px) {
-
+@media (min-width: 992px) {
   .contact {
-    &--row {
-      margin-top: -20px;
-      margin-bottom: 100px;
-    }
+    //height: calc(100vh - #{header-height(xs)});
+    min-height: 950px;
 
     &--image {
-      margin-bottom: 0;
+      position: absolute;
+      height: 597px;
+      top: 300px;
     }
-
   }
-
 }
 
-@media only screen and (min-width: 1200px) {
-
+@media (min-width: 1200px) {
   .contact {
-    &--row {
-      margin-top: -50px;
+    //height: calc(100vh - #{header-height(xl)});
+    min-height: 750px;
+
+    &--image {
+      bottom: 0;
+      z-index: 1;
+      top: 80px;
+      right: 0;
+      height: 597px;
     }
   }
-
 }
+
+@media (min-width: 1600px) {
+  .contact {
+    &--image {
+      left: 50%;
+      right: unset;
+    }
+  }
+}
+

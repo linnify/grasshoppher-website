@@ -13,9 +13,9 @@ export const header = [
   },
   {
     label: "JOIN NOW",
-    path: "/join",
-    style: {
-      textDecoration: "underline"
-    }
+    path: "/membership",
+    computeStyle: (isActive) => ({
+      textDecoration: isActive ? 'none' : "underline"
+    })
   }
 ];

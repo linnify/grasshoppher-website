@@ -65,7 +65,7 @@ export const menuFooterItems = [
 export const copyrightFooterItems = [
     {
         text: "Digital Millenium Copyright Act Compliances of Use",
-        link: "https://www.grasshoppherapp.com/signup",
-        newTab: true
+        link: "/copyright",
+        newTab: false
     }
 ];

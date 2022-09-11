@@ -10,6 +10,12 @@
   letter-spacing: 0.1em;
   width: fit-content;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &--disabled {
+    cursor: unset;
+    background-color: $color-footer-text-hover!important;
+  }
 
   &__contained {
 
@@ -35,7 +41,7 @@
   &__outlined {
     background-color: white;
     border: 2px solid $color-neon-dark;
-    color:  $color-neon-dark;
+    color: $color-neon-dark;
 
     &:hover {
       background-color: $color-gray-hover;

@@ -31,10 +31,13 @@ export default class ContactForm extends React.Component {
   };
 
   onSubmit = () => {
+    if (this.isDisabled()) {
+      return;
+    }
 
     if (!this.isEmailValid()) {
       this.setState({validEmail: "invalid"});
-      return this.props.validation(false);;
+      return this.props.validation(false);
     }
 
     this.props.validation(true);
@@ -71,11 +74,12 @@ export default class ContactForm extends React.Component {
           <div>Your message</div>
           <textarea
             value={this.state.message}
+            rows={5}
             onChange={(message) => this.setState({message: message.target.value})}
           />
         </div>
         <div
-          className={`button__contact ${this.isDisabled() ? "button-disabled" : ""}`}
+          className={`button button__contained button__contained--primary ${this.isDisabled() ? "button--disabled" : ""}`}
           onClick={this.onSubmit}
         >
           Submit

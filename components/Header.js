@@ -27,10 +27,9 @@ export const ActiveItem = styled.p`
 export const Header = () => {
     const router = useRouter()
     const displayMenuItems = () => header.map((item, index) => {
-            return <Link href={item.path} key={index}>
-                <ActiveItem active={item.path === '/'
-                    ? router.asPath === item.path
-                    : router.asPath.includes(item.path)} style={item.style}>{item.label}</ActiveItem>
+        const isActive = router.asPath === item.path;
+        return <Link href={item.path} key={index}>
+                <ActiveItem active={isActive} style={item.computeStyle && item.computeStyle(isActive)}>{item.label}</ActiveItem>
             </Link>
         }
     )
