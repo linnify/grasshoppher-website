@@ -34,7 +34,7 @@ export const HomeProblemStatement = () => {
                     <BigText text={"Bold"}/>
                 </div>
             </div>
-            <div className={styles['problem-statement--align-end']}>
+            <div className={`margin-top-xl ${styles['problem-statement--align-end']}`}>
                 <p className={"big-text"}>Bound<wbr/>less</p>
             </div>
         </div>

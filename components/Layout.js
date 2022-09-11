@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
         this.setState({loaded: true})
         if (typeof window !== 'undefined') {
             if (!window.localStorage.getItem('EBOOK_DIALOG')) {
-                this.myTimeout = setInterval(() => {
+                this.myTimeout = setTimeout(() => {
                         this.setState({open: true})
                         window.localStorage.setItem('EBOOK_DIALOG', "opened")
                     },

@@ -10,7 +10,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 
   :global(#ebook-content) {
     gap: 30px !important;

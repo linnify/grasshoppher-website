@@ -9,7 +9,7 @@ export const header = [
   },
   {
     label: "ABOUT US",
-    path: "/about-us",
+    path: "/story",
   },
   {
     label: "JOIN NOW",
