@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import {VideoPlayer} from "../components/VideoPlayer/VideoPlayer";
 import {PageTitle} from "../components/PageTitle";
 import {b2c} from "../constants/b2c";
-import {B2CDownloadSection} from "../components/B2CDownloadSection/B2CDownloadSection";
 import {Perks} from "../components/Perks/Perks";
 import {TextBoldKeyword} from "../components/TextBoldKeyword";
 import Page from "../components/Page";
@@ -49,9 +48,6 @@ export default class BusinessToClient extends React.Component {
           </FadeInScroll>
           <FadeInScroll>
             <Perks/>
-          </FadeInScroll>
-          <FadeInScroll>
-            <B2CDownloadSection/>
           </FadeInScroll>
         </Layout>
       </Page>

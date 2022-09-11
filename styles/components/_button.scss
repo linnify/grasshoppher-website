@@ -51,19 +51,3 @@
     }
   }
 }
-
-.button-download {
-  border: 1px solid $color-primary;
-  padding: 30px;
-  font-size: 22px;
-  font-weight: $bold;
-  border-radius: 100px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-
-  &--text {
-     margin-bottom: 20px;
-  }
-}
