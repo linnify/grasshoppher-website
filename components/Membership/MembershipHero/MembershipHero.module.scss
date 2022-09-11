@@ -1,6 +1,5 @@
 @import "styles/abstracts/variables";
 
-
 .membership-hero {
   height: calc(100vh - #{header-height(xs)});
   min-height: 777px;
@@ -9,8 +8,11 @@
   justify-content: space-between;
   gap: 67px;
   padding-bottom: 48px;
+  top: calc(13px + #{header-height(xs)});
+  position: relative;
 
   @media (min-width: 1200px) {
     height: calc(100vh - #{header-height(xl)});
+    top: calc(13px + #{header-height(xl)});
   }
 }

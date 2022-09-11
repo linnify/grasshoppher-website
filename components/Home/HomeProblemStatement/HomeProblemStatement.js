@@ -7,7 +7,7 @@ import styles from "./HomeProblemStatement.module.scss"
 export const HomeProblemStatement = () => {
     return (
         <div className={`container padding-top-bottom-100 ${styles['problem-statement']}`}>
-            <div className={styles['problem-statement--align-end']}>
+            <div className={`${styles['problem-statement--align-end']} ${styles['problem-statement__brave']}`}>
                 <BigText text={"Brave"}/>
             </div>
             <HighlightedText

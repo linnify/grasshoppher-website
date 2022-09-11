@@ -3,6 +3,13 @@
   flex-direction: column;
   justify-content: start;
   gap: 16px;
+  position: relative;
+
+  &__brave {
+    position: absolute;
+    right: 0;
+    top: -30px
+  }
 
   &--align-end {
     display: flex;
@@ -27,9 +34,19 @@
   }
 }
 
+@media (min-width: 576px) {
+  .problem-statement__brave {
+    top: -5px
+  }
+}
+
 @media (min-width: 769px) {
   .problem-statement {
     gap: 32px;
+
+    &__brave {
+      top: -205px
+    }
 
     &__section {
       display: flex;
@@ -45,5 +62,17 @@
     &__section-subtitle {
       max-width: 70%;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .problem-statement__brave {
+    top: -190px
+  }
+}
+
+@media (min-width: 1200px) {
+  .problem-statement__brave {
+    top: -255px
   }
 }

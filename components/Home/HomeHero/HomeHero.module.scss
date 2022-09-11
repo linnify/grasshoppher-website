@@ -1,0 +1,65 @@
+@import "styles/abstracts/variables";
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  top: 103px;
+  position: relative;
+  min-height: 783px;
+
+  &__text {
+    width: 274px;
+    margin-top: 25px;
+    margin-bottom: 46px;
+  }
+
+  &__video {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 64px;
+
+    video {
+      height: 657px;
+      width: 371px;
+    }
+  }
+
+  @media (min-width: 576px) {
+    &__video {
+      padding-top: 0;
+      position: relative;
+      justify-content: flex-end;
+      height: 357px;
+      right: 20px;
+      top: -275px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: calc(100vh - 103px);
+
+    &__video {
+      width: 371px;
+      height: 657px;
+      display: block;
+      position: absolute;
+      bottom: 115px;
+      right: 10%;
+      top: unset;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &__video {
+      right: 20%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &__video {
+      right: 28%;
+    }
+  }
+}
