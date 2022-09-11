@@ -20,7 +20,7 @@ export const MembershipYourFuture = () => {
       </div>
       <HighlightedText text={'Go you. \n' +
         'Join Now. \n' +
-        'Look at you Thriving.'} />
+        'Look at you Thriving.'}/>
     </div>
   )
 }

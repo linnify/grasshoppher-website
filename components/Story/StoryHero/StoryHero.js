@@ -3,6 +3,7 @@ import {PageTitle} from '../../PageTitle';
 import React from 'react';
 import {HighlightedText} from '../../HighlightedText/HighlightedText';
 import styles from "./StoryHero.module.scss"
+import {Parallax} from 'react-scroll-parallax';
 
 export const StoryHero = () => {
   return (
@@ -20,7 +21,9 @@ export const StoryHero = () => {
           </div>
         </div>
         <div className={styles['story-hero__image']}>
-          <img src={'/images/story-hero.png'}/>
+          <Parallax speed={8}>
+            <img src={'/images/story-hero.png'}/>
+          </Parallax>
         </div>
       </div>
     </HeroLayout>

@@ -10,49 +10,41 @@ import {EBook} from "../components/EBook/EBook";
 import {HomeHero} from '../components/Home/HomeHero/HomeHero';
 
 export default class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loaded: false,
-            newPartnership: this.props.newPartnership,
-            partners: this.props.partners,
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false,
+      newPartnership: this.props.newPartnership,
+      partners: this.props.partners,
+    };
+  }
 
-    async componentDidMount() {
-        this.setState({loaded: true});
-    }
+  async componentDidMount() {
+    this.setState({loaded: true});
+  }
 
-    render() {
-        return (
-            <Layout title={"GrasshoppHer"}>
-                {!this.state.loaded && <Loader/>}
-                <HomeHero/>
-                <HomeProblemStatement/>
-                <FadeInScroll>
-                    <HomeWhatYouWillGet/>
-                </FadeInScroll>
-                {/*INSTAGRAM*/}
-                {/*<FadeInScroll threshold={0.25}>*/}
-                {/*    <InstagramSection feed={this.props.posts}/>*/}
-                {/*</FadeInScroll>*/}
-                <FadeInScroll>
-                    <Sponsors/>
-                </FadeInScroll>
-                <FadeInScroll>
-                    <EBook/>
-                </FadeInScroll>
-            </Layout>
-        );
-    }
+  render() {
+    return (
+      <Layout title={"GrasshoppHer"}>
+        {!this.state.loaded && <Loader/>}
+        <HomeHero/>
+        <HomeProblemStatement/>
+        <HomeWhatYouWillGet/>
+        {/*INSTAGRAM*/}
+        {/*    <InstagramSection feed={this.props.posts}/>*/}
+        <Sponsors/>
+        <EBook/>
+      </Layout>
+    );
+  }
 }
 
 export async function getStaticProps() {
-    // const posts = await getInstagramPosts();
+  // const posts = await getInstagramPosts();
 
-    return {
-        props: {
-            posts: [],
-        },
-    };
+  return {
+    props: {
+      posts: [],
+    },
+  };
 }

@@ -1,8 +1,32 @@
-import React from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import styles from "./MembershipIntroduction.module.scss"
 import {RedirectButton} from '../../RedirectButton';
+import {Parallax} from 'react-scroll-parallax';
 
 export const MembershipIntroduction = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0
+  })
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight
+        })
+      }
+
+      window.addEventListener('resize', handleResize)
+
+      handleResize()
+
+      return () => window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  const isMobile = useMemo(() => windowSize.width < 768, [windowSize])
 
   return (
     <div className={styles['membership-introduction']}>
@@ -21,39 +45,46 @@ export const MembershipIntroduction = () => {
         />
       </div>
       <div className={`${styles['membership-introduction__right']} ${styles['membership-introduction__half']}`}>
-        <div
-          className={`white-space-break ${styles['membership-introduction__title-1']}`}>{'Memberships\ninclude'}</div>
-        <div className={styles['membership-introduction__right__sections-wrapper']}>
+        <Parallax translateY={[50, 0]} disabled={isMobile}>
           <div
-            className={`${styles['membership-introduction__right__section']}`}>
-            <div className={styles['membership-introduction__title-2']} style={{marginBottom: '20px'}}>Virtual</div>
-            <div className={`white-space-break ${styles['membership-introduction__box']} ${styles['membership-introduction__box__text']}`}>
-              {'Monthly skill-building events lead by gamechangers like like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n' +
-                '\n' +
-                'An engaged and inspiring virtual community\n' +
-                '\n' +
-                'Biweekly member update with leveling up tips and tricks \n' +
-                '\n' +
-                'Opportunities to speak at a summit or lead your own talk\n' +
-                '\n' +
-                'Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!'}
+            className={`white-space-break ${styles['membership-introduction__title-1']}`}>{'Memberships\ninclude'}</div>
+          <div className={styles['membership-introduction__right__sections-wrapper']}>
+            <div
+              className={`${styles['membership-introduction__right__section']}`}>
+              <Parallax translateX={[-50, 0]} disabled={!isMobile} easing={'easeOutExpo'}>
+                <div className={styles['membership-introduction__title-2']} style={{marginBottom: '20px'}}>Virtual</div>
+              </Parallax>
+              <div
+                className={`white-space-break ${styles['membership-introduction__box']} ${styles['membership-introduction__box__text']}`}>
+                {'Monthly skill-building events lead by gamechangers like like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n' +
+                  '\n' +
+                  'An engaged and inspiring virtual community\n' +
+                  '\n' +
+                  'Biweekly member update with leveling up tips and tricks \n' +
+                  '\n' +
+                  'Opportunities to speak at a summit or lead your own talk\n' +
+                  '\n' +
+                  'Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!'}
+              </div>
+            </div>
+            <div
+              className={`${styles['membership-introduction__right__section']}`}>
+              <Parallax translateX={[-50, 0]} disabled={!isMobile} easing={'easeOutExpo'}>
+                <div className={styles['membership-introduction__title-2']}>Austin</div>
+                <div className={styles['membership-introduction__subtitle']} style={{marginBottom: '16px'}}>
+                  *NEW CHAPTERS COMING SOON
+                </div>
+              </Parallax>
+              <div className={`white-space-break ${styles['membership-introduction__box__text']}`}>
+                {'Everything in the Virtual membership Plus: \n' +
+                  '\n' +
+                  'A monthly in-person networking event with industry professionals and recruiters\n' +
+                  '\n' +
+                  'Local perks and discounts'}
+              </div>
             </div>
           </div>
-          <div
-            className={`${styles['membership-introduction__right__section']}`}>
-            <div className={styles['membership-introduction__title-2']}>Austin</div>
-            <div className={styles['membership-introduction__subtitle']} style={{marginBottom: '16px'}}>
-              *NEW CHAPTERS COMING SOON
-            </div>
-            <div className={`white-space-break ${styles['membership-introduction__box__text']}`}>
-              {'Everything in the Virtual membership Plus: \n' +
-                '\n' +
-                'A monthly in-person networking event with industry professionals and recruiters\n' +
-                '\n' +
-                'Local perks and discounts'}
-            </div>
-          </div>
-        </div>
+        </Parallax>
       </div>
     </div>
   )

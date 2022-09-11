@@ -36,21 +36,26 @@
     right: 0;
     height: 597px;
 
-    img{
-      position: absolute;
+    &__wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
       bottom: 0;
       height: 697px;
+      width: 100%;
       object-fit: cover;
-      object-position: bottom left;
+      object-position: top left;
     }
   }
 
   @media (min-width: 800px) {
     &__image {
-      height: 497px;
       bottom: 100px;
 
-      img{
+      img {
         position: relative;
         bottom: 0;
         height: 497px;
@@ -65,7 +70,7 @@
       position: absolute;
       height: 597px;
 
-      img{
+      img {
         position: relative;
         bottom: 0;
         height: 597px;

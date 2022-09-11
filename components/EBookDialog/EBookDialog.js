@@ -19,7 +19,7 @@ export const EBookDialog = ({open, onClose}) => {
             <div className={styles['ebook-dialog']}>
                 <div>
                     <div className={styles['ebook-dialog__wrapper']}>
-                        <EBook/>
+                        <EBook disableAnimation={true}/>
                     </div>
                 </div>
             </div>

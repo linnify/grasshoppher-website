@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./MembershipTestimonials.module.scss"
+import {Parallax} from 'react-scroll-parallax';
 
 export const MembershipTestimonials = () => {
   const testimonials = [
@@ -27,10 +28,14 @@ export const MembershipTestimonials = () => {
 
   const displayTestimonialCard = (testimonial, key) => (
     <div key={key} className={styles['membership-testimonials__card']}>
-      <img className={styles['membership-testimonials__card__image']} src={testimonial.image} alt={testimonial.name}/>
+      <Parallax scaleX={[-1, 1]} easing="easeOutExpo">
+        <img className={styles['membership-testimonials__card__image']} src={testimonial.image} alt={testimonial.name}/>
+      </Parallax>
       <div>
-        <div className={`${styles['membership-testimonials__card__title']} ${styles['membership-testimonials__card__text']}`}>{testimonial.name}</div>
-        <div className={`${styles['membership-testimonials__card__subtitle']} ${styles['membership-testimonials__card__text']}`}>{testimonial.occupation}</div>
+        <div
+          className={`${styles['membership-testimonials__card__title']} ${styles['membership-testimonials__card__text']}`}>{testimonial.name}</div>
+        <div
+          className={`${styles['membership-testimonials__card__subtitle']} ${styles['membership-testimonials__card__text']}`}>{testimonial.occupation}</div>
       </div>
       <div className={`inter2 ${styles['membership-testimonials__card__text']}`}>{testimonial.description}</div>
     </div>
@@ -41,7 +46,7 @@ export const MembershipTestimonials = () => {
       <div className={`container ${styles['membership-testimonials']}`}>
         {testimonials.map((testimonial, index) => displayTestimonialCard(testimonial, index))}
       </div>
-      <div className={styles['membership-testimonials__band']}></div>
+      <div className={styles['membership-testimonials__band']}/>
     </div>
   )
 }

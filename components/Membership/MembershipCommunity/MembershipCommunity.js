@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./MembershipCommunity.module.scss"
 import {HighlightedText} from '../../HighlightedText/HighlightedText';
 import {RedirectButton} from '../../RedirectButton';
+import {Parallax} from 'react-scroll-parallax';
 
 export const MembershipCommunity = () => {
   return (
@@ -31,7 +32,11 @@ export const MembershipCommunity = () => {
         />
       </div>
       <div className={styles['membership-community__image']}>
-        <img src={'/images/community.png'}/>
+        <div className={styles['membership-community__image__wrapper']}>
+          <Parallax scale={[1, 1.3]} easing="easeInQuad">
+            <img src={'/images/community.png'}/>
+          </Parallax>
+        </div>
       </div>
     </div>
   )

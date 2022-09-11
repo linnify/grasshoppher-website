@@ -26,6 +26,7 @@
     "react-lines-ellipsis": "^0.14.1",
     "react-marquee-master": "^1.4.3",
     "react-player": "^2.7.0",
+    "react-scroll-parallax": "^3.3.1",
     "read-time-estimate": "0.0.3",
     "sass": "^1.49.7",
     "styled-components": "^5.2.1",
