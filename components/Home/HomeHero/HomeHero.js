@@ -31,7 +31,7 @@ export const HomeHero = () => {
               preload="auto"
               poster={'/images/hero-video-frame.png'}
             >
-              <source src={'/videos/hero.mov'}/>
+              <source src={'/videos/home-hero.mp4'}/>
             </video>
           </Parallax>
         </div>

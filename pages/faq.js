@@ -30,11 +30,11 @@ const FAQ = ({ questions }) => {
 }
 
 export async function getStaticProps() {
-  const questions = await getFrequentlyAskQuestions()
+  // const questions = await getFrequentlyAskQuestions()
   
   return {
     props: {
-      questions,
+      questions: [],
     },
   };
 }

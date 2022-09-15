@@ -10,7 +10,7 @@ export const DisruptorsScholarhsip = ({ donate }) => {
   }
   
   return (
-    <div>
+    <div className={'relative'}>
       <div className={styles.scholarship}>
         <video
           playsInline

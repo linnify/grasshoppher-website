@@ -29,10 +29,10 @@ export default class Blog extends React.Component {
       >
         <Layout title={"Blog"}>
           {!this.state.loaded && <Loader/>}
-          <FadeIn>
-            <PageTitle content={"Blog"} id={"general"}/>
-          </FadeIn>
           <div className={"container"}>
+            <FadeIn>
+              <PageTitle content={"Blog"} id={"general"}/>
+            </FadeIn>
             <BlogPosts posts={this.state.posts}/>
           </div>
         </Layout>

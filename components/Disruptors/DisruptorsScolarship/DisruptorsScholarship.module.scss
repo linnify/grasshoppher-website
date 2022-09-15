@@ -13,11 +13,12 @@ $video-height: 80vh;
     flex-direction: column;
     justify-content: center;
     height: $video-height;
+    z-index: 2;
   }
 
   &__video {
     object-fit: cover;
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -43,7 +44,7 @@ $video-height: 80vh;
     @include media-query(md) {
       font-size: 116px;
       text-shadow: 15px 15px 0 rgba(245, 202, 196, 0.6);
-      top: -100px;
+      top: -50px;
       text-align: left;
     }
   }
@@ -74,7 +75,9 @@ $video-height: 80vh;
     right: 0;
     left: 0;
     width: 100%;
-     margin-top: -64px;
+    margin-top: -64px;
+    position: relative;
+    z-index: 2;
 
     @include media-query(md) {
       padding: 48px;

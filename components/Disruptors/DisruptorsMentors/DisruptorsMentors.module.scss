@@ -23,23 +23,26 @@
 
   &--featured {
     z-index: 10;
-    //color: #294584;
   }
-  &--mentors {
-    //color: #F5CAC4;
+
+  :global(.marquee) {
+    align-items: start !important;
   }
 }
 
 .mentor-item {
-  width: 280px;
+  width: 300px;
   min-height: 650px;
   margin-right: 32px;
   overflow-wrap: break-word;
 }
 
 .disruptors-mentor-card {
-  width: 100%;
+  width: 292px;
 
+  &__content {
+    width: 273px;
+  }
 
   &__bar {
     height: 20px;
@@ -129,6 +132,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
     &--item {
       padding: 8px 8px;
       color: white;

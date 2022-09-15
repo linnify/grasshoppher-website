@@ -18,33 +18,33 @@ export const DisruptorsFindMentors = () => {
       
       <div className={styles['steps']}>
         
-        <div className={'steps__step'}>
-          <img src={'/disruptors/search.svg'} className={styles['steps__step__image']}/>
-          <div className={styles['steps__step__title']}>
+        <div className={styles['steps__disruptor-step']}>
+          <img src={'/disruptors/search.svg'} className={styles['steps__disruptor-step__image']}/>
+          <div className={styles['steps__disruptor-step__title']}>
             Find a mentor that serves your needs.
           </div>
-          <div className={styles['steps__step__description']}>
+          <div className={styles['steps__disruptor-step__description']}>
             Exploring tech? Prepping a pitch? Just window shopping for a guru? <br/>
             Explore a robust community of mentors, based on your unique needs.
           </div>
         </div>
         
-        <div className={styles['steps__step']}>
-          <img src={'/disruptors/calendar.svg'} className={styles['steps__step__image']}/>
-          <div className={styles['steps__step__title']}>
+        <div className={styles['steps__disruptor-step']}>
+          <img src={'/disruptors/calendar.svg'} className={styles['steps__disruptor-step__image']}/>
+          <div className={styles['steps__disruptor-step__title']}>
             Book a session
           </div>
-          <div className={styles['steps__step__description']}>
+          <div className={styles['steps__disruptor-step__description']}>
             Your time, your terms. Whether it’s a monthly 1-on-1 or a daily 30, mentors make it work when it works for you.
           </div>
         </div>
         
-        <div className={styles['steps__step']}>
-          <img src={'/disruptors/hart.svg'} className={styles['steps__step__image']}/>
-          <div className={styles['steps__step__title']}>
+        <div className={styles['steps__disruptor-step']}>
+          <img src={'/disruptors/hart.svg'} className={styles['steps__disruptor-step__image']}/>
+          <div className={styles['steps__disruptor-step__title']}>
             Begin your journey
           </div>
-          <div className={styles['steps__step__description']}>
+          <div className={styles['steps__disruptor-step__description']}>
             Once you're matched, the journey begins. Consider this your professional path to enlightenment. Namaste, GrasshoppHers.
           </div>
         </div>

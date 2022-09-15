@@ -27,7 +27,7 @@ export const HomeProblemStatement = () => {
             Let us be your roadmap on the next leg of your journey. We’ll help you fill in the missing
             pieces to reach your full potential.
           </div>
-          <RedirectButton href={"/membership"} target={false} label={"Join now"}/>
+          <RedirectButton href={"/membership-landing"} target={false} label={"Join now"}/>
         </div>
         <div className={styles['problem-statement--align-end']}>
           <Parallax speed={10} translateY={[60, -20]}>

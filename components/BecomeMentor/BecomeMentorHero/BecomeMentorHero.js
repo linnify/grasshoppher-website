@@ -45,7 +45,7 @@ export const BecomeMentorHero = () => {
         <source type="video/mp4" src={'/mentor/hero-section.mp4'}/>
       </video>
       
-      <div>
+      <div className={styles['become-mentor__content']}>
         <div className={styles['become-mentor__title']}>
           BECOME A MENTOR.
         </div>

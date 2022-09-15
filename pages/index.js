@@ -32,8 +32,8 @@ export default class Home extends React.Component {
         <HomeProblemStatement/>
         <HomeWhatYouWillGet/>
         <HomeInstagram feed={this.props.posts}/>
-        <Sponsors/>
         <EBook/>
+        <Sponsors/>
       </Layout>
     );
   }

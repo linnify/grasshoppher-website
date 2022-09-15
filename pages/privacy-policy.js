@@ -1,8 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import {OrderedList} from "../components/OrderedList";
-import {policy} from "../constants/privacyPolicy";
-import {PageTitle} from "../components/PageTitle";
 import Link from 'next/link'
 import {HighlightedText} from '../components/HighlightedText/HighlightedText';
 

@@ -17,7 +17,7 @@ export const socialMedia = [
     {
         icon: "/footer/instagram.svg",
         icon_hover: "/footer/instagram-hover.svg",
-        link: "https://www.instagram.com/grasshoppher/",
+        link: "https://www.instagram.com/befearlesssummit/?hl=en",
     }
 ];
 
@@ -46,7 +46,7 @@ export const legalFooterItems = [
 
 export const menuFooterItems = [
     {
-        text: "Impact in yours Inbox",
+        text: "Impact in your Inbox",
         link: "https://docs.google.com/forms/d/e/1FAIpQLScJhoNzVv2A5p0e979itmtgvVPz2LdYe91iPWESZBLYjIb2Gg/viewform",
         newTab: true
     },

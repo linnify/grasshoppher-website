@@ -39,6 +39,8 @@ $gotch-image-size: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 32px;
   margin-top: 32px;
 
@@ -47,9 +49,10 @@ $gotch-image-size: 500px;
     flex-direction: row;
   }
 
-  &__step {
+  &__disruptor-step {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
     max-width: 300px;
     margin-bottom: 64px;
