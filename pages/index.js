@@ -8,6 +8,7 @@ import {getInstagramPosts} from "../src/services/instagram"
 import {Sponsors} from "../components/Home/Sponsors";
 import {EBook} from "../components/EBook/EBook";
 import {HomeHero} from '../components/Home/HomeHero/HomeHero';
+import {HomeInstagram} from "../components/Home/HomeInstagram";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -30,8 +31,7 @@ export default class Home extends React.Component {
         <HomeHero/>
         <HomeProblemStatement/>
         <HomeWhatYouWillGet/>
-        {/*INSTAGRAM*/}
-        {/*    <InstagramSection feed={this.props.posts}/>*/}
+        <HomeInstagram feed={this.props.posts}/>
         <Sponsors/>
         <EBook/>
       </Layout>
@@ -40,11 +40,11 @@ export default class Home extends React.Component {
 }
 
 export async function getStaticProps() {
-  // const posts = await getInstagramPosts();
+  const posts = await getInstagramPosts();
 
   return {
     props: {
-      posts: [],
+      posts: posts || [],
     },
   };
 }

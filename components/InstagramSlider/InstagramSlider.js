@@ -1,37 +1,36 @@
 import React from "react";
-import LinesEllipsis from "react-lines-ellipsis";
-import Link from "next/link";
 import Marquee from 'react-marquee-master';
 import styles from "./InstagramSlider.module.scss"
 
-function InstagramSlider ({ feed }) {
+export const InstagramSlider = ({feed}) => {
 
   const onDisplayFeed = feed.map((post, i) => {
     const image = post.thumbnail_url || post.media_url
     const caption = post.caption
-    
+
     return (
-      <Link key={i} href={post.permalink}>
-        <div className={styles.feed}>
-          <img src={image} alt={"instagram feed"} className={"image " + styles['feed--img']}/>
-          <div style={{padding: "0 20px"}}>
-            <div className={styles["feed--insta"]}>instagram</div>
-            <LinesEllipsis
-              text={caption}
-              maxLine="3"
-              ellipsis="..."
-              className={styles["feed--text"]}
-            />
-            <img src={"/insta-arrow.svg"} className={styles["feed--arrow"]} alt={"arrow"}/>
-          </div>
+      <div key={i} className={styles['instagram-slider__post__wrapper']}>
+        <div className={styles['instagram-slider__post']}>
+          <a href={post.permalink} target={'_blank'} className={styles['instagram-slider__post__link']}>
+            <div className={styles['instagram-slider__post__content']}>
+              <div className={styles['instagram-slider__post__img']}>
+                <img src={image} alt={"instagram feed"} className={"image"}/>
+              </div>
+              <div>
+                <div className={`inter3 ${styles['instagram-slider__text']}`}>
+                  {caption}
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
-      </Link>
+      </div>
     );
   })
 
-  return(
+  return (
     <div className={"row"}>
-      <div className={"marquee--container"}>
+      <div className={`marquee--container ${styles['instagram-slider']}`}>
         <Marquee
           marqueeItems={onDisplayFeed}
           height={700}
@@ -44,6 +43,6 @@ function InstagramSlider ({ feed }) {
   );
 }
 
-export default React.memo(InstagramSlider)
+
 
 
