@@ -16,8 +16,18 @@
     gap: 30px !important;
   }
 
+  :global(#ebook-content__image) {
+    @media (min-width: 768px) {
+      width: 60% !important;
+    }
+
+    @media (min-width: 992px) {
+      width: 630px !important;
+    }
+  }
+
   &__paper {
-    padding: 24px 139px 16px 139px;
+    padding: 24px 24px 16px 24px;
     background-color: $color-main-background !important;
     border-radius: 0 !important;
 
@@ -28,12 +38,13 @@
       max-width: unset !important;
       max-height: unset !important;
       overflow: unset !important;
+      padding: 0 !important;
     }
   }
 
   &__close-button {
     position: absolute;
-    padding: 24px 32px 0 32px;
+    padding: 24px 48px 0 32px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -101,7 +112,7 @@
   }
 
   @include media-query(lg) {
-    padding: 24px 139px 16px 139px;
+    // padding: 24px 139px 16px 139px;
   }
 }
 

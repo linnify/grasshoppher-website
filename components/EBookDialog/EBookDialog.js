@@ -10,7 +10,7 @@ export const EBookDialog = ({open, onClose}) => {
     };
 
     return (
-        <Dialog onClose={handleClose} open={open} maxWidth={false} classes={{
+        <Dialog onClose={handleClose} open={open} maxWidth={'md'} classes={{
             paper: styles['ebook-dialog__paper']
         }}>
             <div className={styles['ebook-dialog__close-button']}>

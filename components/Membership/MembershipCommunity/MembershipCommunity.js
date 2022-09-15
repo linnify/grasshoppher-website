@@ -13,14 +13,14 @@ export const MembershipCommunity = () => {
           <div className={styles['membership-community__text']}>
             If you put a finger down to most of these questions, then yes, it is!
           </div>
-          <div className={styles['membership-community__questions']}>
-            <div className={styles['membership-community__text']}>
+          <div className={`${styles['membership-community__questions']} inter2`}>
+            <div >
               Feeling stuck? Or lookin' for career love in all the wrong places?
             </div>
-            <div className={styles['membership-community__text']}>
+            <div >
               Ready to leap on over to the next phase of your journey?
             </div>
-            <div className={styles['membership-community__text']}>
+            <div >
               Eager to connect with thought leaders? (But tired of cold messaging them on LinkedIn?)
             </div>
           </div>

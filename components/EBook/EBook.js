@@ -17,10 +17,10 @@ export const EBook = ({disableAnimation = false}) => {
         <RedirectButton
           label={"Get your free\ndownloadable ebook"}
           target={true}
-          href={"/documents/the_career_hacks_you_need.pdf"}
+          href={'https://docs.google.com/forms/d/e/1FAIpQLSfXz9_t_2_MKgPs4v1ubPiPyeIxbrV9A1BXgVouthXuOCO8hg/viewform'}
         />
       </div>
-      <div className={styles['ebook__image']}>
+      <div className={styles['ebook__image']} id={'ebook-content__image'}>
         <Parallax disabled={disableAnimation} translateX={[20, 0]} easing="easeOutCirc">
           <img src={'/images/impact.png'}/>
         </Parallax>

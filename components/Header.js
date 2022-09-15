@@ -47,7 +47,7 @@ export const Header = () => {
                     {displayMenuItems()}
                 </div>
                 <img src={"/logos/be_fearless_promo.svg"} alt={"logo Be Fearless"}
-                     style={{cursor: "pointer", height: "177px"}} className={"web-menu__promo"}/>
+                     style={{cursor: "pointer", height: "137px"}} className={"web-menu__promo"}/>
             </div>
             <div className={'burger-menu'}>
                 <HeaderBurgerMenu/>

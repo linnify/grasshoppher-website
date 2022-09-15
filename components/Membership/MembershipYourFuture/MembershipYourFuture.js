@@ -18,9 +18,8 @@ export const MembershipYourFuture = () => {
           href={'/membership'}
         />
       </div>
-      <HighlightedText text={'Go you. \n' +
-        'Join Now. \n' +
-        'Look at you Thriving.'}/>
+      <HighlightedText text={'You’re already here. Go you.\n' +
+        'Find a mirror, stand in front of it, and note what it looks to "thrive”.\n'}/>
     </div>
   )
 }

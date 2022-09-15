@@ -60,7 +60,7 @@
       bottom: 0;
       z-index: 1;
       top: 70px;
-      width: 70%;
+      width: 66%;
 
 
       img{
@@ -73,14 +73,14 @@
 
   @media (min-width: 992px) {
     &__image {
-      width: 77%;
+      width: 73%;
 
     }
   }
 
   @media (min-width: 1200px) {
     &__image {
-      width: 82%;
+      width: 78%;
 
       img{
         object-fit: contain;

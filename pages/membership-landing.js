@@ -12,12 +12,12 @@ const MembershipLanding = () => {
     <Page title={"Presale Membership - GrasshoppHer"}>
       <Layout title={"Presale Membership"}>
         <MembershipHero/>
-        <div className={'container'}>
-          <MembershipIntroduction/>
-          <MembershipYourFuture />
-        </div>
-        <MembershipTestimonials />
         <MembershipCommunity />
+        <MembershipTestimonials />
+        <div className={'container'}>
+          <MembershipYourFuture />
+          <MembershipIntroduction/>
+        </div>
       </Layout>
     </Page>
   )

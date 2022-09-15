@@ -46,8 +46,8 @@ export const legalFooterItems = [
 
 export const menuFooterItems = [
     {
-        text: "Impact in your Inbox",
-        link: "https://docs.google.com/forms/d/e/1FAIpQLScJhoNzVv2A5p0e979itmtgvVPz2LdYe91iPWESZBLYjIb2Gg/viewform",
+        text: "Download your e-book",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSfXz9_t_2_MKgPs4v1ubPiPyeIxbrV9A1BXgVouthXuOCO8hg/viewform",
         newTab: true
     },
     {
