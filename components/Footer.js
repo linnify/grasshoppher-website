@@ -99,7 +99,7 @@ export const Footer = () => {
                 fontSize: "13px",
               }}
             >
-              <a href={"https://linnify.com"}>
+              <a href={"https://linnify.com"} target={"_blank"}>
                 <img
                   src={"/linnify-logo.svg"}
                   alt={"Linnify logo"}
@@ -107,8 +107,11 @@ export const Footer = () => {
                   width={24}
                 />
               </a>
-              Copyright © 2022 <a href={"https://linnify.com"}>Linnify</a> All
-              rights reserved.
+              Copyright © 2022{" "}
+              <a href={"https://linnify.com"} target={"_blank"}>
+                Linnify
+              </a>{" "}
+              All rights reserved.
             </div>
           </div>
         </div>
