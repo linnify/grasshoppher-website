@@ -1,91 +1,127 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import styles from "./MembershipIntroduction.module.scss"
-import {RedirectButton} from '../../RedirectButton';
-import {Parallax} from 'react-scroll-parallax';
+import React, { useEffect, useMemo, useState } from "react";
+import styles from "./MembershipIntroduction.module.scss";
+import { RedirectButton } from "../../RedirectButton";
+import { Parallax } from "react-scroll-parallax";
 
 export const MembershipIntroduction = () => {
   const [windowSize, setWindowSize] = useState({
     width: 0,
-    height: 0
-  })
+    height: 0,
+  });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const handleResize = () => {
         setWindowSize({
           width: window.innerWidth,
-          height: window.innerHeight
-        })
-      }
+          height: window.innerHeight,
+        });
+      };
 
-      window.addEventListener('resize', handleResize)
+      window.addEventListener("resize", handleResize);
 
-      handleResize()
+      handleResize();
 
-      return () => window.removeEventListener('resize', handleResize)
+      return () => window.removeEventListener("resize", handleResize);
     }
-  }, [])
+  }, []);
 
-  const isMobile = useMemo(() => windowSize.width < 768, [windowSize])
+  const isMobile = useMemo(() => windowSize.width < 768, [windowSize]);
 
   return (
-    <div className={styles['membership-introduction']}>
-      <div className={`${styles['membership-introduction__left']} ${styles['membership-introduction__half']}`}>
+    <div className={styles["membership-introduction"]}>
+      <div
+        className={`${styles["membership-introduction__left"]} ${styles["membership-introduction__half"]}`}
+      >
         <h3>
-          We’ve analyzed other membership communities and developed a community that has been carefully curated to help
-          you reach your full potential.
+          We’ve analyzed other membership communities and developed a community
+          that has been carefully curated to help you reach your full potential.
         </h3>
-        <div className={'inter1 white-space-break'}>
-          {'Between our highly vetted role models and professional leaders, upskilling events, and a community of engaged peers, you\'ve got access to the dream team. Literally.\n\nJoin GrasshoppHer. Together, we can disrupt the status quo and you can become the person you want to be.'}
+        <div className={"inter1 white-space-break"}>
+          {
+            "Between our highly vetted role models and professional leaders, upskilling events, and a community of engaged peers, you've got access to the dream team. Literally.\n\nJoin GrasshoppHer. Together, we can disrupt the status quo and you can become the person you want to be."
+          }
         </div>
         <RedirectButton
-          label={'Join GrasshoppHer'}
+          label={"Join GrasshoppHer"}
           target={false}
-          href={'/membership'}
+          href={"/membership"}
         />
       </div>
-      <div className={`${styles['membership-introduction__right']} ${styles['membership-introduction__half']}`}>
+      <div
+        className={`${styles["membership-introduction__right"]} ${styles["membership-introduction__half"]}`}
+      >
         <Parallax translateY={[50, 0]} disabled={isMobile}>
           <div
-            className={`white-space-break ${styles['membership-introduction__title-1']}`}>{'Memberships\ninclude'}</div>
-          <div className={styles['membership-introduction__right__sections-wrapper']}>
+            className={`white-space-break ${styles["membership-introduction__title-1"]}`}
+          >
+            {"Memberships\ninclude"}
+          </div>
+          <div
+            className={
+              styles["membership-introduction__right__sections-wrapper"]
+            }
+          >
             <div
-              className={`${styles['membership-introduction__right__section']}`}>
-              <Parallax translateX={[-50, 0]} disabled={!isMobile} easing={'easeOutExpo'}>
-                <div className={styles['membership-introduction__title-2']} style={{marginBottom: '20px'}}>Virtual</div>
+              className={`${styles["membership-introduction__right__section"]}`}
+            >
+              <Parallax
+                translateX={[-50, 0]}
+                disabled={!isMobile}
+                easing={"easeOutExpo"}
+              >
+                <div
+                  className={styles["membership-introduction__title-2"]}
+                  style={{ marginBottom: "20px", paddingLeft: "11px" }}
+                >
+                  Virtual
+                </div>
               </Parallax>
               <div
-                className={`white-space-break ${styles['membership-introduction__box']} ${styles['membership-introduction__box__text']}`}>
-                {'Monthly skill-building events lead by gamechangers like like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n' +
-                  '\n' +
-                  'An engaged and inspiring virtual community\n' +
-                  '\n' +
-                  'Biweekly member update with leveling up tips and tricks \n' +
-                  '\n' +
-                  'Opportunities to speak at a summit or lead your own talk\n' +
-                  '\n' +
-                  'Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!'}
+                className={`white-space-break ${styles["membership-introduction__box"]} ${styles["membership-introduction__box__text"]}`}
+              >
+                {"Monthly skill-building events lead by gamechangers like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n" +
+                  "\n" +
+                  "An engaged and inspiring virtual community\n" +
+                  "\n" +
+                  "Biweekly member update with leveling up tips and tricks \n" +
+                  "\n" +
+                  "Opportunities to speak at a summit or lead your own talk\n" +
+                  "\n" +
+                  "Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!"}
               </div>
             </div>
             <div
-              className={`${styles['membership-introduction__right__section']}`}>
-              <Parallax translateX={[-50, 0]} disabled={!isMobile} easing={'easeOutExpo'}>
-                <div className={styles['membership-introduction__title-2']}>Austin</div>
-                <div className={styles['membership-introduction__subtitle']} style={{marginBottom: '16px'}}>
+              className={`${styles["membership-introduction__right__section"]}`}
+            >
+              <Parallax
+                translateX={[-50, 0]}
+                disabled={!isMobile}
+                easing={"easeOutExpo"}
+              >
+                <div className={styles["membership-introduction__title-2"]}>
+                  Austin
+                </div>
+                <div
+                  className={styles["membership-introduction__subtitle"]}
+                  style={{ marginBottom: "16px" }}
+                >
                   *NEW CHAPTERS COMING SOON
                 </div>
               </Parallax>
-              <div className={`white-space-break ${styles['membership-introduction__box__text']}`}>
-                {'Everything in the Virtual membership Plus: \n' +
-                  '\n' +
-                  'A monthly in-person networking event with industry professionals and recruiters\n' +
-                  '\n' +
-                  'Local perks and discounts'}
+              <div
+                className={`white-space-break ${styles["membership-introduction__box__text"]}`}
+              >
+                {"Everything in the Virtual membership Plus: \n" +
+                  "\n" +
+                  "Monthly in-person networking event with industry professionals and recruiters\n" +
+                  "\n" +
+                  "Local perks and discounts"}
               </div>
             </div>
           </div>
         </Parallax>
       </div>
     </div>
-  )
-}
+  );
+};
