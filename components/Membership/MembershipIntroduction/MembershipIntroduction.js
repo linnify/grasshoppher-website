@@ -114,7 +114,7 @@ export const MembershipIntroduction = () => {
               >
                 {"Everything in the Virtual membership Plus: \n" +
                   "\n" +
-                  "Monthly in-person networking event with industry professionals and recruiters\n" +
+                  "Monthly in-person networking events with industry professionals and recruiters\n" +
                   "\n" +
                   "Local perks and discounts"}
               </div>

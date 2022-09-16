@@ -14,8 +14,10 @@ const MembershipLanding = () => {
         <MembershipHero />
         <div className={"container"}>
           <MembershipIntroduction />
-          <MembershipCommunity />
-          <MembershipTestimonials />
+        </div>
+        <MembershipCommunity />
+        <MembershipTestimonials />
+        <div className={"container"}>
           <MembershipYourFuture />
         </div>
       </Layout>
