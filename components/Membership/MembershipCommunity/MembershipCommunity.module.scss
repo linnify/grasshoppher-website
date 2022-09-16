@@ -51,37 +51,42 @@
     }
   }
 
-  @media (min-width: 800px) {
-    &__image {
-      bottom: 100px;
+  //@media (min-width: 800px) {
+  //  &__image {
+  //    bottom: 100px;
+  //
+  //    img {
+  //      position: relative;
+  //      bottom: 0;
+  //      height: 497px;
+  //    }
+  //  }
+  //}
 
-      img {
-        position: relative;
-        bottom: 0;
-        height: 497px;
-      }
-    }
-  }
+  //@media (min-width: 992px) {
+  //  padding-bottom: 500px;
+  //
+  //  &__image {
+  //    position: absolute;
+  //    height: 597px;
+  //
+  //    img {
+  //      position: relative;
+  //      bottom: 0;
+  //      height: 597px;
+  //    }
+  //  }
+  //}
 
-  @media (min-width: 992px) {
-    padding-bottom: 500px;
-
-    &__image {
-      position: absolute;
-      height: 597px;
-
-      img {
+  @media (min-width: 1320px) {
+    padding-bottom: 144px;
+       img {
         position: relative;
         bottom: 0;
         height: 597px;
       }
-    }
-  }
-
-  @media (min-width: 1200px) {
-    padding-bottom: 144px;
-
     &__image {
+            position: absolute;
       bottom: 0;
       z-index: 1;
       top: -20px;
