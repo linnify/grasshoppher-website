@@ -23,11 +23,11 @@ export const socialMedia = [
 ];
 
 export const legalFooterItems = [
-  {
-    text: "Be a Mentor",
-    link: "/become-mentor",
-    newTab: false,
-  },
+  // {
+  //   text: "Be a Mentor",
+  //   link: "/become-mentor",
+  //   newTab: false,
+  // },
   {
     text: "Contact",
     link: "/contact",
@@ -57,11 +57,11 @@ export const menuFooterItems = [
     link: "https://www.befearlesssummit.org/",
     newTab: true,
   },
-  {
-    text: "Book a Mentor",
-    link: "/disruptors",
-    newTab: false,
-  },
+  // {
+  //   text: "Book a Mentor",
+  //   link: "/disruptors",
+  //   newTab: false,
+  // },
 ];
 
 export const copyrightFooterItems = [
