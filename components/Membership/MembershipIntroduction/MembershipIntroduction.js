@@ -80,11 +80,11 @@ export const MembershipIntroduction = () => {
               <div
                 className={`white-space-break ${styles["membership-introduction__box"]} ${styles["membership-introduction__box__text"]}`}
               >
-                {"Monthly skill-building events lead by gamechangers like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n" +
+                {"Monthly skill-building events led by gamechangers like Kelly Rutherford, Mandy Teefey, and Allison Kaye\n" +
                   "\n" +
                   "An engaged and inspiring virtual community\n" +
                   "\n" +
-                  "Biweekly member update with leveling up tips and tricks \n" +
+                  "Biweekly member updates with leveling up tips and tricks \n" +
                   "\n" +
                   "Opportunities to speak at a summit or lead your own talk\n" +
                   "\n" +
