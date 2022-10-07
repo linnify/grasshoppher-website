@@ -1,32 +1,11 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import styles from "./MembershipIntroduction.module.scss";
 import { RedirectButton } from "../../RedirectButton";
 import { Parallax } from "react-scroll-parallax";
+import { useDeviceSize } from "../../../hooks/use-device-size.hook";
 
 export const MembershipIntroduction = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      handleResize();
-
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  const isMobile = useMemo(() => windowSize.width < 768, [windowSize]);
+  const { isMobile } = useDeviceSize();
 
   return (
     <div className={styles["membership-introduction"]}>

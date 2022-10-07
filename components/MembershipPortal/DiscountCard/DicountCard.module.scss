@@ -1,0 +1,45 @@
+@import "styles/abstracts/variables";
+
+.card{
+  position:relative;
+  width: 432px;
+  height:432px;
+  background-color:$color-neon;
+  padding:32px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  margin-right: 32px;
+
+  &__promo{
+    text-decoration: underline;
+    text-align: right;
+  }
+
+
+
+  img{
+    z-index:1;
+    position: absolute;
+    object-fit: cover;
+      height:232px;
+    width:232px;
+    right:32px;
+    top:95px;
+
+  }
+}
+
+.secondary-card{
+    background-color:#000 ;
+  margin-top:64px;
+
+}
+
+div.card:hover{
+  border: 2px solid #000;
+}
+
+div.secondary-card:hover{
+   border: 2px solid $color-neon;
+}

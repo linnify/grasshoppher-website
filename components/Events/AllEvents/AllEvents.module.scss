@@ -1,0 +1,17 @@
+.events{
+  margin-top:24px;
+  margin-bottom:24px;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap:24px;
+
+     @media (max-width: 768px) {
+      justify-content:center;
+     }
+
+}
+
+.page-min-height {
+  min-height: calc(100vh - 980px);
+}

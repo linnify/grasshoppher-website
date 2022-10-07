@@ -3,31 +3,11 @@ import styles from "./MembershipCommunity.module.scss";
 import { HighlightedText } from "../../HighlightedText/HighlightedText";
 import { RedirectButton } from "../../RedirectButton";
 import { Parallax } from "react-scroll-parallax";
+import { useDeviceSize } from "../../../hooks/use-device-size.hook";
 
 export const MembershipCommunity = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
+  const { isMobile } = useDeviceSize();
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      handleResize();
-
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  const isMobile = useMemo(() => windowSize.width < 768, [windowSize]);
   return (
     <div className={styles["membership-community"]}>
       <div className={`container ${styles["membership-community__content"]}`}>

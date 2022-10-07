@@ -1,0 +1,24 @@
+@import "styles/abstracts/variables";
+
+.membership-portal-hero {
+  //height: calc(40vh - #{header-height(xs)});
+  //min-height: 777px;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+  //gap: 67px;
+  //padding-bottom: 48px;
+  top: calc(13px + #{header-height(xs)});
+  position:relative;
+
+      &__text {
+    width: 274px;
+    margin-top: 24px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1200px) {
+    //height: calc(40vh - #{header-height(xl)});
+    top: calc(13px + #{header-height(xl)});
+  }
+}

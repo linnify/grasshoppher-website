@@ -1,5 +1,4 @@
 import {HeroLayout} from '../../HeroLayout/HeroLayout';
-import FadeIn from '../../FadeIn/FadeIn';
 import {PageTitle} from '../../PageTitle';
 import React from 'react';
 import {HighlightedText} from '../../HighlightedText/HighlightedText';
