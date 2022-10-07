@@ -234,3 +234,13 @@ h1 {
 .color-neon{
   color: $color-neon !important;
 }
+
+.content-position {
+
+  top:  #{header-height(xs)};
+  position:relative;
+
+  @media (min-width: 1200px) {
+    top:  #{header-height(xl)};
+  }
+}

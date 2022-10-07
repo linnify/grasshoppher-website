@@ -1,0 +1,13 @@
+.cards{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  margin-bottom:24px;
+  width:100%;
+
+    @media (max-width: 768px) {
+    flex-direction:column;
+    align-items:center;
+      gap:24px;
+  }
+}
