@@ -43,7 +43,12 @@ export const EBook = ({
           }
         />
       </div>
-      <div className={styles["ebook__image"]} id={"ebook-content__image"}>
+      <div
+        className={`${styles["ebook__image"]} ${
+          displayBigText ? styles["no-top"] : ""
+        }`}
+        id={"ebook-content__image"}
+      >
         <Parallax
           disabled={disableAnimation}
           translateX={[20, 0]}

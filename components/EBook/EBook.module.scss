@@ -95,10 +95,16 @@
   position:absolute;
   width:100%;
 
-  @media (max-width:424px){
+  @media (max-width:425px){
     p {
       font-size: 70px;
       text-align:center;
     }
   }
+}
+
+.no-top{
+   @media (max-width: 1024px) {
+    top:-40px;
+   }
 }

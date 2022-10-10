@@ -379,3 +379,8 @@ $space-sizes: (
 .relative {
   position: relative;
 }
+
+.display-center{
+  display:flex;
+  justify-content:center
+}

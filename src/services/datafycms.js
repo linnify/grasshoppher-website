@@ -181,7 +181,7 @@ export const getUpcomingEvents = async () => {
 export const getDiscounts = async () => {
   const response = await datafyCMS
     .collections("discount")
-    .fields(["promo_code", "tags", "discount", "image.url"])
+    .fields(["promo_code", "tags", "discount", "image.url", "virtual"])
     .pageSize(100)
 
     .list();

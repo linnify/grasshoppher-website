@@ -49,7 +49,7 @@ export const UpcomingEvent = ({ event }) => {
         />
       </div>
       <div
-        className={isMobile ? "container" : ""}
+        className={isMobile ? "container display-center" : ""}
         style={{
           position: "relative",
           width: isMobile ? "" : "600px",

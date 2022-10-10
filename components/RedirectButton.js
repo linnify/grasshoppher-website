@@ -1,11 +1,33 @@
 import React from "react";
 
-export const RedirectButton = ({href, label, target, variant = "contained", color = "primary"}) => {
+export const RedirectButton = ({
+  href,
+  label,
+  target,
+  variant = "contained",
+  color = "primary",
+  asButton = false,
+  onClick,
+}) => {
+  if (asButton) {
+    return (
+      <div
+        className={`button button__${variant} button__${variant}--${color}`}
+        onClick={onClick}
+      >
+        <span>{label}</span>
+      </div>
+    );
+  }
   return (
-    <a href={href} target={`${target ? "_blank" : ""}`} style={{display: 'inline-flex', width: "fit-content"}}>
+    <a
+      href={href}
+      target={`${target ? "_blank" : ""}`}
+      style={{ display: "inline-flex", width: "fit-content" }}
+    >
       <div className={`button button__${variant} button__${variant}--${color}`}>
         <span>{label}</span>
       </div>
     </a>
   );
-}
+};
