@@ -49,7 +49,7 @@ export const EventCard = ({ event, index, inPerson }) => {
         src={event.image.url}
         alt={"card image"}
         width={inPerson ? 368 : 432}
-        height={166}
+        height={300}
       />
       <div
         className={`${
