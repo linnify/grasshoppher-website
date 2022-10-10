@@ -34,7 +34,7 @@ export const DiscountCard = ({ discount, index }) => {
       >
         PROMO CODE: {discount.promo_code}
       </h3>
-      <img src={discount.image.url} width={232} height={232} />
+      <img src={discount.image.url} width={200} height={200} />
     </div>
   );
 };

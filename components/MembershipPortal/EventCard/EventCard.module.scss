@@ -130,11 +130,15 @@ div.event-container:hover .event-container__image-in-person{
 
 div.event-container:hover .event-container__content  {
     border: 2px solid #000;
+      padding:22px;
+
 
 }
 
 div.event-container:hover .event-container__content-in-person  {
     border: 2px solid $color-neon;
+        padding:22px;
+
 
 }
 

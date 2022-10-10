@@ -10,7 +10,7 @@
   padding-bottom:66px;
   min-height:730px;
   position: relative;
-  align-items:baseline;
+  align-items:center;
 
   @media (max-width: 768px) {
         flex-direction:column;
@@ -31,9 +31,9 @@
   }
 
   img{
-    position: absolute;
-    width: 550px;
-    height: 400px;
+    //position: absolute;
+    //width: 900px;
+    min-height: 400px;
     object-fit:cover;
 
   @media (max-width: 768px) {

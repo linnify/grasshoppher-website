@@ -21,9 +21,9 @@
   img{
     z-index:1;
     position: absolute;
-    object-fit: cover;
-      height:232px;
-    width:232px;
+    object-fit: fill;
+      height:200px;
+    width:200px;
     right:32px;
     top:95px;
 
@@ -38,8 +38,12 @@
 
 div.card:hover{
   border: 2px solid #000;
+    padding:30px;
+
 }
 
 div.secondary-card:hover{
    border: 2px solid $color-neon;
+    padding:30px;
+
 }

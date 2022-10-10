@@ -56,8 +56,8 @@ export const UpcomingEvent = ({ event }) => {
         }}
       >
         {" "}
-        <Parallax scale={[1, 1.25]} easing="easeOutCirc">
-          <img src={event.image.url} width={600} height={400} />
+        <Parallax scale={isMobile ? [1, 1.25] : [0.75, 1]} easing="easeOutCirc">
+          <img src={event.image.url} />
         </Parallax>
       </div>
     </div>

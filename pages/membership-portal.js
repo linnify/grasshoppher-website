@@ -124,9 +124,19 @@ export async function getStaticProps() {
   const discounts = await getDiscounts();
   return {
     props: {
-      inPersonEvents: inPersonEvents.slice(0, 2),
-      virtualEvents: virtualEvents.slice(0, 2),
-      upcomingEvent: upcomingEvents[0],
+      inPersonEvents: inPersonEvents
+        .filter((event) => {
+          return new Date(event.date).getTime() >= new Date().getTime();
+        })
+        .slice(0, 2),
+      virtualEvents: virtualEvents
+        .filter(
+          (event) => new Date(event.date).getTime() >= new Date().getTime()
+        )
+        .slice(0, 2),
+      upcomingEvent: upcomingEvents.filter(
+        (event) => new Date(event.date).getTime() >= new Date().getTime()
+      )[0],
       discounts: discounts,
     },
   };
