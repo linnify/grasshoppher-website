@@ -44,7 +44,7 @@ const Membership = (props) => {
             <div style={{ marginBottom: "24px" }}>
               <RedirectButton
                 label={"Already a member? Login Now!"}
-                href={""}
+                href={"/membership-portal"}
                 target={false}
                 color={"primary"}
               />

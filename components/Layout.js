@@ -56,9 +56,7 @@ export default class Layout extends React.Component {
           {this.props.children}
           <EBookDialog open={this.state.open} onClose={onClose} />
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <footer>{!this.props.withouthFooter && <Footer />}</footer>
       </div>
     );
   }

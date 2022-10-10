@@ -13,25 +13,75 @@ import { UpcomingEvent } from "../components/MembershipPortal/UpcomingEvent/Upco
 import { Discounts } from "../components/MembershipPortal/Discounts/Discounts";
 import { SignUp } from "../components/MembershipPortal/SignUp/SignUp";
 import { EBook } from "../components/EBook/EBook";
+import { CheckEmail } from "../components/MembershipPortal/CheckEmail/CheckEmail";
 
 class MembershipPortal extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      emailVerified: false,
+      virtual: false,
+      message: null,
+    };
   }
 
-  render() {
-    return (
-      <Page title={"Membership Portal - GrasshoppHer"}>
-        <Layout title={"Membership Portal"}>
+  componentDidMount() {
+    this.setState({
+      emailVerified: sessionStorage.getItem("emailVerified") === "true",
+    });
+    this.setState({
+      virtual: sessionStorage.getItem("virtual") === "true",
+    });
+  }
+
+  onCheckEmail = async (email) => {
+    const url = `${process.env.NEXT_PUBLIC_HOST}/api/verify-email`;
+    try {
+      const response = await fetch(url, {
+        body: JSON.stringify({
+          email: email,
+        }),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.json();
+      sessionStorage.setItem("emailVerified", result.active);
+      sessionStorage.setItem("virtual", result.virtual);
+      this.setState({
+        emailVerified: result.active,
+        virtual: result.virtual,
+        message: result.active
+          ? null
+          : "You don’t have an active GrasshoppHer Membership subscription.",
+      });
+    } catch (e) {
+      this.setState({
+        message: "An error occurred. Please try again.",
+      });
+    }
+  };
+
+  getContent = () => {
+    if (this.state.emailVerified) {
+      return (
+        <>
           <MembershipPortalHero />
           <div className={"container"}>
             <Events
               virtualEvents={this.props.virtualEvents}
               inPersonEvents={this.props.inPersonEvents}
+              virtual={this.state.virtual}
             />
           </div>
-          <UpcomingEvent event={this.props.upcomingEvent} />
-          <Discounts discounts={this.props.discounts} />
+          {!this.state.virtual && (
+            <UpcomingEvent event={this.props.upcomingEvent} />
+          )}
+          <Discounts
+            discounts={this.props.discounts}
+            virtual={this.state.virtual}
+          />
           <SignUp />
           <EBook
             title={"Join\n" + "our\n" + "slack\n" + "community"}
@@ -43,6 +93,25 @@ class MembershipPortal extends React.Component {
             imageUrl={"/images/slack.png"}
             displayBigText={true}
           />
+        </>
+      );
+    }
+    return (
+      <CheckEmail
+        message={this.state.message}
+        onCheckEmail={this.onCheckEmail}
+      />
+    );
+  };
+
+  render() {
+    return (
+      <Page title={"Membership Portal - GrasshoppHer"}>
+        <Layout
+          title={"Membership Portal"}
+          withouthFooter={!this.state.emailVerified}
+        >
+          {this.getContent()}
         </Layout>
       </Page>
     );

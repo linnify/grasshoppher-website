@@ -5,7 +5,13 @@ import styles from "../Events/Events.module.scss";
 import { Parallax } from "react-scroll-parallax";
 import { BigText } from "../../BigText";
 
-export const Discounts = ({ discounts }) => {
+export const Discounts = ({ discounts, virtual }) => {
+  const getDiscounts = () => {
+    if (virtual) {
+      return discounts.filter((discount) => discount.virtual);
+    }
+    return discounts;
+  };
   return (
     <>
       <div className={"container"} style={{ position: "relative" }}>
@@ -17,7 +23,7 @@ export const Discounts = ({ discounts }) => {
         </div>
       </div>
 
-      <DiscountSlider discounts={discounts} />
+      <DiscountSlider discounts={getDiscounts()} />
     </>
   );
 };

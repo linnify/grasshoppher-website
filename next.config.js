@@ -3,23 +3,23 @@ module.exports = {
   swcMinify: true,
   experimental: {
     sprFlushToDisk: false,
-    styledComponents: true
+    styledComponents: true,
   },
 
   async headers() {
     return [
       {
-        source: '/fonts/BebasNeue/FontsFree-Net-BebasNeueRegular.ttf',
+        source: "/fonts/BebasNeue/FontsFree-Net-BebasNeueRegular.ttf",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      }
-    ]
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
-  
+
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
