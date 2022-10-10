@@ -1,12 +1,13 @@
 import "../styles/main.global.scss";
-import {DefaultSeo} from "next-seo";
+import { DefaultSeo } from "next-seo";
 import SEO from "../seo-metadata";
-import React, {useEffect} from "react";
-import {useRouter} from "next/router";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import * as gtag from "../src/helpers/gtag";
-import {ParallaxProvider} from 'react-scroll-parallax';
+import { ParallaxProvider } from "react-scroll-parallax";
+import { StylesProvider } from "@material-ui/core";
 
-export default function MyApp({Component, pageProps}) {
+export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -20,10 +21,12 @@ export default function MyApp({Component, pageProps}) {
 
   return (
     <>
-      <DefaultSeo {...SEO} />
-      <ParallaxProvider>
-        <Component {...pageProps} />
-      </ParallaxProvider>
+      <StylesProvider injectFirst>
+        <DefaultSeo {...SEO} />
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
+      </StylesProvider>
     </>
   );
 }
