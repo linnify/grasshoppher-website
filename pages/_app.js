@@ -5,7 +5,8 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../src/helpers/gtag";
 import { ParallaxProvider } from "react-scroll-parallax";
-import { StylesProvider } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
+import theme from "../src/theme";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -21,12 +22,12 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <StylesProvider injectFirst>
+      <ThemeProvider theme={theme}>
         <DefaultSeo {...SEO} />
         <ParallaxProvider>
           <Component {...pageProps} />
         </ParallaxProvider>
-      </StylesProvider>
+      </ThemeProvider>
     </>
   );
 }

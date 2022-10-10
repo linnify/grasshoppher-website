@@ -2,19 +2,7 @@ import React, { useState } from "react";
 import styles from "./CheckEmail.module.scss";
 import { HeroLayout } from "../../HeroLayout/HeroLayout";
 import { TextField } from "@material-ui/core";
-import styled from "styled-components";
 import { RedirectButton } from "../../RedirectButton";
-
-const StyledInput = styled(TextField)`
-  & label.Mui-focused {
-    color: #000;
-  }
-  & .MuiOutlinedInput-root {
-    &.Mui-focused fieldset {
-      border-color: #000;
-    }
-  }
-`;
 
 export const CheckEmail = ({ message, onCheckEmail }) => {
   const [email, setEmail] = useState(null);
@@ -39,7 +27,7 @@ export const CheckEmail = ({ message, onCheckEmail }) => {
             Please enter the email address you used to pay your GrasshoppHer
             Membership subscription.
           </span>
-          <StyledInput
+          <TextField
             label="Enter your email address"
             variant="outlined"
             value={email}
