@@ -48,12 +48,13 @@ export const MembershipCards = () => {
   ];
 
   const getCards = () => {
-    return data.map((item) => {
+    return data.map((item, index) => {
       return (
         <MembershipCard
           type={item.type}
           description={item.description}
           prices={item.prices}
+          key={index}
         />
       );
     });
