@@ -12,10 +12,14 @@ export const header = [
     path: "/story",
   },
   {
+    label: "LOGIN",
+    path: "/membership-portal",
+  },
+  {
     label: "JOIN NOW",
     path: "/membership",
     computeStyle: (isActive) => ({
-      textDecoration: isActive ? 'none' : "underline"
-    })
-  }
+      textDecoration: isActive ? "none" : "underline",
+    }),
+  },
 ];

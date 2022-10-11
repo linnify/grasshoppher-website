@@ -7,6 +7,9 @@ import * as gtag from "../src/helpers/gtag";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { ThemeProvider } from "@material-ui/core";
 import theme from "../src/theme";
+import "swiper/swiper-bundle.css";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();

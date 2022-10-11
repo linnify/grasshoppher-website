@@ -73,11 +73,7 @@ export const MembershipCard = ({ type, description, prices }) => {
         </div>
       </div>
       <div className={` white-space-break ${styles["card__description"]}`}>
-        {type === "virtual" ? (
-          <span>{description}</span>
-        ) : (
-          <h3>{description}</h3>
-        )}
+        <span>{description}</span>
         <RedirectButton
           label={"Choose"}
           href={getLink()}

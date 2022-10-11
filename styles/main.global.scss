@@ -50,3 +50,19 @@ a {
   box-sizing: border-box;
 }
 
+
+.swiper-button-prev,
+.swiper-button-next {
+  &:after {
+     color:gray;
+
+  }
+}
+
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+}
+
+
+

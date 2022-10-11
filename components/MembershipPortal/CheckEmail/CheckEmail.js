@@ -22,7 +22,7 @@ export const CheckEmail = ({ message, onCheckEmail }) => {
           </span>
         </div>
         <div className={`${styles["card__right"]}`}>
-          <h3>Wellcome</h3>
+          <h3>Welcome</h3>
           <span className={`inter1`}>
             Please enter the email address you used to pay your GrasshoppHer
             Membership subscription.

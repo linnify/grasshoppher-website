@@ -10,6 +10,7 @@ export const SignUp = () => {
         gap: "64px",
         display: "flex",
         flexDirection: "column",
+        marginTop: "200px",
         marginBottom: "200px",
       }}
     >
@@ -20,9 +21,7 @@ export const SignUp = () => {
       />
       <RedirectButton
         label={"Sign Up"}
-        href={
-          "https://docs.google.com/forms/d/e/1FAIpQLScJhoNzVv2A5p0e979itmtgvVPz2LdYe91iPWESZBLYjIb2Gg/viewform "
-        }
+        href={"https://forms.gle/MoqSb5Y3P6kKGLLy5"}
         target={true}
         color={"primary"}
       />

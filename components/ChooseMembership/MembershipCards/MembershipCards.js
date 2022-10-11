@@ -33,7 +33,9 @@ export const MembershipCards = () => {
         "\n" +
         "Monthly in-person networking events with industry professionals and recruiters\n" +
         "\n" +
-        "Local perks and discounts",
+        "Local perks and discounts\n" +
+        "\n" +
+        "Live in Austin. Coming to other cities in 2023!",
       prices: {
         monthly: {
           price: "$12.99",

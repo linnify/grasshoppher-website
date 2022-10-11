@@ -17,7 +17,7 @@ export const Events = ({ virtualEvents, inPersonEvents, virtual }) => {
       <EventsHeader
         title={"Monthly virtual events"}
         description={
-          "Connect with industry experts and a network of leaders to catapult you into your dreams, GrasshoppHer."
+          "Connect with industry experts and a network of leaders to catapult you into your dreams."
         }
         buttonTitle={"See all"}
         buttonLink={"/events/virtual"}
@@ -34,7 +34,7 @@ export const Events = ({ virtualEvents, inPersonEvents, virtual }) => {
           <EventsHeader
             title={"Monthly in-person events"}
             description={
-              "Connect with industry experts and a network of leaders to catapult you into your dreams, GrasshoppHer."
+              "We’re live in Austin (new locations launching in 2023). Join us for fun, budding friendships, and some good ol’ fashioned career road-mapping. We’ll help you leap to your next goal."
             }
             buttonTitle={"See all"}
             buttonLink={"/events/in-person"}
@@ -44,9 +44,7 @@ export const Events = ({ virtualEvents, inPersonEvents, virtual }) => {
           </div>
           <EventsHeader
             title={"Upcoming Event"}
-            description={
-              "Connect with industry experts and a network of leaders to catapult you into your dreams, GrasshoppHer."
-            }
+            description={"Looking to level-up in the near future? We got you."}
             buttonTitle={"See all"}
             buttonLink={"/events/upcoming"}
           />

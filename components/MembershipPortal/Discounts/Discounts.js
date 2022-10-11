@@ -14,7 +14,10 @@ export const Discounts = ({ discounts, virtual }) => {
   };
   return (
     <>
-      <div className={"container"} style={{ position: "relative" }}>
+      <div
+        className={"container"}
+        style={{ position: "relative", marginBottom: "72px" }}
+      >
         <HighlightedText text={"Perks & Discounts"} />
         <div className={`${styles["big-text"]}`}>
           <Parallax speed={10} translateY={[20, -180]}>
