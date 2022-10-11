@@ -86,7 +86,7 @@ class MembershipPortal extends React.Component {
           <EBook
             title={"Join\n" + "our\n" + "slack\n" + "community"}
             description={
-              "Join the community and don’t miss any chance in becoming the GrasshoppHer you want to be"
+              "Don’t miss your chance to become the GrasshoppHer you want to be!"
             }
             buttonTitle={"join now"}
             buttonLink={"https://grasshopphergroup.slack.com/ssb/redirect#/"}

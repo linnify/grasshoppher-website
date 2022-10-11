@@ -16,7 +16,7 @@ export const SignUp = () => {
     >
       <HighlightedText
         text={
-          "We want to put you on a pedestal.\n Share current project and collab  opportunities."
+          "We want to put you on a pedestal.\nShare current project and collab  opportunities."
         }
       />
       <RedirectButton
