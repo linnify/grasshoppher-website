@@ -46,6 +46,7 @@ const Membership = (props) => {
                 label={"Already a member? Login Now!"}
                 href={"/membership-portal"}
                 target={false}
+                useLink={true}
                 color={"primary"}
               />
             </div>

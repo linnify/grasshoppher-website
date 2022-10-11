@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export const RedirectButton = ({
   href,
@@ -7,6 +8,7 @@ export const RedirectButton = ({
   variant = "contained",
   color = "primary",
   asButton = false,
+  useLink = false,
   onClick,
 }) => {
   if (asButton) {
@@ -17,6 +19,18 @@ export const RedirectButton = ({
       >
         <span>{label}</span>
       </div>
+    );
+  }
+  if (useLink) {
+    return (
+      <Link href={href}>
+        <div
+          className={`button button__${variant} button__${variant}--${color}`}
+          onClick={onClick}
+        >
+          <span>{label}</span>
+        </div>
+      </Link>
     );
   }
   return (
