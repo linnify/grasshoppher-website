@@ -26,20 +26,16 @@ export const DiscountSlider = ({ discounts }) => {
         disableOnInteraction: false,
       }}
       breakpoints={{
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 32,
-        },
         1024: {
           slidesPerView: 2,
           spaceBetween: 32,
         },
-        1440: {
+        1500: {
           slidesPerView: 3,
           spaceBetween: 32,
         },
         2560: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 32,
         },
       }}
