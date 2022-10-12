@@ -50,7 +50,7 @@ export const Header = () => {
         <div className={"logo header__padding-top-30"}>
           <Link href={"/"}>
             <img
-              src={"/logos/logo.svg"}
+              src={"/logos/new-logo.svg"}
               alt={"logo GrasshoppHer"}
               style={{ cursor: "pointer" }}
               className={"logo"}

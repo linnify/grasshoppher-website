@@ -14,7 +14,7 @@ export const CheckEmail = ({ message, onCheckEmail }) => {
     >
       <div className={`${styles["card"]} content-position`}>
         <div className={`${styles["card__left"]}`}>
-          <img src={"/logos/logo.svg"} alt={"logo GrasshoppHer"} />
+          <img src={"/logos/new-logo.svg"} alt={"logo GrasshoppHer"} />
           <span className={`inter1`}>
             GrasshoppHer is a career roadmapping platform and community,
             designed to connect you with industry leaders and empower you to

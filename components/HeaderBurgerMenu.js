@@ -29,7 +29,7 @@ export const HeaderBurgerMenu = () => {
       <div>
         <Link href={"/"}>
           <img
-            src={"/logos/logo.svg"}
+            src={"/logos/new-logo.svg"}
             alt={"logo GrasshoppHer"}
             style={{ marginBottom: "40px" }}
             className={"logo"}
