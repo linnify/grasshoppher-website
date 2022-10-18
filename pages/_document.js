@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
 import { GA_TRACKING_ID, HOTJAR_SITE_ID } from "../constants/deploy";
+import { ServerStyleSheets } from "@material-ui/core";
 
 export default class MyDocument extends Document {
   render() {
