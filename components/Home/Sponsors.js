@@ -4,14 +4,30 @@ import { HighlightedText } from "../HighlightedText/HighlightedText";
 
 export const Sponsors = ({ title, isArticle = false }) => {
   const logos = isArticle
-    ? [
-        {
-          image: "/logos/Girlboss_Logo_Wordmark_Black_400x106.png",
-          alt: "Girlboss",
-          link:
-            "https://girlboss.com/blogs/read/how-to-set-boundaries-as-a-boss",
-        },
-      ]
+    ? Array(3)
+        .fill(null)
+        .map(() => [
+          {
+            image: "/logos/Girlboss_Logo_Wordmark_Black_400x106.png",
+            alt: "Girlboss",
+            link:
+              "https://girlboss.com/blogs/read/how-to-set-boundaries-as-a-boss",
+          },
+
+          {
+            image: "/logos/forbes.png",
+            alt: "Forbes",
+            link:
+              "https://www.forbes.com/sites/danabrownlee/2020/03/19/the-dirty-little-secret-of-career-success-work-ethic-may-trump-raw-talent/?sh=65634adb30f8",
+          },
+          {
+            image: "/logos/insider.png",
+            alt: "Insider",
+            link:
+              "https://www.businessinsider.com/budget-template-how-much-entrepreneurs-small-businesses-spend-marketing-advertising-2022-7",
+          },
+        ])
+        .flat()
     : Array(3)
         .fill(null)
         .map(() => [

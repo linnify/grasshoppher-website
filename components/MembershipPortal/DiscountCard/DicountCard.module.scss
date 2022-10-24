@@ -26,14 +26,15 @@
     z-index:1;
     position: absolute;
     object-fit: fill;
-      height:200px;
-    width:200px;
-      @media (max-width: 425px) {
-     width: 150px;
+          width: 150px;
   height:150px;
+      @media (max-width: 425px) {
+     width: 120px;
+  height:120px;
+    top:98px;
    }
     right:32px;
-    top:95px;
+    top:138px;
 
   }
 }
@@ -49,7 +50,8 @@ div.card:hover{
     padding:30px;
     img{
           right:30px;
-    top:93px;
+    top:136px;
+        @media (max-width: 425px) { top:96px;}
     }
 }
 
@@ -58,6 +60,8 @@ div.secondary-card:hover{
     padding:30px;
     img{
        right:30px;
-    top:93px;
+     top:136px;
+              @media (max-width: 425px) { top:96px;}
+
     }
 }
