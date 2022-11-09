@@ -9,7 +9,12 @@ const getStripe = () => {
 };
 
 export const isActiveSubscription = async (email) => {
-  const stripe = await getStripe();
+  if (process.env.EXCLUDED_MAILS === email) {
+    return {
+      active: true,
+      virtual: false,
+    };
+  }
   const customers = await stripe.customers.search({
     query: `email:'${email}'`,
     expand: ["data.subscriptions"],
