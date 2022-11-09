@@ -9,7 +9,7 @@ const getStripe = () => {
 };
 
 export const isActiveSubscription = async (email) => {
-  if (process.env.EXCLUDED_MAILS === email) {
+  if (`${process.env.EXCLUDED_MAILS}` === email) {
     return {
       active: true,
       virtual: false,
