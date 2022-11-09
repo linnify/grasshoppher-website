@@ -8,7 +8,18 @@ const getStripe = () => {
   return stripePromise;
 };
 
+const getExcludedMails = () => {
+  return process.env.EXCLUDED_MAILS.split(",");
+};
+
 export const isActiveSubscription = async (email) => {
+  const excludedMails = getExcludedMails();
+  if (excludedMails.indexOf(email) !== -1) {
+    return {
+      active: true,
+      virtual: false,
+    };
+  }
   const stripe = await getStripe();
   const customers = await stripe.customers.search({
     query: `email:'${email}'`,

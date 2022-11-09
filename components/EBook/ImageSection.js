@@ -37,10 +37,8 @@ export const EBook = ({
         <RedirectButton
           label={buttonTitle || "Get your free\ndownloadable ebook"}
           target={true}
-          href={
-            buttonLink ||
-            "https://docs.google.com/forms/d/e/1FAIpQLSfXz9_t_2_MKgPs4v1ubPiPyeIxbrV9A1BXgVouthXuOCO8hg/viewform"
-          }
+          useLink={!buttonLink}
+          href={buttonLink || "/e-book"}
         />
       </div>
       <div
