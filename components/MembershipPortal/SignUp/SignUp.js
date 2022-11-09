@@ -16,13 +16,14 @@ export const SignUp = () => {
     >
       <HighlightedText
         text={
-          "We want to put you on a pedestal.\nShare current project and collab  opportunities."
+          "We want to put you on a pedestal.\nShare current project and collab opportunities."
         }
       />
       <RedirectButton
         label={"Sign Up"}
-        href={"https://forms.gle/MoqSb5Y3P6kKGLLy5"}
-        target={true}
+        href={"/collab"}
+        useLink={true}
+        target={false}
         color={"primary"}
       />
     </div>

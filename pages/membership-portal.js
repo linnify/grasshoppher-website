@@ -12,7 +12,7 @@ import {
 import { UpcomingEvent } from "../components/MembershipPortal/UpcomingEvent/UpcomingEvent";
 import { Discounts } from "../components/MembershipPortal/Discounts/Discounts";
 import { SignUp } from "../components/MembershipPortal/SignUp/SignUp";
-import { EBook } from "../components/EBook/EBook";
+import { ImageSection } from "../components/EBook/ImageSection";
 import { CheckEmail } from "../components/MembershipPortal/CheckEmail/CheckEmail";
 
 class MembershipPortal extends React.Component {
@@ -83,7 +83,7 @@ class MembershipPortal extends React.Component {
             virtual={this.state.virtual}
           />
           <SignUp />
-          <EBook
+          <ImageSection
             title={"Join\n" + "our\n" + "slack\n" + "community"}
             description={
               "Don’t miss your chance to become the GrasshoppHer you want to be!"

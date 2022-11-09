@@ -1,7 +1,7 @@
 import Dialog from "@material-ui/core/Dialog";
 import styles from "./EBookDialog.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
-import { EBook } from "../EBook/EBook";
+import { ImageSection } from "../EBook/ImageSection";
 import { useDeviceSize } from "../../hooks/use-device-size.hook";
 
 export const EBookDialog = ({ open, onClose }) => {
@@ -27,7 +27,7 @@ export const EBookDialog = ({ open, onClose }) => {
       <div className={styles["ebook-dialog"]}>
         <div>
           <div className={styles["ebook-dialog__wrapper"]}>
-            <EBook disableAnimation={true} />
+            <ImageSection disableAnimation={true} />
           </div>
         </div>
       </div>

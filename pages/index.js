@@ -5,7 +5,7 @@ import { HomeProblemStatement } from "../components/Home/HomeProblemStatement/Ho
 import { HomeWhatYouWillGet } from "../components/Home/HomeWhatYouWillGet/HomeWhatYouWillGet";
 import { getInstagramPosts } from "../src/services/instagram";
 import { Sponsors } from "../components/Home/Sponsors";
-import { EBook } from "../components/EBook/EBook";
+import { ImageSection } from "../components/EBook/ImageSection";
 import { HomeHero } from "../components/Home/HomeHero/HomeHero";
 import { HomeInstagram } from "../components/Home/HomeInstagram";
 
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         <HomeProblemStatement />
         <HomeWhatYouWillGet />
         <HomeInstagram feed={this.props.posts} />
-        <EBook />
+        <ImageSection />
         <Sponsors />
         <Sponsors title={"AS SEEN ON"} isArticle={true} />
       </Layout>

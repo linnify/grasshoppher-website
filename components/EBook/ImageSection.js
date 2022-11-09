@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./EBook.module.scss";
+import styles from "./ImageSection.module.scss";
 import { PageTitle } from "../PageTitle";
 import { RedirectButton } from "../RedirectButton";
 import { Parallax } from "react-scroll-parallax";
 
-export const EBook = ({
+export const ImageSection = ({
   disableAnimation = false,
   displayBigText = false,
   title,

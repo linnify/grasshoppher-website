@@ -48,9 +48,8 @@ export const legalFooterItems = [
 export const menuFooterItems = [
   {
     text: "Download your e-book",
-    link:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfXz9_t_2_MKgPs4v1ubPiPyeIxbrV9A1BXgVouthXuOCO8hg/viewform",
-    newTab: true,
+    link: "/e-book",
+    newTab: false,
   },
   {
     text: "Be Fearless Summit",
