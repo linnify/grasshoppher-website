@@ -15,6 +15,7 @@ export const isActiveSubscription = async (email) => {
       virtual: false,
     };
   }
+  const stripe = await getStripe();
   const customers = await stripe.customers.search({
     query: `email:'${email}'`,
     expand: ["data.subscriptions"],
