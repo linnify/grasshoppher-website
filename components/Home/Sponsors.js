@@ -18,7 +18,7 @@ export const Sponsors = ({ title, isArticle = false }) => {
             image: "/logos/forbes.png",
             alt: "Forbes",
             link:
-              "https://www.forbes.com/sites/danabrownlee/2020/03/19/the-dirty-little-secret-of-career-success-work-ethic-may-trump-raw-talent/?sh=65634adb30f8",
+              "https://www.forbes.com/sites/laureldonnellan/2022/08/16/this-24-year-old-entrepreneur-found-her-path-to-soul-work-without-a-college-degree/",
           },
           {
             image: "/logos/insider.png",
