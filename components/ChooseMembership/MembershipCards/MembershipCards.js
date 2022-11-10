@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MembershipCards.module.scss";
 import { MembershipCard } from "../MembershipCard/MembershipCard";
 export const MembershipCards = () => {
+  const [link, setSelectedLink] = useState(null);
   const data = [
     {
       type: "virtual",
@@ -49,7 +50,21 @@ export const MembershipCards = () => {
     },
   ];
 
+  const onSelect = (link) => {
+    setSelectedLink(link);
+  };
+
   const getCards = () => {
+    if (link) {
+      return (
+        <iframe
+          className={"register-form"}
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfTdSd6UnOhQdTui2NgQSDETr7_UFItqDnwzfHnRXisV-s8TQ/viewform?embedded=true"
+        >
+          Loading…
+        </iframe>
+      );
+    }
     return data.map((item, index) => {
       return (
         <MembershipCard
@@ -57,6 +72,7 @@ export const MembershipCards = () => {
           description={item.description}
           prices={item.prices}
           key={index}
+          onSelect={onSelect}
         />
       );
     });

@@ -5,23 +5,7 @@ import { MembershipCards } from "../components/ChooseMembership/MembershipCards/
 import { HeroLayout } from "../components/HeroLayout/HeroLayout";
 import { RedirectButton } from "../components/RedirectButton";
 
-// const datafyCMS = require("@datafycms/js-client");
-
-const Membership = (props) => {
-  // return (
-  //   <Page title={"Presale Membership - GrasshoppHer"}>
-  //     <Layout title={"Presale Membership"}>
-  //       <FadeIn>
-  //         <div className={"container"}>
-  //           <HighlightedText text={"Presale Membership"} />
-  //         </div>
-  //       </FadeIn>
-  //       <div className={"container padding-top-m padding-bottom-xxl"}>
-  //         <div dangerouslySetInnerHTML={{ __html: props.page }} />
-  //       </div>
-  //     </Layout>
-  //   </Page>
-  // );
+const Membership = () => {
   return (
     <Page title={"Choose Membership - GrasshoppHer"}>
       <Layout title={"Choose Membership"}>
@@ -56,20 +40,5 @@ const Membership = (props) => {
     </Page>
   );
 };
-
-// export const getStaticProps = async () => {
-//   const response = await datafyCMS
-//     .collections("pages")
-//     .filterBy("type", "eq", "membership")
-//     .pageSize(1)
-//     .list();
-//   const page = response.results?.[0];
-//
-//   return {
-//     props: {
-//       page: page?.content || "",
-//     },
-//   };
-// };
 
 export default Membership;

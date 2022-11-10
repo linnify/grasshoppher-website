@@ -3,7 +3,7 @@ import styles from "./MembershipCard.module.scss";
 import { Radio } from "@material-ui/core";
 import { RedirectButton } from "../../RedirectButton";
 
-export const MembershipCard = ({ type, description, prices }) => {
+export const MembershipCard = ({ type, description, prices, onSelect }) => {
   const [selectedValue, setSelectedValue] = React.useState("monthly");
 
   const handleChange = (event) => {
@@ -76,9 +76,9 @@ export const MembershipCard = ({ type, description, prices }) => {
         <span>{description}</span>
         <RedirectButton
           label={"Choose"}
-          href={getLink()}
-          target={true}
+          asButton={true}
           color={"black"}
+          onClick={() => onSelect(getLink())}
         />
       </div>
     </div>

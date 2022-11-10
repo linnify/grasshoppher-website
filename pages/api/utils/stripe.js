@@ -8,13 +8,8 @@ const getStripe = () => {
   return stripePromise;
 };
 
-const getExcludedMails = () => {
-  return process.env.EXCLUDED_MAILS.split(",");
-};
-
 export const isActiveSubscription = async (email) => {
-  const excludedMails = getExcludedMails();
-  if (excludedMails.indexOf(email) !== -1) {
+  if (`${process.env.EXCLUDED_MAILS}` === email) {
     return {
       active: true,
       virtual: false,
