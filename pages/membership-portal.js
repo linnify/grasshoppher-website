@@ -79,7 +79,7 @@ class MembershipPortal extends React.Component {
           {!this.state.virtual && (
             <UpcomingEvent event={this.props.upcomingEvent} />
           )}
-          <OfficeHours />
+          <OfficeHours withRedirect={true} />
           <Discounts
             discounts={this.props.discounts}
             virtual={this.state.virtual}

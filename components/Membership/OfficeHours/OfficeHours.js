@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./OfficeHours.module.scss";
 import { EventsHeader } from "../../MembershipPortal/EventsHeader/EventsHeader";
-export const OfficeHours = () => {
+export const OfficeHours = ({ withRedirect }) => {
   return (
     <div>
       <div className={"container"}>
@@ -20,12 +20,26 @@ export const OfficeHours = () => {
           <div>
             <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
               <h3>Wednesdays at 1pm CT</h3>
-              <img
-                src={"/icons/slack.svg"}
-                width={20}
-                height={20}
-                alt={"slack"}
-              />
+              {withRedirect ? (
+                <a
+                  href={"https://grasshopphergroup.slack.com/ssb/redirect#/"}
+                  target={"_blank"}
+                >
+                  <img
+                    src={"/icons/slack.svg"}
+                    width={20}
+                    height={20}
+                    alt={"slack"}
+                  />
+                </a>
+              ) : (
+                <img
+                  src={"/icons/slack.svg"}
+                  width={20}
+                  height={20}
+                  alt={"slack"}
+                />
+              )}
             </div>
             <div className={"inter1"}>
               with Heather on Slack channel #office-hours
@@ -34,12 +48,26 @@ export const OfficeHours = () => {
           <div>
             <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
               <h3>Fridays at 12pm CT</h3>
-              <img
-                src={"/footer/instagram.svg"}
-                width={20}
-                height={20}
-                alt={"instagram"}
-              />
+              {withRedirect ? (
+                <a
+                  href={"https://www.instagram.com/grasshoppher"}
+                  target={"_blank"}
+                >
+                  <img
+                    src={"/footer/instagram.svg"}
+                    width={20}
+                    height={20}
+                    alt={"instagram"}
+                  />
+                </a>
+              ) : (
+                <img
+                  src={"/footer/instagram.svg"}
+                  width={20}
+                  height={20}
+                  alt={"instagram"}
+                />
+              )}
             </div>
             <div className={"inter1"}>with Alexa on Instagram live</div>
           </div>

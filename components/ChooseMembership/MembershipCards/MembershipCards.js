@@ -19,7 +19,9 @@ export const MembershipCards = () => {
         "\n" +
         "Opportunities to speak at a summit or lead your own talk\n" +
         "\n" +
-        "Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!",
+        "Discounts + perks to help along your journey with partners like 99Designs, Moo.com & more!\n" +
+        "\n" +
+        "Office hours with the founders for career advice and more",
       prices: {
         monthly: {
           price: "$12.99",
