@@ -14,6 +14,7 @@ import { Discounts } from "../components/MembershipPortal/Discounts/Discounts";
 import { SignUp } from "../components/MembershipPortal/SignUp/SignUp";
 import { ImageSection } from "../components/EBook/ImageSection";
 import { CheckEmail } from "../components/MembershipPortal/CheckEmail/CheckEmail";
+import { OfficeHours } from "../components/Membership/OfficeHours/OfficeHours";
 
 class MembershipPortal extends React.Component {
   constructor(props) {
@@ -78,6 +79,7 @@ class MembershipPortal extends React.Component {
           {!this.state.virtual && (
             <UpcomingEvent event={this.props.upcomingEvent} />
           )}
+          <OfficeHours />
           <Discounts
             discounts={this.props.discounts}
             virtual={this.state.virtual}

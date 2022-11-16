@@ -85,6 +85,17 @@ export const Footer = () => {
             {" "}
             <div className={"footer__menu-col"}>
               {legalItems} {copyrightItems}
+              <div
+                className={"footer__menu-simple-text"}
+                style={{ display: "flex", flexFlow: "row wrap", gap: "4px" }}
+              >
+                For questions regarding membership and billing, contact{" "}
+                <a href="mailto:outreach@grasshoppher.com">
+                  <div className={"footer__menu-text"}>
+                    outreach@grasshoppher.com
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div>

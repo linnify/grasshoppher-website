@@ -54,6 +54,14 @@
     margin-bottom: 15px;
   }
 
+    &__menu-simple-text {
+    font-family: Inter, sans-serif;
+       font-size: 13px;
+      font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+
   &__copyright {
     color: $color-text-gray;
     display: flex;
@@ -78,6 +86,10 @@
       font-size: 15px;
       padding-right: 36px;
     }
+
+     &__menu-simple-text {
+       font-size:15px;
+     }
 
     &__copyright {
       font-size: 18px;
@@ -122,5 +134,10 @@
     &__menu-text{
       font-size: 18px;
     }
+
+     &__menu-simple-text {
+       font-size:18px;
+     }
+
   }
 }

@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./MembershipCards.module.scss";
 import { MembershipCard } from "../MembershipCard/MembershipCard";
+import { useRouter } from "next/router";
 export const MembershipCards = () => {
   const [link, setSelectedLink] = useState(null);
+  const [submitted, setSubmitted] = useState(true);
+  const router = useRouter();
+
   const data = [
     {
       type: "virtual",
@@ -54,10 +58,33 @@ export const MembershipCards = () => {
     setSelectedLink(link);
   };
 
+  const onSubmit = () => {
+    setSubmitted(!submitted);
+  };
+
+  useEffect(() => {
+    if (submitted && link) {
+      router.push("/membership-portal");
+      window.open(link, "_blank").focus();
+    }
+  }, [submitted]);
+
   const getCards = () => {
     if (link) {
       return (
+        // <iframe
+        //   onLoad={onSubmit}
+        //   src="https://docs.google.com/forms/d/e/1FAIpQLSfK-G487lUO70DgnnlRjaFSnEUCEV9VDpwsRun2GO49ygpO-g/viewform?embedded=true"
+        //   width="640"
+        //   height="581"
+        //   frameBorder="0"
+        //   marginHeight="0"
+        //   marginWidth="0"
+        // >
+        //   Loading…
+        // </iframe>
         <iframe
+          onLoad={onSubmit}
           className={"register-form"}
           src="https://docs.google.com/forms/d/e/1FAIpQLSfTdSd6UnOhQdTui2NgQSDETr7_UFItqDnwzfHnRXisV-s8TQ/viewform?embedded=true"
         >

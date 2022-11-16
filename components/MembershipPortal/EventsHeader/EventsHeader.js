@@ -13,12 +13,14 @@ export const EventsHeader = ({
     <div className={`${styles["events-header"]}`}>
       <div className={`${styles["events-header__container"]}`}>
         <HighlightedText text={title} />
-        <RedirectButton
-          label={buttonTitle}
-          target={false}
-          href={buttonLink}
-          color={"white"}
-        />
+        {!!(buttonTitle && buttonLink) && (
+          <RedirectButton
+            label={buttonTitle}
+            target={false}
+            href={buttonLink}
+            color={"white"}
+          />
+        )}
       </div>
       <div className={`inter1 ${styles["events-header__text"]}`}>
         {description}

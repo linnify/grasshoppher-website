@@ -25,7 +25,7 @@ const Membership = () => {
               Choose Membership
             </h1>
             <MembershipCards />
-            <div style={{ marginBottom: "24px" }}>
+            <div style={{ marginBottom: "32px" }}>
               <RedirectButton
                 label={"Already a member? Login Now!"}
                 href={"/membership-portal"}
@@ -33,6 +33,18 @@ const Membership = () => {
                 useLink={true}
                 color={"primary"}
               />
+            </div>
+            <div style={{ marginBottom: "32px" }}>
+              <h4 style={{ textAlign: "center" }}>
+                For questions regarding membership and billing, contact
+              </h4>
+              <a href="mailto:outreach@grasshoppher.com">
+                <h4
+                  style={{ textAlign: "center", textDecoration: "underline" }}
+                >
+                  outreach@grasshoppher.com
+                </h4>
+              </a>
             </div>
           </div>
         </HeroLayout>

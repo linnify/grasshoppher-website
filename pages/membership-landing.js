@@ -6,6 +6,7 @@ import { MembershipIntroduction } from "../components/Membership/MembershipIntro
 import { MembershipYourFuture } from "../components/Membership/MembershipYourFuture/MembershipYourFuture";
 import { MembershipTestimonials } from "../components/Membership/MembershipTestimonials/MembershipTestimonials";
 import { MembershipCommunity } from "../components/Membership/MembershipCommunity/MembershipCommunity";
+import { OfficeHours } from "../components/Membership/OfficeHours/OfficeHours";
 
 const MembershipLanding = () => {
   return (
@@ -15,6 +16,7 @@ const MembershipLanding = () => {
         <div className={"container"}>
           <MembershipIntroduction />
         </div>
+        <OfficeHours />
         <MembershipCommunity />
         <MembershipTestimonials />
         <div className={"container"}>
