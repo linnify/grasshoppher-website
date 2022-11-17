@@ -42,7 +42,17 @@ export const OfficeHours = ({ withRedirect }) => {
               )}
             </div>
             <div className={"inter1"}>
-              with Heather on Slack channel #office-hours
+              {"with Heather on Slack channel "}
+              {withRedirect ? (
+                <a
+                  href={"https://grasshopphergroup.slack.com/ssb/redirect#/"}
+                  target={"_blank"}
+                >
+                  #office-hours
+                </a>
+              ) : (
+                "#office-hours"
+              )}
             </div>
           </div>
           <div>
@@ -69,7 +79,19 @@ export const OfficeHours = ({ withRedirect }) => {
                 />
               )}
             </div>
-            <div className={"inter1"}>with Alexa on Instagram live</div>
+            <div className={"inter1"}>
+              {"with Alexa on"}{" "}
+              {withRedirect ? (
+                <a
+                  href={"https://www.instagram.com/grasshoppher"}
+                  target={"_blank"}
+                >
+                  Instagram live
+                </a>
+              ) : (
+                "Instagram live"
+              )}
+            </div>
           </div>
         </div>
         <img

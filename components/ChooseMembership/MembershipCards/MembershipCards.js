@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./MembershipCards.module.scss";
 import { MembershipCard } from "../MembershipCard/MembershipCard";
 import { useRouter } from "next/router";
+import ScrollToTop from "../../ScrollToTop";
 export const MembershipCards = () => {
   const [link, setSelectedLink] = useState(null);
   const [submitted, setSubmitted] = useState(true);
@@ -85,13 +86,15 @@ export const MembershipCards = () => {
         // >
         //   Loading…
         // </iframe>
-        <iframe
-          onLoad={onSubmit}
-          className={"register-form"}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfTdSd6UnOhQdTui2NgQSDETr7_UFItqDnwzfHnRXisV-s8TQ/viewform?embedded=true"
-        >
-          Loading…
-        </iframe>
+        <ScrollToTop>
+          <iframe
+            onLoad={onSubmit}
+            className={"register-form"}
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfTdSd6UnOhQdTui2NgQSDETr7_UFItqDnwzfHnRXisV-s8TQ/viewform?embedded=true"
+          >
+            Loading…
+          </iframe>
+        </ScrollToTop>
       );
     }
     return data.map((item, index) => {
