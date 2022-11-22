@@ -57,23 +57,6 @@ export default class MyDocument extends Document {
               `,
             }}
           />
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style={{ display: "none" }}
-              src="https://www.facebook.com/tr?id=795501494796536&ev=PageView&noscript=1"
-            />
-          </noscript>
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style="display:none;"
-              alt=""
-              src="https://px.ads.linkedin.com/collect/?pid=4333228&fmt=gif"
-            />
-          </noscript>
         </Head>
         <body>
           <Main />

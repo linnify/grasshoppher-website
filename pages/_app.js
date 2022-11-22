@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Global Site Code Pixel - Facebook Pixel */}
+      Global Site Code Pixel - Facebook Pixel
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
@@ -43,6 +43,17 @@ export default function MyApp({ Component, pageProps }) {
             fbq('init', '795501494796536');
             fbq('track', 'PageView');
           `,
+        }}
+      />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `   <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          alt=""
+          src="https://www.facebook.com/tr?id=795501494796536&ev=PageView&noscript=1"
+        />`,
         }}
       />
       {/* Global Site Code Pixel - LinkedIn Pixel */}
@@ -62,6 +73,19 @@ export default function MyApp({ Component, pageProps }) {
           b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
           s.parentNode.insertBefore(b, s);})(window.lintrk);
           `,
+        }}
+      />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: ` 
+        <img
+          height="1"
+          width="1"
+          style="display:none;"
+          alt=""
+          src="https://px.ads.linkedin.com/collect/?pid=4333228&fmt=gif"
+        />
+      `,
         }}
       />
       <ThemeProvider theme={theme}>
