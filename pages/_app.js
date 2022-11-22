@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      Global Site Code Pixel - Facebook Pixel
+      {/*Global Site Code Pixel - Facebook Pixel*/}
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
