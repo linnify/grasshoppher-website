@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./MembershipCards.module.scss";
 import { MembershipCard } from "../MembershipCard/MembershipCard";
-import { useRouter } from "next/router";
 import ScrollToTop from "../../ScrollToTop";
+
 export const MembershipCards = () => {
   const [link, setSelectedLink] = useState(null);
   const [submitted, setSubmitted] = useState(true);
-  const router = useRouter();
 
   const data = [
     {
@@ -67,8 +66,7 @@ export const MembershipCards = () => {
 
   useEffect(() => {
     if (submitted && link) {
-      router.push("/membership-portal");
-      window.open(link, "_blank").focus();
+      window.location.href = link;
     }
   }, [submitted]);
 
