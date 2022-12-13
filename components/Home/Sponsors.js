@@ -26,6 +26,11 @@ export const Sponsors = ({ title, isArticle = false }) => {
             link:
               "https://www.businessinsider.com/budget-template-how-much-entrepreneurs-small-businesses-spend-marketing-advertising-2022-7",
           },
+          {
+            image: "/logos/fox-7-austing.png",
+            alt: "FOX 7 Austin",
+            link: "https://www.fox7austin.com/video/1153051",
+          },
         ])
         .flat()
     : Array(3)

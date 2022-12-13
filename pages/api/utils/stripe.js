@@ -22,21 +22,24 @@ export const isActiveSubscription = async (email) => {
   });
   if (customers.data?.length) {
     const subscription = customers.data[0].subscriptions?.data?.find(
-      (subscription) => subscription.status === "active"
+      (subscription) =>
+        subscription.status === "active" || subscription.status === "trialing"
     );
-    const activeSubscription = await stripe.subscriptions.retrieve(
-      subscription.id,
-      {
-        expand: ["plan.product"],
+    if (subscription) {
+      const activeSubscription = await stripe.subscriptions.retrieve(
+        subscription.id,
+        {
+          expand: ["plan.product"],
+        }
+      );
+      if (activeSubscription) {
+        return {
+          active: true,
+          virtual: activeSubscription.plan.product.name
+            .toLowerCase()
+            .includes("virtual"),
+        };
       }
-    );
-    if (activeSubscription) {
-      return {
-        active: true,
-        virtual: activeSubscription.plan.product.name
-          .toLowerCase()
-          .includes("virtual"),
-      };
     }
   }
   return { active: false };
