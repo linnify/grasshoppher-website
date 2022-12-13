@@ -42,5 +42,6 @@ export const isActiveSubscription = async (email) => {
       }
     }
   }
+
   return { active: false };
 };
