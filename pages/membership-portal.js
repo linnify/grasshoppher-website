@@ -11,7 +11,7 @@ import {
 } from "../src/services/datafycms";
 import { UpcomingEvent } from "../components/MembershipPortal/UpcomingEvent/UpcomingEvent";
 import { Discounts } from "../components/MembershipPortal/Discounts/Discounts";
-import { SignUp } from "../components/MembershipPortal/SignUp/SignUp";
+import { RedirectToForm } from "../components/MembershipPortal/RedirectToForm/RedirectToForm";
 import { ImageSection } from "../components/EBook/ImageSection";
 import { CheckEmail } from "../components/MembershipPortal/CheckEmail/CheckEmail";
 import { OfficeHours } from "../components/Membership/OfficeHours/OfficeHours";
@@ -84,7 +84,16 @@ class MembershipPortal extends React.Component {
             discounts={this.props.discounts}
             virtual={this.state.virtual}
           />
-          <SignUp />
+          <RedirectToForm />
+          <RedirectToForm
+            title={
+              "We want to hear what you want to learn about.\n" +
+              "Share your thoughts with us."
+            }
+            buttonTitle={"Tell us more"}
+            alignRight={true}
+            path={"/tell-us-more"}
+          />
           <ImageSection
             title={"Join\n" + "our\n" + "slack\n" + "community"}
             description={
