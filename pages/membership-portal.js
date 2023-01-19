@@ -76,7 +76,7 @@ class MembershipPortal extends React.Component {
               virtual={this.state.virtual}
             />
           </div>
-          {!this.state.virtual && (
+          {!this.state.virtual && this.state.upcomingEvent && (
             <UpcomingEvent event={this.props.upcomingEvent} />
           )}
           <OfficeHours withRedirect={true} />
@@ -133,6 +133,9 @@ export async function getStaticProps() {
   const virtualEvents = await getVirtualEvents();
   const upcomingEvents = await getUpcomingEvents();
   const discounts = await getDiscounts();
+  const filteredUpcomingEvents = upcomingEvents.filter(
+    (event) => new Date(event.date).getTime() >= new Date().getTime()
+  );
   return {
     props: {
       inPersonEvents: inPersonEvents
@@ -145,9 +148,9 @@ export async function getStaticProps() {
           (event) => new Date(event.date).getTime() >= new Date().getTime()
         )
         .slice(0, 2),
-      upcomingEvent: upcomingEvents.filter(
-        (event) => new Date(event.date).getTime() >= new Date().getTime()
-      )[0],
+      upcomingEvent: filteredUpcomingEvents.length
+        ? filteredUpcomingEvents[0]
+        : null,
       discounts: discounts,
     },
   };

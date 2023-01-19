@@ -3,8 +3,9 @@ import styles from "./DicountCard.module.scss";
 
 export const DiscountCard = ({ discount, index }) => {
   const tags = () => {
-    return discount.tags.map((tag) => (
+    return discount.tags.map((tag, index) => (
       <h3
+        key={index}
         className={`
       ${index % 2 ? "color-neon" : ""}`}
       >

@@ -5,7 +5,7 @@ import { TextField } from "@material-ui/core";
 import { RedirectButton } from "../../RedirectButton";
 
 export const CheckEmail = ({ message, onCheckEmail }) => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState("");
 
   return (
     <HeroLayout
