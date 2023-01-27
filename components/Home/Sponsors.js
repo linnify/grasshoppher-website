@@ -31,6 +31,12 @@ export const Sponsors = ({ title, isArticle = false }) => {
             alt: "FOX 7 Austin",
             link: "https://www.fox7austin.com/video/1153051",
           },
+          {
+            image: "/logos/ein-presswire.png",
+            alt: "EIN PRESSWIRE",
+            link:
+              "https://www.einpresswire.com/article/613300836/dynamic-female-duo-launches-game-changing-career-roadmapping-program-for-women-grasshoppher",
+          },
         ])
         .flat()
     : Array(3)
