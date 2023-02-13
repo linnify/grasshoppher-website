@@ -67,7 +67,7 @@ export const Header = () => {
             target={"_blank"}
           >
             <img
-              src={"/logos/be-fearless-promo.jpeg"}
+              src={"/logos/bfs-grey.jpg"}
               alt={"logo Be Fearless"}
               style={{ cursor: "pointer", height: "137px" }}
             />
