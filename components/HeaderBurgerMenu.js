@@ -43,7 +43,7 @@ export const HeaderBurgerMenu = () => {
         className={"web-menu__promo"}
       >
         <img
-          src={"/logos/be-fearless-promo.jpeg"}
+          src={"/logos/bfs-grey.jpg"}
           alt={"logo Be Fearless"}
           style={{ cursor: "pointer", height: "177px", marginTop: "30px" }}
         />
