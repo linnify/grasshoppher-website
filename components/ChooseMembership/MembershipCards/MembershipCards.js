@@ -45,7 +45,7 @@ export const MembershipCards = () => {
         "Live in Austin. Coming to other cities in 2023!",
       prices: {
         monthly: {
-          price: "19.99",
+          price: "$19.99",
           link: "https://buy.stripe.com/9AQ5nlex70fd4pO5kA",
         },
         annually: {
