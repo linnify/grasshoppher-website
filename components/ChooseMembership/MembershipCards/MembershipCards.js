@@ -24,12 +24,12 @@ export const MembershipCards = () => {
         "Office hours with the founders for career advice and more",
       prices: {
         monthly: {
-          price: "$12.99",
-          link: "https://buy.stripe.com/14k1751Klfa7aOc008",
+          price: "$19.99",
+          link: "https://buy.stripe.com/9AQdTRex72nle0o6oH",
         },
         annually: {
-          price: "$139.50",
-          link: "https://buy.stripe.com/6oEcPN74Ffa76xW5kt",
+          price: "$216.00",
+          link: "https://buy.stripe.com/cN2031ex7d1Z9K8eVc",
         },
       },
     },
@@ -45,12 +45,12 @@ export const MembershipCards = () => {
         "Live in Austin. Coming to other cities in 2023!",
       prices: {
         monthly: {
-          price: "$12.99",
-          link: "https://buy.stripe.com/8wMaHFdt32nlaOc7sC",
+          price: "19.99",
+          link: "https://buy.stripe.com/9AQ5nlex70fd4pO5kA",
         },
         annually: {
-          price: "$139.50",
-          link: "https://buy.stripe.com/7sIaHFbkV8LJ1dCbIT",
+          price: "$216.00",
+          link: "https://buy.stripe.com/aEU2b93St3rpbSg5kB",
         },
       },
     },
