@@ -1,5 +1,5 @@
 import Mailgun from "mailgun.js";
-const formData = require('form-data');
+const formData = require("form-data");
 
 export default async (req, res) => {
   const mailgun = new Mailgun(formData);
@@ -9,24 +9,24 @@ export default async (req, res) => {
     <br/> E-Mail: ${email}
     <br/> Mesage: ${message}
   `;
-  
+
   const mg = mailgun.client({
-    username: 'api',
+    username: "api",
     key: process.env.MAILGUN_API_KEY,
   });
-  
+
   try {
-    const response = await mg.messages.create('mg.grasshoppherapp.com', {
-      from: 'Grasshoppher Website <mailgun@mg.grasshoppherapp.com>',
-      to: ['hello@grasshoppher.com'],
+    const response = await mg.messages.create("mg.grasshoppherapp.com", {
+      from: "Grasshoppher Website <mailgun@mg.grasshoppherapp.com>",
+      to: ["outreach@grasshoppher.com"],
       subject: `Contact - GrasshoppHer website`,
       html,
-    })
-    console.log('Send Mail ', response)
-    
-    return res.send("success")
+    });
+    console.log("Send Mail ", response);
+
+    return res.send("success");
   } catch (e) {
-    console.error('Error response ', e)
-    return res.send("error" + JSON.stringify(e))
+    console.error("Error response ", e);
+    return res.send("error" + JSON.stringify(e));
   }
-}
+};
