@@ -74,7 +74,7 @@ export const EventCard = ({ event, index, inPerson }) => {
         >
           {event.button_link && (
             <RedirectButton
-              label={"Sign Up"}
+              label={event.button_text || "Sign Up"}
               href={event.button_link}
               target={true}
               color={inPerson ? "primary" : "black"}

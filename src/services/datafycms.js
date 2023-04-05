@@ -132,6 +132,7 @@ export const getVirtualEvents = async () => {
       "title",
       "description",
       "button_link",
+      "button_text",
       "image.url",
       "created",
       "even_type",
@@ -158,6 +159,7 @@ export const getUpcomingEvents = async () => {
     .fields([
       "title",
       "description",
+      "button_text",
       "button_link",
       "image.url",
       "created",
