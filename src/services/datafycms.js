@@ -101,6 +101,7 @@ export const getInPersonEvents = async () => {
   const response = await datafyCMS
     .collections("event")
     .fields([
+      "id",
       "title",
       "description",
       "button_link",
@@ -129,6 +130,7 @@ export const getVirtualEvents = async () => {
   const response = await datafyCMS
     .collections("event")
     .fields([
+      "id",
       "title",
       "description",
       "button_link",
@@ -157,6 +159,7 @@ export const getUpcomingEvents = async () => {
   const response = await datafyCMS
     .collections("event")
     .fields([
+      "id",
       "title",
       "description",
       "button_text",

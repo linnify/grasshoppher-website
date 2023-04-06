@@ -24,10 +24,10 @@ export const EventCard = ({ event, index, inPerson }) => {
 
   useEffect(() => {
     const description = document.getElementById(
-      `content-description-${index}-${inPerson}`
+      `content-description-${event.id}`
     );
     const container = document.getElementById(
-      `container-description-${index}-${inPerson}}`
+      `container-description-${event.id}`
     );
     console.log(description.offsetHeight);
     console.log(container.offsetHeight);
@@ -77,13 +77,13 @@ export const EventCard = ({ event, index, inPerson }) => {
           <h3>{event.title}</h3>
         </div>
         <div
-          id={`container-description-${index}-${inPerson}`}
+          id={`container-description-${event.id}`}
           className={`inter1 ${
             styles["event-container__content__description"]
           } ${inPerson ? "color-white" : ""}`}
         >
           <p
-            id={`content-description-${index}-${inPerson}`}
+            id={`content-description-${event.id}`}
             className={"scrolling-text"}
           >
             {event.description}
