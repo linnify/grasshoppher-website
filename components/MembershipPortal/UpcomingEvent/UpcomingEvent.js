@@ -52,11 +52,14 @@ export const UpcomingEvent = ({ event }) => {
         className={isMobile ? "container display-center" : ""}
         style={{
           position: "relative",
-          width: isMobile ? "" : "600px",
+          width: isMobile ? "" : "400px",
         }}
       >
         {" "}
-        <Parallax scale={isMobile ? [1, 1.25] : [0.75, 1]} easing="easeOutCirc">
+        <Parallax
+          scale={isMobile ? [0.75, 1.25] : [0.75, 1.5]}
+          easing="easeOutCirc"
+        >
           <img src={event.image.url} />
         </Parallax>
       </div>

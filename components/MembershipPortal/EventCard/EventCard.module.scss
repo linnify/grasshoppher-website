@@ -97,9 +97,16 @@
     &__description{
       font-size:14px;
       overflow:hidden;
+      width: 100%;
       text-overflow: ellipsis;
       max-height: 90px;
       line-height:23px;
+      height:100%;
+      p{
+  width: 100%;
+
+      }
+
     }
     &__button{
       display:flex;
@@ -142,3 +149,6 @@ div.event-container:hover .event-container__content-in-person  {
 
 }
 
+div.event-container:hover .event-container__content__description p{
+  animation-play-state: paused;
+}

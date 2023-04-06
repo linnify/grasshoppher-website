@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RedirectButton } from "../../RedirectButton";
 import styles from "./EventCard.module.scss";
 import { useDeviceSize } from "../../../hooks/use-device-size.hook";
@@ -21,6 +21,17 @@ export const EventCard = ({ event, index, inPerson }) => {
   };
 
   const { isMobile } = useDeviceSize();
+
+  useEffect(() => {
+    const description = document.getElementById(`content-description-${index}`);
+    const container = document.getElementById(`container-description-${index}`);
+    console.log(description.offsetHeight);
+    console.log(container.offsetHeight);
+    if (description.offsetHeight > container.offsetHeight) {
+      description.classList.add("animate");
+      description.style.marginTop = `${container.offsetHeight}px`;
+    }
+  }, []);
 
   return (
     <div
@@ -62,11 +73,14 @@ export const EventCard = ({ event, index, inPerson }) => {
           <h3>{event.title}</h3>
         </div>
         <div
+          id={`container-description-${index}`}
           className={`inter1 ${
             styles["event-container__content__description"]
           } ${inPerson ? "color-white" : ""}`}
         >
-          {event.description}
+          <p id={`content-description-${index}`} className={"scrolling-text"}>
+            {event.description}
+          </p>
         </div>
 
         <div
