@@ -23,8 +23,12 @@ export const EventCard = ({ event, index, inPerson }) => {
   const { isMobile } = useDeviceSize();
 
   useEffect(() => {
-    const description = document.getElementById(`content-description-${index}`);
-    const container = document.getElementById(`container-description-${index}`);
+    const description = document.getElementById(
+      `content-description-${index}-${inPerson}`
+    );
+    const container = document.getElementById(
+      `container-description-${index}-${inPerson}}`
+    );
     console.log(description.offsetHeight);
     console.log(container.offsetHeight);
     if (description.offsetHeight > container.offsetHeight) {
@@ -73,12 +77,15 @@ export const EventCard = ({ event, index, inPerson }) => {
           <h3>{event.title}</h3>
         </div>
         <div
-          id={`container-description-${index}`}
+          id={`container-description-${index}-${inPerson}`}
           className={`inter1 ${
             styles["event-container__content__description"]
           } ${inPerson ? "color-white" : ""}`}
         >
-          <p id={`content-description-${index}`} className={"scrolling-text"}>
+          <p
+            id={`content-description-${index}-${inPerson}`}
+            className={"scrolling-text"}
+          >
             {event.description}
           </p>
         </div>
