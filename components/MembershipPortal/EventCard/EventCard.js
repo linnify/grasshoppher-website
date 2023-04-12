@@ -29,8 +29,7 @@ export const EventCard = ({ event, index, inPerson }) => {
     const container = document.getElementById(
       `container-description-${event.id}`
     );
-    console.log(description.offsetHeight);
-    console.log(container.offsetHeight);
+
     if (description.offsetHeight > container.offsetHeight) {
       description.classList.add("animate");
       description.style.marginTop = `${container.offsetHeight}px`;
