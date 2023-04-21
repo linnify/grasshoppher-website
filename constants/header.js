@@ -12,7 +12,7 @@ export const header = [
     path: "/story",
   },
   {
-    label: "LOGIN",
+    label: "MEMBER PORTAL",
     path: "/membership-portal",
   },
   {
