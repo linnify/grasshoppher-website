@@ -11,10 +11,10 @@ export const header = [
     label: "ABOUT US",
     path: "/story",
   },
-  {
-    label: "BLOG",
-    path: "/blog",
-  },
+  // {
+  //   label: "BLOG",
+  //   path: "/blog",
+  // },
   {
     label: "MEMBER PORTAL",
     path: "/membership-portal",
