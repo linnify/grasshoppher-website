@@ -8,6 +8,8 @@ import { Sponsors } from "../components/Home/Sponsors";
 import { ImageSection } from "../components/EBook/ImageSection";
 import { HomeHero } from "../components/Home/HomeHero/HomeHero";
 import { HomeInstagram } from "../components/Home/HomeInstagram";
+import FadeInScroll from "../components/FadeInScroll/FadeInScroll";
+import { LandingDownload } from "../components/LandingDownload";
 
 export default class Home extends React.Component {
   constructor(props) {

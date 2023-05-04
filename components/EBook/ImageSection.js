@@ -35,7 +35,7 @@ export const ImageSection = ({
           </div>
         </div>
         <RedirectButton
-          label={buttonTitle || "Get your free\ndownloadable ebook"}
+          label={buttonTitle || "Yes please to free ebook and newsletter!"}
           target={true}
           useLink={!buttonLink}
           href={buttonLink || "/e-book"}

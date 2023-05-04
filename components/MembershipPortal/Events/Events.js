@@ -15,7 +15,7 @@ export const Events = ({ virtualEvents, inPersonEvents, virtual }) => {
   return (
     <div style={{ position: "relative" }}>
       <EventsHeader
-        title={"Monthly virtual events"}
+        title={"The Hub"}
         description={
           "Connect with industry experts and a network of leaders to catapult you into your dreams."
         }
@@ -31,17 +31,17 @@ export const Events = ({ virtualEvents, inPersonEvents, virtual }) => {
               <BigText text={"Brave"} />
             </Parallax>
           </div>{" "}
-          <EventsHeader
-            title={"Monthly in-person events"}
-            description={
-              "We’re live in Austin (new locations launching in 2023). Join us for fun, budding friendships, and some good ol’ fashioned career road-mapping. We’ll help you leap to your next goal."
-            }
-            buttonTitle={"See all"}
-            buttonLink={"/events/in-person"}
-          />
-          <div className={`${styles["events"]}`}>
-            {getCards(inPersonEvents, true)}
-          </div>
+          {/*<EventsHeader*/}
+          {/*  title={"Monthly in-person events"}*/}
+          {/*  description={*/}
+          {/*    "We’re live in Austin (new locations launching in 2023). Join us for fun, budding friendships, and some good ol’ fashioned career road-mapping. We’ll help you leap to your next goal."*/}
+          {/*  }*/}
+          {/*  buttonTitle={"See all"}*/}
+          {/*  buttonLink={"/events/in-person"}*/}
+          {/*/>*/}
+          {/*<div className={`${styles["events"]}`}>*/}
+          {/*  {getCards(inPersonEvents, true)}*/}
+          {/*</div>*/}
           <EventsHeader
             title={"Upcoming Event"}
             description={"Looking to level-up in the near future? We got you."}

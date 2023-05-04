@@ -136,7 +136,7 @@ export async function getStaticProps() {
   const filteredUpcomingEvents = upcomingEvents.filter(
     (event) => new Date(event.date).getTime() >= new Date().getTime()
   );
-  
+
   return {
     props: {
       inPersonEvents: inPersonEvents
@@ -145,13 +145,15 @@ export async function getStaticProps() {
         })
         .slice(0, 2),
       virtualEvents: virtualEvents
-        .filter(
-          (event) => new Date(event.date).getTime() >= new Date().getTime()
-        )
+        .sort((a, b) => {
+          return (
+            new Date(b.published_at).getTime() -
+            new Date(a.published_at).getTime()
+          );
+        })
         .slice(0, 2),
-      upcomingEvent: filteredUpcomingEvents.length > 0
-        ? filteredUpcomingEvents[0]
-        : null,
+      upcomingEvent:
+        filteredUpcomingEvents.length > 0 ? filteredUpcomingEvents[0] : null,
       discounts: discounts,
     },
   };

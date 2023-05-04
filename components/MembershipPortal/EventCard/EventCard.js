@@ -47,14 +47,18 @@ export const EventCard = ({ event, index, inPerson }) => {
             : 0,
       }}
     >
-      <div
-        className={`${inPerson ? styles["event-container__date-in-person"] : ""}
+      {event.data && (
+        <div
+          className={`${
+            inPerson ? styles["event-container__date-in-person"] : ""
+          }
             ${styles["event-container__date"]}
         }`}
-      >
-        <h3>{getDate()}</h3>
-        <span>{getTime()}</span>
-      </div>
+        >
+          <h3>{getDate()}</h3>
+          <span>{getTime()}</span>
+        </div>
+      )}
       <img
         className={`${
           inPerson ? styles["event-container__image-in-person"] : ""

@@ -143,11 +143,13 @@ export const getVirtualEvents = async () => {
       "event_type",
       "upcoming",
       "date",
+      "published_at",
     ])
     .filterBy("event_type", "eq", "virtual")
-    .filterBy("date", "isnull", false)
+    // .filterBy("date", "isnull", false)
     .filterBy("disabled", "eq", false)
-    .sortBy("date", SortOperator.ASC)
+    .filterBy("published_at", "isnull", false)
+    .sortBy("published_at", SortOperator.ASC)
     .pageSize(100)
 
     .list();

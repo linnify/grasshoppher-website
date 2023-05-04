@@ -33,27 +33,27 @@ export const MembershipCards = () => {
         },
       },
     },
-    {
-      type: "in-person",
-      description:
-        "Everything in the Virtual membership Plus: \n" +
-        "\n" +
-        "Monthly in-person networking events with industry professionals and recruiters\n" +
-        "\n" +
-        "Local perks and discounts\n" +
-        "\n" +
-        "Live in Austin. Coming to other cities in 2023!",
-      prices: {
-        monthly: {
-          price: "$19.99",
-          link: "https://buy.stripe.com/9AQ5nlex70fd4pO5kA",
-        },
-        annually: {
-          price: "$216.00",
-          link: "https://buy.stripe.com/aEU2b93St3rpbSg5kB",
-        },
-      },
-    },
+    // {
+    //   type: "in-person",
+    //   description:
+    //     "Everything in the Virtual membership Plus: \n" +
+    //     "\n" +
+    //     "Monthly in-person networking events with industry professionals and recruiters\n" +
+    //     "\n" +
+    //     "Local perks and discounts\n" +
+    //     "\n" +
+    //     "Live in Austin. Coming to other cities in 2023!",
+    //   prices: {
+    //     monthly: {
+    //       price: "$19.99",
+    //       link: "https://buy.stripe.com/9AQ5nlex70fd4pO5kA",
+    //     },
+    //     annually: {
+    //       price: "$216.00",
+    //       link: "https://buy.stripe.com/aEU2b93St3rpbSg5kB",
+    //     },
+    //   },
+    // },
   ];
 
   const onSelect = (link) => {
