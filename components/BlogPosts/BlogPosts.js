@@ -1,25 +1,25 @@
-import React, {useEffect} from "react";
-import {PostItem} from "../PostItem/PostItem";
-import {resizeAllGridItems} from "../../src/helpers/resizeGridItem";
+import React, { useEffect } from "react";
+import { PostItem } from "../PostItem/PostItem";
+import { resizeAllGridItems } from "../../src/helpers/resizeGridItem";
 
 export const BlogPosts = ({ posts }) => {
-
   useEffect(() => {
     // TODO remove functions and use as in her cloud
     resizeAllGridItems();
-    window.addEventListener("load", resizeAllGridItems)
+    window.addEventListener("load", resizeAllGridItems);
     window.addEventListener("resize", resizeAllGridItems);
+    window.addEventListener("scroll", resizeAllGridItems);
+
     return () => {
-      window.removeEventListener('load', resizeAllGridItems)
+      window.removeEventListener("load", resizeAllGridItems);
       window.removeEventListener("resize", resizeAllGridItems);
+      window.removeEventListener("scroll", resizeAllGridItems);
     };
-  });
+  }, []);
 
-  const displayPosts = posts.map((post, index) => <PostItem post={post} key={index}/>);
+  const displayPosts = posts.map((post, index) => (
+    <PostItem post={post} key={index} />
+  ));
 
-  return(
-    <div className={"blog-post"}>
-      {displayPosts}
-    </div>
-  );
-}
+  return <div className={"blog-post"}>{displayPosts}</div>;
+};
