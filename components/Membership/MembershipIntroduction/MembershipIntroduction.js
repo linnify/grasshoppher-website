@@ -75,30 +75,30 @@ export const MembershipIntroduction = () => {
             <div
               className={`${styles["membership-introduction__right__section"]}`}
             >
-              <Parallax
-                translateX={[-50, 0]}
-                disabled={!isMobile}
-                easing={"easeOutExpo"}
-              >
-                <div className={styles["membership-introduction__title-2"]}>
-                  Austin
-                </div>
-                <div
-                  className={styles["membership-introduction__subtitle"]}
-                  style={{ marginBottom: "16px" }}
-                >
-                  *NEW CHAPTERS COMING SOON
-                </div>
-              </Parallax>
-              <div
-                className={`white-space-break ${styles["membership-introduction__box__text"]}`}
-              >
-                {"Everything in the Virtual membership Plus: \n" +
-                  "\n" +
-                  "Monthly in-person networking events with industry professionals and recruiters\n" +
-                  "\n" +
-                  "Local perks and discounts"}
-              </div>
+              {/*<Parallax*/}
+              {/*  translateX={[-50, 0]}*/}
+              {/*  disabled={!isMobile}*/}
+              {/*  easing={"easeOutExpo"}*/}
+              {/*>*/}
+              {/*  <div className={styles["membership-introduction__title-2"]}>*/}
+              {/*    Austin*/}
+              {/*  </div>*/}
+              {/*  <div*/}
+              {/*    className={styles["membership-introduction__subtitle"]}*/}
+              {/*    style={{ marginBottom: "16px" }}*/}
+              {/*  >*/}
+              {/*    *NEW CHAPTERS COMING SOON*/}
+              {/*  </div>*/}
+              {/*</Parallax>*/}
+              {/*  <div*/}
+              {/*    className={`white-space-break ${styles["membership-introduction__box__text"]}`}*/}
+              {/*  >*/}
+              {/*    {"Everything in the Virtual membership Plus: \n" +*/}
+              {/*      "\n" +*/}
+              {/*      "Monthly in-person networking events with industry professionals and recruiters\n" +*/}
+              {/*      "\n" +*/}
+              {/*      "Local perks and discounts"}*/}
+              {/*  </div>*/}
             </div>
           </div>
         </Parallax>
