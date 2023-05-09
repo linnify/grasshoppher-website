@@ -12,7 +12,7 @@ export const header = [
     path: "/story",
   },
   {
-    label: "BLOG",
+    label: "THE HUB",
     path: "/blog",
   },
   {
