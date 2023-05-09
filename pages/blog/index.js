@@ -23,17 +23,17 @@ export default class Blog extends React.Component {
   render() {
     return (
       <Page
-        title={"Blog - GrasshoppHer"}
+        title={"THE HUB - GrasshoppHer"}
         description={
           "Read GrasshoppHer's articles and find more about what they stand for."
         }
         url={"https://grasshoppher.com/blog"}
       >
-        <Layout title={"Blog"}>
+        <Layout title={"THE HUB"}>
           {!this.state.loaded && <Loader />}
           <div className={"container"}>
             <FadeIn>
-              <PageTitle content={"Blog"} id={"general"} />
+              <PageTitle content={"THE HUB"} id={"general"} />
             </FadeIn>
             <BlogPosts posts={this.state.posts} />
           </div>
