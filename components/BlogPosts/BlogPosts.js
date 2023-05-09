@@ -15,7 +15,7 @@ export const BlogPosts = ({ posts }) => {
     window.addEventListener("scroll", resizeAllGridItems);
     const myTimeout = setTimeout(() => {
       resizeAllGridItems();
-    }, 100);
+    }, 250);
 
     return () => {
       window.removeEventListener("load", resizeAllGridItems);
@@ -23,7 +23,7 @@ export const BlogPosts = ({ posts }) => {
       window.removeEventListener("scroll", resizeAllGridItems);
       clearInterval(myTimeout);
     };
-  }, []);
+  }, [posts]);
 
   return <div className={"blog-post"}>{displayPosts}</div>;
 };
