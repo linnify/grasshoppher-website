@@ -1,26 +1,27 @@
 @import "styles/abstracts/variables";
 
 .story-hero {
-  min-height: 816px;
+  //min-height: 816px;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding-bottom: 48px;
+  //padding-bottom: 48px;
   top: calc(13px + #{header-height(xs)});
 
   &__content {
-    width: 520px;
-    max-width: 100%;
+    //width: 520px;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 67px;
-    position: relative;
-    z-index: 15;
+    //position: relative;
+    //z-index: 15;
 
     &__subtitle {
-      width: 438px;
+      //width: 438px;
       padding-bottom: 24px;
       max-width: 100%;
     }
@@ -33,48 +34,56 @@
   }
 
   &__image {
-    padding: 0 !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 1;
-    right: 0;
+    //padding: 0 !important;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: flex-end;
+    //position: relative;
+    //z-index: 1;
+    //right: 0;
+  }
+
+  @media (max-width: 768px){
+      flex-direction: column;
+     &__content {
+       max-width: 100%;
+
+     }
   }
 
   @media (min-width: 992px) {
-    height: calc(100vh - #{header-height(xs)});
+    //height: calc(100vh - #{header-height(xs)});
 
     &__content__subtitle {
-      width: 370px;
+      //width: 370px;
     }
 
     &__image {
-      position: absolute;
-      bottom: 115px;
-      width: 600px;
-      right: 0;
-      z-index: 1;
+      //position: absolute;
+      //bottom: 115px;
+      //width: 600px;
+      //right: 0;
+      //z-index: 1;
     }
   }
 
   @media (min-width: 1200px) {
-    height: calc(100vh - #{header-height(xl)});
+    //height: calc(100vh - #{header-height(xl)});
     top: calc(13px + #{header-height(xl)});
 
     &__content__subtitle {
-      width: 438px;
+      //width: 438px;
     }
 
     &__image {
-      width: 729px;
+      //width: 729px;
     }
   }
 
   @media (min-width: 1460px) {
     &__image {
-      width: 700px;
-      right: 234px;
+      //width: 700px;
+      //right: 234px;
     }
   }
 }
