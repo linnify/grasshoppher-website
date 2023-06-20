@@ -19,7 +19,7 @@ export const HomeProblemStatement = () => {
       </div>
       <HighlightedText
         text={
-          "GrasshoppHer is a career road mapping platform and\ncommunity, designed to connect you with industry leaders\nand empower you to reach your fullest potential."
+          "GrasshoppHer is your one-stop-shop for reaching your money goals. We offer financial knowledge and community for women to empower you to reach your fullest, brightest potential."
         }
       />
       <div
@@ -30,22 +30,26 @@ export const HomeProblemStatement = () => {
           className={`col start-xs ${styles["problem-statement__section-title"]}`}
         >
           <h3>
-            Maybe you're ready to make that vision board a reality board. Or,
-            maybe you want to level up for your next step.
+            Life is expensive and adulting is hard. We know that many of you
+            worry about the rising costs of living and having to put off life
+            milestones.
           </h3>
           <div
             className={`inter1 ${styles["problem-statement__section-subtitle"]}`}
           >
-            We know what it feels like to have taken some seemingly unrelated
-            turns on our chosen paths. Let us be your roadmap on the next leg of
-            your journey. We’ll help you fill in the missing pieces to reach
-            your full potential.
+            At Grasshoppher, our mission is to empower you to build long-term
+            wealth and opportunities. We understand that you face unique
+            challenges and barriers, but equipped with financial knowledge and
+            the right tools, you can unlock your full potential. Money
+            empowerment is key to your overall well-being and independence.
+            We’ll help you set that ripple effect into motion to grow your
+            money, life and dreams.
           </div>
-          <RedirectButton
-            href={"/membership-landing"}
-            target={false}
-            label={"Join now"}
-          />
+          {/*<RedirectButton*/}
+          {/*  href={"/membership-landing"}*/}
+          {/*  target={false}*/}
+          {/*  label={"Join now"}*/}
+          {/*/>*/}
         </div>
         <div className={styles["problem-statement--align-end"]}>
           <Parallax speed={10} translateY={[60, -20]}>

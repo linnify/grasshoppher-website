@@ -8,7 +8,7 @@ export const HomeWhatYouWillGet = () => {
       <h3 className={`container`}>What you'll get</h3>
       <div className={styles["what-you-will-get--sections"]}>
         <HighlightedSection
-          words={["Career", "Roadmapping"]}
+          words={["Money", "tips", "and", "tricks"]}
           alignment={"left"}
         />
         <HighlightedSection
@@ -16,11 +16,11 @@ export const HomeWhatYouWillGet = () => {
           alignment={"right"}
         />
         <HighlightedSection
-          words={["Reinvented", "Career-fairs"]}
+          words={["Thought", "Leadership"]}
           alignment={"left"}
         />
         <HighlightedSection
-          words={["Thought", "Leadership"]}
+          words={["Financial", "empowerment", "summits"]}
           alignment={"right"}
         />
       </div>
