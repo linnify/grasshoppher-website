@@ -21,7 +21,16 @@ export const isActiveSubscription = async (email) => {
     expand: ["data.subscriptions"],
   });
   if (customers.data?.length) {
-    const subscription = customers.data[0].subscriptions?.data?.find(
+    const customer = customers.data.find(
+      (_customer) =>
+        !!_customer.subscriptions?.data?.find(
+          (subscription) =>
+            subscription.status === "active" ||
+            subscription.status === "trialing"
+        )
+    );
+
+    const subscription = customer?.subscriptions?.data?.find(
       (subscription) =>
         subscription.status === "active" || subscription.status === "trialing"
     );
