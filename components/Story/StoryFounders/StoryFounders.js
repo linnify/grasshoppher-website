@@ -14,14 +14,14 @@ export const StoryFounders = () => {
           "She founded GrasshoppHer, where you come to realign with your unique purpose, in the hope that we will disrupt the status quo and achieve more, together.",
         ],
       },
-      {
-        title: "About Alexa Curtis",
-        paragraphs: [
-          "Born and raised in small town Mansfield, Connecticut, Alexa Curtis knew she was different. At just 12 years old, she started a fashion blog; A Life in the Fashion Lane (now Life Unfiltered with Alexa).",
-          "In Sept 2018, Curtis added ‘host’ to her arsenal as she launched her own radio show on Radio Disney called “Fearless Every Day” with Alexa Curtis. It became a platform for her to express her feelings around everything relating to teens, body image, and mental health.",
-          "Following the success of “Fearless Everyday”, Curtis founded the Be Fearless Summit, which is a pop-up summit that appeared at Drexel University on March 15th, 2020. Now the company lies under the GrasshoppHer umbrella.",
-        ],
-      },
+      // {
+      //   title: "About Alexa Curtis",
+      //   paragraphs: [
+      //     "Born and raised in small town Mansfield, Connecticut, Alexa Curtis knew she was different. At just 12 years old, she started a fashion blog; A Life in the Fashion Lane (now Life Unfiltered with Alexa).",
+      //     "In Sept 2018, Curtis added ‘host’ to her arsenal as she launched her own radio show on Radio Disney called “Fearless Every Day” with Alexa Curtis. It became a platform for her to express her feelings around everything relating to teens, body image, and mental health.",
+      //     "Following the success of “Fearless Everyday”, Curtis founded the Be Fearless Summit, which is a pop-up summit that appeared at Drexel University on March 15th, 2020. Now the company lies under the GrasshoppHer umbrella.",
+      //   ],
+      // },
     ],
     []
   );
@@ -53,7 +53,7 @@ export const StoryFounders = () => {
       <div className={styles["founders__header-section"]}>
         <Parallax scale={[1, 1.2]} easing="easeInQuart">
           <img
-            src={"/images/founders.png"}
+            src={"heather-miller.png"}
             className={styles["founders__header-section__image"]}
           />
         </Parallax>
