@@ -56,7 +56,7 @@ export async function getStaticProps({ params }) {
       "published_at",
     ])
     .sortBy("published_at", "desc")
-    .pageSize(50)
+    .pageSize(100)
     .list();
 
   // const response = {

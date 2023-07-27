@@ -3,10 +3,10 @@ export const header = [
     label: "HOME",
     path: "/",
   },
-  {
-    label: "MEMBERSHIP",
-    path: "/membership-landing",
-  },
+  // {
+  //   label: "MEMBERSHIP",
+  //   path: "/membership-landing",
+  // },
   {
     label: "ABOUT US",
     path: "/story",
