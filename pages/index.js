@@ -32,7 +32,7 @@ export default class Home extends React.Component {
         <HomeHero />
         <HomeProblemStatement />
         <HomeWhatYouWillGet />
-        <HomeInstagram feed={this.props.posts} />
+        {/*<HomeInstagram feed={this.props.posts} />*/}
         <ImageSection />
         <Sponsors />
         <Sponsors title={"AS SEEN ON"} isArticle={true} />
