@@ -12,7 +12,8 @@ export const HomeHero = () => {
         <div className={"container"}>
           <PageTitle content={"There’s\na\nnew\nway\nto\ngrow"} />
           <div className={`inter1 ${styles["home-hero__text"]}`}>
-            Money can't buy opportunity, but knowledge can.
+            Connect with industry experts and a network of leaders to catapult
+            you into your dreams, GrasshoppHer.
           </div>
           {/*<RedirectButton*/}
           {/*  label={"Join now"}*/}

@@ -14,16 +14,14 @@ export const StoryHero = () => {
           <div className={`${styles["story-hero__text"]}`}>
             <HighlightedText
               text={
-                "GrasshoppHer is your one-stop-shop for reaching your money goals. We offer financial knowledge and community for women to empower you to reach your fullest, brightest potential."
+                "GrasshoppHer is\na career roadmapping\nservice and community."
               }
             />
             <h3 className={`${styles["story-hero__content__subtitle"]}`}>
-              At GrasshoppHer, we recognize the important role financial
-              know-how plays in your life. By developing a deep understanding of
-              financial concepts and strategies, you gain the necessary tools to
-              make bold decisions and unlock a world of opportunities. With
-              GrasshoppHer, you'll discover the power within you to leap beyond
-              boundaries and achieve your wildest dreams.
+              We know what it feels like to have taken some seemingly unrelated
+              turns on our chosen paths. Let us be your roadmap on the next leg
+              of your journey. We’ll help you fill in the missing pieces to
+              reach your full potential.
             </h3>
           </div>
         </div>
