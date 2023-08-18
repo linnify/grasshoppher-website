@@ -16,9 +16,9 @@ export const HomeHero = () => {
             you into your dreams, GrasshoppHer.
           </div>
           {/*<RedirectButton*/}
-          {/*  label={"Join now"}*/}
+          {/*  label={'Join now'}*/}
           {/*  target={false}*/}
-          {/*  href={"/membership-landing"}*/}
+          {/*  href={'/membership-landing'}*/}
           {/*/>*/}
         </div>
         <div className={styles["home-hero__video"]}>
