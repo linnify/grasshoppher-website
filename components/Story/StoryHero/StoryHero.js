@@ -17,7 +17,7 @@ export const StoryHero = () => {
                 "GrasshoppHer is\na career roadmapping\nservice and community."
               }
             />
-            <h3 className={`${styles["story-hero__content__subtitle"]}`}>
+            <h3 className={styles["story-hero__content__subtitle"]}>
               We know what it feels like to have taken some seemingly unrelated
               turns on our chosen paths. Let us be your roadmap on the next leg
               of your journey. We’ll help you fill in the missing pieces to
