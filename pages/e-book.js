@@ -4,8 +4,8 @@ import React from "react";
 
 export const EBook = () => {
   return (
-    <Page title={"Download your e-book - GrasshoppHer"}>
-      <Layout title={"Download your e-book"}>
+    <Page title={"Newsletter Sign Up - GrasshoppHer"}>
+      <Layout title={"Newsletter Sign Up"}>
         <div
           className={"container"}
           style={{
@@ -15,7 +15,7 @@ export const EBook = () => {
             gap: "48px",
           }}
         >
-          <h2 style={{ textAlign: "center" }}>Download your e-book</h2>
+          <h2 style={{ textAlign: "center" }}>Newsletter Sign Up</h2>
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSfXz9_t_2_MKgPs4v1ubPiPyeIxbrV9A1BXgVouthXuOCO8hg/viewform?embedded=true"
             className={"google-form"}

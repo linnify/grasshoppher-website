@@ -47,7 +47,7 @@ export const legalFooterItems = [
 
 export const menuFooterItems = [
   {
-    text: "Download your e-book",
+    text: "Newsletter Sign Up",
     link: "/e-book",
     newTab: false,
   },
