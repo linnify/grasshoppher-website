@@ -12,6 +12,10 @@ export const header = [
     path: "/story",
   },
   {
+    label: "PODCAST",
+    path: "https://www.heathermillernow.com/balancenesspodcast",
+  },
+  {
     label: "THE HUB",
     path: "/blog",
   },
