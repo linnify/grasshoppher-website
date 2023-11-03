@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { PostItem } from "../PostItem/PostItem";
 import { resizeAllGridItems } from "../../src/helpers/resizeGridItem";
+import { RedirectButton } from "../RedirectButton";
 
-export const BlogPosts = ({ posts }) => {
-  const displayPosts = posts.map((post, index) => (
+export const BlogPosts = (props) => {
+  const displayPosts = props.posts.map((post, index) => (
     <PostItem post={post} key={index} />
   ));
 
@@ -23,7 +24,26 @@ export const BlogPosts = ({ posts }) => {
       window.removeEventListener("scroll", resizeAllGridItems);
       clearInterval(myTimeout);
     };
-  }, [posts]);
+  }, [props.posts]);
 
-  return <div className={"blog-post"}>{displayPosts}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div className={"blog-post"}>{displayPosts}</div>
+      {props.hasMore && (
+        <div style={{ marginBottom: "32px" }}>
+          <RedirectButton
+            label={"Load more articles"}
+            asButton={true}
+            onClick={props.onLoadMore}
+          />
+        </div>
+      )}
+    </div>
+  );
 };

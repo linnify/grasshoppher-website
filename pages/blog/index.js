@@ -13,11 +13,35 @@ export default class Blog extends React.Component {
     this.state = {
       loaded: false,
       posts: this.props.posts,
+      hasMore: !!this.props.hasMore,
+      page: 1,
     };
   }
 
   componentDidMount() {
     this.setState({ loaded: true });
+  }
+
+  async onLoadMore() {
+    const url = `${process.env.NEXT_PUBLIC_HOST}/api/get-articles`;
+    console.log(url);
+    const response = await fetch(url, {
+      body: JSON.stringify({
+        page: this.state.page + 1,
+        pageSize: 20,
+      }),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const result = await response.json();
+    console.log(result);
+    this.setState({
+      posts: [...(this.state.posts || []), ...result.posts],
+      hasMore: !!result.next,
+      page: this.state.page + 1,
+    });
   }
 
   render() {
@@ -35,7 +59,11 @@ export default class Blog extends React.Component {
             <FadeIn>
               <PageTitle content={"THE HUB"} id={"general"} />
             </FadeIn>
-            <BlogPosts posts={this.state.posts} />
+            <BlogPosts
+              posts={this.state.posts}
+              hasMore={this.state.hasMore}
+              onLoadMore={() => this.onLoadMore()}
+            />
           </div>
         </Layout>
       </Page>
@@ -43,8 +71,6 @@ export default class Blog extends React.Component {
   }
 }
 export async function getStaticProps({ params }) {
-  // TODO Bia we load only the first 50 items, after that we should have a load more button
-
   const response = await datafyCMS
     .collections("post")
     .fields([
@@ -56,13 +82,9 @@ export async function getStaticProps({ params }) {
       "published_at",
     ])
     .sortBy("published_at", "desc")
-    .pageSize(100)
+    .pageSize(20)
+    .page(1)
     .list();
-
-  // const response = {
-  //   results: [],
-  //   next: false
-  // }
 
   return {
     props: {
