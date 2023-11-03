@@ -12,19 +12,22 @@ export default class Blog extends React.Component {
     super(props);
     this.state = {
       loaded: false,
+      loading: false,
       posts: this.props.posts,
       hasMore: !!this.props.hasMore,
       page: 1,
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setState({ loaded: true });
   }
 
   async onLoadMore() {
+    this.setState({
+      loading: true,
+    });
     const url = `${process.env.NEXT_PUBLIC_HOST}/api/get-articles`;
-    console.log(url);
     const response = await fetch(url, {
       body: JSON.stringify({
         page: this.state.page + 1,
@@ -36,8 +39,8 @@ export default class Blog extends React.Component {
       },
     });
     const result = await response.json();
-    console.log(result);
     this.setState({
+      loading: false,
       posts: [...(this.state.posts || []), ...result.posts],
       hasMore: !!result.next,
       page: this.state.page + 1,
@@ -62,6 +65,7 @@ export default class Blog extends React.Component {
             <BlogPosts
               posts={this.state.posts}
               hasMore={this.state.hasMore}
+              loading={this.state.loading}
               onLoadMore={() => this.onLoadMore()}
             />
           </div>

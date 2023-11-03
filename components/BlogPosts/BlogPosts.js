@@ -40,6 +40,7 @@ export const BlogPosts = (props) => {
           <RedirectButton
             label={"Load more articles"}
             asButton={true}
+            loading={props.loading}
             onClick={props.onLoadMore}
           />
         </div>

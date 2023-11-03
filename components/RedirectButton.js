@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CircularProgress } from "@material-ui/core";
 
 export const RedirectButton = ({
   href,
@@ -9,6 +10,7 @@ export const RedirectButton = ({
   color = "primary",
   asButton = false,
   useLink = false,
+  loading = false,
   onClick,
 }) => {
   if (asButton) {
@@ -16,8 +18,29 @@ export const RedirectButton = ({
       <div
         className={`button button__${variant} button__${variant}--${color}`}
         onClick={onClick}
+        style={{
+          position: loading ? "relative" : "",
+        }}
       >
-        <span>{label}</span>
+        <CircularProgress
+          style={{
+            visibility: loading ? "visible" : "hidden",
+            position: "absolute",
+            margin: "auto",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+          size={"12px"}
+        ></CircularProgress>
+        <span
+          style={{
+            visibility: loading ? "hidden" : "visible",
+          }}
+        >
+          {label}
+        </span>
       </div>
     );
   }
