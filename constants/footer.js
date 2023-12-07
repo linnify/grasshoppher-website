@@ -51,11 +51,11 @@ export const menuFooterItems = [
     link: "/e-book",
     newTab: false,
   },
-  {
-    text: "Be Fearless Summit",
-    link: "https://www.befearlesssummit.org/",
-    newTab: true,
-  },
+  // {
+  //   text: "Be Fearless Summit",
+  //   link: "https://www.befearlesssummit.org/",
+  //   newTab: true,
+  // },
   // {
   //   text: "Book a Mentor",
   //   link: "/disruptors",
