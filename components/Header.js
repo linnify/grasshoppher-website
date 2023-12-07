@@ -61,17 +61,17 @@ export const Header = () => {
           <div className={"web-menu header__padding-top-40"}>
             {displayMenuItems()}
           </div>
-          {/*<a*/}
-          {/*  href={"https://www.befearlesssummit.org/"}*/}
-          {/*  className={"web-menu__promo"}*/}
-          {/*  target={"_blank"}*/}
-          {/*>*/}
-          {/*  <img*/}
-          {/*    src={"/logos/bfs-grey.jpg"}*/}
-          {/*    alt={"logo Be Fearless"}*/}
-          {/*    style={{ cursor: "pointer", height: "137px" }}*/}
-          {/*  />*/}
-          {/*</a>*/}
+          <a
+            href={"https://www.befearlesssummit.org/"}
+            className={"web-menu__promo"}
+            target={"_blank"}
+          >
+            <img
+              src={"/logos/bfs-grey.jpg"}
+              alt={"logo Be Fearless"}
+              style={{ cursor: "pointer", height: "137px" }}
+            />
+          </a>
         </div>
         <div className={"burger-menu"}>
           <HeaderBurgerMenu />
