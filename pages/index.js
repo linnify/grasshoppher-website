@@ -35,7 +35,7 @@ export default class Home extends React.Component {
         {/*<HomeInstagram feed={this.props.posts} />*/}
         <ImageSection />
         <Sponsors />
-        <Sponsors title={"AS SEEN ON"} isArticle={true} />
+        {/*<Sponsors title={"AS SEEN ON"} isArticle={true} />*/}
       </Layout>
     );
   }
