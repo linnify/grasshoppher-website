@@ -1,9 +1,9 @@
-import Page from "../components/Page";
-import Layout from "../components/Layout";
+import Page from "../../components/Page";
+import Layout from "../../components/Layout";
 import React from "react";
-import { MembershipCards } from "../components/ChooseMembership/MembershipCards/MembershipCards";
-import { HeroLayout } from "../components/HeroLayout/HeroLayout";
-import { RedirectButton } from "../components/RedirectButton";
+import { MembershipCards } from "../../components/ChooseMembership/MembershipCards/MembershipCards";
+import { HeroLayout } from "../../components/HeroLayout/HeroLayout";
+import { RedirectButton } from "../../components/RedirectButton";
 
 const Membership = () => {
   return (

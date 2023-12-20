@@ -19,15 +19,15 @@ export const header = [
     label: "THE HUB",
     path: "/blog",
   },
-  {
-    label: "MEMBER PORTAL",
-    path: "/membership-portal",
-  },
-  {
-    label: "JOIN NOW",
-    path: "/membership",
-    computeStyle: (isActive) => ({
-      textDecoration: isActive ? "none" : "underline",
-    }),
-  },
+  // {
+  //   label: "MEMBER PORTAL",
+  //   path: "/membership-portal",
+  // },
+  // {
+  //   label: "JOIN NOW",
+  //   path: "/membership",
+  //   computeStyle: (isActive) => ({
+  //     textDecoration: isActive ? "none" : "underline",
+  //   }),
+  // },
 ];

@@ -2,12 +2,12 @@ import {
   getInPersonEvents,
   getUpcomingEvents,
   getVirtualEvents,
-} from "../../src/services/datafycms";
-import Page from "../../components/Page";
-import Layout from "../../components/Layout";
+} from "../../../src/services/datafycms";
+import Page from "../../../components/Page";
+import Layout from "../../../components/Layout";
 import React from "react";
-import { AllEvents } from "../../components/Events/AllEvents/AllEvents";
-import { CheckEmail } from "../../components/MembershipPortal/CheckEmail/CheckEmail";
+import { AllEvents } from "../../../components/Events/AllEvents/AllEvents";
+import { CheckEmail } from "../../../components/MembershipPortal/CheckEmail/CheckEmail";
 
 class Events extends React.Component {
   constructor(props) {

@@ -1,20 +1,20 @@
 import React from "react";
-import Page from "../components/Page";
-import Layout from "../components/Layout";
-import { MembershipPortalHero } from "../components/MembershipPortal/MembershipPortalHero/MembershipPortalHero";
-import { Events } from "../components/MembershipPortal/Events/Events";
+import Page from "../../components/Page";
+import Layout from "../../components/Layout";
+import { MembershipPortalHero } from "../../components/MembershipPortal/MembershipPortalHero/MembershipPortalHero";
+import { Events } from "../../components/MembershipPortal/Events/Events";
 import {
   getDiscounts,
   getInPersonEvents,
   getUpcomingEvents,
   getVirtualEvents,
-} from "../src/services/datafycms";
-import { UpcomingEvent } from "../components/MembershipPortal/UpcomingEvent/UpcomingEvent";
-import { Discounts } from "../components/MembershipPortal/Discounts/Discounts";
-import { RedirectToForm } from "../components/MembershipPortal/RedirectToForm/RedirectToForm";
-import { ImageSection } from "../components/EBook/ImageSection";
-import { CheckEmail } from "../components/MembershipPortal/CheckEmail/CheckEmail";
-import { OfficeHours } from "../components/Membership/OfficeHours/OfficeHours";
+} from "../../src/services/datafycms";
+import { UpcomingEvent } from "../../components/MembershipPortal/UpcomingEvent/UpcomingEvent";
+import { Discounts } from "../../components/MembershipPortal/Discounts/Discounts";
+import { RedirectToForm } from "../../components/MembershipPortal/RedirectToForm/RedirectToForm";
+import { ImageSection } from "../../components/EBook/ImageSection";
+import { CheckEmail } from "../../components/MembershipPortal/CheckEmail/CheckEmail";
+import { OfficeHours } from "../../components/Membership/OfficeHours/OfficeHours";
 
 class MembershipPortal extends React.Component {
   constructor(props) {
