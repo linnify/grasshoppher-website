@@ -27,7 +27,8 @@ export const StoryHero = () => {
         </div>
         <div className={styles["story-hero__image"]}>
           <Parallax speed={8}>
-            <img src={"/images/story-hero.png"} />
+            {/*<img src={"/images/story-hero.png"} />*/}
+            <img src={"/images/community.png"} />
           </Parallax>
         </div>
       </div>

@@ -23,16 +23,17 @@ export const HomeHero = () => {
         </div>
         <div className={styles["home-hero__video"]}>
           <Parallax scale={[1, 1.3]} easing="easeInQuad">
-            <video
-              playsInline
-              loop
-              muted
-              autoPlay
-              preload="auto"
-              poster={"/images/hero-video-frame.png"}
-            >
-              <source src={"/videos/home-hero.mp4"} />
-            </video>
+            {/*<video*/}
+            {/*  playsInline*/}
+            {/*  loop*/}
+            {/*  muted*/}
+            {/*  autoPlay*/}
+            {/*  preload="auto"*/}
+            {/*  poster={"/images/hero-video-frame.png"}*/}
+            {/*>*/}
+            {/*  <source src={"/videos/home-hero.mp4"} />*/}
+            {/*</video>*/}
+            <img src={"/images/hero-video-frame.png"} alt={""} />
           </Parallax>
         </div>
       </div>

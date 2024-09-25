@@ -52,7 +52,8 @@ export const ImageSection = ({
           translateX={[20, 0]}
           easing="easeOutCirc"
         >
-          <img src={imageUrl || "/images/impact.png"} />
+          {/*<img src={imageUrl || "/images/impact.png"} />*/}
+          <img src={"/images/slack.png"} />
         </Parallax>
       </div>
     </div>
