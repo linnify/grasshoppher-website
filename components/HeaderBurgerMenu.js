@@ -42,12 +42,12 @@ export const HeaderBurgerMenu = () => {
       {/*  target={"_blank"}*/}
       {/*  className={"web-menu__promo"}*/}
       {/*>*/}
-      <img
-        className={"web-menu__promo"}
-        src={"/logos/bfs-grey.jpg"}
-        alt={"logo Be Fearless"}
-        style={{ height: "177px", marginTop: "30px" }}
-      />
+      {/*<img*/}
+      {/*  className={"web-menu__promo"}*/}
+      {/*  src={"/logos/bfs-grey.jpg"}*/}
+      {/*  alt={"logo Be Fearless"}*/}
+      {/*  style={{ height: "177px", marginTop: "30px" }}*/}
+      {/*/>*/}
       {/*</a>*/}
     </Menu>
   );

@@ -66,12 +66,12 @@ export const Header = () => {
           {/*  className={"web-menu__promo"}*/}
           {/*  target={"_blank"}*/}
           {/*>*/}
-          <img
-            className={"web-menu__promo"}
-            src={"/logos/bfs-grey.jpg"}
-            alt={"logo Be Fearless"}
-            style={{ height: "137px" }}
-          />
+          {/*<img*/}
+          {/*  className={"web-menu__promo"}*/}
+          {/*  src={"/logos/bfs-grey.jpg"}*/}
+          {/*  alt={"logo Be Fearless"}*/}
+          {/*  style={{ height: "137px" }}*/}
+          {/*/>*/}
           {/*</a>*/}
         </div>
         <div className={"burger-menu"}>
