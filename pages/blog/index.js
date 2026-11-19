@@ -5,7 +5,7 @@ import { PageTitle } from "../../components/PageTitle";
 import Page from "../../components/Page";
 import FadeIn from "../../components/FadeIn/FadeIn";
 import { Loader } from "../../components/Loader/Loader";
-const datafyCMS = require("@datafycms/js-client");
+const datafyCMS = require("../../cms/client");
 
 export default class Blog extends React.Component {
   constructor(props) {

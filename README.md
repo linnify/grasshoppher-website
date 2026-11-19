@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Content
+
+The site's content (blog posts, authors, tags, mentors, events, FAQ, discounts, partnerships, press) used to come from DatafyCMS (`api.datafycms.com`), which has been shut down. It was exported in November 2026 and now lives in this repository:
+
+- `cms/data/*.json` holds one file per collection. Media fields hold an id from `cms/data/media.json`. Reference fields (`post.author`, `post.tags`) hold the `id` of a record in the referenced collection.
+- `public/cms-media/` holds the images and documents the content uses, served at `/cms-media/<file>`.
+- `cms/client.js` is a small local replacement for `@datafycms/js-client`, with the same `collections(...).fields(...).filterBy(...).sortBy(...).list()` API. Records with `published_at: null` are hidden from listings, as they were in the CMS.
+
+To change content, edit the JSON files and add any new images to `public/cms-media/`.
+
 ## Getting Started
 
 First, run the development server:

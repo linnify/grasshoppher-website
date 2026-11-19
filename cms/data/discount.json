@@ -1,0 +1,153 @@
+[
+  {
+    "id": "f103c3fe-7f59-4982-b655-8091ee0e300f",
+    "created_at": "2022-11-22T20:58:12.754822Z",
+    "updated_at": "2022-11-22T20:58:30.869185Z",
+    "published_at": "2022-11-22T20:58:30.869047Z",
+    "image": 1170,
+    "discount": 20,
+    "promo_code": "60daysawayGH",
+    "tags": [
+      "https://amzn.to/3UUuljI",
+      "60 Days of Mindfulness Meditation Card Deck"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "c5ab2ba6-22d7-4fc5-a481-a56cd80db115",
+    "created_at": "2022-10-07T14:00:24.573990Z",
+    "updated_at": "2022-10-18T13:43:15.202614Z",
+    "published_at": "2022-10-07T14:00:28.306205Z",
+    "image": 1087,
+    "discount": 10,
+    "promo_code": "GHMember",
+    "tags": [
+      "Online Coaching",
+      "$75 off",
+      "In-Person Training"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "4a144550-5a46-47d2-bc95-1327bd8b6a60",
+    "created_at": "2022-10-07T13:53:47.197172Z",
+    "updated_at": "2022-10-07T14:02:00.567530Z",
+    "published_at": "2022-10-07T13:54:41.337376Z",
+    "image": 1088,
+    "discount": 15,
+    "promo_code": "FEARLESS",
+    "tags": [
+      "Ziki Kitchens",
+      "Via their website"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "60a4177c-8403-40a1-9549-8f54d44c45bc",
+    "created_at": "2022-10-07T13:52:35.686664Z",
+    "updated_at": "2022-10-07T14:02:18.061787Z",
+    "published_at": "2022-10-07T13:53:57.337369Z",
+    "image": 1089,
+    "discount": 5,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "Ruby Hotel"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "695c6652-becc-4bcd-9f58-e33fc34ac08d",
+    "created_at": "2022-10-07T13:52:06.547704Z",
+    "updated_at": "2022-10-07T14:02:39.809397Z",
+    "published_at": "2022-10-07T13:54:11.623509Z",
+    "image": 1090,
+    "discount": 10,
+    "promo_code": "GH10",
+    "tags": [
+      "Bronzier Tan"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "1ddefe98-ec68-4665-a7de-f93ca0d1f903",
+    "created_at": "2022-10-07T13:51:38.946066Z",
+    "updated_at": "2022-10-19T15:52:13.610955Z",
+    "published_at": "2022-10-07T13:54:26.971267Z",
+    "image": 1131,
+    "discount": 10,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "Wander Salon"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "211ac73b-7cc3-45d4-8200-ea7b1ac8d684",
+    "created_at": "2022-10-07T13:47:55.355575Z",
+    "updated_at": "2022-10-07T14:04:37.632026Z",
+    "published_at": "2022-10-07T13:48:00.031472Z",
+    "image": 1092,
+    "discount": 10,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "Afuga Coffee"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "a647aabd-c909-4768-ae2b-e9f4ad9d8691",
+    "created_at": "2022-09-26T12:00:19.490031Z",
+    "updated_at": "2022-10-11T17:08:26.726481Z",
+    "published_at": "2022-09-26T12:00:23.723475Z",
+    "image": 1057,
+    "discount": 10,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "Brent Del Bianco",
+      "Massage Therapy"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "464631a9-1b16-4756-8cf8-f327b7bd6513",
+    "created_at": "2022-09-26T11:59:24.096618Z",
+    "updated_at": "2022-10-10T16:49:27.975788Z",
+    "published_at": "2022-09-26T11:59:44.057299Z",
+    "image": 1057,
+    "discount": 10,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "Fluid Revival",
+      "IV vitamin drips"
+    ],
+    "virtual": false
+  },
+  {
+    "id": "31e1c3e9-f0f2-4cba-a113-17b7b0a6c613",
+    "created_at": "2022-09-26T11:57:05.642212Z",
+    "updated_at": "2022-10-19T15:50:27.874617Z",
+    "published_at": "2022-09-26T11:57:11.582120Z",
+    "image": 1130,
+    "discount": 10,
+    "promo_code": "GRASSHOPPHER",
+    "tags": [
+      "$30USD off",
+      "your first",
+      "design contest"
+    ],
+    "virtual": true
+  },
+  {
+    "id": "0ff0a715-b99d-483b-8369-d84d16ad7630",
+    "created_at": "2022-09-26T11:56:12.966870Z",
+    "updated_at": "2022-10-10T16:49:39.240403Z",
+    "published_at": "2022-09-26T11:56:33.760768Z",
+    "image": 1057,
+    "discount": 10,
+    "promo_code": "GrasshoppHer10",
+    "tags": [
+      "Runway Fitness"
+    ],
+    "virtual": true
+  }
+]

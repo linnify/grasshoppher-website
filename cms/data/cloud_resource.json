@@ -1,0 +1,52 @@
+[
+  {
+    "id": "39deaa40-114d-43cc-aaea-c201701a8b59",
+    "created_at": "2021-05-16T22:26:04.624081Z",
+    "updated_at": "2021-05-16T22:26:28.529335Z",
+    "published_at": "2021-05-16T22:26:09.918062Z",
+    "image": 182,
+    "title": "GH Goal-setting Worksheet",
+    "description": "Use our three-step HOP technique and spreadsheet template to start setting smart, achievable goals today.",
+    "document_resource": 183
+  },
+  {
+    "id": "496bb321-30eb-4837-9084-01095e992b50",
+    "created_at": "2021-05-16T22:24:59.995061Z",
+    "updated_at": "2021-05-16T22:25:08.143103Z",
+    "published_at": "2021-05-16T22:25:01.988805Z",
+    "image": 191,
+    "title": "How To Be A Good Mentee",
+    "description": "Follow these ten tips to become a great mentee!",
+    "document_resource": 189
+  },
+  {
+    "id": "1c3d1ead-a4a1-4321-8510-e01338e56634",
+    "created_at": "2021-05-16T22:24:15.917979Z",
+    "updated_at": "2021-05-16T22:24:19.041873Z",
+    "published_at": "2021-05-16T22:24:18.086694Z",
+    "image": 188,
+    "title": "How To Be A Good Mentor",
+    "description": "For our valued mentors, brush up on your mentoring skillset with these ten pointers.",
+    "document_resource": 190
+  },
+  {
+    "id": "97311cca-cd8b-4c26-b685-33ae3a9dbe78",
+    "created_at": "2021-05-16T22:22:59.545451Z",
+    "updated_at": "2021-05-16T22:23:15.321913Z",
+    "published_at": "2021-05-16T22:23:12.230274Z",
+    "image": 186,
+    "title": "Mentee Checklist",
+    "description": "Mentees, please keep this simple checklist handy to ensure you make the most of your mentoring relationship!",
+    "document_resource": 187
+  },
+  {
+    "id": "8a15439f-07ab-4b63-85c2-f2a0bec9b30a",
+    "created_at": "2021-05-16T22:15:04.753489Z",
+    "updated_at": "2021-05-16T22:21:04.896715Z",
+    "published_at": "2021-05-16T22:21:04.896540Z",
+    "image": 184,
+    "title": "Mentor Checklist",
+    "description": "Be the best mentor you can be with the help of this checklist!",
+    "document_resource": 185
+  }
+]

@@ -1,4 +1,4 @@
-const datafyCMS = require("@datafycms/js-client");
+const datafyCMS = require("../../../cms/client");
 
 export const getArticles = async (page = 1, pageSize = 20) => {
   const response = await datafyCMS
