@@ -90,7 +90,7 @@ export default withRouter(Article);
 export async function getStaticPaths() {
   const posts = await datafyCMS
     .collections("post")
-    .pageSize(50)
+    .pageSize(100)
     .fields(["slug"])
     .list()
     .then((value) => value.results);
