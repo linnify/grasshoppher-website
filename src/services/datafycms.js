@@ -1,6 +1,6 @@
-import { SortOperator } from "@datafycms/js-client";
+import { SortOperator } from "../../cms/client";
 
-const datafyCMS = require("@datafycms/js-client");
+const datafyCMS = require("../../cms/client");
 
 export const getLastPartner = async () => {
   const response = await datafyCMS

@@ -6,7 +6,7 @@ import { roundReadingTime } from "../../src/helpers/roundReadingTime";
 import Page from "../../components/Page";
 import { Loader } from "../../components/Loader/Loader";
 import { withRouter } from "next/router";
-const datafyCMS = require("@datafycms/js-client");
+const datafyCMS = require("../../cms/client");
 import readTimeEstimate from "read-time-estimate";
 
 class Article extends React.Component {
@@ -90,7 +90,7 @@ export default withRouter(Article);
 export async function getStaticPaths() {
   const posts = await datafyCMS
     .collections("post")
-    .pageSize(50)
+    .pageSize(100)
     .fields(["slug"])
     .list()
     .then((value) => value.results);
